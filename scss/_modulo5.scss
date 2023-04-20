@@ -1,0 +1,164 @@
+.flexFlujo{
+    display: flex;
+    flex-direction: row;
+}
+/* .selectorFactorSocial{
+    display: none;
+  overflow-y: auto !important;
+} */
+
+/* .tablaHorizonte{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    
+    th{
+        height: 60px;
+        padding-bottom: 10px;
+    }
+  }
+
+.tablaHorizonte{
+        font-size: 10px;
+} */
+
+.tablaHorizonte {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.tablaHorizonte table {
+    width: 1000%;
+}
+
+.tablaHorizonte th,
+.tablaHorizonte td {
+    width: 50px !important; 
+}
+
+.tablaHorizonte input{
+    width: 80px;
+}
+
+
+.costoComp{
+    font-size: 15px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    
+}
+
+input{
+    background-color: whitesmoke;
+    color: black;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.inputTextoIzq{
+    text-align: left;
+}
+
+.inputNumeroDer{
+    text-align: right;
+}
+
+.inputEspecialCen{
+    text-align: center;
+}
+
+
+datalist {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.tablaModulo5_3{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    th{
+        padding: 0%;
+        min-width: 2.5cm;
+    }
+}
+
+.tablaModulo5_6{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    th{
+        padding: 0%;
+        min-width: 2.5cm;
+    }
+}
+
+.tablaModulo5_7{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    th{
+        padding: 0%;
+        min-width: 2.5cm;
+    }
+}
+
+.tablaModulo7{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    th{
+        padding: 0%;
+        min-width: 2.5cm;
+    }
+}
+
+.cronogramaClass{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%
+
+    th{
+        width: 4cm;
+    }
+}
+
+
+.sumTodoMod5{
+    font-size: 15px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    
+}
+
+.costoPrivadoClass{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    th{
+        min-width: 2.5cm;
+    }
+}
+
+.costoSocialClass{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    th{
+        min-width: 2.5cm;
+    }
+}

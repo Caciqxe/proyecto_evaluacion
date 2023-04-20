@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÓDULO 2: ANÁLISIS DE INVOLUCRADOS</title>
+</head>
+<body>
+    <nav class="navBar">
+        <h1>MÓDULO 2: ANÁLISIS DE INVOLUCRADOS</h1>
+    </nav>
+    <div id="modulo_2">
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 2.1  IDENTIFICACIÓN DE ACTORES</span>
+            </p>
+            <span class="explicacion">DETERMINE LOS ACTORES O POBLACIÓN RELACIONADA CON EL AMBIENTE DEL PROBLEMA Y/O CON EL PROYECTO</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="notaInstitucional" style="width:10cm">INSTITUCIONALES:</td>
+                        <td><span id="institucionales" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="notaSociales" style="width:10cm">SOCIALES:</td>
+                        <td><span id="sociales" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="notaPoliticos" style="width:10cm">POLÍTICOS:</td>
+                        <td><span id="politicos" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="notaSectorial" style="width:10cm">SECTORIALES:</td>
+                        <td><span id="sectorial" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="notaGremiales" style="width:10cm">GREMIALES:</td>
+                        <td><span id="gremiales" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="notaComunidad" style="width:10cm">COMUNIDAD EN GENERAL:</td>
+                        <td><span id="comunidad" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="notaGrupos" style="width:10cm">GRUPOS VULNERABLES FÍSICA, SOCIAL O DESDE LA PERSPECTIVA DE GÉNERO:</td>
+                        <td><span id="grupos" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada" style="width:10cm">OTROS</td>
+                        <td><span id="otros" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 2.2  IDENTIFICACIÓN DE INTERESES</span>
+            </p>
+            <table id='tabla_identificacion_interes'>
+            </table>
+        </div>
+        <span><button id='a_bttn_identificacion_interes' class="agregar">Agregar Fila</button></span>
+        <span><button id='e_bttn_identificacion_interes' class="eliminar">Eliminar Fila</button></span>
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 2.3  ESTRATEGIAS DE VINCULACIÓN</span>
+            </p>
+            <span class="explicacion">DEFINA CLARAMENTE LAS ESTRATEGIAS DE RELACIÓN CON LOS INVOLUCRADOS Y LA FASE DEL PROYECTO EN QUE SE GENERA</span>
+            <table id="tabla_estrategias_vinculacion">
+
+            </table>
+        </div>
+        <span><button id='a_bttn_estrategias_vinculacion' class="agregar">Agregar Fila</button></span>
+        <span><button id='e_bttn_estrategias_vinculacion' class="eliminar">Eliminar Fila</button></span>
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 2.4  PARTICIPACIÓN COMUNITARIA</span>
+            </p>
+            <span class="explicacion">DEFINA EL NIVEL EN EL CUAL SE INVOLUCRÓ O SE PRETENDE INVOLUCRAR A LA COMUNIDAD</span>
+            <table id="tabla_participacion_comunitaria">
+                <tbody>
+                    <tr>
+                        <th style="width: 15cm">ACTOR COMUNITARIO</th>
+                        <th style="width: 15cm">ASPECTO DE VINCULACIÓN</th>
+                    </tr>
+                    <tr>
+                        <td><span contenteditable="true" class="textInput" id="participacion_comunitaria_actor_1"></span></td>
+                        <td><span contenteditable="true" class="textInput" id="participacion_comunitaria_vinculacion_1"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <span><button id='a_bttn_participacion_comunitaria' class="agregar">Agregar Fila</button></span>
+        <span><button id='e_bttn_participacion_comunitaria' class="eliminar">Eliminar Fila</button></span>
+    </div>
+    <a href="../index.html">Inicio</a>
+    <a class="home" href="./modulo_1.html">Atrás</a>
+    <a class="siguiente" href="./modulo_3.html">Siguiente</a>
+    <button id="grabar" class="botonSesion">Calcular/Grabar</button>
+    <script type="module" src="../js/modulo_2.js"></script>
+</body>
+</html>

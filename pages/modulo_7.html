@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 7: FINANCIACIÓN</title>
+</head>
+<body>
+    <nav class="navBar">
+        <h1>MÓDULO 7: FINANCIACIÓN</h1>
+    </nav>
+    <div id = modulo_7>
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 7.1   ESTABLECER FLUJO FINANCIERO DEL PROYECTO</span>
+            </p>
+            <span class="explicacion">UTILIZAR ESTE CUADRO SOLO CUANDO EL PROYECTO GENERE INGRESOS (RENTABILIDAD FINANCIERA)</span>
+            <table id="preInversion" class="tablaModulo7">
+                <tbody>
+                    <tr id="costosPreinversion">
+                        <th>TIPO DE COSTO</th>
+                        <th>UNIDAD DE MEDIDA</th>
+                        <th>CANTIDAD REQUERIDA</th>
+                        <th>VALOR UNITARIO</th>
+                        <th>VALOR TOTAL</th>
+                    </tr>
+                    <tr id="costosEstudios">
+                        <td class="bajada">ESTUDIOS</td>
+                        <td><span id="unidadMedidaEstudio" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="cantRequeridaEstudio" class= "textInput" contenteditable="true" style="text-align: right">0</span></td>
+                        <td><span id="valorUnitarioEstudio" class= "textInput" contenteditable="true" style="text-align: right">0</span></td>
+                        <td><span id="valorTotalEstudio" class= "textInput" contenteditable="false" style="text-align: right">0</span></td>
+                    </tr>
+                    <tr id="costosDisenos">
+                        <td class="bajada">DISEÑOS</td>
+                        <td><span id="unidadMedidaDisenos" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="cantRequeridaDisenos" class= "textInput" contenteditable="true" style="text-align: right">0</span></td>
+                        <td><span id="valorUnitarioDisenos" class= "textInput" contenteditable="true" style="text-align: right">0</span></td>
+                        <td><span id="valorTotalDisenos" class= "textInput" contenteditable="false" style="text-align: right">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="totalPreinversion" class="tablaModulo7">
+                <tbody>
+                    <tr id="totalCostosPreinversion">
+                        <th rowspan="2">TOTAL COSTOS PREINVERSION:</th>
+                        <th>VALOR TOTAL</th>
+                    </tr>
+                    <tr id="totalCostosEstudios">
+                        <td><span id="bodyPreInversion0" class="respuestaTabla" style="text-align: right">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="contenedorComponentes">
+
+            </div>
+            <table id="totalCostosInversion" class="tablaModulo7">
+                <tbody>
+                    <tr id="headerInversion">
+                        <th rowspan="2">TOTAL COSTOS INVERSION Y REINVERSION</th>
+                        <th>VALOR TOTAL</th>
+                    </tr>
+                    <tr id="bodyInversion">
+                        <td><span id="bodyInversion0" class="respuestaTabla" style="text-align: right"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="totalCostosOperacion" class="tablaModulo7">
+                <tbody>
+                    <tr id="headerOperacion">
+                        <th rowspan="2">TOTAL COSTOS OPERACIÓN</th>
+                        <th>VALOR TOTAL</th>
+                    </tr>
+                    <tr id="bodyOperacion">
+                        <td><span id="bodyOperacion0" class="respuestaTabla" style="text-align: right"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="ingresos" class="tablaModulo7">
+                <tbody id=ingresosBodyBodyBody>
+                    <tr id="ingresosIngresos">
+                        <th>INGRESOS</th>
+                        <th>UNIDAD DE MEDIDA</th>
+                        <th>CANTIDAD REQUERIDA</th>
+                        <th>VALOR UNITARIO</th>
+                        <th>VALOR TOTAL</th>
+                    </tr>
+                    <tr id="ingresoConcepto">
+                        <td><span id="descripcionConcepto1" class="textInput" contenteditable="true"></span></td>
+                        <td class="celdaUnidades">
+                            <span style="display: none;"></span>
+                            <select id="unidadMedidaConcepto1" class="dropdownUnidades"></select>
+                        </td>
+                        <td><span id="cantRequeridaConcepto1" class= "textInput" contenteditable="true" style="text-align: right">0</span></td>
+                        <td><span id="valorUnitarioConcepto1" class= "textInput" contenteditable="true" style="text-align: right">0</span></td>
+                        <td><span id="valorTotalConcepto1" class= "textInput" contenteditable="false" style="text-align: right">0</span></td>
+                    </tr>
+<!--                     <tr id="ingresoConcepto2">
+                        <td class="bajada">CONCEPTO 2</td>
+                        <td><span id="unidadMedidaConcepto2" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="cantRequeridaConcepto2" class= "textInput" contenteditable="true">0</span></td>
+                        <td><span id="valorUnitarioConcepto2" class= "textInput" contenteditable="true">0</span></td>
+                        <td><span id="valorTotalConcepto2" class= "textInput" contenteditable="false">0</span></td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <button id="a_bttn_ingresos" class="agregar">AGREGAR CONCEPTO</button>
+            <button id="e_bttn_ingresos" class="eliminar">ELIMINAR CONCEPTO</button>
+            <table id="totalIngresos" class="tablaModulo7">
+                <tbody>
+                    <tr id="totalIngresosHeader">
+                        <th rowspan="2">TOTAL INGRESOS:</th>
+                        <th>VALOR TOTAL</th>
+                    </tr>
+                    <tr id="totalIngresosConceptos">
+                        <td><span id="bodyIngreso0" class="respuestaTabla" style="text-align: right">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="flujoNeto" class="tablaModulo7">
+                <tbody>
+                    <tr id="flujoNetoHeader">
+                        <th rowspan="2">FLUJO NETO DEL PROYECTO:</th>
+                        <th>VALOR TOTAL</th>
+                    </tr>
+                    <tr id="flujoNetoTotal">
+                        <td><span id="bodyFlujoNeto0" class="respuestaTabla" style="text-align: right">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="indicadoresUltimaTabla">
+                <tbody>
+                    <tr>
+                        <td class="bajada">TASA DE OPORTUNIDAD (TASA SOCIAL DE DESCUENTO)</td>
+                        <td><span id="tasaOportunidad" class="respuestaTabla" contenteditable="true"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada">VALOR PRESENTE NETO</td>
+                        <td><span id="van" class="respuestaTabla" contenteditable="false" style="text-align: right">0</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada">TIR</td>
+                        <td><span id="tir" class="respuestaTabla" contenteditable="false" style="text-align: right">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="paso">
+                <span>PASO 7.2  FUENTES DE FINANCIAMIENTO</span>
+            </p>
+            <span class="explicacion">SELECCIONE LA FUENTE DE FINANCIACIÓN DEL PROYECTO Y JUSTIFIQUELA</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <th rowspan="2">FUENTES DE FINANCIACIÓN</th>
+                        <th colspan="3">FASE DEL PROYECTO</th>
+                        <th rowspan="2">OBSERVACIÓN</th>
+                    </tr>
+                    <tr>
+                        <th>PREINVERSIÓN</th>
+                        <th>INVERSIÓN</th>
+                        <th>OPERACIÓN (PROMEDIO ANUAL)</th>
+                    </tr>
+                    <tr>
+                        <td class="bajada">VALOR REQUERIDO (Chequeo)</td>
+                        <td><span id="valorRequerido0" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="valorRequerido1" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="valorRequerido2" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="valorRequerido3" class= "textInput" contenteditable="true"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada">FONDOS NACIONALES</td>
+                        <td><span id="fondosNacionales0" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="fondosNacionales1" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="fondosNacionales2" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="fondosNacionales3" class= "textInput" contenteditable="true"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada">MUNICIPAL Y COMUNIDAD</td>
+                        <td><span id="municipalComunidad0" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="municipalComunidad1" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="municipalComunidad2" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="municipalComunidad3" class= "textInput" contenteditable="true"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada">COOPERACIÓN INTERNACIONAL (DONACIÓN)</td>
+                        <td><span id="cooperacionInternacional0" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="cooperacionInternacional1" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="cooperacionInternacional2" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="cooperacionInternacional3" class= "textInput" contenteditable="true"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada">PRESTAMOS (BANCA MULTILATERAL)</td>
+                        <td><span id="prestamos0" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="prestamos1" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="prestamos2" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="prestamos3" class= "textInput" contenteditable="true"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada">RECURSOS PROPIOS</td>
+                        <td><span id="recursosPropios0" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="recursosPropios1" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="recursosPropios2" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="recursosPropios3" class= "textInput" contenteditable="true"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada">INGRESOS DEL PROYECTO (TARIFAS, SERVICIOS)</td>
+                        <td><span id="ingresosProyecto0" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="ingresosProyecto1" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="ingresosProyecto2" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="ingresosProyecto3" class= "textInput" contenteditable="true"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada">APP (CONCESION)</td>
+                        <td><span id="app0" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="app1" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="app2" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="app3" class= "textInput" contenteditable="true"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada">OTROS (ESPECIFIQUE)</td>
+                        <td><span id="otros0" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="otros1" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="otros2" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="otros3" class= "textInput" contenteditable="true"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada">TOTAL</td>
+                        <td><span id="totalTablaFinanciamiento0" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="totalTablaFinanciamiento1" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="totalTablaFinanciamiento2" class= "textInput" contenteditable="true"></span></td>
+                        <td><span id="totalTablaFinanciamiento3" class= "textInput" contenteditable="true"></span></td>
+                    </tr>
+                    <tr>
+                        <td id="justificacionPropuesta" class="bajada" colspan="1">JUSTIFICACIÓN DE LA PROPUESTA DE FINANCIACIÓN: </td>
+                        <td colspan="4"><span class= "textInput" contenteditable="true"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <a href="../index.html">Inicio</a>
+    <a href="./modulo_6.html">Atrás</a>
+    <a href="./modulo_8.html">Siguiente</a>
+    <button id="botonGrabar" class="botonSesion">Calcular/Grabar</button>
+    <script type="module" src="../js/modulo_7.js"></script>
+</body>
+</html>

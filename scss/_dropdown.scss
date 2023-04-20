@@ -1,0 +1,47 @@
+.input-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.input-dropdown input {
+  background-color: whitesmoke;
+  color: black;
+  width: 100%;
+  
+}
+
+.input-dropdown ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+  display: none;
+  max-height: 400px; 
+  width: 400px;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.input-dropdown ul li{
+   color: black;
+}
+
+.input-dropdown ul li label {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px black solid;
+}
+
+.input-dropdown ul li label:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.input-dropdown.active ul {
+  display: block;
+}

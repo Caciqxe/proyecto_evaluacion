@@ -1,0 +1,221 @@
+@mixin bajada {
+        font-weight: bold;
+        text-align: left;
+        padding: 2px;
+        color: black;
+        background-color: #B8CCE4;
+        border-left: 1px black solid;
+        border-right: 1px black solid;
+        border-bottom: 1px black solid;
+}
+
+
+.triangulo {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid red;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.notaInstitucional{
+    @include bajada()
+}
+
+td.notaInstitucional:hover::before {
+    content: "DGIP-Preinversión: Son las instituciones del Sector Público, Alcaldías, Organismos financieros";
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+.notaSociales{
+    @include bajada()
+}
+
+td.notaSociales:hover::before{
+    content: "DGIP-Preinversión: Patronatos, Juntas de Agua.";
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.notaPoliticos{
+    @include bajada()
+}
+
+td.notaPoliticos:hover::before{
+    content: "DGIP-Preinversión: Partidos Políticos, Congreso Nacional.";
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.notaSectorial{
+    @include bajada()
+}
+
+td.notaSectorial:hover::before{
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.notaGremiales{
+    @include bajada()
+}
+
+td.notaGremiales:hover::before{
+    content: "DGIP-Preinversión: Gremio  de agricultores,  ganaderos, cafetaleros etc.";
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.notaComunidad{
+    @include bajada()
+}
+
+td.notaComunidad:hover::before{
+    content: "DGIP-Preinversión: habitantes de la comunidad.";
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.notaGrupos{
+    @include bajada()
+}
+
+td.notaGrupos:hover::before{
+    content: "DGIP-Preinversión: Personas con capacidades físicas especiales, etnias en general, madres solteras.";
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+th.notaActor:hover::before{
+    content: "DGIP-Preinversión: Llenar una fila por cada actor arriba identificado.";
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+th.accionNota:hover::before{
+    content: "Incluye el costo de la acción correctiva y los costos para reducir efectos colaterales";
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+th.notaProceso:hover::before{
+    content: "En caso de que se aplique el análisis de pasos operativos del sistema";
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.notaConsumo{
+    @include bajada()
+}
+
+td.notaConsumo:hover::before{
+    content: "DGIP-Preinversión: Crear Tabla de  Coeficientes de Consumo con proyectos tipo: un cupo por persona.";
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+td.notaConsumoR:hover::before{
+    content: "DGIP-Preinversión: Crear Tabla de  Coeficientes de Consumo con proyectos tipo: un cupo por persona.";
+    position: absolute;
+    z-index: 1;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+td.calificadaNota:hover::before{
+    content: "Mano de obra calificada: Se refiere al recurso humano que requiere de cierto nivel de formación y especialización para el desempeño adecuado de sus funciones (profesionales, obreros especializados). ";
+    position: absolute;   
+    z-index: 1;
+    color: black;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid rgb(187, 13, 13);;
+    border-radius: 5px;
+}
+
+td.semiCalificadaNota:hover::before{
+    content: "Mano de obra Semi calificada: Se refiere al recurso humano que desempeña actividades para las cuales no se requiere estudios previos y que, teniendo experiencia, esta no es suficiente para ser clasificados como mano de obra calificada (personal de apoyo administrativo, artesanos y operarios de oficio, trabajadores de los servicios y vendedores del comercio, operadores de máquinas y montadores).";
+    position: absolute;   
+    z-index: 1;
+    color: black;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid rgb(187, 13, 13);;
+    border-radius: 5px;
+}
+
+
+td.noCalificadaNota:hover::before{
+    content: "Mano de obra no calificada: Se refiere al recurso humano que no requiere ningún tipo de preparación especial para el cumplimiento de las labores de su cargo. ";
+    position: absolute;   
+    z-index: 1;
+    color: black;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid rgb(187, 13, 13);;
+    border-radius: 5px;
+}
+
+.tasaPrivadaNota{
+    @include bajada();
+}
+
+.tasaPrivadaNota:hover::before{
+    content: "Insertar la Tasa mínima de rentabilidad de inversiones similares -revisar caso Tasa del Mercado Vigente";
+    position: absolute;   
+    z-index: 1;
+    color: black;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border: 1px solid rgb(187, 13, 13);;
+    border-radius: 5px;
+}

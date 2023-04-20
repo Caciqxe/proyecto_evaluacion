@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÓDULO 5: EVALUACIÓN DE ALTERNATIVAS</title>
+</head>
+<body>
+    <nav class="navBar">
+        <h1>MÓDULO 5: EVALUACIÓN DE ALTERNATIVAS</h1>
+    </nav>
+    <div id="modulo_5_4">
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 5.3  ANÁLISIS COSTO EFICIENCIA </span>
+            </p>
+            <div class="header">
+                <p>ANÁLISIS A PRECIOS PRIVADOS</p>
+            </div>
+            <div id="costoEficienciaPrivado">
+                <table id="factoresPrecioPrivado">
+                    <tbody>
+                        <tr>
+                            <td class="tasaPrivadaNota"><span>TASA PRIVADA DE DESCUENTO:</span></td>
+                            <td><input id="tasaPrivada" value=0></input></td>
+                        </tr>
+                        <tr>
+                            <td class="bajada"><span>UNIDAD DE BENEFICIO DEL PROYECTO:</span></td>
+                            <td><input id="unidadPrivada" value=""></input></td>
+                        </tr>
+                        <tr>
+                            <td class="bajada"><span>NUMERO DE PERIODOS DEL PROYECTO:</span></td>
+                            <td><input id="horizontePrivada" value="0"></input></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="header">
+                <p>ANÁLISIS A PRECIOS SOCIALES</p>
+            </div>
+            <div id="costoEficienciaSocial">
+                <table id="factoresPrecioSocial">
+                    <tbody>
+                        <tr>
+                            <td class="bajada"><span>TASA SOCIAL DE DESCUENTO:</span></td>
+                            <td><input id="tasaSocial" value=8.5></input></td>
+                        </tr>
+                        <tr>
+                            <td class="bajada"><span>UNIDAD DE BENEFICIO DEL PROYECTO:</span></td>
+                            <td><input id="unidadSocial" value=""></input></td>
+                        </tr>
+                        <tr>
+                            <td class="bajada"><span>NUMERO DE PERIODOS DEL PROYECTO:</span></td>
+                            <td><input id="horizonteSocial" value="0"></input></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <a href="../index.html" id="inicio">Inicio</a>
+    <a href="./modulo_5_3.html" id="volver">Atrás</a>
+    <a href="./modulo_5_5.html" id="siguiente">Siguiente</a>
+    <button id="botonGrabar" class="botonSesion">Calcular/Grabar</button>
+    <script type="module" src="../js/modulo_5_4.js"></script>
+</body>
+</html>

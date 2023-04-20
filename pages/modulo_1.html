@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÓDULO 1: METODOLOGÍA GENERAL PARA LA FORMULACIÓN DE PROYECTOS DE INVERSIÓN</title>
+</head>
+<body>
+    <nav class="navBar">
+        <h1>MÓDULO 1: METODOLOGÍA GENERAL PARA LA FORMULACIÓN DE PROYECTOS DE INVERSIÓN</h1>
+    </nav> 
+    <div id = modulo_1>
+        <h3 class="header">Análisis Preliminar del Problema</h3>
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 1.1 : ANTECEDENTES DOCUMENTALES DE LA SITUACIÓN PROBLEMA (Desarrolle o mencione los antecedentes de la situación problemática o problema)</span>    
+            </p>
+            <table id="antecedentesProblematica">
+                <tbody>
+                    <tr>
+                        <th class="bajada">DESARROLLE O MENCIONE LOS ANTECEDENTES  DE LA SITUACION PROBLEMÁTICA O PROBLEMA.</th>
+                    </tr>
+                    <tr>
+                        <td><span id="antecedentesProblematicaRespuest" class="textInput" contenteditable="true" style="max-width: 1300px;"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <span class="bajada">INDIQUE LOS DOCUMENTOS - ESTUDIOS O ANÁLISIS EXISTENTES QUE SOPORTEN LOS ANTECEDENTES DEL PROBLEMA.</span>
+            <table id="documentosEstudio">
+                <tbody id="bodyTabla1">
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="a_bttn_Tabla1" class="agregar">Agregar Fila</button>
+            <button id="e_bttn_Tabla1" class="eliminar">Eliminar Fila</button>
+<!--             <canvas id="pruebaCanvas">DEJAR COSAS ACA</canvas>
+            <p class="output"></p> -->
+        </div>
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 1.2 : DIAGNÓSTICO DE LA SITUACIÓN ACTUAL DEL PROBLEMA</span>
+            </p>
+            <span class="bajada">DESCRIBA EL DIAGNÓSTICO DEL PROBLEMA</span>
+            <span id="diagnosticoProblema" class= "textInput" contenteditable="true"></span>
+            <span class="bajada">SI EL PROBLEMA INCIDE EN LA GENERACIÓN DE LA BRECHA DE GÉNERO, DESCRIBA COMO INCIDE</span>
+            <span id="brechaGenero" class= "textInput" contenteditable="true"></span>
+            <span class="bajada">INDIQUE LOS DOCUMENTOS-ESTUDIOS O ANÁLISIS EXISTENTES QUE SOPORTEN EL DIAGNÓSTICO DEL PROBLEMA Y SU SITUACIÓN ACTUAL</span>
+            <table id="documentosProblema">
+                <tbody id="bodyTabla2">
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="a_bttn_Tabla2" class="agregar">Agregar Fila</button>
+            <button id="e_bttn_Tabla2" class="eliminar">Eliminar Fila</button>
+        </div>
+        <h3 class="header">Análisis Específico del Problema</h3>
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 1.3 : DEFINICIÓN DEL PROBLEMA E INDICADOR DE LÍNEA BASE</span>
+            </p>
+            <span class="bajada">DEFINA DE MANERA CONCRETA EL PROBLEMA QUE SE PRETENDE SOLUCIONAR CON EL PROYECTO.</span>
+            <span id="problemaSolucionar" class= "textInput" contenteditable="true"></span>
+            <span class="bajada">CUÁLES SON LOS INDICADORES DE LÍNEA DE BASE CON SUS VALORES (SITUACIÓN ACTUAL) QUE MIDEN EL ESTADO DEL PROBLEMA</span>
+            <span id="indicadoresBase" class= "textInput" contenteditable="true"></span>
+        </div>
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 1.4 : PLANTEAMIENTO DE OBJETIVOS</span>
+            </p>
+            <span class="bajada">DEFINA EL OBJETIVO CENTRAL: (Debe ser igual al del Árbol de Objetivos)</span>
+            <span id="objetivoCentral" class= "textInput" contenteditable="true"></span>
+            <span class="bajada">DESCRIBA LA META DEL OBJETIVO CENTRAL (Esta debe guardar relación directa con el objetivo y los indicadores de línea base del problema)</span>
+            <span id="metaObjetivo" class= "textInput" contenteditable="true"></span>
+        </div>
+        <div class="segmentos">
+            <h3 class="alternativaStilo">DEFINICIÓN DE COMPONENTES (Deben corresponder a los medios directos del Árbol de Objetivos)</h3>
+            <div id="alternativasComponentes">
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a class="home" href="../index.html">Inicio</a>
+        <a class="siguiente" href="./modulo_2.html">Siguiente</a>
+        <button id="grabar" class="botonSesion">Calcular/Grabar</button>
+    </footer>
+
+
+<!--     <table>
+        <tbody>
+            <tr>
+                <td>DESCRIBA EL DIAGNÓSTICO DEL PROBLEMA</td>
+                <td><span class="respuestaTabla">RESPUESTA</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="preguntaTabla">SI EL PROBLEMA INCIDE EN LA GENERACIÓN DE LA BRECHA DE GÉNERO, DESCRIBA COMO INCIDE</span>
+                    </td>
+                <td><span class="pruebaTabla">RESPUESTA</span></td>
+            </tr>
+        </tbody>
+    </table> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+    <script type="module" src="../js/modulo_1.js"></script>
+</body>
+</html>

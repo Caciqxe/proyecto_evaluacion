@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÓDULO 3:  POBLACIÓN BENEFICIARIA Y ANÁLISIS DE DEMANDA</title>
+</head>
+<body>
+    <nav class="navBar">
+        <h1>MÓDULO 3.  POBLACIÓN BENEFICIARIA Y ANÁLISIS DE DEMANDA</h1>
+    </nav>
+    <div id="modulo_3">
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 3.1 TIPIFICAR POBLACIÓN</span>
+            </p>
+            <span class="explicacion">DEFINA LA POBLACIÓN RELACIONADA CON EL PROBLEMA TENIENDO EN CUENTA LAS SIGUIENTES CATEGORÍAS:</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="bajada" style="width: 22.5cm;">POBLACIÓN DE REFERENCIA:</td>
+                        <td style="width: 7cm;text-align: right;"><span id="poblacionReferencia" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada" style="width: 22.5cm;">POBLACIÓN AFECTADA:</td>
+                        <td style="width: 7cm;text-align: right;"><span id="poblacionAfectada" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada" style="width: 22.5cm;">POBLACIÓN OBJETIVO:</td>
+                        <td style="width: 7cm;text-align: right;"><span id="poblacionObjetivo" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 3.2 CARACTERIZAR POBLACIÓN OBJETIVO</span>
+            </p>
+            <span class="explicacion">CARACTERICE LA POBLACIÓN OBJETIVO A PARTIR DE LA SIGUIENTES CATEGORÍAS</span>
+            <table id="tablaCaracterizacionPoblacion">
+                <tbody>
+                    <tr>
+                        <th style="width: 8cm;">RANGO ETÁREO</th>
+                        <th style="width: 4cm;">HOMBRES</th>
+                        <th style="width: 4cm;">MUJERES</th>
+                        <th style="width: 4cm;">TOTAL</th>
+                        <th style="width: 10cm;">DESCRIBA O CUANTIFIQUE</th>
+                    </tr>
+                    <tr>
+                        <td><span class="respuestaTabla">MENORES DE 5 AÑOS</span></td>
+                        <td><input id="h5años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="m5años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="t5años" class="inputNumeroDer" value="0" readonly="true"></td>
+                        <td><span  id="d5años" class="respuestaTabla" contenteditable="true"> </span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="respuestaTabla">De 5 a 13 AÑOS</span></td>
+                        <td><input id="h13años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="m13años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="t13años" class="inputNumeroDer" value="0" readonly="true"></td>
+                        <td><span  id="d13años" class="respuestaTabla" contenteditable="true"> </span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="respuestaTabla">De 14 a 18 AÑOS</span></td>
+                        <td><input id="h18años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="m18años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="t18años" class="inputNumeroDer" value="0" readonly="true"></td>
+                        <td><span  id="d18años" class="respuestaTabla" contenteditable="true"> </span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="respuestaTabla">De 19 a 28 AÑOS</span></td>
+                        <td><input id="h28años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="m28años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="t28años" class="inputNumeroDer" value="0" readonly="true"></td>
+                        <td><span  id="d28años" class="respuestaTabla" contenteditable="true"> </span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="respuestaTabla">De 29 a 50 AÑOS</span></td>
+                        <td><input id="h50años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="m50años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="t50años" class="inputNumeroDer" value="0" readonly="true"></td>
+                        <td><span  id="d50años" class="respuestaTabla" contenteditable="true"> </span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="respuestaTabla">De 51 a 60 AÑOS</span></td>
+                        <td><input id="h60años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="m60años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="t60años" class="inputNumeroDer" value="0" readonly="true"></td>
+                        <td><span  id="d60años" class="respuestaTabla" contenteditable="true"> </span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="respuestaTabla">De 61 AÑOS EN ADELANTE</span></td>
+                        <td><input id="h61años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="m61años" class="inputNumeroDer" value="0"></td>
+                        <td><input id="t61años" class="inputNumeroDer" value="0" readonly="true"></td>
+                        <td><span  id="d61años" class="respuestaTabla" contenteditable="true"> </span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="respuestaTabla">TOTAL</span></td>
+                        <td><input id="totalH"class="inputNumeroDer" value="0" readonly="true"></td>
+                        <td><input id="totalM"class="inputNumeroDer" value="0" readonly="true"></td>
+                        <td><input id="totalT"class="inputNumeroDer" value="0" readonly="true"></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="bajada" style="width: 13.8cm;">ESTRATO O NIVEL SOCIOECONÓMICO:</td>
+                        <td><span id="estratoSocioeconomico" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada" style="width: 13.8cm;">NIVEL EDUCATIVO:</td>
+                        <td><span id="nivelEducativo"contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada" style="width: 13.8cm;">PERTENENCIA ÉTNICA:</td>
+                        <td><span id="pertenenciaEtnica" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada" style="width: 13.8cm;">GRADO DE VULNERABILIDAD:</td>
+                        <td><span id="gradoVulnerabilidad" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada" style="width: 13.8cm;">ACTIVIDAD ECONÓMICA PRINCIPAL DE LA QUE DEPENDA:</td>
+                        <td><span id="actividadEconomica" contenteditable="true" class="textInput"></span></td>
+                    </tr>                    
+                    <tr>
+                        <td class="bajada" style="width: 13.8cm;">OTRA CARACTERISTICA RELEVANTE:</td>
+                        <td><span id="otraCaracteristica" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 3.3  DEMANDA INSATISFECHA PROYECTADA DE LA POBLACIÓN OBJETIVO, INICIANDO POR EL AÑO ACTUAL</span>
+            </p>
+            <span class="explicacion">DEFINA LA DEMANDA INSATISFECHA DE LA POBLACIÓN OBJETIVO</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="bajada" style="width: 10cm;">UNIDAD DE MEDIDA:</td>
+<!--                         <td class="dropdown-cell">
+                            <span id="unidadMedida" style="display: none;"></span>
+                            <select class="my-dropdown" id="unidadMedida"></select>
+                          </td> -->
+                        <td><span id="unidadMedida" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada" style="width: 14cm;">DESCRIPCION DE LA UNIDAD DE MEDIDA:</td>
+                        <td><span id="descripcionUnidad"contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada" style="width: 14cm;">TASA DE CRECIMIENTO POBLACIONAL %:</td>
+                        <td><span id="tasaCrecimiento" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="notaConsumo" style="width: 14cm;">COEFICIENTE DE CONSUMO:</td>
+                        <td><span id="coeficienteConsumo" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada" style="width: 14cm;">POBLACIÓN INICIAL:</td>
+                        <td><span id="poblacionInicial" contenteditable="true" class="textInput"></span></td>
+                    </tr>                    
+                    <tr>
+                        <td class="bajada" style="width: 14cm;">OFERTA ANUAL:</td>
+                        <td><span id="demandaAnual" contenteditable="true" class="textInput"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="botonCrecimiento">GENERAR TABLA POBLACION</button>
+            <table id="tablaCrecimiento">
+                <tbody id="bodyCrecimiento">
+<!--                     <tr>
+                        <th>AÑO</th>
+                        <th>POBLACIÓN</th>
+                        <th>DEMANDA</th>
+                        <th>OFERTA</th>
+                        <th>DEFICIT / SUPERAVIT</th>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <div class="segmentos">
+            <p class="paso">
+                <span>PASO 3.4  ESTABLECER CRITERIOS DE ASIGNACIÓN</span>
+            </p>
+            <span class="explicacion">DEFINA LOS CRITERIOS UTILIZADOS PARA LA SELECCIÓN DE LA POBLACIÓN OBJETIVO (BENEFICIARIOS).</span>
+            <table id="tablaCriterios">
+                <tbody id="bodyCriterios">
+                    <tr>
+                        <th colspan="2">POBLACIÓN OBJETIVO</th>
+                        <th colspan="1" rowspan="2">CRITERIOS DE ASIGNACIÓN (De acuerdo al RUB: Registro Unico de Beneficiarios, el cual tiene identificados los hogares en pobreza y en extrema pobreza)</th>
+                    </tr>
+                    <tr>
+                        <th style="padding: 0%;min-width:120px">DESCRIPCION</th>
+                        <th style="padding: 0%;min-width:120px">CANTIDAD</th>
+                    </tr>
+                </tbody>
+            </table>
+            <span><button id="a_bttn_Criterios" class="agregar">Agregar Fila</button></span>
+            <span><button id="e_bttn_Criterios" class="eliminar">Eliminar Fila</button></span>
+        </div>
+    </div>
+    <a href="../index.html">Inicio</a>
+    <a href="./modulo_2.html">Atrás</a>
+    <a href="./modulo_4.html">Siguiente</a>
+    <button id="grabar" class="botonSesion">Calcular/Grabar</button>
+    <script type="module" src="../js/modulo_3.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "herramienta-gmg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "compilar": "electron-packager .",
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm  run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "electron-packager": "^17.1.1",
+    "jspdf": "^2.5.1",
+    "node-fetch": "^2.6.7"
+  }
+}
