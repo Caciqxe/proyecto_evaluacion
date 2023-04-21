@@ -56,7 +56,7 @@ while (x < numeroAlternativasInt) {
     alternativasComponentes.innerHTML += 
     `
     <p>
-      <span class="alternativaStilo">ALTERNATIVA N° ${x+1}</span>
+      <span class="alternativaStilo" style="width:99.7%;">ALTERNATIVA N° ${x+1}</span>
     </p>
     <table id= "descripcionAlt_${x+1}">
       <tbody>
@@ -66,15 +66,15 @@ while (x < numeroAlternativasInt) {
           <th style="width:16cm;">Descripción Básica (En qué consiste la alternativa, características principales de los procesos y de los aspectos técnicos)</th>
         <tr/>
         <tr>
-          <td><span class="respuestaTabla" style="text-align:center">${x+1}</span></td>
-          <td><span class="respuestaTabla">${JSON.parse(sessionStorage.getItem(`Alt_numero_${x+1}`)).name}</span></td>
-          <td><span class= "textInput" contenteditable="true"></span></td>
+          <td><span class="respuestaTabla" style="text-align:center; width:95%;">${x+1}</span></td>
+          <td><span class="respuestaTabla" style="width:99%;">${JSON.parse(sessionStorage.getItem(`Alt_numero_${x+1}`)).name}</span></td>
+          <td><span class= "textInput" contenteditable="true" style="width:99%;"></span></td>
         <tr/>
       </tbody>
     </table>
     <div id = Alt_${x+1}>
       <p>
-        <span class="alternativaStilo">DEFINA LOS COMPONENTES Y SUS RESPECTIVAS METAS (Deben corresponder a los medios directos del Árbol de Objetivos)</span>
+        <span class="alternativaStilo" style="width:99.7%;">DEFINA LOS COMPONENTES Y SUS RESPECTIVAS METAS (Deben corresponder a los medios directos del Árbol de Objetivos)</span>
       </p>
       <table id = comp_alt_${x+1}>
         <tbody>
@@ -98,9 +98,9 @@ while (x < numeroAlternativasInt) {
         for(var j =0; j < cellCount; j++){
             var cell = row.insertCell(j);
             if(j < cellCount-2){
-                cell.innerHTML=`<span  style="text-align:center" class="respuestaTabla">${y+1}`;
+                cell.innerHTML=`<span  style="text-align:center; width: 95%;" class="respuestaTabla">${y+1}`;
             }else{
-                cell.innerHTML = '<span class= "textInput" contenteditable="true"></span>';
+                cell.innerHTML = '<span class= "textInput" contenteditable="true" style="width:99%;"></span>';
             }
         }
       y++

@@ -259,11 +259,11 @@ function generarTablaCremiento() {
         bodyCrecimiento.innerHTML +=
             `
             <tr>
-                <td><span class="respuestaTabla">${y+1}</span></td>
-                <td><input id="poblacion${y+1}" class="inputNumeroDer" value="${parseInt(poblacionCalculada)}" readonly="true"></td>
-                <td><input id="demanda${y+1}" class="inputNumeroDer" value="${parseInt(poblacionCalculada * coeficienteConsumo.innerHTML)}" readonly="true"></td>
-                <td><input id="oferta${y+1}" class="inputNumeroDer" value="${parseInt(demandaAnual.innerHTML)}" readonly="true"></td>
-                <td><input id="deficit${y+1}" class="inputNumeroDer" value="${parseInt(demandaAnual.innerHTML - (poblacionCalculada * coeficienteConsumo.innerHTML))}" readonly="true"></td>
+                <td><span class="respuestaTabla" style="width: 95%;">${y+1}</span></td>
+                <td><input id="poblacion${y+1}" class="inputNumeroDer" value="${parseInt(poblacionCalculada)}" readonly="true" style="width: 98%;"></td>
+                <td><input id="demanda${y+1}" class="inputNumeroDer" value="${parseInt(poblacionCalculada * coeficienteConsumo.innerHTML)}" readonly="true" style="width: 98%;"></td>
+                <td><input id="oferta${y+1}" class="inputNumeroDer" value="${parseInt(demandaAnual.innerHTML)}" readonly="true" style="width: 98%;"></td>
+                <td><input id="deficit${y+1}" class="inputNumeroDer" value="${parseInt(demandaAnual.innerHTML - (poblacionCalculada * coeficienteConsumo.innerHTML))}" readonly="true" style="width: 98%;"></td>
             <tr>
             `
         
