@@ -122,9 +122,9 @@ if (tablaCriterios != null) {
         bodyModificar.innerHTML +=
         `
         <tr>
-            <td><span class="textInput" contenteditable="true">${tablaCriterios.rows[x][0]}</span></td>
-            <td><span class="textInput" contenteditable="true" style="text-align:center">${tablaCriterios.rows[x][1]}</span></td>
-            <td><span class="textInput" contenteditable="true">${tablaCriterios.rows[x][2]}</span></td>
+            <td><span class="textInput" contenteditable="true" style="width: 97%;" >${tablaCriterios.rows[x][0]}</span></td>
+            <td><span class="textInput" contenteditable="true" style="width: 97%;" style="text-align:center">${tablaCriterios.rows[x][1]}</span></td>
+            <td><span class="textInput" contenteditable="true" style="width: 99.5%;">${tablaCriterios.rows[x][2]}</span></td>
         </tr>
         `
 
@@ -144,9 +144,9 @@ if (tablaCriterios != null) {
         <th>CANTIDAD</th>
     </tr>
     <tr>
-        <td><span class="textInput" contenteditable="true"></span></td>
-        <td><span class="textInput" contenteditable="true"></span></td>
-        <td><span class="textInput" contenteditable="true"></span></td>
+        <td><span class="textInput" contenteditable="true" style="width: 97%;"></span></td>
+        <td><span class="textInput" contenteditable="true" style="width: 97%;"></span></td>
+        <td><span class="textInput" contenteditable="true" style="width: 99.5%;"></span></td>
     </tr>
     `
 }
@@ -337,9 +337,9 @@ const agregarFila = (event) => {
     var cell2 = row.insertCell(-1);
     var cell3 = row.insertCell(-1);
 
-    cell1.innerHTML = `<td><span class= "textInput" contenteditable="true"></span></td>`
-    cell2.innerHTML = `<td><span class= "textInput" contenteditable="true"></span></td>`
-    cell3.innerHTML = `<td><span class= "textInput" contenteditable="true"></span></td>`
+    cell1.innerHTML = `<td><span class= "textInput" contenteditable="true" style="width: 97%;"></span></td>`
+    cell2.innerHTML = `<td><span class= "textInput" contenteditable="true" style="width: 97%;"></span></td>`
+    cell3.innerHTML = `<td><span class= "textInput" contenteditable="true" style="width: 99.5%;"></span></td>`
     }
   }
 
