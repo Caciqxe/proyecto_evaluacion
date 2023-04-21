@@ -13,33 +13,33 @@ while (x<numAlternativas) {
         actividades.innerHTML +=
         `
         <div id=Alt${x+1} class="segmentos">
-            <span class="alternativaStilo">Alternativa N° ${x+1}: ${respuestaTabla.rows[0][1]}</span>
+            <span class="alternativaStilo" style="width: 99.8%;">Alternativa N° ${x+1}: ${respuestaTabla.rows[0][1]}</span>
             <span class="bajada">PREPARACION DE LA ALTERNATIVA N° ${x+1}</span>
-            <span id="preparacion_alt${x+1}" class="textInput" contenteditable="true">${infoSession[0].preparacionAlt}</span>
+            <span id="preparacion_alt${x+1}" class="textInput" contenteditable="true"  style="width: 99.5%;">${infoSession[0].preparacionAlt}</span>
             <span class="bajada">DESCRIPCIÓN BÁSICA DE LA ALTERNATIVA ${x+1}</span>
-            <span id="descripcion_alt${x+1}" class="textInput" contenteditable="true">${infoSession[0].descripcionAlt}</span>
+            <span id="descripcion_alt${x+1}" class="textInput" contenteditable="true" style="width: 99.5%;">${infoSession[0].descripcionAlt}</span>
         </div>
         `
     } else if (respuestaTabla != null) {
         actividades.innerHTML +=
         `
         <div id=Alt${x+1} class="segmentos">
-            <span class="alternativaStilo">Alternativa N° ${x+1}</span>
+            <span class="alternativaStilo" style="width: 99.8%;">Alternativa N° ${x+1}</span>
             <span class="bajada">PREPARACION DE LA ALTERNATIVA N° ${x+1}</span>
-            <span id="preparacion_alt${x+1}" class="textInput" contenteditable="true">${respuestaTabla.rows[0][1]}</span>
+            <span id="preparacion_alt${x+1}" class="textInput" contenteditable="true" style="width: 99.5%;">${respuestaTabla.rows[0][1]}</span>
             <span class="bajada">DESCRIPCIÓN BÁSICA DE LA ALTERNATIVA ${x+1}</span>
-            <span id="descripcion_alt${x+1}" class="textInput" contenteditable="true">${respuestaTabla.rows[0][2]}</span>
+            <span id="descripcion_alt${x+1}" class="textInput" contenteditable="true" style="width: 99.5%;">${respuestaTabla.rows[0][2]}</span>
         </div>
         `
     } else {
         actividades.innerHTML +=
         `
         <div id=Alt${x+1} class="segmentos">
-            <span class="alternativaStilo">Alternativa N° ${x+1}</span>
+            <span class="alternativaStilo" style="width: 99.8%;">Alternativa N° ${x+1}</span>
             <span class="bajada">PREPARACION DE LA ALTERNATIVA N° ${x+1}</span>
-            <span id="preparacion_alt${x+1}" class="textInput" contenteditable="true"></span>
+            <span id="preparacion_alt${x+1}" class="textInput" contenteditable="true" style="width: 99.5%;"></span>
             <span class="bajada">DESCRIPCIÓN BÁSICA DE LA ALTERNATIVA ${x+1}</span>
-            <span id="descripcion_alt${x+1}" class="textInput" contenteditable="true"></span>
+            <span id="descripcion_alt${x+1}" class="textInput" contenteditable="true" style="width: 99.5%;"></span>
         </div>
         `
     }

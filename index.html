@@ -1,118 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <meta charset="UTF-8" />
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <title>HerramientaGMG</title>
-  </head>
 
-  <body>
-    <nav class="navBar">
-      <h1>METODOLOGÍA GENERAL PARA LA FORMULACIÓN DE PROYECTOS DE INVERSIÓN</h1>
-    </nav>
-    <div class="buttonContainer">
-      <button id="guardarComo" class="botonSesion">GUARDAR COMO</button>
-      <button id="abrirArchivo" class="botonSesion">ABRIR ARCHIVO</button>
-      <button id="grabarTodo" class="botonSesion">GRABAR SESIÓN</button>
-      <button id="eliminarTodo" class="botonSesion">NUEVO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </button>
+<head>
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <meta charset="UTF-8" />
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <title>HerramientaGMG</title>
+</head>
+
+<body>
+  <nav class="navBar">
+    <h1>METODOLOGÍA GENERAL PARA LA FORMULACIÓN DE PROYECTOS DE INVERSIÓN</h1>
+  </nav>
+  <div class="buttonContainer">
+    <button id="guardarComo" class="botonSesion">GUARDAR COMO</button>
+    <button id="abrirArchivo" class="botonSesion">ABRIR ARCHIVO</button>
+    <button id="grabarTodo" class="botonSesion">GRABAR SESIÓN</button>
+    <button id="eliminarTodo" class="botonSesion">NUEVO
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </button>
+  </div>
+  <main>
+    <div class="contenedor_1">
+      <div class="projectInfo">
+        <div class="div1">
+          <p>Nombre del Proyecto</p>
+        </div>
+        <div class="div2">
+          <input type="text" name="" id="nombreProyecto">
+        </div>
+        <div class="div3">
+          <p>Descripción del Proyecto</p>
+        </div>
+        <div class="div4">
+          <textarea type="text" name="" id="descripcionProyecto"></textarea>
+        </div>
+        <div class="div5">
+          <p>Horizonte de Evaluación (Años)</p>
+        </div>
+        <div class="div6">
+          <input type="number" name="" id="horizonteEvaluacion">
+        </div>
+        <div class="div7">
+          <p>N° Alternativas</p>
+        </div>
+        <div class="div8">
+          <input type="number" name="" id="numeroAlternativas">
+        </div>
+      </div>
+      <div id="contenedorAlternativas">
+      </div>
     </div>
-    <main>
-      <div class="contenedor_1">
-        <div class="projectInfo">
-          <div class="div1">
-            <p>Nombre del Proyecto</p>
-          </div>
-          <div class="div2">
-            <input type="text" name="" id="nombreProyecto">
-          </div>
-          <div class="div3">
-            <p>Descripción del Proyecto</p>
-          </div>
-          <div class="div4">
-            <textarea type="text" name="" id="descripcionProyecto"></textarea>
-          </div>
-          <div class="div5">
-            <p>Horizonte de Evaluación (Años)</p>
-          </div>
-          <div class="div6">
-            <input type="number" name="" id="horizonteEvaluacion">
-          </div>
-          <div class="div7">
-           <p>N° Alternativas</p>
-          </div>
-          <div class="div8">
-            <input type="number" name="" id="numeroAlternativas">
-          </div>
-        </div>
-        <!-- <div class="grido">
-          <div class="div1">
-            <p>Nombre del Proyecto</p>
-          </div>
-          <div class="div2">
-            <input type="text" name="" id="nombreProyecto">
-          </div>
-          <div class="div3">
-            Descripción del Proyecto
-          </div>
-          <div class="div4">
-
-            <input type="text" name="" id="descripcionProyecto"> 
-          </div>
-          <div class="div5">
-            Horizonte de Evaluación (Años)
-          </div>
-          <div class="div6">
-
-            <input type="text" name="" id="horizonteEvaluacion">
-          </div>
-          <div class="div7">
-            N° Alternativas
-          </div>
-          <div class="div8">
-
-            <input type="text" name="" id="numeroAlternativas">
-          </div>
-        </div>
-         -->
-        <div id="contenedorAlternativas">
-
-        </div>
-
-        <!--         <input type="text" name="" id="n_componentes">
-        <button id="prueba">aaaaaaaaaaaaaaaaa</button>
-        <p id="text"></p> -->
+    <div class="contenedor_2">
+      <div>
+        <p>MÓDULOS</p>
       </div>
-      <div class="contenedor_2">
-        <div>
-          <p>MÓDULOS</p>
-        </div>
-      </div>
-      <div class="contenedor_3">
-        <lu>
-          <li><button><a id="modulo_1" href="./pages/modulo_1.html" >Módulo 1: IDENTIFICACIÓN</a></button></li>
-          <li><button><a id="modulo_2" href="./pages/modulo_2.html" >Módulo 2: ANÁLISIS DE INVOLUCRADOS</a></button></li>
-          <li><button><a id="modulo_3" href="./pages/modulo_3.html" >Módulo 3: POBLACIÓN BENEFICIARIA Y DE ANÁLISIS DE DEMANDA</a></button></li>
-          <li><button><a id="modulo_4" href="./pages/modulo_4.html" >Módulo 4: ASPECTOS TÉCNICOS</a></button></li>
-          <li><button><a id="modulo_5" href="./pages/modulo_5.html" >Módulo 5: EVALUACIÓN DE ALTERNATIVAS</a></button></li>
-          <li><button><a id="modulo_6" href="./pages/modulo_6.html" >Módulo 6: ESQUEMA INSTITUCIONAL</a></button></li>
-          <li><button><a id="modulo_7" href="./pages/modulo_7.html" >Módulo 7: FINANCIACIÓN</a></button></li>
-          <li><button><a id="modulo_8" href="./pages/modulo_8.html" >Módulo 8: MARCO LÓGICO</a></button></li>
-          <li><button><a id="modulo_9" href="./pages/modulo_9.html" >Módulo 9: CRONOGRAMA</a></button></li>
-          <li><button><a id="modulo_10" href="./pages/modulo_10.html" >Módulo 10: EVALUACIÓN INTEGRAL DEL PROYECTO</a></button></li>
-        </lu>
-      </div>
-    </main>
-<!--     <script type="module" src="./array/proyectoArray.js"></script> -->
-    <script type="module" src="./js/controles.js"></script>
-<!-- <script type="module" src="./js/controlesEditado.js"></script> -->
-  </body>
+    </div>
+    <div class="contenedor_3">
+      <lu>
+        <li><button><a id="modulo_1" href="./pages/modulo_1.html">Módulo 1: IDENTIFICACIÓN</a></button></li>
+        <li><button><a id="modulo_2" href="./pages/modulo_2.html">Módulo 2: ANÁLISIS DE INVOLUCRADOS</a></button></li>
+        <li><button><a id="modulo_3" href="./pages/modulo_3.html">Módulo 3: POBLACIÓN BENEFICIARIA Y DE ANÁLISIS DE
+              DEMANDA</a></button></li>
+        <li><button><a id="modulo_4" href="./pages/modulo_4.html">Módulo 4: ASPECTOS TÉCNICOS</a></button></li>
+        <li><button><a id="modulo_5" href="./pages/modulo_5.html">Módulo 5: EVALUACIÓN DE ALTERNATIVAS</a></button></li>
+        <li><button><a id="modulo_6" href="./pages/modulo_6.html">Módulo 6: ESQUEMA INSTITUCIONAL</a></button></li>
+        <li><button><a id="modulo_7" href="./pages/modulo_7.html">Módulo 7: FINANCIACIÓN</a></button></li>
+        <li><button><a id="modulo_8" href="./pages/modulo_8.html">Módulo 8: MARCO LÓGICO</a></button></li>
+        <li><button><a id="modulo_9" href="./pages/modulo_9.html">Módulo 9: CRONOGRAMA</a></button></li>
+        <li><button><a id="modulo_10" href="./pages/modulo_10.html">Módulo 10: EVALUACIÓN INTEGRAL DEL
+              PROYECTO</a></button></li>
+      </lu>
+    </div>
+  </main>
+  <!--     <script type="module" src="./array/proyectoArray.js"></script> -->
+  <script type="module" src="./js/controles.js"></script>
+  <!-- <script type="module" src="./js/controlesEditado.js"></script> -->
+</body>
+
 </html>

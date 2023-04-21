@@ -153,8 +153,6 @@ main {
 
     button {
       color: white;
-      /*         border: 2px #4472c4 solid;
-            background-color: #4472c4; */
       border: 2px #071334 solid;
       background-color: #071334;
       margin-top: 2%;
@@ -162,7 +160,6 @@ main {
       width: 130%;
       height: 2.5rem;
       border-radius: 5px;
-      //box-shadow: -4px 5px 4px -2px black;
       transition: 1s;
     }
 
@@ -205,7 +202,8 @@ main {
     background-color: whitesmoke;
     color: black;
     width: 100%;
-    border-top: 0px black solid;
+    //border-top: 0px black solid;
+    border: 0px;
     display: inline-block;
     padding: 2px
   }

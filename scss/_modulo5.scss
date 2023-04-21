@@ -53,9 +53,10 @@
 input{
     background-color: whitesmoke;
     color: black;
-    border-left: 1px black solid;
+    border: 0px;
+    /* border-left: 1px black solid;
     border-right: 1px black solid;
-    border-bottom: 1px black solid;
+    border-bottom: 1px black solid; */
     width: 100%;
     display: inline-block;
     padding-bottom: 4px;

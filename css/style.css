@@ -120,8 +120,6 @@ main {
     list-style: none; }
     .contenedor_3 lu button {
       color: white;
-      /*         border: 2px #4472c4 solid;
-            background-color: #4472c4; */
       border: 2px #071334 solid;
       background-color: #071334;
       margin-top: 2%;
@@ -157,7 +155,7 @@ main {
     background-color: whitesmoke;
     color: black;
     width: 100%;
-    border-top: 0px black solid;
+    border: 0px;
     display: inline-block;
     padding: 2px; }
 
@@ -228,9 +226,9 @@ canvas {
 .textInput {
   background-color: whitesmoke;
   color: black;
-  border-left: 1px black solid;
-  border-right: 1px black solid;
-  border-bottom: 1px black solid;
+  /* border-left: 1px black solid;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid; */
   width: 100%;
   display: inline-block;
   padding: 2px; }
@@ -298,9 +296,9 @@ table {
 .respuestaTabla {
   background-color: whitesmoke;
   color: black;
-  border-left: 1px black solid;
-  border-right: 1px black solid;
-  border-bottom: 1px black solid;
+  /*     border-left: 1px black solid;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid; */
   width: 100%;
   display: inline-block;
   padding: 2px; }
@@ -318,9 +316,9 @@ table {
 .pruebaTabla {
   background-color: whitesmoke;
   color: black;
-  border-left: 1px black solid;
-  border-right: 1px black solid;
-  border-bottom: 1px black solid;
+  /*     border-left: 1px black solid;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid; */
   width: 100%;
   display: inline-block;
   padding: 2px; }
@@ -398,9 +396,10 @@ a {
 input {
   background-color: whitesmoke;
   color: black;
-  border-left: 1px black solid;
-  border-right: 1px black solid;
-  border-bottom: 1px black solid;
+  border: 0px;
+  /* border-left: 1px black solid;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid; */
   width: 100%;
   display: inline-block;
   padding-bottom: 4px; }
