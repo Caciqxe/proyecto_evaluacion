@@ -245,7 +245,7 @@ const agregarFila = (event) => {
   var row = table.insertRow(-1);
   var cell1 = row.insertCell(-1);
 
-  cell1.innerHTML = `<td><span class="textInput" contenteditable="true"></span></td>`
+  cell1.innerHTML = `<td><span class="textInput" contenteditable="true" style="width: 99.5%;"></span></td>`
 
   }
 }

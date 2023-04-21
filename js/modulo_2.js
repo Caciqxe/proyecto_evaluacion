@@ -41,9 +41,9 @@ if (identificacionInteres != null) {
         iterarIden.innerHTML +=
         `
         <tr>
-            <td><span contenteditable="true" class="textInput">${identificacionInteres.rows[x][0]}</span></td>
-            <td><span contenteditable="true" class="textInput">${identificacionInteres.rows[x][1]}</span></td>
-            <td><span contenteditable="true" class="textInput">${identificacionInteres.rows[x][2]}</span></td>
+            <td><span contenteditable="true" class="textInput" style="width: 99%;>${identificacionInteres.rows[x][0]}</span></td>
+            <td><span contenteditable="true" class="textInput" style="width: 99%;>${identificacionInteres.rows[x][1]}</span></td>
+            <td><span contenteditable="true" class="textInput" style="width: 99%;>${identificacionInteres.rows[x][2]}</span></td>
         </tr>
         `
 
@@ -62,9 +62,9 @@ if (identificacionInteres != null) {
         
     </tr>
     <tr>
-        <td><span contenteditable="true" class="textInput" id="identificacion_interes_actor_1"></span></td>
-        <td><span contenteditable="true" class="textInput" id="identificacion_interes_problema_1"></span></td>
-        <td><span contenteditable="true" class="textInput" id="identificacion_interes_propuesta_1"></span></td>
+        <td><span contenteditable="true" class="textInput" id="identificacion_interes_actor_1" style="width: 99%;"></span></td>
+        <td><span contenteditable="true" class="textInput" id="identificacion_interes_problema_1" style="width: 99%;"></span></td>
+        <td><span contenteditable="true" class="textInput" id="identificacion_interes_propuesta_1" style="width: 99%;"></span></td>
     </tr>
     </tbody>
     `
@@ -141,8 +141,8 @@ if (estrategiasVinculacion != null) {
         <th style="width: 7.5cm;" >POSICIÓN FRENTE AL PROYECTO</th>
     </tr>
     <tr>
-        <td><span contenteditable="true" class="textInput" id="estrategias_vinculacion_actor_1"></span></td>
-        <td><span contenteditable="true" class="textInput" id="estrategias_vinculacion_roles_1"></span></td>
+        <td><span contenteditable="true" class="textInput" id="estrategias_vinculacion_actor_1" style="width: 99%;" ></span></td>
+        <td><span contenteditable="true" class="textInput" id="estrategias_vinculacion_roles_1" style="width: 99%;"></span></td>
         <td class="celdaPosicion" id="estrategias_vinculacion_proyecto_1" style="display: flex; justify-content: center; align-items: center; height: 23px">
             <span style="display: none;"></span>
             <select class="dropdownPosicion"></select>
@@ -266,20 +266,21 @@ const agregarFila = (event) => {
     if (id_loc === 'tabla_participacion_comunitaria') {
         var cell1 = row.insertCell(-1);
         var cell2 = row.insertCell(-1);
-        cell1.innerHTML = `<span contenteditable="true" class="textInput" id=participacion_comunitaria_actor_${rowCount}></span>`
-        cell2.innerHTML = `<span contenteditable="true" class="textInput" id=participacion_comunitaria_vinculacion_${rowCount}></span>`
+        cell1.innerHTML = `<span contenteditable="true" class="textInput" id=participacion_comunitaria_actor_${rowCount} style="width: 99%;"></span>`
+        cell2.innerHTML = `<span contenteditable="true" class="textInput" id=participacion_comunitaria_vinculacion_${rowCount} style="width: 99%;"></span>`
 
     } else if (id_loc === 'tabla_estrategias_vinculacion') {
         var cell1 = row.insertCell(-1);
         var cell2 = row.insertCell(-1);
         var cell3 = row.insertCell(-1);
-        cell1.innerHTML = `<span contenteditable="true" class="textInput" id="estrategias_vinculacion_actor_${rowCount}"></span>`
-        cell2.innerHTML = `<span contenteditable="true" class="textInput" id="estrategias_vinculacion_roles_${rowCount}"></span>`
+        cell1.innerHTML = `<span contenteditable="true" class="textInput" id="estrategias_vinculacion_actor_${rowCount}" style="width: 99%;"></span>`
+        cell2.innerHTML = `<span contenteditable="true" class="textInput" id="estrategias_vinculacion_roles_${rowCount} " style="width: 99%;"></span>`
 
         cell3.className = "celdaPosicion"
+        cell3.style = "display: flex; justify-content: center; align-items: center; height: 23px"
         cell3.innerHTML = 
         `
-        <span style="display: none;" id="estrategias_vinculacion_proyecto_${rowCount}"></span>
+        <span style="display: none;" id="estrategias_vinculacion_proyecto_${rowCount} " style="width: 99%;"></span>
         <select class="dropdownPosicion"></select>
         `;
         
@@ -289,9 +290,9 @@ const agregarFila = (event) => {
         var cell1 = row.insertCell(-1);
         var cell2 = row.insertCell(-1);
         var cell3 = row.insertCell(-1);
-        cell1.innerHTML = `<span contenteditable="true" class="textInput" id="identificacion_interes_actor_${rowCount}"></span>`
-        cell2.innerHTML = `<span contenteditable="true" class="textInput" id="identificacion_interes_problema_${rowCount}"></span>`
-        cell3.innerHTML = `<span contenteditable="true" class="textInput" id="identificacion_interes_propuesta_${rowCount}"></span>`
+        cell1.innerHTML = `<span contenteditable="true" class="textInput" id="identificacion_interes_actor_${rowCount} " style="width: 99%;"></span>`
+        cell2.innerHTML = `<span contenteditable="true" class="textInput" id="identificacion_interes_problema_${rowCount} " style="width: 99%;"></span>`
+        cell3.innerHTML = `<span contenteditable="true" class="textInput" id="identificacion_interes_propuesta_${rowCount} " style="width: 99%;"></span>`
     }
 
     }

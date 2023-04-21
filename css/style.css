@@ -340,6 +340,13 @@ a {
   max-width: 250px;
   padding: 10px 0 24px 0; }
 
+.secondFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 330px;
+  padding: 20px 0 24px 0; }
+
 .tablaModulo4 {
   display: block;
   overflow-x: auto;
