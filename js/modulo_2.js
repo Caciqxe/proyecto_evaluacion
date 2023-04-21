@@ -138,12 +138,12 @@ if (estrategiasVinculacion != null) {
     <tr>
         <th class="notaActor" style="width: 7.5cm">ACTOR</th>
         <th style="width: 7.5cm">DEFINICIÓN DE ROLES FRENTE AL PROYECTO</th>
-        <th style="width: 7.5cm">POSICIÓN FRENTE AL PROYECTO</th>
+        <th style="width: 7.5cm;" >POSICIÓN FRENTE AL PROYECTO</th>
     </tr>
     <tr>
         <td><span contenteditable="true" class="textInput" id="estrategias_vinculacion_actor_1"></span></td>
         <td><span contenteditable="true" class="textInput" id="estrategias_vinculacion_roles_1"></span></td>
-        <td class="celdaPosicion" id="estrategias_vinculacion_proyecto_1">
+        <td class="celdaPosicion" id="estrategias_vinculacion_proyecto_1" style="display: flex; justify-content: center; align-items: center; height: 23px">
             <span style="display: none;"></span>
             <select class="dropdownPosicion"></select>
         </td>
