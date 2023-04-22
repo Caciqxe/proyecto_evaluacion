@@ -56,9 +56,9 @@ while (x<numAlternativas) {
                                 <span style="display: none;"></span>
                                 <select id="unidadMedidaConcepto1" class="dropdownUnidades"></select>
                             </td>
-                            <td><span style="text-align:right" class= "textInput" contenteditable="true"></span></td>
-                            <td><span style="text-align:right" class= "textInput" contenteditable="true">0</span></td>
-                            <td><span style="text-align:right" class= "textInput" contenteditable="false">0</span></td>
+                            <td><span style="text-align:right; width: 97%" class= "textInput" contenteditable="true"></span></td>
+                            <td><span style="text-align:right; width: 97%" class= "textInput" contenteditable="true">0</span></td>
+                            <td><span style="text-align:right; width: 97%" class= "textInput" contenteditable="false">0</span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                         <tr>
                     </tbody>
@@ -69,7 +69,7 @@ while (x<numAlternativas) {
                     <tbody>
                         <tr>
                             <td class="bajada">TOTAL VALOR ACTUAL O INVERSIÓN DEL PROYECTO<span></span></td>
-                            <td style="text-align:right"><span id="totalPaso6_alt${x+1}_A" class="textInput" contenteditable="false">0</span></td>
+                            <td style="text-align:right"><span style="width:90%" id="totalPaso6_alt${x+1}_A" class="textInput" contenteditable="false">0</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -161,9 +161,9 @@ while (x<numAlternativas) {
                     <span style="display: none;"></span>
                     <select id="unidadMedidaConcepto1" class="dropdownUnidades" value="${infoSession6A.rows[y_a][1]}"></select>
                 </td>
-                <td><span style="text-align:right" class= "textInput" contenteditable="true">${infoSession6A.rows[y_a][2]}</span></td>
-                <td><span style="text-align:right" class= "textInput" contenteditable="true">${infoSession6A.rows[y_a][3]}</span></td>
-                <td><span style="text-align:right" class= "textInput" contenteditable="false">${infoSession6A.rows[y_a][3]*infoSession6A.rows[y_a][2]}</span></td>
+                <td><span style="text-align:right; width: 97%" class= "textInput" contenteditable="true">${infoSession6A.rows[y_a][2]}</span></td>
+                <td><span style="text-align:right; width: 97%" class= "textInput" contenteditable="true">${infoSession6A.rows[y_a][3]}</span></td>
+                <td><span style="text-align:right; width: 97%" class= "textInput" contenteditable="false">${infoSession6A.rows[y_a][3]*infoSession6A.rows[y_a][2]}</span></td>
                 <td><span class= "textInput" contenteditable="true">${infoSession6A.rows[y_a][5]}</span></td>
             </tr>
             `
@@ -265,9 +265,9 @@ const agregarFila = (event) => {
         <select class="dropdownUnidades"></select>
         `
 
-        cell3.innerHTML = `<td><span style="text-align:right" class= "textInput" contenteditable="true"></span></td>`
-        cell4.innerHTML = `<td><span style="text-align:right" class= "textInput" contenteditable="true">0</span></td>`
-        cell5.innerHTML = `<td><span style="text-align:right" class= "textInput" contenteditable="false">0</span></td>`
+        cell3.innerHTML = `<td><span style="text-align:right; width:97%" class= "textInput" contenteditable="true"></span></td>`
+        cell4.innerHTML = `<td><span style="text-align:right; width:97%" class= "textInput" contenteditable="true">0</span></td>`
+        cell5.innerHTML = `<td><span style="text-align:right; width:97%" class= "textInput" contenteditable="false">0</span></td>`
         cell6.innerHTML = `<td><span class= "textInput" contenteditable="true"></span></td>`
     
         crearOpcionesUnidades(row)

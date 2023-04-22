@@ -261,19 +261,19 @@ while (x<numAlternativas) {
                         <tr>
                             <td class="bajada"><span >COBERTURA (Número de Beneficiarios primer año y al finalizar la ejecución del proyecto)</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso3.rows[0][1]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso3.rows[0][2]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width: 98%">${tablaPaso3.rows[0][2]}</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso3.rows[0][3]}</span></td>
                         </tr>
                         <tr>
                             <td class="bajada"><span>CAPACIDAD INSTALADA PROPUESTA</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso3.rows[1][1]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso3.rows[1][2]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width: 98%">${tablaPaso3.rows[1][2]}</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso3.rows[1][3]}</span></td>
                         </tr>
                         <tr>
                             <td class="bajada"><span>AMPLIACIÓN DE CAPACIDAD PREVISTA: DIMENSIÓN Y AÑO</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso3.rows[2][1]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso3.rows[2][2]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width: 98%">${tablaPaso3.rows[2][2]}</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso3.rows[2][3]}</span></td>
                         </tr>
                     </tbody>
@@ -298,19 +298,19 @@ while (x<numAlternativas) {
                         <tr>
                             <td class="bajada"><span >COBERTURA (Número de Beneficiarios primer año y al finalizar la ejecución del proyecto)</span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width: 98%"></span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                         </tr>
                         <tr>
                             <td class="bajada"><span>CAPACIDAD INSTALADA PROPUESTA</span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width: 98%"></span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                         </tr>
                         <tr>
                             <td class="bajada"><span>AMPLIACIÓN DE CAPACIDAD PREVISTA: DIMENSIÓN Y AÑO</span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width: 98%"></span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                         </tr>
                     </tbody>
@@ -347,7 +347,7 @@ while (x<numAlternativas) {
             bodyPaso4.innerHTML +=
             `
             <tr>
-                <td><span class= "textInput" contenteditable="true">${tablaPaso4.rows[l][0]}</span></td>
+                <td><span style="width: 98%"  class= "textInput" contenteditable="true">${tablaPaso4.rows[l][0]}</span></td>
                 <td><span class= "textInput" contenteditable="true">${tablaPaso4.rows[l][1]}</span></td>
                 <td class="celdaImpacto">
                     <span style="display: none;"></span>
@@ -379,7 +379,7 @@ while (x<numAlternativas) {
                             <th style="width:15cm">ESTRATÉGIA Y MEDIDAS DE MITIGACIÓN</th>
                         </tr>
                         <tr>
-                            <td><span class= "textInput" contenteditable="true"></span></td>
+                            <td><span style="width: 98%" class= "textInput" contenteditable="true"></span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                             <td class="celdaImpacto">
                                 <span style="display: none;"></span>
@@ -421,151 +421,151 @@ while (x<numAlternativas) {
                         <tr>
                             <td class="bajada" rowspan="7">ALTA</td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[0][1]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[0][2]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[0][3]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[0][4]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[0][2]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[0][3]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[0][4]}</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[0][5]}</span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[1][0]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[1][1]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[1][2]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[1][3]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[1][1]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[1][2]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[1][3]}</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[1][4]}</span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[2][0]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[2][1]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[2][2]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[2][3]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[2][1]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[2][2]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[2][3]}</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[2][4]}</span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[3][0]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[3][1]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[3][2]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[3][3]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[3][1]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[3][2]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[3][3]}</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[3][4]}</span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[4][0]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[4][1]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[4][2]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[4][3]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[4][1]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[4][2]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[4][3]}</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[4][4]}</span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[5][0]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[5][1]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[5][2]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[5][3]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[5][1]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[5][2]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[5][3]}</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[5][4]}</span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[6][0]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[6][1]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[6][2]}</span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[6][3]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[6][1]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[6][2]}</span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[6][3]}</span></td>
                             <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[6][4]}</span></td>
                         </tr>
                         <tr>
                         <td class="bajada" rowspan="7">MEDIA</td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[7][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[7][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[7][3]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[7][4]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[7][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[7][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[7][4]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[7][5]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[8][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[8][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[8][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[8][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[8][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[8][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[8][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[8][4]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[9][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[9][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[9][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[9][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[9][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[9][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[9][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[9][4]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[10][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[10][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[10][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[10][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[10][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[10][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[10][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[10][4]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[11][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[11][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[11][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[11][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[11][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[11][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[11][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[11][4]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[12][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[12][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[12][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[12][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[12][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[12][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[12][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[12][4]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[13][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[13][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[13][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf">${tablaPaso5.rows[13][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[13][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[13][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf">${tablaPaso5.rows[13][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[13][4]}</span></td>
                     </tr>
                     <tr>
                         <td class="bajada" rowspan="7">BAJO</td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[14][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[14][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[14][3]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[14][4]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[14][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[14][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[14][4]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[14][5]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[15][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[15][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[15][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[15][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[15][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[15][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[15][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[15][4]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[16][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[16][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[16][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[16][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[16][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[16][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[16][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[16][4]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[17][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[17][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[17][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[17][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[17][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[17][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[17][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[17][4]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[18][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[18][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[18][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[18][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[18][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[18][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[18][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[18][4]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[19][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[19][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[19][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[19][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[19][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[19][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[19][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[19][4]}</span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[20][0]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[20][1]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[20][2]}</span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center">${tablaPaso5.rows[20][3]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[20][1]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[20][2]}</span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ">${tablaPaso5.rows[20][3]}</span></td>
                         <td><span class= "textInput" contenteditable="true">${tablaPaso5.rows[20][4]}</span></td>
                     </tr>
                     </tbody>
@@ -595,151 +595,151 @@ while (x<numAlternativas) {
                         <tr>
                             <td class="bajada" rowspan="7">ALTA</td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                         </tr>
                         <tr>
                             <td><span class= "textInput" contenteditable="true"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
-                            <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
+                            <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                             <td><span class= "textInput" contenteditable="true"></span></td>
                         </tr>
                         <tr>
                         <td class="bajada" rowspan="7">MEDIA</td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center;background-color:#d6afaf"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% ;background-color:#d6afaf"></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td class="bajada" rowspan="7">BAJO</td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     <tr>
                         <td><span class= "textInput" contenteditable="true"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
-                        <td><span class= "textInput" contenteditable="true" style="text-align:center"></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
+                        <td><span class= "textInput" contenteditable="true" style="text-align:center; width:96% "></span></td>
                         <td><span class= "textInput" contenteditable="true"></span></td>
                     </tr>
                     </tbody>

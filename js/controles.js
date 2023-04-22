@@ -74,7 +74,7 @@ function crearAlternativas() {
         contenedorAlternativas.innerHTML += 
         `
         <article class="articulosAlternativa" id="alt${x+1}">
-            <h1>Alternativa ${x+1}</h1>
+                <h1>Alternativa ${x+1}</h1>
             <span>Nombre de alternativa: <input style="width: 99.4%; margin: 5px 0;"  type="text" value="${soloAlt > x ? JSON.parse(sessionStorage.getItem(`Alt_numero_${x+1}`)).name : ""}" name="" class="nombreAlt" id="nombreAlternativa${x}"></span>
             <span>Número de componente: <input style="width: 99.4%; margin: 5px 0;" type="text" value="${soloAlt > x ? JSON.parse(sessionStorage.getItem(`Alt_numero_${x+1}`)).numeroCom : ""}"name="" class="numeroCom" id="numeroComponente${x}"></span>
         </article>`

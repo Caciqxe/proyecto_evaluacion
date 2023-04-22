@@ -73,12 +73,12 @@ while (x<numAlternativas) {
                                 <span style="display: none;"></span>
                                 <select class="my-dropdown" id="unidMed_alt${x+1}_com${y+1}_act1" value="${storage.rows[z][1]}"></select>
                             </td>
-                            <td><input id= "cantReq_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][2]}" contenteditable="true" style="text-align:right"></input></td>
-                            <td><input id= "costUnit_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][3]}" contenteditable="true" style="text-align:right"></input></td>
-                            <td><input id= "valTotal_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][4]}" readonly="true" style="text-align:right"></input></td>
-                            <td><input id= "perDepre_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][5]}" contenteditable="true"></input></td>
-                            <td><input id= "riesAsoc_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][6]}" contenteditable="true"></input></td>
-                            <td><input id= "afectPos_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][7]}" contenteditable="true"></input></td>
+                            <td><input style="width: 97%" id= "cantReq_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][2]}" contenteditable="true" style="text-align:right"></input></td>
+                            <td><input style="width: 97%" id= "costUnit_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][3]}" contenteditable="true" style="text-align:right"></input></td>
+                            <td><input style="width: 97%" id= "valTotal_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][4]}" readonly="true" style="text-align:right"></input></td>
+                            <td><input style="width: 97%" id= "perDepre_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][5]}" contenteditable="true"></input></td>
+                            <td><input style="width: 97%" id= "riesAsoc_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][6]}" contenteditable="true"></input></td>
+                            <td><input style="width: 97%" id= "afectPos_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][7]}" contenteditable="true"></input></td>
                         </tr>
                 `
         
@@ -114,12 +114,12 @@ while (x<numAlternativas) {
                             <span style="display: none;"></span>
                             <select class="my-dropdown" id="unidMed_alt${x+1}_com${y+1}_act1"></select>
                         </td>
-                        <td><input id= "cantReq_alt${x+1}_com${y+1}_act1" class= "textInput" value=0 contenteditable="true" style="text-align:right"></input></td>
-                        <td><input id= "costUnit_alt${x+1}_com${y+1}_act1" class= "textInput" value=0 contenteditable="true" style="text-align:right"></input></td>
-                        <td><input id= "valTotal_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="false" style="text-align:right"></input></td>
-                        <td><input id= "perDepre_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="true"></input></td>
-                        <td><input id= "riesAsoc_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="true"></input></td>
-                        <td><input id= "afectPos_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="true"></input></td>
+                        <td><input style="width:97%" id= "cantReq_alt${x+1}_com${y+1}_act1" class= "textInput" value=0 contenteditable="true" style="text-align:right"></input></td>
+                        <td><input style="width:97%" id= "costUnit_alt${x+1}_com${y+1}_act1" class= "textInput" value=0 contenteditable="true" style="text-align:right"></input></td>
+                        <td><input style="width:97%" id= "valTotal_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="false" style="text-align:right"></input></td>
+                        <td><input style="width:97%" id= "perDepre_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="true"></input></td>
+                        <td><input style="width:97%" id= "riesAsoc_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="true"></input></td>
+                        <td><input style="width:97%" id= "afectPos_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="true"></input></td>
                     </tr>
                 </tbody>
             </table>
