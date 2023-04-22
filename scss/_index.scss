@@ -210,6 +210,11 @@ main {
     display: inline-block;
     padding: 2px
   }
+
+  &__results {
+    width: 99.4% !important; 
+    margin: 5px 0;
+  }
 }
 
 .botonSesion {

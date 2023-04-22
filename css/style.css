@@ -161,6 +161,9 @@ main {
     border: 0px;
     display: inline-block;
     padding: 2px; }
+  .articulosAlternativa__results {
+    width: 99.4% !important;
+    margin: 5px 0; }
 
 .botonSesion {
   margin-top: 1%;

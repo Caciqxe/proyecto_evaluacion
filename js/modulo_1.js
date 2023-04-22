@@ -151,18 +151,18 @@ while (x < numeroAlternativasInt) {
         for(var j =0; j < cellCount; j++){
             var cell = row.insertCell(j);
             if(j < cellCount-2){
-                cell.innerHTML=`<span style="text-align:center" class="respuestaTabla">${y+1}`;
+                cell.innerHTML=`<span style="text-align:center; width: 97%" class="respuestaTabla">${y+1}`;
             }else if(j < cellCount-1){
               if (detalleComp.rows[y] === undefined) {
-                cell.innerHTML = `<span class= "textInput" contenteditable="true"></span>`
+                cell.innerHTML = `<span style="width:97%" class= "textInput" contenteditable="true"></span>`
               } else{
-                cell.innerHTML = `<span class= "textInput" contenteditable="true">${detalleComp.rows[y][1]}</span>`;
+                cell.innerHTML = `<span style="width:97%" class= "textInput" contenteditable="true">${detalleComp.rows[y][1]}</span>`;
               }
             }else{
               if (detalleComp.rows[y] === undefined) {
-                cell.innerHTML = `<span class= "textInput" contenteditable="true"></span>`;
+                cell.innerHTML = `<span style="width:97%" class= "textInput" contenteditable="true"></span>`;
               } else {
-                cell.innerHTML = `<span class= "textInput" contenteditable="true">${detalleComp.rows[y][2]}</span>`;
+                cell.innerHTML = `<span style="width:97%" class= "textInput" contenteditable="true">${detalleComp.rows[y][2]}</span>`;
               }
             }
         }
