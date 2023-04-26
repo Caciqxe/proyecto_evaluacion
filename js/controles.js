@@ -75,8 +75,8 @@ function crearAlternativas() {
         `
         <article class="articulosAlternativa" id="alt${x+1}">
                 <h1>Alternativa ${x+1}</h1>
-            <span>Nombre de alternativa: <input class="articulosAlternativa__results" type="text" value="${soloAlt > x ? JSON.parse(sessionStorage.getItem(`Alt_numero_${x+1}`)).name : ""}" name="" class="nombreAlt" id="nombreAlternativa${x}"></span>
-            <span>Número de componente: <input class="articulosAlternativa__results" type="text" value="${soloAlt > x ? JSON.parse(sessionStorage.getItem(`Alt_numero_${x+1}`)).numeroCom : ""}"name="" class="numeroCom" id="numeroComponente${x}"></span>
+            <span>Nombre de alternativa: <input type="text" value="${soloAlt > x ? JSON.parse(sessionStorage.getItem(`Alt_numero_${x+1}`)).name : ""}" name="" class="nombreAlt" id="nombreAlternativa${x}"></span>
+            <span>Número de componente: <input type="text" value="${soloAlt > x ? JSON.parse(sessionStorage.getItem(`Alt_numero_${x+1}`)).numeroCom : ""}" name="" class="numeroCom" id="numeroComponente${x}"></span>
         </article>`
         x++
     }  
