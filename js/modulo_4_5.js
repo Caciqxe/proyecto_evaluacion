@@ -131,17 +131,17 @@ while (x<numAlternativas) {
                 <table class="tablaModulo4" id="tablaPaso9frecuente_alt${x+1}_A">
                     <tbody id="bodyPaso9frecuente_alt${x+1}_A">
                         <tr>
-                            <th style="paddin:0px ; min-width:200px" >Elementos Dañados</th>
-                            <th style="paddin:0px ; min-width:100px" >Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px" >Factor Social</th>
-                            <th style="paddin:0px ; min-width:300px" >% de Daños o Pérdidas</th>
-                            <th style="paddin:0px ; min-width:500px" >Costo aproximado de las pérdidas antes (Lps.)</th>
-                            <th style="paddin:0px ; min-width:600px" >Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
-                            <th style="paddin:0px ; min-width:200px" >Efectos Colaterales</th>
-                            <th style="paddin:0px ; min-width:100px" >Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px" >Factor Social</th>
-                            <th style="paddin:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                            <th style="paddin:0px ; min-width:700px" >Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:200px" >Elementos Dañados</th>
+                            <th style="padding:0px ; min-width:100px" >Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px" >Factor Social</th>
+                            <th style="padding:0px ; min-width:300px" >% de Daños o Pérdidas</th>
+                            <th style="padding:0px ; min-width:500px" >Costo aproximado de las pérdidas antes (Lps.)</th>
+                            <th style="padding:0px ; min-width:600px" >Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
+                            <th style="padding:0px ; min-width:200px" >Efectos Colaterales</th>
+                            <th style="padding:0px ; min-width:100px" >Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px" >Factor Social</th>
+                            <th style="padding:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:700px" >Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                         </tr>
                     </tbody>
                 </table>
@@ -149,9 +149,9 @@ while (x<numAlternativas) {
                     <tbody>
                         <tr>
                             <th></th>
-                            <th style="paddin:0px ; min-width:450px" >Costo aproximado de las pérdidas antes (Lps.)</th>
-                            <th style="paddin:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                            <th style="paddin:0px ; min-width:650px" >Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:450px" >Costo aproximado de las pérdidas antes (Lps.)</th>
+                            <th style="padding:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:650px" >Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                         </tr>
                         <tr>
                             <td class="bajada"><span>Sub totales a Precios Privados</span></td>
@@ -185,17 +185,17 @@ while (x<numAlternativas) {
                 <table class="tablaModulo4" id="tablaPaso9extremo_alt${x+1}_A">
                     <tbody id="bodyPaso9extremo_alt${x+1}_A">
                         <tr>
-                            <th style="paddin:0px ; min-width:200px">Elementos Dañados</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:300px">% de Daños o Pérdidas</th>
-                            <th style="paddin:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
-                            <th style="paddin:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
-                            <th style="paddin:0px ; min-width:200px">Efectos Colaterales</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                            <th style="paddin:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:200px">Elementos Dañados</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:300px">% de Daños o Pérdidas</th>
+                            <th style="padding:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
+                            <th style="padding:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
+                            <th style="padding:0px ; min-width:200px">Efectos Colaterales</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                         </tr>
                     </tbody>
                 </table>
@@ -203,9 +203,9 @@ while (x<numAlternativas) {
                 <tbody>
                     <tr>
                         <th></th>
-                        <th style="paddin:0px ; min-width:450px">Costo aproximado de las pérdidas antes (Lps.)</th>
-                        <th style="paddin:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                        <th style="paddin:0px ; min-width:450px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                        <th style="padding:0px ; min-width:450px">Costo aproximado de las pérdidas antes (Lps.)</th>
+                        <th style="padding:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                        <th style="padding:0px ; min-width:450px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Sub totales a Precios Privados</span></td>
@@ -237,9 +237,9 @@ while (x<numAlternativas) {
             <tbody>
                 <tr>
                     <th></th>
-                    <th style="paddin:0px ; min-width:450px">Costo aproximado de las pérdidas antes (Lps.)</th>
-                    <th style="paddin:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                    <th style="paddin:0px ; min-width:450px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                    <th style="padding:0px ; min-width:450px">Costo aproximado de las pérdidas antes (Lps.)</th>
+                    <th style="padding:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                    <th style="padding:0px ; min-width:450px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                 </tr>
                 <tr>
                     <td class="bajada"><span>Total Escenario Frecuente más Extremo a Precios Privados</span></td>
@@ -261,17 +261,17 @@ while (x<numAlternativas) {
                 <table class="tablaModulo4" id="tablaPaso9frecuente_alt${x+1}_B">
                     <tbody id="bodyPaso9frecuente_alt${x+1}_B">
                         <tr>
-                            <th style="paddin:0px ; min-width:200px">Elementos Dañados</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:300px">% de Daños o Pérdidas</th>
-                            <th style="paddin:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
-                            <th style="paddin:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
-                            <th style="paddin:0px ; min-width:200px">Efectos Colaterales</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                            <th style="paddin:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:200px">Elementos Dañados</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:300px">% de Daños o Pérdidas</th>
+                            <th style="padding:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
+                            <th style="padding:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
+                            <th style="padding:0px ; min-width:200px">Efectos Colaterales</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                         </tr>
                     </tbody>
                 </table>
@@ -279,9 +279,9 @@ while (x<numAlternativas) {
                 <tbody>
                     <tr>
                         <th></th>
-                        <th style="paddin:0px ; min-width:450px">Costo aproximado de las pérdidas antes (Lps.)</th>
-                        <th style="paddin:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                        <th style="paddin:0px ; min-width:450px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                        <th style="padding:0px ; min-width:450px">Costo aproximado de las pérdidas antes (Lps.)</th>
+                        <th style="padding:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                        <th style="padding:0px ; min-width:450px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Sub totales a Precios Privados</span></td>
@@ -315,17 +315,17 @@ while (x<numAlternativas) {
                 <table class="tablaModulo4" id="tablaPaso9extremo_alt${x+1}_B">
                     <tbody id="bodyPaso9extremo_alt${x+1}_B">
                         <tr>
-                            <th style="paddin:0px ; min-width:200px">Elementos Dañados</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:300px">% de Daños o Pérdidas</th>
-                            <th style="paddin:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
-                            <th style="paddin:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
-                            <th style="paddin:0px ; min-width:200px">Efectos Colaterales</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                            <th style="paddin:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:200px">Elementos Dañados</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:300px">% de Daños o Pérdidas</th>
+                            <th style="padding:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
+                            <th style="padding:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
+                            <th style="padding:0px ; min-width:200px">Efectos Colaterales</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                         </tr>
                     </tbody>
                 </table>
@@ -333,9 +333,9 @@ while (x<numAlternativas) {
                 <tbody>
                     <tr>
                         <th></th>
-                        <th style="paddin:0px ; min-width:450px">Costo aproximado de las pérdidas antes (Lps.)</th>
-                        <th style="paddin:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                        <th style="paddin:0px ; min-width:450px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                        <th style="padding:0px ; min-width:450px">Costo aproximado de las pérdidas antes (Lps.)</th>
+                        <th style="padding:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                        <th style="padding:0px ; min-width:450px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Sub totales a Precios Privados</span></td>
@@ -367,9 +367,9 @@ while (x<numAlternativas) {
             <tbody>
                 <tr>
                     <th></th>
-                    <th style="paddin:0px ; min-width:450px">Costo aproximado de las pérdidas antes (Lps.)</th>
-                    <th style="paddin:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                    <th style="paddin:0px ; min-width:450px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                    <th style="padding:0px ; min-width:450px">Costo aproximado de las pérdidas antes (Lps.)</th>
+                    <th style="padding:0px ; min-width:450px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                    <th style="padding:0px ; min-width:450px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                 </tr>
                 <tr>
                     <td class="bajada"><span>Total Escenario Frecuente más Extremo a Precios Privados</span></td>
@@ -501,17 +501,17 @@ while (x<numAlternativas) {
                 <table class="tablaModulo4" id="tablaPaso9frecuente_alt${x+1}_A">
                     <tbody id="bodyPaso9frecuente_alt${x+1}_A">
                         <tr>
-                            <th style="paddin:0px ; min-width:200px" >Elementos Dañados</th>
-                            <th style="paddin:0px ; min-width:100px" >Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px" >Factor Social</th>
-                            <th style="paddin:0px ; min-width:300px" >% de Daños o Pérdidas</th>
-                            <th style="paddin:0px ; min-width:500px" >Costo aproximado de las pérdidas antes (Lps.)</th>
-                            <th style="paddin:0px ; min-width:600px" >Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
-                            <th style="paddin:0px ; min-width:200px" >Efectos Colaterales</th>
-                            <th style="paddin:0px ; min-width:100px" >Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px" >Factor Social</th>
-                            <th style="paddin:0px ; min-width:500px"  class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                            <th style="paddin:0px ; min-width:700px" >Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:200px" >Elementos Dañados</th>
+                            <th style="padding:0px ; min-width:100px" >Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px" >Factor Social</th>
+                            <th style="padding:0px ; min-width:300px" >% de Daños o Pérdidas</th>
+                            <th style="padding:0px ; min-width:500px" >Costo aproximado de las pérdidas antes (Lps.)</th>
+                            <th style="padding:0px ; min-width:600px" >Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
+                            <th style="padding:0px ; min-width:200px" >Efectos Colaterales</th>
+                            <th style="padding:0px ; min-width:100px" >Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px" >Factor Social</th>
+                            <th style="padding:0px ; min-width:500px"  class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:700px" >Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                         </tr>
                     </tbody>
                 </table>
@@ -555,17 +555,17 @@ while (x<numAlternativas) {
                 <table class="tablaModulo4" id="tablaPaso9extremo_alt${x+1}_A">
                     <tbody id="bodyPaso9extremo_alt${x+1}_A">
                         <tr>
-                            <th style="paddin:0px ; min-width:200px">Elementos Dañados</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:300px">% de Daños o Pérdidas</th>
-                            <th style="paddin:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
-                            <th style="paddin:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
-                            <th style="paddin:0px ; min-width:200px">Efectos Colaterales</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                            <th style="paddin:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:200px">Elementos Dañados</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:300px">% de Daños o Pérdidas</th>
+                            <th style="padding:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
+                            <th style="padding:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
+                            <th style="padding:0px ; min-width:200px">Efectos Colaterales</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                         </tr>
                     </tbody>
                 </table>
@@ -631,17 +631,17 @@ while (x<numAlternativas) {
                 <table class="tablaModulo4" id="tablaPaso9frecuente_alt${x+1}_B">
                     <tbody id="bodyPaso9frecuente_alt${x+1}_B">
                         <tr>
-                            <th style="paddin:0px ; min-width:200px">Elementos Dañados</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:300px">% de Daños o Pérdidas</th>
-                            <th style="paddin:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
-                            <th style="paddin:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
-                            <th style="paddin:0px ; min-width:200px">Efectos Colaterales</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                            <th style="paddin:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:200px">Elementos Dañados</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:300px">% de Daños o Pérdidas</th>
+                            <th style="padding:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
+                            <th style="padding:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
+                            <th style="padding:0px ; min-width:200px">Efectos Colaterales</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                         </tr>
                     </tbody>
                 </table>
@@ -685,17 +685,17 @@ while (x<numAlternativas) {
                 <table class="tablaModulo4" id="tablaPaso9extremo_alt${x+1}_B">
                     <tbody id="bodyPaso9extremo_alt${x+1}_B">
                         <tr>
-                            <th style="paddin:0px ; min-width:200px">Elementos Dañados</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:300px">% de Daños o Pérdidas</th>
-                            <th style="paddin:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
-                            <th style="paddin:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
-                            <th style="paddin:0px ; min-width:200px">Efectos Colaterales</th>
-                            <th style="paddin:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
-                            <th style="paddin:0px ; min-width:200px">Factor Social</th>
-                            <th style="paddin:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
-                            <th style="paddin:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:200px">Elementos Dañados</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:300px">% de Daños o Pérdidas</th>
+                            <th style="padding:0px ; min-width:500px">Costo aproximado de las pérdidas antes (Lps.)</th>
+                            <th style="padding:0px ; min-width:600px">Acción correctiva ¿Qué hago para reducir las afectaciones?</th>
+                            <th style="padding:0px ; min-width:200px">Efectos Colaterales</th>
+                            <th style="padding:0px ; min-width:100px">Tipo de Componente por sector y subsector</th>
+                            <th style="padding:0px ; min-width:200px">Factor Social</th>
+                            <th style="padding:0px ; min-width:500px" class="accionNota">Costo Aproximado de la acción correctiva (Lps.)</th>
+                            <th style="padding:0px ; min-width:700px">Costo aproximado de las pérdidas despúes de la acción correctiva (Lps.)</th>
                         </tr>
                     </tbody>
                 </table>

@@ -58,29 +58,29 @@ while (x<numAlternativas) {
                     <th>Precios Sociales</th>
                 </tr>
                 <tr>
-                    <td><span class="respuestaTabla">Costo de la Acción Correctiva</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${totalPaso9A.rows[0][2]}</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${totalPaso9A.rows[1][2]}</span></td>
+                    <td><span class="respuestaTabla4-7">Costo de la Acción Correctiva</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${totalPaso9A.rows[0][2]}</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${totalPaso9A.rows[1][2]}</span></td>
                 </tr>
                 <tr>
-                    <td><span class="respuestaTabla">Dividido por</span></td>
-                    <td><span class="respuestaTabla" style="text-align:center">/</span></td>
-                    <td><span class="respuestaTabla" style="text-align:center">/</span></td>
+                    <td><span class="respuestaTabla4-7">Dividido por</span></td>
+                    <td><span class="respuestaTabla4-7" style="text-align:center">/</span></td>
+                    <td><span class="respuestaTabla4-7" style="text-align:center">/</span></td>
                 </tr>
                 <tr>
-                    <td><span class="respuestaTabla">Costo Total del Proyecto</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${valor_total_privado}</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${valor_total_a}</span></td>
+                    <td><span class="respuestaTabla4-7">Costo Total del Proyecto</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${valor_total_privado}</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${valor_total_a}</span></td>
                 </tr>
                 <tr>
-                    <td><span class="respuestaTabla">% del Costo de la Acción Correctiva respecto al Costo Total</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${(parseFloat(totalPaso9A.rows[0][2]/valor_total_privado)*100).toFixed(2)}</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${(parseFloat(totalPaso9A.rows[1][2]/valor_total_a)*100).toFixed(2)}</span></td>
+                    <td><span class="respuestaTabla4-7">% del Costo de la Acción Correctiva respecto al Costo Total</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${(parseFloat(totalPaso9A.rows[0][2]/valor_total_privado)*100).toFixed(2)}</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${(parseFloat(totalPaso9A.rows[1][2]/valor_total_a)*100).toFixed(2)}</span></td>
                 </tr>
                 <tr>
-                    <td><span class="respuestaTabla">¿Los Costos de la Acción Correctiva, son factibles o reconsiderar el proyecto?</span></td>
-                    <td><span style="text-align:right;background-color:yellow" class="respuestaTabla">${((parseFloat(totalPaso9A.rows[0][2]/valor_total_privado)*100).toFixed(2))<=15?"FACTIBLE":"NO FACTIBLE"}</span></td>
-                    <td><span style="text-align:right;background-color:yellow" class="respuestaTabla">${((parseFloat(totalPaso9A.rows[1][2]/valor_total_a)*100).toFixed(2))<=15?"FACTIBLE":"NO FACTIBLE"}</span></td>
+                    <td><span class="respuestaTabla4-7">¿Los Costos de la Acción Correctiva, son factibles o reconsiderar el proyecto?</span></td>
+                    <td><span style="text-align:right;background-color:yellow" class="respuestaTabla4-7">${((parseFloat(totalPaso9A.rows[0][2]/valor_total_privado)*100).toFixed(2))<=15?"FACTIBLE":"NO FACTIBLE"}</span></td>
+                    <td><span style="text-align:right;background-color:yellow" class="respuestaTabla4-7">${((parseFloat(totalPaso9A.rows[1][2]/valor_total_a)*100).toFixed(2))<=15?"FACTIBLE":"NO FACTIBLE"}</span></td>
                 </tr>
             </tbody>
         </table>
@@ -96,29 +96,29 @@ while (x<numAlternativas) {
                     <th>Precios Sociales</th>
                 </tr>
                 <tr>
-                    <td><span class="respuestaTabla">Costo de la Acción Correctiva</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${totalPaso9B.rows[0][2]}</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${totalPaso9B.rows[1][2]}</span></td>
+                    <td><span class="respuestaTabla4-7">Costo de la Acción Correctiva</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${totalPaso9B.rows[0][2]}</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${totalPaso9B.rows[1][2]}</span></td>
                 </tr>
                 <tr>
-                    <td><span class="respuestaTabla">Dividido por</span></td>
-                    <td><span class="respuestaTabla" style="text-align:center">/</span></td>
-                    <td><span class="respuestaTabla" style="text-align:center">/</span></td>
+                    <td><span class="respuestaTabla4-7">Dividido por</span></td>
+                    <td><span class="respuestaTabla4-7" style="text-align:center">/</span></td>
+                    <td><span class="respuestaTabla4-7" style="text-align:center">/</span></td>
                 </tr>
                 <tr>
-                    <td><span class="respuestaTabla">Costo Total del Proyecto</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${valor_total_privado}</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${valor_total_b}</span></td>
+                    <td><span class="respuestaTabla4-7">Costo Total del Proyecto</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${valor_total_privado}</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${valor_total_b}</span></td>
                 </tr>
                 <tr>
-                    <td><span class="respuestaTabla">% del Costo de la Acción Correctiva respecto al Costo Total</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${(parseFloat(totalPaso9B.rows[0][2]/valor_total_privado)*100).toFixed(2)}</span></td>
-                    <td><span style="text-align:right" class="respuestaTabla">${(parseFloat(totalPaso9B.rows[1][2]/valor_total_b)*100).toFixed(2)}</span></td>
+                    <td><span class="respuestaTabla4-7">% del Costo de la Acción Correctiva respecto al Costo Total</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${(parseFloat(totalPaso9B.rows[0][2]/valor_total_privado)*100).toFixed(2)}</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla4-7">${(parseFloat(totalPaso9B.rows[1][2]/valor_total_b)*100).toFixed(2)}</span></td>
                 </tr>
                 <tr>
-                    <td><span class="respuestaTabla">¿Los Costos de la Acción Correctiva, son factibles o reconsiderar el proyecto?</span></td>
-                    <td><span style="text-align:right;background-color:yellow" class="respuestaTabla">${((parseFloat(totalPaso9B.rows[0][2]/valor_total_privado)*100).toFixed(2))<=15?"FACTIBLE":"NO FACTIBLE"}</span></td>
-                    <td><span style="text-align:right;background-color:yellow" class="respuestaTabla">${((parseFloat(totalPaso9B.rows[1][2]/valor_total_b)*100).toFixed(2))<=15?"FACTIBLE":"NO FACTIBLE"}</span></td>
+                    <td><span class="respuestaTabla4-7">¿Los Costos de la Acción Correctiva, son factibles o reconsiderar el proyecto?</span></td>
+                    <td><span style="text-align:right;background-color:yellow" class="respuestaTabla4-7">${((parseFloat(totalPaso9B.rows[0][2]/valor_total_privado)*100).toFixed(2))<=15?"FACTIBLE":"NO FACTIBLE"}</span></td>
+                    <td><span style="text-align:right;background-color:yellow" class="respuestaTabla4-7">${((parseFloat(totalPaso9B.rows[1][2]/valor_total_b)*100).toFixed(2))<=15?"FACTIBLE":"NO FACTIBLE"}</span></td>
                 </tr>
             </tbody>
         </table>

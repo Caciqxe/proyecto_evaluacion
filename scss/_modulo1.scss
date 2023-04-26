@@ -38,7 +38,7 @@ canvas{
 .textInput{
     background-color: whitesmoke;
     color: black;
-    width: 99%;
+    width: 97%;
     display: inline-block;
     padding: 2px;
 }
@@ -89,6 +89,7 @@ canvas{
 }
 
 .paso{
+    width: 100%;
     background: #071334;
     border: 2px #071334 solid ;
     color: white;
@@ -160,6 +161,14 @@ table{
     border-right: 1px black solid;
     border-bottom: 1px black solid; */
     width: 99%;
+    display: inline-block;
+    padding: 2px
+}
+
+.respuestaTabla4-7{
+    background-color: whitesmoke;
+    color: black;
+    width: 97%;
     display: inline-block;
     padding: 2px
 }
