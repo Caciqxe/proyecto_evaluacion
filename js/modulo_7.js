@@ -74,11 +74,11 @@ if (preInversion === null) {
         `
         costosEstudios.innerHTML +=
         `
-        <td><span class= "textInput" contenteditable="true" style="text-align:right">0</span></td>
+        <td><span class= "textInput7-1" contenteditable="true" style="text-align:right">0</span></td>
         `
         costosDisenos.innerHTML +=
         `
-        <td><span class= "textInput" contenteditable="true" style="text-align:right">0</span></td>
+        <td><span class= "textInput7-1" contenteditable="true" style="text-align:right">0</span></td>
         `
         totalCostosPreinversion.innerHTML +=
         `
@@ -86,7 +86,7 @@ if (preInversion === null) {
         `
         totalCostosEstudios.innerHTML +=
         `
-        <td><span class= "textInput" contenteditable="false" style="text-align:right">0</span></td>
+        <td><span class= "textInput7-1" contenteditable="false" style="text-align:right">0</span></td>
         `
 
         ingresosIngresos.innerHTML +=
@@ -95,11 +95,11 @@ if (preInversion === null) {
         `
         ingresoConcepto.innerHTML +=
         `
-        <td><span class= "textInput" contenteditable="true" style="text-align:right">0</span></td>
+        <td><span class= "textInput7-1" contenteditable="true" style="text-align:right">0</span></td>
         `
 /*         ingresoConcepto2.innerHTML +=
         `
-        <td><span class= "textInput" contenteditable="true">0</span></td>
+        <td><span class= "textInput7-1" contenteditable="true">0</span></td>
         ` */
         totalIngresosHeader.innerHTML +=
         `
@@ -107,7 +107,7 @@ if (preInversion === null) {
         `
         totalIngresosConceptos.innerHTML +=
         `
-        <td><span class= "textInput" contenteditable="false" style="text-align:right">0</span></td>
+        <td><span class= "textInput7-1" contenteditable="false" style="text-align:right">0</span></td>
         `
 
         flujoNetoHeader.innerHTML +=
@@ -116,7 +116,7 @@ if (preInversion === null) {
         `
         flujoNetoTotal.innerHTML +=
         `
-        <td><span class= "textInput" contenteditable="false" style="text-align:right">0</span></td>
+        <td><span class= "textInput7-1" contenteditable="false" style="text-align:right">0</span></td>
         `
         
         y++
@@ -172,12 +172,12 @@ if (preInversion === null) {
     
     costosEstudios.innerHTML +=
     `
-    <td><span class= "textInput" contenteditable="true" style="text-align: right">${preInversion.rows[0][y+5]}</span></td>
+    <td><span class= "textInput7-1" contenteditable="true" style="text-align: right">${preInversion.rows[0][y+5]}</span></td>
     `
 
     costosDisenos.innerHTML +=
     `
-    <td><span class= "textInput" contenteditable="true" style="text-align: right">${preInversion.rows[1][y+5]}</span></td>
+    <td><span class= "textInput7-1" contenteditable="true" style="text-align: right">${preInversion.rows[1][y+5]}</span></td>
     `
 
     totalCostosPreinversion.innerHTML +=
@@ -186,7 +186,7 @@ if (preInversion === null) {
     `
     totalCostosEstudios.innerHTML +=
     `
-    <td><span class= "textInput" contenteditable="false" style="text-align: right">${parseInt(preInversion.rows[0][y+5]) + parseInt(preInversion.rows[1][y+5])}</span></td>
+    <td><span class= "textInput7-1" contenteditable="false" style="text-align: right">${parseInt(preInversion.rows[0][y+5]) + parseInt(preInversion.rows[1][y+5])}</span></td>
     `
 
     ingresosIngresos.innerHTML +=
@@ -195,11 +195,11 @@ if (preInversion === null) {
     `
     ingresoConcepto.innerHTML +=
     `
-    <td><span class= "textInput" contenteditable="true" style="text-align: right">${ingresos.rows[0][y+5]}</span></td>
+    <td><span class= "textInput7-1" contenteditable="true" style="text-align: right">${ingresos.rows[0][y+5]}</span></td>
     `
     /* ingresoConcepto2.innerHTML +=
     `
-    <td><span class= "textInput" contenteditable="true">${ingresos.rows[1][y+5]}</span></td>
+    <td><span class= "textInput7-1" contenteditable="true">${ingresos.rows[1][y+5]}</span></td>
     ` */
     totalIngresosHeader.innerHTML +=
     `
@@ -217,7 +217,7 @@ if (preInversion === null) {
 
     totalIngresosConceptos.innerHTML +=
     `
-    <td><span class= "textInput" contenteditable="false" style="text-align: right">${parseInt(sumTotalIngresos)}</span></td>
+    <td><span class= "textInput7-1" contenteditable="false" style="text-align: right">${parseInt(sumTotalIngresos)}</span></td>
     `
 
     flujoNetoHeader.innerHTML +=
@@ -226,7 +226,7 @@ if (preInversion === null) {
     `
     flujoNetoTotal.innerHTML +=
     `
-    <td><span class= "textInput" contenteditable="false" style="text-align: right">${parseInt(totalIngresos.rows[0][y+1]) - (parseInt(tablaCostosInversion.rows[0][y+1])+parseInt(tablaCostosOperacion.rows[0][y+1])+parseInt(totalPreinversion.rows[0][y+1]))}</span></td>
+    <td><span class= "textInput7-1" contenteditable="false" style="text-align: right">${parseInt(totalIngresos.rows[0][y+1]) - (parseInt(tablaCostosInversion.rows[0][y+1])+parseInt(tablaCostosOperacion.rows[0][y+1])+parseInt(totalPreinversion.rows[0][y+1]))}</span></td>
     `
     
     y++
@@ -243,14 +243,14 @@ if (preInversion === null) {
         boydobydoby.innerHTML +=
         `
         <tr id="ingresoConcepto${largo_tabla+1}">
-            <td><span id="descripcionConcepto${largo_tabla+1}" class="textInput" contenteditable="true">${ingresos.rows[largo_tabla][0]}</span></td>
+            <td><span id="descripcionConcepto${largo_tabla+1}" class="textInput7-1" contenteditable="true">${ingresos.rows[largo_tabla][0]}</span></td>
             <td class="celdaUnidades">
                 <span style="display: none;"></span>
                 <select id="unidadMedidaConcepto${largo_tabla+1}" class="dropdownUnidades" value="${ingresos.rows[largo_tabla][1]}"></select>
             </td>
-            <td><span id="cantRequeridaConcepto${largo_tabla+1}" class= "textInput" style="text-align: right">${ingresos.rows[largo_tabla][2]}</span></td>
-            <td><span id="valorUnitarioConcepto${largo_tabla+1}" class= "textInput" style="text-align: right">${ingresos.rows[largo_tabla][3]}</span></td>
-            <td><span id="valorTotalConcepto${largo_tabla+1}" class= "textInput" style="text-align: right">${parseInt(ingresos.rows[largo_tabla][2]) * parseInt(ingresos.rows[largo_tabla][3])}</span></td>
+            <td><span id="cantRequeridaConcepto${largo_tabla+1}" class= "textInput7-1" style="text-align: right">${ingresos.rows[largo_tabla][2]}</span></td>
+            <td><span id="valorUnitarioConcepto${largo_tabla+1}" class= "textInput7-1" style="text-align: right">${ingresos.rows[largo_tabla][3]}</span></td>
+            <td><span id="valorTotalConcepto${largo_tabla+1}" class= "textInput7-1" style="text-align: right">${parseInt(ingresos.rows[largo_tabla][2]) * parseInt(ingresos.rows[largo_tabla][3])}</span></td>
         </tr>
         `
 
@@ -260,7 +260,7 @@ if (preInversion === null) {
             
             filaActual.innerHTML +=
             `
-            <td><span class= "textInput" contenteditable="true" style="text-align: right">${ingresos.rows[largo_tabla][periodos_body+5]}</span></td>
+            <td><span class= "textInput7-1" contenteditable="true" style="text-align: right">${ingresos.rows[largo_tabla][periodos_body+5]}</span></td>
             `
             periodos_body++
         }
@@ -470,11 +470,11 @@ while (x<numComponentes) {
         actividades.innerHTML +=
         `
         <tr id="comp${x+1}_act${act+1}">
-            <td><span class="respuestaTabla">${flujoCosto.rows[act][0]}</span></td>
-            <td><span class="respuestaTabla">${flujoCosto.rows[act][3]}</span></td>
-            <td><span class="respuestaTabla" style="text-align: right">${flujoCosto.rows[act][4]}</span></td>
-            <td><span class="respuestaTabla" style="text-align: right">${flujoCosto.rows[act][5]}</span></td>
-            <td><span class="respuestaTabla" style="text-align: right">${flujoCosto.rows[act][6]}</span></td>
+            <td><span class="respuestaTabla7">${flujoCosto.rows[act][0]}</span></td>
+            <td><span class="respuestaTabla7">${flujoCosto.rows[act][3]}</span></td>
+            <td><span class="respuestaTabla7" style="text-align: right">${flujoCosto.rows[act][4]}</span></td>
+            <td><span class="respuestaTabla7" style="text-align: right">${flujoCosto.rows[act][5]}</span></td>
+            <td><span class="respuestaTabla7" style="text-align: right">${flujoCosto.rows[act][6]}</span></td>
         </tr>
         `
         
@@ -487,7 +487,7 @@ while (x<numComponentes) {
         while (periodo<=horizonte) {
             tableRow.innerHTML+=
             `
-            <td><span class="respuestaTabla" style="text-align: right">${horizonteCosto.rows[act][periodo]}</span></td>
+            <td><span class="respuestaTabla7" style="text-align: right">${horizonteCosto.rows[act][periodo]}</span></td>
             `
             periodo++
         }
@@ -499,7 +499,7 @@ while (x<numComponentes) {
     `
     <tr id="totalCom${x+1}">
         <td class="bajada" colspan="4">TOTAL COMPONENTE ${x+1}</td>
-        <td><span class="respuestaTabla" style="text-align: right">${flujoCosto.rows[act][6]}</span></td>
+        <td><span class="respuestaTabla7" style="text-align: right">${flujoCosto.rows[act][6]}</span></td>
     </tr>
     `
 
@@ -515,7 +515,7 @@ while (x<numComponentes) {
         `
         totalComponente.innerHTML+=
         `
-        <td><span class="respuestaTabla" style="text-align: right">${horizonteCosto.rows[act][j]}</span></td>
+        <td><span class="respuestaTabla7" style="text-align: right">${horizonteCosto.rows[act][j]}</span></td>
         `
 
         j++
@@ -535,7 +535,7 @@ while (mCostoInversion < sumTodo.rows[1].length-2) {
     
     bodyInversion.innerHTML+=
     `
-    <td><span class="respuestaTabla" style="text-align: right">${sumTodo.rows[1][mCostoInversion+2]}</span></td>
+    <td><span class="respuestaTabla7" style="text-align: right">${sumTodo.rows[1][mCostoInversion+2]}</span></td>
     `
     headerInversion.innerHTML+=
     `
@@ -559,7 +559,7 @@ for (let index = 2; index < ultimoTotales.rows[0].length; index++) {
     
     bodyOperacion.innerHTML +=
     `
-    <td><span class="respuestaTabla" style="text-align: right">${ultimoTotales.rows[0][index]}</span></td>
+    <td><span class="respuestaTabla7" style="text-align: right">${ultimoTotales.rows[0][index]}</span></td>
     `
 }
 
@@ -584,7 +584,7 @@ const agregarFila = (event) => {
         var cell4 = row.insertCell(-1)
         var cell5 = row.insertCell(-1)
         //var cell8 = row.insertCell(-1)
-        cell1.innerHTML = `<td><span class= "textInput" contenteditable="true"></span></td>`
+        cell1.innerHTML = `<td><span class= "textInput7-1" contenteditable="true"></span></td>`
         //cell2.innerHTML = `<input id="categoria${rowCount-6}_${id_loc}" list="listaSocial${rowCount-6}_${id_loc}"><datalist class=selectorFactorSocial id=listaSocial${rowCount-6}_${id_loc} style="overflow-y: auto"></datalist>`
 
         cell2.className = "celdaUnidades"
@@ -593,15 +593,15 @@ const agregarFila = (event) => {
             <span style="display: none;"></span>
             <select class="dropdownUnidades"></select>
         `
-        cell3.innerHTML = `<span class="textInput" contenteditable="true" style="text-align: right">0</span>`
-        cell4.innerHTML = `<span class="textInput" contenteditable="true" style="text-align: right">0</span>`
-        cell5.innerHTML = `<span class="textInput" contenteditable="true" style="text-align: right">0</span>`
+        cell3.innerHTML = `<span class="textInput7-1" contenteditable="true" style="text-align: right">0</span>`
+        cell4.innerHTML = `<span class="textInput7-1" contenteditable="true" style="text-align: right">0</span>`
+        cell5.innerHTML = `<span class="textInput7-1" contenteditable="true" style="text-align: right">0</span>`
 
 
         let array_periodos=[]
         for (let index = 0; index <= horizonte; index++) {
             array_periodos[index] = row.insertCell(-1)
-            array_periodos[index].innerHTML = `<td><span class= "textInput" contenteditable="true" style="text-align: right">0</span></td>`
+            array_periodos[index].innerHTML = `<td><span class= "textInput7-1" contenteditable="true" style="text-align: right">0</span></td>`
         }
 
         crearOpcionesUnidades(row)
