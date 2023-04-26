@@ -56,7 +56,7 @@ while (x<=(horizonte*modHoz)) {
 
 ayuda.innerHTML += 
 `
-<th style="width:1500px; padding:0.1%">OBSERVACIONES</th>
+<th style="width:100%; min-width:160px; padding:0.1%">OBSERVACIONES</th>
 `
 
 
@@ -91,7 +91,7 @@ while (i < array_nuevo.length) {
         } else if (z===1) {
             columnas.innerHTML += 
             `
-            <td><span contenteditable="false" class="textInput">${array_nuevo[i]}</span></td>
+            <td><span contenteditable="false" class="textInput9">${array_nuevo[i]}</span></td>
             `
         } else if(z<=((horizonte*modHoz)+2)) {
             if (importarCronograma!=null) {
@@ -109,12 +109,12 @@ while (i < array_nuevo.length) {
             if (importarCronograma!=null) {
                 columnas.innerHTML += 
                 `
-                <td><span contenteditable="true" class="textInput">${importarCronograma.rows[i][z]}</span></td>
+                <td><span contenteditable="true" class="textInput9">${importarCronograma.rows[i][z]}</span></td>
                 `
             } else {
                 columnas.innerHTML += 
                 `
-                <td><span contenteditable="true" class="textInput"></span></td>
+                <td><span contenteditable="true" class="textInput9"></span></td>
                 `
             }
         }
