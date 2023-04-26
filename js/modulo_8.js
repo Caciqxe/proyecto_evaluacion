@@ -18,10 +18,10 @@ if (infoModulo!=null) {
 <tr>
     <td rowspan="${numeroComponentes}" class="bajada">COMPONENTES</td>
     <td class="bajada">1</td>
-    <td><span contenteditable="false" class="textInput">${nombreComponente.rows[0][1]}</span></td>
-    <td><span contenteditable="true" class="textInput">${infoModulo.rows[3][2]}</span></td>
-    <td><span contenteditable="true" class="textInput">${infoModulo.rows[3][3]}</span></td>
-    <td><span contenteditable="true" class="textInput">${infoModulo.rows[3][4]}</span></td>
+    <td><span contenteditable="false" class="textInput8">${nombreComponente.rows[0][1]}</span></td>
+    <td><span contenteditable="true" class="textInput8">${infoModulo.rows[3][2]}</span></td>
+    <td><span contenteditable="true" class="textInput8">${infoModulo.rows[3][3]}</span></td>
+    <td><span contenteditable="true" class="textInput8">${infoModulo.rows[3][4]}</span></td>
 </tr>
 `
 while (x<numeroComponentes-1) {
@@ -37,10 +37,10 @@ while (x<numeroComponentes-1) {
 
     cell1.className = "bajada"
     cell1.innerHTML=`<td class="bajada"><span contenteditable="false">${x+2}</span></td>`
-    cell2.innerHTML=`<td><span contenteditable="false" class="textInput">${nombreComponente.rows[x+1][1]}</span></td>`
-    cell3.innerHTML=`<td><span contenteditable="true" class="textInput">${infoModulo.rows[x+4][2]}</span></td>`
-    cell4.innerHTML=`<td><span contenteditable="true" class="textInput">${infoModulo.rows[x+4][3]}</span></td>`
-    cell5.innerHTML=`<td><span contenteditable="true" class="textInput">${infoModulo.rows[x+4][4]}</span></td>`
+    cell2.innerHTML=`<td><span contenteditable="false" class="textInput8">${nombreComponente.rows[x+1][1]}</span></td>`
+    cell3.innerHTML=`<td><span contenteditable="true" class="textInput8">${infoModulo.rows[x+4][2]}</span></td>`
+    cell4.innerHTML=`<td><span contenteditable="true" class="textInput8">${infoModulo.rows[x+4][3]}</span></td>`
+    cell5.innerHTML=`<td><span contenteditable="true" class="textInput8">${infoModulo.rows[x+4][4]}</span></td>`
     x++
 }
 
@@ -59,10 +59,10 @@ while (y<numeroComponentes) {
     <tr>
         <td rowspan="${numeroComponentes}" class="bajada">COMPONENTES</td>
         <td class="bajada">1</td>
-        <td><span contenteditable="false" class="textInput">${nombreComponente.rows[0][1]}</span></td>
-        <td><span contenteditable="true" class="textInput"></span></td>
-        <td><span contenteditable="true" class="textInput"></span></td>
-        <td><span contenteditable="true" class="textInput"></span></td>
+        <td><span contenteditable="false" class="textInput8">${nombreComponente.rows[0][1]}</span></td>
+        <td><span contenteditable="true" class="textInput8"></span></td>
+        <td><span contenteditable="true" class="textInput8"></span></td>
+        <td><span contenteditable="true" class="textInput8"></span></td>
     </tr>
     `
     while (x<numeroComponentes-1) {
@@ -78,10 +78,10 @@ while (y<numeroComponentes) {
     
         cell1.className = "bajada"
         cell1.innerHTML=`<td class="bajada"><span contenteditable="false">${x+2}</span></td>`
-        cell2.innerHTML=`<td><span contenteditable="false" class="textInput">${nombreComponente.rows[x+1][1]}</span></td>`
-        cell3.innerHTML=`<td><span contenteditable="true" class="textInput"></span></td>`
-        cell4.innerHTML=`<td><span contenteditable="true" class="textInput"></span></td>`
-        cell5.innerHTML=`<td><span contenteditable="true" class="textInput"></span></td>`
+        cell2.innerHTML=`<td><span contenteditable="false" class="textInput8">${nombreComponente.rows[x+1][1]}</span></td>`
+        cell3.innerHTML=`<td><span contenteditable="true" class="textInput8"></span></td>`
+        cell4.innerHTML=`<td><span contenteditable="true" class="textInput8"></span></td>`
+        cell5.innerHTML=`<td><span contenteditable="true" class="textInput8"></span></td>`
         x++
     }
     
@@ -132,10 +132,10 @@ if (infoModulo!=null) {
     <tr>
         <td rowspan="${array_nuevo.length}" class="bajada">ACTIVIDADES</td>
         <td class="bajada">1</td>
-        <td><span contenteditable="false" class="textInput">${array_nuevo[0]}</span></td>
-        <td><span contenteditable="true" class="textInput">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][2]}</span></td>
-        <td><span contenteditable="true" class="textInput">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][3]}</span></td>
-        <td><span contenteditable="true" class="textInput">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][4]}</span></td>
+        <td><span contenteditable="false" class="textInput8">${array_nuevo[0]}</span></td>
+        <td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][2]}</span></td>
+        <td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][3]}</span></td>
+        <td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][4]}</span></td>
     </tr>
     `
 
@@ -152,10 +152,10 @@ if (infoModulo!=null) {
 
         cell1.className = "bajada"
         cell1.innerHTML=`${i+2}`
-        cell2.innerHTML=`<td><span contenteditable="false" class="textInput">${array_nuevo[i+1]}</span></td>`
-        cell3.innerHTML=`<td><span contenteditable="true" class="textInput">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length+(i+1)][2]}</span></td>`
-        cell4.innerHTML=`<td><span contenteditable="true" class="textInput">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length+(i+1)][3]}</span></td>`
-        cell5.innerHTML=`<td><span contenteditable="true" class="textInput">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length+(i+1)][4]}</span></td>`
+        cell2.innerHTML=`<td><span contenteditable="false" class="textInput8">${array_nuevo[i+1]}</span></td>`
+        cell3.innerHTML=`<td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length+(i+1)][2]}</span></td>`
+        cell4.innerHTML=`<td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length+(i+1)][3]}</span></td>`
+        cell5.innerHTML=`<td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length+(i+1)][4]}</span></td>`
         i++
     }
 } else {
@@ -165,10 +165,10 @@ if (infoModulo!=null) {
     <tr>
         <td rowspan="${array_nuevo.length}" class="bajada">ACTIVIDADES</td>
         <td class="bajada">1</td>
-        <td><span contenteditable="false" class="textInput">${array_nuevo[0]}</span></td>
-        <td><span contenteditable="true" class="textInput"></span></td>
-        <td><span contenteditable="true" class="textInput"></span></td>
-        <td><span contenteditable="true" class="textInput"></span></td>
+        <td><span contenteditable="false" class="textInput8">${array_nuevo[0]}</span></td>
+        <td><span contenteditable="true" class="textInput8"></span></td>
+        <td><span contenteditable="true" class="textInput8"></span></td>
+        <td><span contenteditable="true" class="textInput8"></span></td>
     </tr>
     `
     
@@ -185,10 +185,10 @@ if (infoModulo!=null) {
     
         cell1.className="bajada"
         cell1.innerHTML=`${i+2}`
-        cell2.innerHTML=`<td><span contenteditable="false" class="textInput">${array_nuevo[i+1]}</span></td>`
-        cell3.innerHTML=`<td><span contenteditable="true" class="textInput"></span></td>`
-        cell4.innerHTML=`<td><span contenteditable="true" class="textInput"></span></td>`
-        cell5.innerHTML=`<td><span contenteditable="true" class="textInput"></span></td>`
+        cell2.innerHTML=`<td><span contenteditable="false" class="textInput8">${array_nuevo[i+1]}</span></td>`
+        cell3.innerHTML=`<td><span contenteditable="true" class="textInput8"></span></td>`
+        cell4.innerHTML=`<td><span contenteditable="true" class="textInput8"></span></td>`
+        cell5.innerHTML=`<td><span contenteditable="true" class="textInput8"></span></td>`
         i++
     }
 }
