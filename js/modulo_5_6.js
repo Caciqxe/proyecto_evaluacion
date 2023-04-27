@@ -45,25 +45,25 @@ while (x<numAlternativas) {
                 <th>VALOR TOTAL</th>
             </tr>
             <tr id="calificada_alt${x+1}">
-            <td><input id=calificadaAlt${x+1} readonly="true" class="respuestaTabla" value="Ahorro Mano de Obra Calificada"></td>
-            <td><input id=unidadCalificadaAlt${x+1} value="${tablaBeneficioPrivado.rows[0][1]}"></td>
-            <td><input id=cantidadCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[0][2]} style="text-align:right"></td>
-            <td><input id=valorUnitarioCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[0][3]} style="text-align:right"></td>
-            <td><input id=valorTotalCalificadaAlt${x+1} readonly=true value=${tablaBeneficioPrivado.rows[0][4]} style="text-align:right"></td>
+            <td><input id=calificadaAlt${x+1} readonly="true" class="respuestaTabla5-6" value="Ahorro Mano de Obra Calificada"></td>
+            <td><input style="width:97%" id=unidadCalificadaAlt${x+1} value="${tablaBeneficioPrivado.rows[0][1]}"></td>
+            <td><input style="width:97%" id=cantidadCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[0][2]} style="text-align:right"></td>
+            <td><input style="width:97%" id=valorUnitarioCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[0][3]} style="text-align:right"></td>
+            <td><input style="width:97%" id=valorTotalCalificadaAlt${x+1} readonly=true value=${tablaBeneficioPrivado.rows[0][4]} style="text-align:right"></td>
             </tr>
             <tr id="semiCalificada_alt${x+1}">
-                <td><input id=semiCalificadaAlt${x+1} readonly="true" class="respuestaTabla" value="Ahorro Mano de Obra Semi Calificada"></td>
-                <td><input id=unidadSemiCalificadaAlt${x+1} value="${tablaBeneficioPrivado.rows[1][1]}"></td>
-                <td><input id=cantidadSemiCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[1][2]} style="text-align:right"></td>
-                <td><input id=valorUnitarioSemiCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[1][3]} style="text-align:right"></td>
-                <td><input id=valorTotalSemiCalificadaAlt${x+1} readonly=true value=${tablaBeneficioPrivado.rows[1][4]} style="text-align:right"></td>
+                <td><input style="width:97%" id=semiCalificadaAlt${x+1} readonly="true" class="respuestaTabla5-6" value="Ahorro Mano de Obra Semi Calificada"></td>
+                <td><input style="width:97%" id=unidadSemiCalificadaAlt${x+1} value="${tablaBeneficioPrivado.rows[1][1]}"></td>
+                <td><input style="width:97%" id=cantidadSemiCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[1][2]} style="text-align:right"></td>
+                <td><input style="width:97%" id=valorUnitarioSemiCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[1][3]} style="text-align:right"></td>
+                <td><input style="width:97%" id=valorTotalSemiCalificadaAlt${x+1} readonly=true value=${tablaBeneficioPrivado.rows[1][4]} style="text-align:right"></td>
             </tr>
             <tr id="noCalificada_alt${x+1}">
-                <td><input id=noCalificadaAlt${x+1} readonly="true" class="respuestaTabla" value="Ahorro Mano de Obra No Calificada"></td>
-                <td><input id=unidadANoCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[2][1]}></td>
-                <td><input id=cantidadANoCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[2][2]} style="text-align:right"></td>
-                <td><input id=valorUnitarioANoCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[2][3]} style="text-align:right"></td>
-                <td><input id=valorTotalANoCalificadaAlt${x+1} readonly=true value=${tablaBeneficioPrivado.rows[2][4]} style="text-align:right"></td>
+                <td><input style="width:97%" id=noCalificadaAlt${x+1} readonly="true" class="respuestaTabla5-6" value="Ahorro Mano de Obra No Calificada"></td>
+                <td><input style="width:97%" id=unidadANoCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[2][1]}></td>
+                <td><input style="width:97%" id=cantidadANoCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[2][2]} style="text-align:right"></td>
+                <td><input style="width:97%" id=valorUnitarioANoCalificadaAlt${x+1} value=${tablaBeneficioPrivado.rows[2][3]} style="text-align:right"></td>
+                <td><input style="width:97%" id=valorTotalANoCalificadaAlt${x+1} readonly=true value=${tablaBeneficioPrivado.rows[2][4]} style="text-align:right"></td>
             </tr>
         </tbody>
     </table>
@@ -78,23 +78,23 @@ while (x<numAlternativas) {
             </tr>
             <tr id="beneficioTotal${x+1}">
                 <td class="bajada"><span>BENEFICIOS TOTALES</span></td>
-                <td class="respuestaTabla" id="beneficioTotalAlt${x+1}0"><span>0</span></td>
+                <td class="respuestaTabla5-6" id="beneficioTotalAlt${x+1}0"><span>0</span></td>
             </tr>
             <tr id="costosDirectos${x+1}">
                 <td class="bajada"><span>COSTOS DIRECTOS (INVERSIÓN Y OPERACIÓN)</span></td>
-                <td class="respuestaTabla" id="costosDirectosAlt${x+1}0"><span>0</span></td>
+                <td class="respuestaTabla5-6" id="costosDirectosAlt${x+1}0"><span>0</span></td>
             </tr>
             <tr id="costosAsociados${x+1}">
                 <td class="bajada"><span>COSTOS ASOCIADOS (DE LOS BENEFICIARIOS)</span></td>
-                <td class="respuestaTabla" id="costosAsociadosAlt${x+1}0"><span contenteditable="true">0</span></td>
+                <td class="respuestaTabla5-6" id="costosAsociadosAlt${x+1}0"><span contenteditable="true">0</span></td>
             </tr>
             <tr id="costoProyecto${x+1}">
                 <td class="bajada"><span>TOTAL COSTOS DEL PROYECTO</span></td>
-                <td class="respuestaTabla" id="costoProyectoAlt${x+1}0"><span>0</span></td>
+                <td class="respuestaTabla5-6" id="costoProyectoAlt${x+1}0"><span>0</span></td>
             </tr>
             <tr id="flujoNetos${x+1}">
             <td class="bajada"><span>FLUJO NETO DE FONDOS</span></td>
-            <td class="respuestaTabla" id="flujoNetosAlt${x+1}0"><span>0</span></td>
+            <td class="respuestaTabla5-6" id="flujoNetosAlt${x+1}0"><span>0</span></td>
         </tr>
         </tbody>
     </table>
@@ -102,23 +102,23 @@ while (x<numAlternativas) {
         <tbody>
             <tr>
                 <td class="bajada">TASA DE OPORTUNIDAD (TASA PRIVADA DE DESCUENTO)</td>
-                <td><span class="respuestaTabla" style="text-align:right">${parseInt(tasa*100)}</span></td>
+                <td><span class="respuestaTabla5-6" style="text-align:right">${parseInt(tasa*100)}</span></td>
             </tr>
             <tr>
                 <td class="bajada">VAN</td>
-                <td><span id="vanAlt${x+1}" class="respuestaTabla" style="text-align:right">${calcularVPN((tablaComplementariaPrivado.rows[4][2]), tablaComplementariaPrivado.rows[4], tasa).toFixed(2)}</span></td>
+                <td><span id="vanAlt${x+1}" class="respuestaTabla5-6" style="text-align:right">${calcularVPN((tablaComplementariaPrivado.rows[4][2]), tablaComplementariaPrivado.rows[4], tasa).toFixed(2)}</span></td>
             </tr>
             <tr>
                 <td class="bajada">VALOR PRESENTE DE LOS BENEFICIOS</td>
-                <td><span id="vanBeneficioAlt${x+1}" class="respuestaTabla" style="text-align:right">${calcularVPN((tablaComplementariaPrivado.rows[0][2]), tablaComplementariaPrivado.rows[0], tasa).toFixed(2)}</span></td>
+                <td><span id="vanBeneficioAlt${x+1}" class="respuestaTabla5-6" style="text-align:right">${calcularVPN((tablaComplementariaPrivado.rows[0][2]), tablaComplementariaPrivado.rows[0], tasa).toFixed(2)}</span></td>
             </tr>
             <tr>
                 <td class="bajada">VALOR PRESENTE DE LOS COSTOS</td>
-                <td><span id="vanCostosAlt${x+1}" class="respuestaTabla" style="text-align:right">${calcularVPN((tablaComplementariaPrivado.rows[3][2]), tablaComplementariaPrivado.rows[3], tasa).toFixed(2)}</span></td>
+                <td><span id="vanCostosAlt${x+1}" class="respuestaTabla5-6" style="text-align:right">${calcularVPN((tablaComplementariaPrivado.rows[3][2]), tablaComplementariaPrivado.rows[3], tasa).toFixed(2)}</span></td>
             </tr>
             <tr>
                 <td class="bajada">RAZON BENEFICIO / COSTO</td>
-                <td><span id="razonBeneficioAlt${x+1}" class="respuestaTabla" style="text-align:right"></span></td>
+                <td><span id="razonBeneficioAlt${x+1}" class="respuestaTabla5-6" style="text-align:right"></span></td>
             </tr>
         </tbody>
     </table>
@@ -194,16 +194,16 @@ while (x<numAlternativas) {
             var cell5T = rowTable.insertCell(-1)
     
 
-            cell1T.innerHTML = `<input id=item${rowCountTabla-6}Alt${x+1} value=${tablaBeneficioPrivado.rows[asd][0]}>`
-            cell2T.innerHTML = `<input id=unidadMedida${rowCountTabla-6}Alt${x+1} value=${tablaBeneficioPrivado.rows[asd][1]}>`
-            cell3T.innerHTML = `<input id=cantidad${rowCountTabla-6}Alt${x+1} value=${tablaBeneficioPrivado.rows[asd][2]} style="text-align:right">`
-            cell4T.innerHTML = `<input id=valorUnitario${rowCountTabla-6}Alt${x+1} value=${tablaBeneficioPrivado.rows[asd][3]} style="text-align:right">`
-            cell5T.innerHTML = `<input id=valorTotal${rowCountTabla-6}Alt${x+1} value=${tablaBeneficioPrivado.rows[asd][4]} style="text-align:right">`
+            cell1T.innerHTML = `<input style="width:97%" id=item${rowCountTabla-6}Alt${x+1} value=${tablaBeneficioPrivado.rows[asd][0]}>`
+            cell2T.innerHTML = `<input style="width:97%" id=unidadMedida${rowCountTabla-6}Alt${x+1} value=${tablaBeneficioPrivado.rows[asd][1]}>`
+            cell3T.innerHTML = `<input style="width:97%" id=cantidad${rowCountTabla-6}Alt${x+1} value=${tablaBeneficioPrivado.rows[asd][2]} style="text-align:right">`
+            cell4T.innerHTML = `<input style="width:97%" id=valorUnitario${rowCountTabla-6}Alt${x+1} value=${tablaBeneficioPrivado.rows[asd][3]} style="text-align:right">`
+            cell5T.innerHTML = `<input style="width:97%" id=valorTotal${rowCountTabla-6}Alt${x+1} value=${tablaBeneficioPrivado.rows[asd][4]} style="text-align:right">`
     
             let array_periodos=[]
             for (let index = 0; index <= horizonte; index++) {
                 array_periodos[index] = rowTable.insertCell(-1)
-                array_periodos[index].innerHTML = `<td class="bajada"><input id=input_item${rowCountTabla-5}_alt${x+1}_hor${index} value=${tablaBeneficioPrivado.rows[asd][index+5]} style="text-align:right"></td>`
+                array_periodos[index].innerHTML = `<td class="bajada"><input style="width:97%" id=input_item${rowCountTabla-5}_alt${x+1}_hor${index} value=${tablaBeneficioPrivado.rows[asd][index+5]} style="text-align:right"></td>`
             }
     
             asd++
@@ -228,17 +228,17 @@ while (x<numAlternativas) {
             `
             semiCalificada.innerHTML +=
             `
-            <td><input id=semiCalificada_alt${x+1}_hor${y} value=${tablaBeneficioPrivado.rows[1][y+5]} style="text-align:right"></td>
+            <td><input style="width: 97%" id=semiCalificada_alt${x+1}_hor${y} value=${tablaBeneficioPrivado.rows[1][y+5]} style="text-align:right"></td>
             `
     
             calificada.innerHTML +=
             `
-            <td><input id=calificada_alt${x+1}_hor${y} value=${tablaBeneficioPrivado.rows[0][y+5]} style="text-align:right"></td>
+            <td><input style="width: 97%" id=calificada_alt${x+1}_hor${y} value=${tablaBeneficioPrivado.rows[0][y+5]} style="text-align:right"></td>
             `
     
             noCalificada.innerHTML +=
             `
-            <td><input id=noCalificada_alt${x+1}_hor${y} value=${tablaBeneficioPrivado.rows[2][y+5]} style="text-align:right"></td>
+            <td><input style="width: 97%" id=noCalificada_alt${x+1}_hor${y} value=${tablaBeneficioPrivado.rows[2][y+5]} style="text-align:right"></td>
             `
             
             periodosCostos.innerHTML +=
@@ -254,17 +254,17 @@ while (x<numAlternativas) {
 
             beneficioTotal.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="beneficioTotal_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${benTotal}</span></td>
+            <td><span class="respuestaTabla5-6" id="beneficioTotal_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${benTotal}</span></td>
             `
     
             costosDirectos.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="costosDirectos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${ultimoTotales.rows[0][y+2]}</span></td>
+            <td><span class="respuestaTabla5-6" id="costosDirectos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${ultimoTotales.rows[0][y+2]}</span></td>
             `
 
             costosAsociados.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="costosAsociados_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaComplementariaPrivado.rows[2][y+2]}</span></td>
+            <td><span class="respuestaTabla5-6" id="costosAsociados_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaComplementariaPrivado.rows[2][y+2]}</span></td>
             `
 
             let beneficioPeriodo = document.getElementById(`beneficioTotal_alt${x+1}_hor${y}`)
@@ -273,11 +273,11 @@ while (x<numAlternativas) {
 
             costoProyecto.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="costoProyecto_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseInt(costosPeriodo.innerHTML) + parseInt(asociadoPeriodo.innerHTML)}</span></td>
+            <td><span class="respuestaTabla5-6" id="costoProyecto_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseInt(costosPeriodo.innerHTML) + parseInt(asociadoPeriodo.innerHTML)}</span></td>
             `
             flujoNetos.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="flujoNetos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseInt(beneficioPeriodo.innerHTML) - parseInt(parseInt(costosPeriodo.innerHTML) + parseInt(asociadoPeriodo.innerHTML))}</span></td>
+            <td><span class="respuestaTabla5-6" id="flujoNetos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseInt(beneficioPeriodo.innerHTML) - parseInt(parseInt(costosPeriodo.innerHTML) + parseInt(asociadoPeriodo.innerHTML))}</span></td>
             `
             y++
         }
@@ -299,25 +299,25 @@ while (x<numAlternativas) {
                 <th>VALOR TOTAL</th>
             </tr>
             <tr id="calificada_alt${x+1}">
-            <td><input id=calificadaAlt${x+1} readonly="true" class="respuestaTabla" value="Ahorro Mano de Obra Calificada"></td>
-            <td><input id=unidadCalificadaAlt${x+1} value=0></td>
-            <td><input id=cantidadCalificadaAlt${x+1} value=0 style="text-align:right"></td>
-            <td><input id=valorUnitarioCalificadaAlt${x+1} value=0 style="text-align:right"></td>
-            <td><input id=valorTotalCalificadaAlt${x+1} readonly=true value=0 style="text-align:right"></td>
+            <td><input id=calificadaAlt${x+1} readonly="true" class="respuestaTabla5-6" value="Ahorro Mano de Obra Calificada"></td>
+            <td><input style="width:97%" id=unidadCalificadaAlt${x+1} value=0></td>
+            <td><input style="width:97%" id=cantidadCalificadaAlt${x+1} value=0 style="text-align:right"></td>
+            <td><input style="width:97%" id=valorUnitarioCalificadaAlt${x+1} value=0 style="text-align:right"></td>
+            <td><input style="width:97%" id=valorTotalCalificadaAlt${x+1} readonly=true value=0 style="text-align:right"></td>
             </tr>
             <tr id="semiCalificada_alt${x+1}">
-                <td><input id=semiCalificadaAlt${x+1} readonly="true" class="respuestaTabla" value="Ahorro Mano de Obra Semi Calificada"></td>
-                <td><input id=unidadSemiCalificadaAlt${x+1} value=0></td>
-                <td><input id=cantidadSemiCalificadaAlt${x+1} value=0 style="text-align:right"></td>
-                <td><input id=valorUnitarioSemiCalificadaAlt${x+1} value=0 style="text-align:right"></td>
-                <td><input id=valorTotalSemiCalificadaAlt${x+1} readonly=true value=0 style="text-align:right"></td>
+                <td><input style="width:97%" id=semiCalificadaAlt${x+1} readonly="true" class="respuestaTabla5-6" value="Ahorro Mano de Obra Semi Calificada"></td>
+                <td><input style="width:97%" id=unidadSemiCalificadaAlt${x+1} value=0></td>
+                <td><input style="width:97%" id=cantidadSemiCalificadaAlt${x+1} value=0 style="text-align:right"></td>
+                <td><input style="width:97%" id=valorUnitarioSemiCalificadaAlt${x+1} value=0 style="text-align:right"></td>
+                <td><input style="width:97%" id=valorTotalSemiCalificadaAlt${x+1} readonly=true value=0 style="text-align:right"></td>
             </tr>
             <tr id="noCalificada_alt${x+1}">
-                <td><input id=noCalificadaAlt${x+1} readonly="true" class="respuestaTabla" value="Ahorro Mano de Obra No Calificada"></td>
-                <td><input id=unidadANoCalificadaAlt${x+1} value=0></td>
-                <td><input id=cantidadANoCalificadaAlt${x+1} value=0 style="text-align:right"></td>
-                <td><input id=valorUnitarioANoCalificadaAlt${x+1} value=0 style="text-align:right"></td>
-                <td><input id=valorTotalANoCalificadaAlt${x+1} readonly=true value=0 style="text-align:right"></td>
+                <td><input style="width:97%" id=noCalificadaAlt${x+1} readonly="true" class="respuestaTabla5-6" value="Ahorro Mano de Obra No Calificada"></td>
+                <td><input style="width:97%" id=unidadANoCalificadaAlt${x+1} value=0></td>
+                <td><input style="width:97%" id=cantidadANoCalificadaAlt${x+1} value=0 style="text-align:right"></td>
+                <td><input style="width:97%" id=valorUnitarioANoCalificadaAlt${x+1} value=0 style="text-align:right"></td>
+                <td><input style="width:97%" id=valorTotalANoCalificadaAlt${x+1} readonly=true value=0 style="text-align:right"></td>
             </tr>
         </tbody>
     </table>
@@ -331,23 +331,23 @@ while (x<numAlternativas) {
             </tr>
             <tr id="beneficioTotal${x+1}">
                 <td class="bajada"><span>BENEFICIOS TOTALES</span></td>
-                <td><span class="respuestaTabla" style="text-align:right">0</span></td>
+                <td><span class="respuestaTabla5-6" style="text-align:right">0</span></td>
             </tr>
             <tr id="costosDirectos${x+1}">
                 <td class="bajada"><span>COSTOS DIRECTOS (INVERSIÓN Y OPERACIÓN)</span></td>
-                <td><span class="respuestaTabla" style="text-align:right">0</span></td>
+                <td><span class="respuestaTabla5-6" style="text-align:right">0</span></td>
             </tr>
             <tr id="costosAsociados${x+1}">
                 <td class="bajada"><span>COSTOS ASOCIADOS (DE LOS BENEFICIARIOS)</span></td>
-                <td><span class="respuestaTabla" style="text-align:right">0</span></td>
+                <td><span class="respuestaTabla5-6" style="text-align:right">0</span></td>
             </tr>
             <tr id="costoProyecto${x+1}">
                 <td class="bajada"><span>TOTAL COSTOS DEL PROYECTO</span></td>
-                <td><span class="respuestaTabla" style="text-align:right">0</span></td>
+                <td><span class="respuestaTabla5-6" style="text-align:right">0</span></td>
             </tr>
             <tr id="flujoNetos${x+1}">
             <td class="bajada"><span>FLUJO NETO DE FONDOS</span></td>
-            <td><span class="respuestaTabla" style="text-align:right">0</span></td>
+            <td><span class="respuestaTabla5-6" style="text-align:right">0</span></td>
         </tr>
         </tbody>
     </table>
@@ -404,17 +404,17 @@ while (x<numAlternativas) {
             `
             semiCalificada.innerHTML +=
             `
-            <td><input id=semiCalificada_alt${x+1}_hor${y} value="0" style="text-align:right"></td>
+            <td><input style="width:97%" id=semiCalificada_alt${x+1}_hor${y} value="0" style="text-align:right"></td>
             `
     
             calificada.innerHTML +=
             `
-            <td><input id=calificada_alt${x+1}_hor${y} value=0 style="text-align:right"></td>
+            <td><input style="width:97%" id=calificada_alt${x+1}_hor${y} value=0 style="text-align:right"></td>
             `
     
             noCalificada.innerHTML +=
             `
-            <td><input id=noCalificada_alt${x+1}_hor${y} value=0 style="text-align:right"></td>
+            <td><input style="width:97%" id=noCalificada_alt${x+1}_hor${y} value=0 style="text-align:right"></td>
             `
             
             periodosCostos.innerHTML +=
@@ -423,12 +423,12 @@ while (x<numAlternativas) {
             `
             beneficioTotal.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="beneficioTotal_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">0</span></td>
+            <td><span class="respuestaTabla5-6" id="beneficioTotal_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">0</span></td>
             `
     
             costosDirectos.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="costosDirectos_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">0</span></td>
+            <td><span class="respuestaTabla5-6" id="costosDirectos_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">0</span></td>
             `
     
             costosAsociados.innerHTML +=
@@ -437,11 +437,11 @@ while (x<numAlternativas) {
             `
             costoProyecto.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="costoProyecto_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">0</span></td>
+            <td><span class="respuestaTabla5-6" id="costoProyecto_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">0</span></td>
             `
             flujoNetos.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="flujoNetos_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">0</span></td>
+            <td><span class="respuestaTabla5-6" id="flujoNetos_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">0</span></td>
             `
     
     
@@ -731,18 +731,18 @@ const agregarFila = (event) => {
     var cell5 = row.insertCell(-1)
 
   
-    cell1.innerHTML = `<input id=item${rowCount-6}Alt${x+1} value=>`
-    cell2.innerHTML = `<input id=unidadMedida${rowCount-6}Alt${x+1} value=0>`
-    cell3.innerHTML = `<input id=cantidad${rowCount-6}Alt${x+1} value=0 style="text-align:right">`
-    cell4.innerHTML = `<input id=valorUnitario${rowCount-6}Alt${x+1} value=0 style="text-align:right">`
-    cell5.innerHTML = `<input id=valorTotal${rowCount-6}Alt${x+1} value=0 style="text-align:right">`
+    cell1.innerHTML = `<input style="width:97%" id=item${rowCount-6}Alt${x+1} value=>`
+    cell2.innerHTML = `<input style="width:97%" id=unidadMedida${rowCount-6}Alt${x+1} value=0>`
+    cell3.innerHTML = `<input style="width:97%" id=cantidad${rowCount-6}Alt${x+1} value=0 style="text-align:right">`
+    cell4.innerHTML = `<input style="width:97%" id=valorUnitario${rowCount-6}Alt${x+1} value=0 style="text-align:right">`
+    cell5.innerHTML = `<input style="width:97%" id=valorTotal${rowCount-6}Alt${x+1} value=0 style="text-align:right">`
 
     let horizonte = sessionStorage.getItem('horizonteEvaluacion')
 
     let array_periodos=[]
     for (let index = 0; index <= horizonte; index++) {
         array_periodos[index] = row.insertCell(-1)
-        array_periodos[index].innerHTML = `<td class="bajada"><input id=input_item${rowCount-5}_alt${x+1}_hor${index} value=0 style="text-align:right"></td>`
+        array_periodos[index].innerHTML = `<td class="bajada"><input style="width:97%" id=input_item${rowCount-5}_alt${x+1}_hor${index} value=0 style="text-align:right"></td>`
     }
   
     }

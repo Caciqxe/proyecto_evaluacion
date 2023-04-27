@@ -87,21 +87,21 @@ while (x<numAlternativas){
     tbody.innerHTML +=
     `
     <tr>
-        <td><input id="nombreAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][0]}"></td>
-        <td><input id="promedioAnualAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][1]}"></td>
-        <td><input id="costoAnualEAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][2]}"></td>
-        <td><input id="indicadorAceAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][3]}"></td>
-        <td><input id="indicadorAcbAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][4]}"></td>
-        <td><input id="indicadorRazonAlt" readonly="true" value="${seleccionAlternativa.rows[x][5]}"></td>
-        <td><input id="comunidadAlt${x+1}"value="${cal1}"></td>
-        <td><input id="calidadAlt${x+1}"value="${cal2}"></td>
-        <td><input id="empleoAlt${x+1}"value="${cal3}"></td>
-        <td><input id="sostenibilidadAlt${x+1}"value="${cal4}"></td>
-        <td><input id="continuidadAlt${x+1}"value="${cal5}"></td>
-        <td><input readonly=" true" id="calificacionAlt${x+1}"value="${calPromedio}"></td>
-        <td><input id="observacion1Alt${x+1}"value="${seleccionAlternativa.rows[x][12]}"></td>
-        <td><input id="observacion2Alt${x+1}"value="${seleccionAlternativa.rows[x][13]}"></td>
-        <td><input id="prioridadAlt${x+1}"value="${x+1}"></td>
+        <td><input class="input5-8" id="nombreAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][0]}"></td>
+        <td><input class="input5-8" id="promedioAnualAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][1]}"></td>
+        <td><input class="input5-8" id="costoAnualEAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][2]}"></td>
+        <td><input class="input5-8" id="indicadorAceAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][3]}"></td>
+        <td><input class="input5-8" id="indicadorAcbAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][4]}"></td>
+        <td><input class="input5-8" id="indicadorRazonAlt" readonly="true" value="${seleccionAlternativa.rows[x][5]}"></td>
+        <td><input class="input5-8" id="comunidadAlt${x+1}"value="${cal1}"></td>
+        <td><input class="input5-8" id="calidadAlt${x+1}"value="${cal2}"></td>
+        <td><input class="input5-8" id="empleoAlt${x+1}"value="${cal3}"></td>
+        <td><input class="input5-8" id="sostenibilidadAlt${x+1}"value="${cal4}"></td>
+        <td><input class="input5-8" id="continuidadAlt${x+1}"value="${cal5}"></td>
+        <td><input class="input5-8" readonly=" true" id="calificacionAlt${x+1}"value="${calPromedio}"></td>
+        <td><input class="input5-8" id="observacion1Alt${x+1}"value="${seleccionAlternativa.rows[x][12]}"></td>
+        <td><input class="input5-8" id="observacion2Alt${x+1}"value="${seleccionAlternativa.rows[x][13]}"></td>
+        <td><input class="input5-8" id="prioridadAlt${x+1}"value="${x+1}"></td>
     </tr>
     `
 
@@ -119,21 +119,21 @@ while (x<numAlternativas){
         tbody.innerHTML +=
         `
         <tr>
-            <td><input id="nombreAlt${x+1}" readonly="true" value="${alternativa.name}"></td>
-            <td><input id="promedioAnualAlt${x+1}" readonly="true" value="${indicadoresPrivados.rows[2][1]}"></td>
-            <td><input id="costoAnualEAlt${x+1}" readonly="true" value="${indicadoresSociales.rows[1][1]}"></td>
-            <td><input id="indicadorAceAlt${x+1}" readonly="true" value="${indicadoresSociales.rows[3][1]}"></td>
-            <td><input id="indicadorAcbAlt${x+1}" readonly="true" value="${indicadoresSociales.rows[1][1]>0?"NO APLICA":tablaIndicadoresCostoBeneficioSocial.rows[0][1]}"></td>
-            <td><input id="indicadorRazonAlt" readonly="true" value="${indicadoresSociales.rows[1][1]>0?"NO APLICA":tablaIndicadoresCostoBeneficioSocial.rows[3][1]}"></td>
-            <td><input id="comunidadAlt${x+1}"value="0"></td>
-            <td><input id="calidadAlt${x+1}"value="0"></td>
-            <td><input id="empleoAlt${x+1}"value="0"></td>
-            <td><input id="sostenibilidadAlt${x+1}"value="0"></td>
-            <td><input id="continuidadAlt${x+1}"value="0"></td>
-            <td><input readonly="true" id="calificacionAlt${x+1}"value="0"></td>
-            <td><input id="observacion1Alt${x+1}"value=""></td>
-            <td><input id="observacion2Alt${x+1}"value=""></td>
-            <td><input id="prioridadAlt${x+1}"value="0"></td>
+            <td><input class="input5-8" id="nombreAlt${x+1}" readonly="true" value="${alternativa.name}"></td>
+            <td><input class="input5-8" id="promedioAnualAlt${x+1}" readonly="true" value="${indicadoresPrivados.rows[2][1]}"></td>
+            <td><input class="input5-8" id="costoAnualEAlt${x+1}" readonly="true" value="${indicadoresSociales.rows[1][1]}"></td>
+            <td><input class="input5-8" id="indicadorAceAlt${x+1}" readonly="true" value="${indicadoresSociales.rows[3][1]}"></td>
+            <td><input class="input5-8" id="indicadorAcbAlt${x+1}" readonly="true" value="${indicadoresSociales.rows[1][1]>0?"NO APLICA":tablaIndicadoresCostoBeneficioSocial.rows[0][1]}"></td>
+            <td><input class="input5-8" id="indicadorRazonAlt" readonly="true" value="${indicadoresSociales.rows[1][1]>0?"NO APLICA":tablaIndicadoresCostoBeneficioSocial.rows[3][1]}"></td>
+            <td><input class="input5-8" id="comunidadAlt${x+1}"value="0"></td>
+            <td><input class="input5-8" id="calidadAlt${x+1}"value="0"></td>
+            <td><input class="input5-8" id="empleoAlt${x+1}"value="0"></td>
+            <td><input class="input5-8" id="sostenibilidadAlt${x+1}"value="0"></td>
+            <td><input class="input5-8" id="continuidadAlt${x+1}"value="0"></td>
+            <td><input class="input5-8" readonly="true" id="calificacionAlt${x+1}"value="0"></td>
+            <td><input class="input5-8" id="observacion1Alt${x+1}"value=""></td>
+            <td><input class="input5-8" id="observacion2Alt${x+1}"value=""></td>
+            <td><input class="input5-8" id="prioridadAlt${x+1}"value="0"></td>
         </tr>
         `
     }

@@ -54,15 +54,15 @@ while (x<numAlternativas) {
             `
             <tr id="trAlt${x+1}_Com${y+1}">
                 <td rowspan="${alternativas.rows.length}" class="bajada" style="text-align:center"><span>${detalleComponente.rows[y][1]}</span></td>
-                <td><span class="respuestaTabla">${alternativas.rows[0][0]}</span></td>
-                <td><input id="hDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[y][1]}" style="text-align:right"></td>
-                <td><input id="mDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[y][2]}" style="text-align:right"></td>
-                <td><input id="vDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[y][3]}" style="text-align:right"></td>
-                <td><input id="tDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[y][4]}" readonly="true" style="text-align:right"></span></td>
-                <td><input id="hIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[y][1]*parseFloat(factorGeneracionEmpleo)} readonly="true" style="text-align:right"></span></td>
-                <td><input id="mIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[y][2]*parseFloat(factorGeneracionEmpleo)} readonly="true" style="text-align:right"></span></td>
-                <td><input id="vIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[y][3]*parseFloat(factorGeneracionEmpleo)} readonly="true" style="text-align:right"></span></td>
-                <td><input id="tIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[y][4]*parseFloat(factorGeneracionEmpleo)} readonly="true" style="text-align:right"></span></td>
+                <td><span class="respuestaTabla5-5">${alternativas.rows[0][0]}</span></td>
+                <td><input style="width:97%" id="hDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[y][1]}" style="text-align:right"></td>
+                <td><input style="width:97%" id="mDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[y][2]}" style="text-align:right"></td>
+                <td><input style="width:97%" id="vDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[y][3]}" style="text-align:right"></td>
+                <td><input style="width:97%" id="tDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[y][4]}" readonly="true" style="text-align:right"></span></td>
+                <td><input style="width:97%" id="hIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[y][1]*parseFloat(factorGeneracionEmpleo)} readonly="true" style="text-align:right"></span></td>
+                <td><input style="width:97%" id="mIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[y][2]*parseFloat(factorGeneracionEmpleo)} readonly="true" style="text-align:right"></span></td>
+                <td><input style="width:97%" id="vIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[y][3]*parseFloat(factorGeneracionEmpleo)} readonly="true" style="text-align:right"></span></td>
+                <td><input style="width:97%" id="tIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[y][4]*parseFloat(factorGeneracionEmpleo)} readonly="true" style="text-align:right"></span></td>
             </tr>
             `
             
@@ -73,15 +73,15 @@ while (x<numAlternativas) {
                 bodyAlt.innerHTML +=
                 `
                 <tr>
-                    <td><span class="respuestaTabla">${alternativas.rows[z+1][0]}</span></td>
-                    <td><input id="hDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
-                    <td><input id="mDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
-                    <td><input id="vDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
-                    <td><input id="tDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true" style="text-align:right"></span></td>
-                    <td><input id="hIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true" style="text-align:right"></span></td>
-                    <td><input id="mIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true" style="text-align:right"></span></td>
-                    <td><input id="vIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true" style="text-align:right"></span></td>
-                    <td><input id="tIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true" style="text-align:right"></span></td>
+                    <td><span class="respuestaTabla5-5">${alternativas.rows[z+1][0]}</span></td>
+                    <td><input style="width:97%" id="hDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
+                    <td><input style="width:97%" id="mDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
+                    <td><input style="width:97%" id="vDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
+                    <td><input style="width:97%" id="tDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true" style="text-align:right"></span></td>
+                    <td><input style="width:97%" id="hIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true" style="text-align:right"></span></td>
+                    <td><input style="width:97%" id="mIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true" style="text-align:right"></span></td>
+                    <td><input style="width:97%" id="vIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true" style="text-align:right"></span></td>
+                    <td><input style="width:97%" id="tIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true" style="text-align:right"></span></td>
                 </tr>
                 `
     
@@ -131,15 +131,15 @@ while (x<numAlternativas) {
             `
             <tr id="trAlt${x+1}_Com${y+1}">
                 <td rowspan="${alternativas.rows.length}" class="bajada" style="text-align:center"><span>${detalleComponente.rows[y][1]}</span></td>
-                <td><span class="respuestaTabla">${alternativas.rows[0][0]}</span></td>
-                <td><input id="hDirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right"></td>
-                <td><input id="mDirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right"></td>
-                <td><input id="vDirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right"></td>
-                <td><input id="tDirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right" readonly="true"></span></td>
-                <td><input id="hIndirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right" readonly="true"></span></td>
-                <td><input id="mIndirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right" readonly="true"></span></td>
-                <td><input id="vIndirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right" readonly="true"></span></td>
-                <td><input id="tIndirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right" readonly="true"></span></td>
+                <td><span class="respuestaTabla5-5">${alternativas.rows[0][0]}</span></td>
+                <td><input style="width:97%" id="hDirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right"></td>
+                <td><input style="width:97%" id="mDirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right"></td>
+                <td><input style="width:97%" id="vDirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right"></td>
+                <td><input style="width:97%" id="tDirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right" readonly="true"></span></td>
+                <td><input style="width:97%" id="hIndirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right" readonly="true"></span></td>
+                <td><input  style="width:97%" id="mIndirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right" readonly="true"></span></td>
+                <td><input style="width:97%" id="vIndirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right" readonly="true"></span></td>
+                <td><input style="width:97%" id="tIndirectoAlt${x+1}_com${y+1}_0" value=0 style="text-align:right" readonly="true"></span></td>
             </tr>
             `
             
@@ -150,15 +150,15 @@ while (x<numAlternativas) {
                 bodyAlt.innerHTML +=
                 `
                 <tr>
-                    <td><span class="respuestaTabla">${alternativas.rows[z+1][0]}</span></td>
-                    <td><input id="hDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
-                    <td><input id="mDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
-                    <td><input id="vDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
-                    <td><input id="tDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right" readonly="true"></span></td>
-                    <td><input id="hIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right" readonly="true"></span></td>
-                    <td><input id="mIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right" readonly="true"></span></td>
-                    <td><input id="vIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right" readonly="true"></span></td>
-                    <td><input id="tIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right" readonly="true"></span></td>
+                    <td><span class="respuestaTabla5-5">${alternativas.rows[z+1][0]}</span></td>
+                    <td><input style="width:97%" id="hDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
+                    <td><input style="width:97%" id="mDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
+                    <td><input style="width:97%" id="vDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right"></td>
+                    <td><input style="width:97%" id="tDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right" readonly="true"></span></td>
+                    <td><input style="width:97%" id="hIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right" readonly="true"></span></td>
+                    <td><input style="width:97%" id="mIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right" readonly="true"></span></td>
+                    <td><input style="width:97%" id="vIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right" readonly="true"></span></td>
+                    <td><input style="width:97%" id="tIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 style="text-align:right" readonly="true"></span></td>
                 </tr>
                 `
     

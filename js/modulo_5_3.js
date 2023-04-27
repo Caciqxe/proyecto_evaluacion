@@ -88,7 +88,7 @@ while (x<numAlternativas) {
                         <select class="dropdownManoObra" value="${tablaCostos.rows[0][1]}"></select>
                     </td>
 
-                    <td><span class="respuestaTabla">${tablaCostos.rows[0][2]}</span></td>
+                    <td><span class="respuestaTabla5-3">${tablaCostos.rows[0][2]}</span></td>
 
                     <td class="celdaUnidades">
                         <span style="display: none;"></span>
@@ -106,7 +106,7 @@ while (x<numAlternativas) {
                         <select class="dropdownManoObra" value="${tablaCostos.rows[1][1]}"></select>
                     </td>
 
-                    <td><span class="respuestaTabla">${tablaCostos.rows[1][2]}</span></td>
+                    <td><span class="respuestaTabla5-3">${tablaCostos.rows[1][2]}</span></td>
 
                     <td class="celdaUnidades">
                         <span style="display: none;"></span>
@@ -124,7 +124,7 @@ while (x<numAlternativas) {
                         <select class="dropdownManoObra" value="${tablaCostos.rows[2][1]}"></select>
                     </td>
 
-                    <td><span class="respuestaTabla">${tablaCostos.rows[2][2]}</span></td>
+                    <td><span class="respuestaTabla5-3">${tablaCostos.rows[2][2]}</span></td>
                     
                     <td class="celdaUnidades">
                         <span style="display: none;"></span>
@@ -150,11 +150,11 @@ while (x<numAlternativas) {
                 </tr>
                 <tr id="costoTotalPrecioPrivadoAlt${x+1}">
                     <td class="bajada"><span>COSTO TOTAL Precios Privados</span></td>
-                    <td><span class="respuestaTabla" id="totalTotalPrecioPrivadoAlt${x+1}" style="text-align:right">0</span></td>
+                    <td><span class="respuestaTabla5-3" id="totalTotalPrecioPrivadoAlt${x+1}" style="text-align:right">0</span></td>
                 </tr>
                 <tr id="costoTotalPrecioSocialAlt${x+1}">
                     <td class="bajada"><span>COSTO TOTAL Precios Sociales</span></td>
-                    <td><span class="respuestaTabla" id="totalTotalPrecioSocialAlt${x+1}" style="text-align:right">0</span></td>
+                    <td><span class="respuestaTabla5-3" id="totalTotalPrecioSocialAlt${x+1}" style="text-align:right">0</span></td>
                 </tr>
             </tbody>
         </table>
@@ -210,7 +210,7 @@ while (x<numAlternativas) {
             let array_periodos=[]
             for (let index = 0; index <= horizonte; index++) {
                 array_periodos[index] = rowTable.insertCell(-1)
-                array_periodos[index].innerHTML = `<td class="bajada"><input id=input_item${rowCountTabla-5}_hor${index} value=${tablaCostos.rows[asd][index+7]} style="text-align:right"></td>`
+                array_periodos[index].innerHTML = `<td class="bajada"><input style="width:96%" id=input_item${rowCountTabla-5}_hor${index} value=${tablaCostos.rows[asd][index+7]} style="text-align:right"></td>`
             }
 
             asd++
@@ -231,15 +231,15 @@ while (x<numAlternativas) {
             `
             semiCalificada.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="semiCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaCostos.rows[0][y+7]}</span></td>
+            <td><span class="respuestaTabla5-3" id="semiCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaCostos.rows[0][y+7]}</span></td>
             `
             calificada.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="calificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaCostos.rows[1][y+7]}</span></td>
+            <td><span class="respuestaTabla5-3" id="calificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaCostos.rows[1][y+7]}</span></td>
             `
             noCalificada.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="noCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaCostos.rows[2][y+7]}</span></td>
+            <td><span class="respuestaTabla5-3" id="noCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaCostos.rows[2][y+7]}</span></td>
             `
     
             periodosCostos.innerHTML +=
@@ -273,11 +273,11 @@ while (x<numAlternativas) {
             }
             costoTotalPrecioPrivado.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="costoTotalPrecioPrivado_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">${sumValPrivado}</span></td>
+            <td><span class="respuestaTabla5-3" id="costoTotalPrecioPrivado_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">${sumValPrivado}</span></td>
             `
             costoTotalPrecioSocial.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="costoTotalPrecioSocial_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">${sumValSocial}</span></td>
+            <td><span class="respuestaTabla5-3" id="costoTotalPrecioSocial_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">${sumValSocial}</span></td>
             `
 
             y++
@@ -319,7 +319,7 @@ while (x<numAlternativas) {
                         <select class="dropdownManoObra"></select>
                     </td>
 
-                    <td><span class="respuestaTabla"></span></td>
+                    <td><span class="respuestaTabla5-3"></span></td>
 
                     <td class="celdaUnidades">
                         <span style="display: none;"></span>
@@ -336,7 +336,7 @@ while (x<numAlternativas) {
                         <select class="dropdownManoObra"></select>
                     </td>
 
-                    <td><span class="respuestaTabla"></span></td>
+                    <td><span class="respuestaTabla5-3"></span></td>
                     
                     <td class="celdaUnidades">
                         <span style="display: none;"></span>
@@ -354,7 +354,7 @@ while (x<numAlternativas) {
                         <select class="dropdownManoObra"></select>
                     </td>
                     
-                    <td><span class="respuestaTabla"></span></td>
+                    <td><span class="respuestaTabla5-3"></span></td>
                     
                     <td class="celdaUnidades">
                         <span style="display: none;"></span>
@@ -379,11 +379,11 @@ while (x<numAlternativas) {
                 </tr>
                 <tr id="costoTotalPrecioPrivadoAlt${x+1}">
                     <td class="bajada"><span>COSTO TOTAL Precios Privados</span></td>
-                    <td><span class="respuestaTabla" style="text-align:right">0</span></td>
+                    <td><span class="respuestaTabla5-3" style="text-align:right">0</span></td>
                 </tr>
                 <tr id="costoTotalPrecioSocialAlt${x+1}">
                     <td class="bajada"><span>COSTO TOTAL Precios Sociales</span></td>
-                    <td><span class="respuestaTabla" style="text-align:right">0</span></td>
+                    <td><span class="respuestaTabla5-3" style="text-align:right">0</span></td>
                 </tr>
             </tbody>
         </table>
@@ -403,15 +403,15 @@ while (x<numAlternativas) {
             `
             semiCalificada.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="semiCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">0</span></td>
+            <td><span class="respuestaTabla5-3" id="semiCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">0</span></td>
             `
             calificada.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="calificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">0</span></td>
+            <td><span class="respuestaTabla5-3" id="calificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">0</span></td>
             `
             noCalificada.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="noCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">0</span></td>
+            <td><span class="respuestaTabla5-3" id="noCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">0</span></td>
             `
     
             periodosCostos.innerHTML +=
@@ -420,11 +420,11 @@ while (x<numAlternativas) {
             `
             costoTotalPrecioPrivado.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="costoTotalPrecioPrivado_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">0</span></td>
+            <td><span class="respuestaTabla5-3" id="costoTotalPrecioPrivado_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">0</span></td>
             `
             costoTotalPrecioSocial.innerHTML +=
             `
-            <td><span class="respuestaTabla" id="costoTotalPrecioSocial_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">0</span></td>
+            <td><span class="respuestaTabla5-3" id="costoTotalPrecioSocial_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">0</span></td>
             `
 
 
@@ -536,7 +536,7 @@ const agregarFila = (event) => {
         let array_periodos=[]
         for (let index = 0; index <= horizonte; index++) {
             array_periodos[index] = row.insertCell(-1)
-            array_periodos[index].innerHTML = `<td class="bajada"><input id=input_item${rowCount-5}_hor${index} value=0></td>`
+            array_periodos[index].innerHTML = `<td class="bajada"><input style="width:96%" id=input_item${rowCount-5}_hor${index} value=0></td>`
 
         }
 

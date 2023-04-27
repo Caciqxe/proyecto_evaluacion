@@ -88,11 +88,11 @@ while (x<numAlternativas) {
                 </tr>
                 <tr id=sumPrivados_alt${x+1}>
                     <td class="bajada" style="width:10cm">TOTAL COSTOS INVERSION Y REINVERSION Precios Privados</td>
-                    <td><span id=valorTotalPrivados_alt${x+1} class="respuestaTabla">0</span></td>
+                    <td><span id=valorTotalPrivados_alt${x+1} class="respuestaTabla5-2">0</span></td>
                 </tr>
                 <tr id=sumSociales_alt${x+1}>
                     <td class="bajada" style="width:10cm">TOTAL COSTOS INVERSION Y REINVERSION Precios Sociales</td>
-                    <td><span id=valorTotalSociales_alt${x+1} class="respuestaTabla">0</span></td>
+                    <td><span id=valorTotalSociales_alt${x+1} class="respuestaTabla5-2">0</span></td>
                 </tr>
             </tbody>
         </table>
@@ -129,12 +129,12 @@ while (x<numAlternativas) {
             `
             periodosSumPrivados.innerHTML +=
             `
-            <td><span id=sumPrivados_alt${x+1}_hor${index} class="respuestaTabla"  style="text-align:right">${SumTotalPrivado}</span></td>
+            <td><span id=sumPrivados_alt${x+1}_hor${index} class="respuestaTabla5-2"  style="text-align:right">${SumTotalPrivado}</span></td>
             `
         
             periodosSumSociales.innerHTML +=
             `
-            <td><span id=sumSociales_alt${x+1}_hor${index} class="respuestaTabla"  style="text-align:right">${SumTotalSocial}</span></td>
+            <td><span id=sumSociales_alt${x+1}_hor${index} class="respuestaTabla5-2"  style="text-align:right">${SumTotalSocial}</span></td>
             `
         }
         
@@ -374,7 +374,7 @@ while (x<numAlternativas) {
                 var cell6 = row.insertCell(-1)
                 var cell7 = row.insertCell(-1)
                 
-                cell1.innerHTML=`<span class="respuestaTabla" style="font-size:75%;width:100%">${alternativas.rows[z][0]}</span>`;
+                cell1.innerHTML=`<span class="respuestaTabla" style="font-size:75%;width:97%">${alternativas.rows[z][0]}</span>`;
                 //cell2.innerHTML=`<input id=inputComponenteSocial_alt${x+1}_com${y+1}_act${z+1} list=factorSocial_alt${x+1}_com${y+1}_act${z+1}><datalist class=selectorFactorSocial id=factorSocial_alt${x+1}_com${y+1}_act${z+1} style="overflow-y: auto"></datalist>`
                 if (flujoCosto === null) {
                     cell2.className = "dropdown-cell"
@@ -383,7 +383,7 @@ while (x<numAlternativas) {
                         <span style="display: none;"></span>
                         <select class="my-dropdown" ></select>
                     `
-                    cell3.innerHTML=`<span class="respuestaTabla" id=valorFactorSocial_alt${x+1}_com${y+1}_act${z+1}></span>`
+                    cell3.innerHTML=`<span class="respuestaTabla5-2" id=valorFactorSocial_alt${x+1}_com${y+1}_act${z+1}></span>`
                 } else {
                     cell2.className = "dropdown-cell"
                     cell2.innerHTML = 
@@ -391,13 +391,13 @@ while (x<numAlternativas) {
                         <span style="display: none;"></span>
                         <select class="my-dropdown" value="${flujoCosto.rows[z][1]}"></select>
                     `
-                    cell3.innerHTML=`<span class="respuestaTabla" id=valorFactorSocial_alt${x+1}_com${y+1}_act${z+1}>${flujoCosto.rows[z][2]}</span>`
+                    cell3.innerHTML=`<span class="respuestaTabla5-2" id=valorFactorSocial_alt${x+1}_com${y+1}_act${z+1}>${flujoCosto.rows[z][2]}</span>`
                 }
 
-                cell4.innerHTML=`<span class="respuestaTabla">${arrayUnidades[alternativas.rows[z][1]]}</span>`;
-                cell5.innerHTML=`<span class="respuestaTabla" style="text-align:right">${alternativas.rows[z][2]}</span>`;
-                cell6.innerHTML=`<span class="respuestaTabla" style="text-align:right">${alternativas.rows[z][3]}</span>`;
-                cell7.innerHTML=`<span class="respuestaTabla" style="text-align:right">${alternativas.rows[z][4]}</span>`;
+                cell4.innerHTML=`<span class="respuestaTabla5-2">${arrayUnidades[alternativas.rows[z][1]]}</span>`;
+                cell5.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][2]}</span>`;
+                cell6.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][3]}</span>`;
+                cell7.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][4]}</span>`;
                 
 /*                 let datalist = document.getElementById(`factorSocial_alt${x+1}_com${y+1}_act${z+1}`)
                 let input = document.getElementById(`inputComponenteSocial_alt${x+1}_com${y+1}_act${z+1}`)
@@ -423,21 +423,21 @@ while (x<numAlternativas) {
                 var cell7 = row.insertCell(-1)
                 
                 if (flujoCosto === null) {
-                    cell1.innerHTML=`<span class="respuestaTabla">Privado</span>`;
+                    cell1.innerHTML=`<span class="respuestaTabla5-2">Privado</span>`;
                     cell2.innerHTML=''
                     cell3.innerHTML=''
                     cell4.innerHTML=''
                     cell5.innerHTML=''
                     cell6.innerHTML=''
-                    cell7.innerHTML=`<span class="respuestaTabla" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right"></span>`
+                    cell7.innerHTML=`<span class="respuestaTabla5-2" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right"></span>`
                 } else {
-                    cell1.innerHTML=`<span class="respuestaTabla">TOTAL COMP a Precios Privados</span>`;
+                    cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Privados</span>`;
                     cell2.innerHTML=''
                     cell3.innerHTML=''
                     cell4.innerHTML=''
                     cell5.innerHTML=''
                     cell6.innerHTML=''
-                    cell7.innerHTML=`<span class="respuestaTabla" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right">${flujoCosto.rows[z][6]}</span>`
+                    cell7.innerHTML=`<span class="respuestaTabla5-2" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right">${flujoCosto.rows[z][6]}</span>`
                 }
                 
                 var sumValTotal = 0;
@@ -461,13 +461,13 @@ while (x<numAlternativas) {
                 var cell5 = row.insertCell(-1)
                 var cell6 = row.insertCell(-1)
                 var cell7 = row.insertCell(-1)
-                cell1.innerHTML=`<span class="respuestaTabla">TOTAL COMP a Precios Sociales</span>`;
+                cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Sociales</span>`;
                 cell2.innerHTML=''
                 cell3.innerHTML=''
                 cell4.innerHTML=''
                 cell5.innerHTML=''
                 cell6.innerHTML=''
-                cell7.innerHTML=`<span class="respuestaTabla" id="resultadoSocial_alt${x+1}_com${y+1}" style="text-align:right"></span>`
+                cell7.innerHTML=`<span class="respuestaTabla5-2" id="resultadoSocial_alt${x+1}_com${y+1}" style="text-align:right"></span>`
 
                 if (flujoCosto === null) {
                     let resultadoSocial = document.getElementById(`resultadoSocial_alt${x+1}_com${y+1}`)
