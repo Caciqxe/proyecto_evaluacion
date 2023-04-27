@@ -231,7 +231,7 @@ while (x<numAlternativas) {
             `
             semiCalificada.innerHTML +=
             `
-            <td><span class="respuestaTabla5-3" id="semiCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaCostos.rows[0][y+7]}</span></td>
+            <td><span class="respuestaTabla5-3" id="semiCalificada_alt${x+1}_hor${y}" data-type="currency" contenteditable="true" contenteditable="true" style="text-align:right">${tablaCostos.rows[0][y+7]}</span></td>
             `
             calificada.innerHTML +=
             `
@@ -561,6 +561,88 @@ const eliminarFila = (event) =>{
         }
     }
 }
+
+document.querySelectorAll("span[data-type='currency']").forEach(function(span) {
+    span.addEventListener('keyup', function() {
+        formatCurrency(span);
+    });
+
+    span.addEventListener('blur', function() {
+        formatCurrency(span, "blur");
+    });
+});
+
+function formatNumber(n) {
+    return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function formatCurrency(span, blur) {
+    var input_val = span.innerHTML;
+
+    if (input_val === "") { return; }
+
+    var original_len = input_val.length;
+    var caret_pos = getCaretPosition(span);
+    
+    if (input_val.indexOf(".") >= 0) {
+        var decimal_pos = input_val.indexOf(".");
+        var left_side = input_val.substring(0, decimal_pos);
+        var right_side = input_val.substring(decimal_pos);
+
+        left_side = formatNumber(left_side);
+        right_side = formatNumber(right_side);
+        
+        if (blur === "blur") {
+            right_side += "00";
+        }
+        
+        right_side = right_side.substring(0, 2);
+        input_val = "$" + left_side + "." + right_side;
+
+    } else {
+        input_val = formatNumber(input_val);
+        input_val = "$" + input_val;
+        
+        if (blur === "blur") {
+            input_val += ".00";
+        }
+    }
+    
+    span.innerHTML = input_val;
+
+    var updated_len = input_val.length;
+    caret_pos = updated_len - original_len + caret_pos;
+    setCaretPosition(span, caret_pos);
+}
+
+function getCaretPosition(editableDiv) {
+    var caretPos = 0,
+        sel, range;
+    if (window.getSelection) {
+        sel = window.getSelection();
+        if (sel.rangeCount) {
+            range = sel.getRangeAt(0);
+            if (range.commonAncestorContainer.parentNode == editableDiv) {
+                caretPos = range.endOffset;
+            }
+        }
+    }
+    return caretPos;
+}
+
+function setCaretPosition(editableDiv, pos) {
+    if (document.createRange && window.getSelection) {
+        var range = document.createRange();
+        range.selectNodeContents(editableDiv);
+        range.collapse(true);
+        range.setEnd(editableDiv, pos);
+        range.setStart(editableDiv, pos);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+    }
+}
+
 
 if (ejecucion == 1) {
     contarFilas2()
