@@ -13,10 +13,12 @@ while (x<numAlternativas) {
     let tablaPaso8 = JSON.parse(sessionStorage.getItem(`tablaPaso8_alt${x+1}_A`))
     
     if (tablaPaso8 === null) {
+
+        let prueba = sessionStorage.getItem(`Alt_numero_${x+1}`)
         riesgoDesastre.innerHTML +=
         `
         <div id="modulo4Paso8_alt${x+1}">
-        <span class="alternativaStilo">Alternativa N° ${x+1} A</span>
+        <span class="alternativaStilo">Alternativa N° ${x+1}: ${JSON.parse(prueba).name}</span>
             <div>
                 <table id="tablaPaso8_alt${x+1}_A">
                     <tbody id="bodyPaso8_alt${x+1}_A">
@@ -53,10 +55,12 @@ while (x<numAlternativas) {
         y_a++
         }
     } else {
+        let prueba = sessionStorage.getItem(`Alt_numero_${x+1}`)
+
         riesgoDesastre.innerHTML +=
         `
         <div id="modulo4Paso8_alt${x+1}">
-        <span class="alternativaStilo">Alternativa N° ${x+1} A</span>
+        <span class="alternativaStilo">Alternativa N° ${x+1}:  ${JSON.parse(prueba).name}</span>
             <div>
                 <table id="tablaPaso8_alt${x+1}_A">
                     <tbody id="bodyPaso8_alt${x+1}_A">
