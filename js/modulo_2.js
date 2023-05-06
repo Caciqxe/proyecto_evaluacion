@@ -41,9 +41,9 @@ if (identificacionInteres != null) {
         iterarIden.innerHTML +=
         `
         <tr>
-            <td><span contenteditable="true" class="textInput" style="width: 99%;>${identificacionInteres.rows[x][0]}</span></td>
-            <td><span contenteditable="true" class="textInput" style="width: 99%;>${identificacionInteres.rows[x][1]}</span></td>
-            <td><span contenteditable="true" class="textInput" style="width: 99%;>${identificacionInteres.rows[x][2]}</span></td>
+            <td><span contenteditable="true" class="textInput" style="width: 99%;">${identificacionInteres.rows[x][0]}</span></td>
+            <td><span contenteditable="true" class="textInput" style="width: 99%;">${identificacionInteres.rows[x][1]}</span></td>
+            <td><span contenteditable="true" class="textInput" style="width: 99%;">${identificacionInteres.rows[x][2]}</span></td>
         </tr>
         `
 
@@ -56,7 +56,7 @@ if (identificacionInteres != null) {
     `
     <tbody>
     <tr>
-        <th style="width: 10cm"> ACTOR</th>
+        <th style="width: 10cm">ACTOR</th>
         <th style="width: 10cm">RELACIÓN CON EL PROBLEMA O PROYECTO</th>
         <th style="width: 10cm">PROPUESTA DE INTERVENCIÓN</th>
         
@@ -305,7 +305,12 @@ const eliminarFila = (event) =>{
     table = table.replace('e_bttn','tabla')
     table = document.getElementById(`${table}`)
 
-    table.deleteRow(-1);
+
+    if (table.rows.length <= 2) {
+        
+    } else {
+        table.deleteRow(-1);
+    }
     }
 }
 
