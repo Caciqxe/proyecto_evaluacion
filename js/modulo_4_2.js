@@ -55,7 +55,7 @@ while (x<numAlternativas) {
                         </tr>
                         <tr>
                             <td class="bajada" colspan="2">OBJETIVO CENTRAL</td>
-                            <td colspan="6"><span class= "textInput" contenteditable="true">${tablaPaso1.rows[0][(tablaPaso1.rows[0].length)-1]}</span></td>
+                            <td colspan="6"><span class= "textInput" contenteditable="true" style="width:99%">${tablaPaso1.rows[0][(tablaPaso1.rows[0].length)-1]}</span></td>
                         </tr>
                     </tbody>
                     <tbody id="bodyPaso1_alt${x+1}">
