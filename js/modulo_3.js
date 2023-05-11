@@ -140,11 +140,11 @@ if (tablaCriterios != null) {
         <th colspan="1" rowspan="2">CRITERIOS DE ASIGNACIÓN (De acuerdo al RUB: Registro Unico de Beneficiarios, el cual tiene identificados los hogares en pobreza y en extrema pobreza)</th>
     </tr>
     <tr>
-        <th>DESCRIPCION</th>
-        <th>CANTIDAD</th>
+        <th class="step3-4">DESCRIPCION</th>
+        <th class="step3-4">CANTIDAD</th>
     </tr>
     <tr>
-        <td><span class="textInput" contenteditable="true" style="width: 97%;"></span></td>
+        <td><span class="textInput" contenteditable="true" style="width: 97%; max-width: 400px"></span></td>
         <td><span class="textInput" contenteditable="true" style="width: 97%;"></span></td>
         <td><span class="textInput" contenteditable="true" style="width: 99.5%;"></span></td>
     </tr>
