@@ -51,6 +51,7 @@ let tablaCostosInversion = JSON.parse(sessionStorage.getItem('totalCostosInversi
 let tablaCostosOperacion = JSON.parse(sessionStorage.getItem('totalCostosOperacion'))
 
 let arrayUnidades = [
+    '---',
     'Número',
     'Global',
     'm',

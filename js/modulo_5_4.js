@@ -343,7 +343,7 @@ window.addEventListener('DOMContentLoaded', function () {
         let inversionInicial = parseFloat(totales.rows[1][2])+parseFloat(costosTotalesPrecioSocial.rows[2][2])
         let y = 0
 
-        while (y<=horCalculo-3) {
+        while (y<horCalculo) {
             flujosCaja.push(`${parseFloat(totales.rows[1][y+3])+parseFloat(costosTotalesPrecioSocial.rows[2][y+3])}`)
             y++
         }

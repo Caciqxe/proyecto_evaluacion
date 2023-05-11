@@ -54,6 +54,7 @@ let arrayFactores = [
 
 
 let arrayUnidades = [
+    '---',
     'Número',
     'Global',
     'm',
