@@ -182,7 +182,7 @@ while (x<numAlternativas) {
                 </tbody>  
                 <tr>
                     <td colspan="1" class="bajada" style="width:350px"><span contenteditable="false">JUSTIFICACIÓN DE LA LOCALIZACIÓN Y/O DE LA COBERTURA GEOGRÁFICA:</td>
-                    <td colspan="2"><span id="justificacionLocalizacion_alt${x+1}" class= "textInput" contenteditable="true"></td>
+                    <td colspan="2"><span id="justificacionLocalizacion_alt${x+1}" class= "textInput" contenteditable="true">${tablaPaso2.rows[tablaPaso2.rows.length-1][1]}</td>
                 </tr> 
             </table>
             <span><button id=a_bttn_Paso2_alt${x+1} class="agregar">Agregar Actividad</button></span>
@@ -192,7 +192,7 @@ while (x<numAlternativas) {
         `
 
         let bodyPaso2 = document.getElementById(`bodyPaso2_alt${x+1}`)
-        while (l<tablaPaso2.rows.length) {
+        while (l<tablaPaso2.rows.length-1) {
             bodyPaso2.innerHTML +=
             `
             <tr>
@@ -957,7 +957,10 @@ function contarFilas() {
                     const cells = rows[j].cells;
 
                     if (j === rows.length-1) {
-                        
+                        for (let k = 0; k < cells.length; k++) {
+                            const cellData = cells[k].innerText.trim();
+                            rowData.push(cellData);
+                        }
                     } else {
                         for (let k = 0; k < cells.length; k++) {
     
