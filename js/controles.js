@@ -151,6 +151,7 @@ a.click();
 abrirArchivo.addEventListener('click', function () {// Agregar un elemento <input> de tipo "file" a la página
     const input = document.createElement('input');
     input.type = 'file';
+    input.className = 'selec-archivo';
     input.addEventListener('change', handleFileSelect);
     document.body.appendChild(input);
     

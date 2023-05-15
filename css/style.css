@@ -201,6 +201,13 @@ footer {
   padding: 1% 0;
   min-width: 120px; }
 
+.selec-archivo {
+  background-color: #afafaf;
+  color: black;
+  border: 0px;
+  display: inline-block;
+  padding-bottom: 4px; }
+
 .header {
   background: #92d050;
   border: 2px #0a3b95 solid;
