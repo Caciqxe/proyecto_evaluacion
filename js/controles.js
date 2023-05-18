@@ -15,6 +15,8 @@ horizonteEvaluacion.addEventListener('change', crearAlternativas)
 numeroAlternativas.addEventListener('change', crearAlternativas)
 setModulo.addEventListener('click', setAlternativas)
 
+grabarTodo.style.display = 'none'
+
 
 if (sessionStorage.length === 0) {
     let x = 0
@@ -127,6 +129,13 @@ grabarTodo.addEventListener('click', guardarPartida)
 eliminarTodo.addEventListener('click', eliminarPartida)
 numeroAlternativas.addEventListener('change',setAlternativas())
 guardarComo.addEventListener('click',function (e) {
+
+
+    function clickArtificial() {
+        grabarTodo.click()
+    }
+
+    clickArtificial()
     // Crear un objeto vacío para almacenar los datos
 const data = {};
 
