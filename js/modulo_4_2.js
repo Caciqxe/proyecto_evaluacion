@@ -25,9 +25,19 @@ let arrayImpacto = [
 
 let arrayOcurrencia = [
     '---',
+    'Suelo',
+    'Atmósfera',
+    'Agua',
+    'Flora y Fauna',
+    'Población',
+    'Otro'
+]
+
+/* let arrayOcurrencia = [
+    '---',
     'Baja',
     'Alta'
-]
+] */
 
 while (x<numAlternativas) {
     let modulo1Info = JSON.parse(sessionStorage.getItem('Modulo1Extra'))
@@ -329,11 +339,10 @@ while (x<numAlternativas) {
                 <table id="tablaPaso4_alt${x+1}">
                     <tbody id="bodyPaso4_alt${x+1}">
                     <tr>
-                        <th style="width:15cm">CATEGORIA IMPACTO AMBIENTAL</th>
-                        <th style="width:15cm">DESCRIPCIÓN</th>
+                        <th style="width:15cm">MEDIO AFECTADO</th>
                         <th style="width:15cm">NIVEL DE IMPACTO</th>
-                        <th style="width:15cm">PROBABILIDAD DE OCURRENCIA</th>
-                        <th style="width:15cm">ESTRATÉGIA Y MEDIDAS DE MITIGACIÓN</th>
+                        <th style="width:15cm">DESCRIPCIÓN DEL IMPACTO</th>
+                        <th style="width:15cm">MEDIDA DE MITIGACIÓN</th>
                     </tr>
                     </tbody>
                 </table>
@@ -347,17 +356,16 @@ while (x<numAlternativas) {
             bodyPaso4.innerHTML +=
             `
             <tr>
-                <td><span style="width: 98%"  class= "textInput" contenteditable="true">${tablaPaso4.rows[l][0]}</span></td>
-                <td><span class= "textInput" contenteditable="true">${tablaPaso4.rows[l][1]}</span></td>
-                <td class="celdaImpacto">
-                    <span style="display: none;"></span>
-                    <select class="dropdownImpacto" value="${tablaPaso4.rows[l][2]}"></select>
-                </td>
                 <td class="celdaOcurrencia">
                     <span style="display: none;"></span>
-                    <select class="dropdownOcurrencia" value="${tablaPaso4.rows[l][3]}"></select>
+                    <select class="dropdownOcurrencia" value="${tablaPaso4.rows[l][0]}"></select>
                 </td>
-                <td><span class= "textInput" contenteditable="true">${tablaPaso4.rows[l][4]}</span></td>
+                <td class="celdaImpacto">
+                    <span style="display: none;"></span>
+                    <select class="dropdownImpacto" value="${tablaPaso4.rows[l][1]}"></select>
+                </td>
+                <td><span class= "textInput" contenteditable="true">${tablaPaso4.rows[l][2]}</span></td>
+                <td><span class= "textInput" contenteditable="true">${tablaPaso4.rows[l][3]}</span></td>
             </tr>
             `
             l++
@@ -372,24 +380,22 @@ while (x<numAlternativas) {
                 <table id="tablaPaso4_alt${x+1}">
                     <tbody id="bodyPaso4_alt${x+1}">
                         <tr>
-                            <th style="width:15cm">CATEGORIA IMPACTO AMBIENTAL</th>
-                            <th style="width:15cm">DESCRIPCIÓN</th>
+                            <th style="width:15cm">MEDIO AFECTADO</th>
                             <th style="width:15cm">NIVEL DE IMPACTO</th>
-                            <th style="width:15cm">PROBABILIDAD DE OCURRENCIA</th>
-                            <th style="width:15cm">ESTRATÉGIA Y MEDIDAS DE MITIGACIÓN</th>
+                            <th style="width:15cm">DESCRIPCIÓN DEL IMPACTO</th>
+                            <th style="width:15cm">MEDIDA DE MITIGACIÓN</th>
                         </tr>
                         <tr>
-                            <td><span style="width: 98%" class= "textInput" contenteditable="true"></span></td>
-                            <td><span class= "textInput" contenteditable="true"></span></td>
-                            <td class="celdaImpacto">
-                                <span style="display: none;"></span>
-                                <select class="dropdownImpacto"></select>
-                            </td>
                             <td class="celdaOcurrencia">
                                 <span style="display: none;"></span>
                                 <select class="dropdownOcurrencia"></select>
                             </td>
-                            <td><span class= "textInput" contenteditable="true"></span></td>
+                            <td class="celdaImpacto">
+                                <span style="display: none;"></span>
+                                <select class="dropdownImpacto"></select>
+                            </td>
+                            <td><span style="width: 98%" class= "textInput" contenteditable="true"></span></td>
+                            <td><span style="width: 98%" class= "textInput" contenteditable="true"></span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -768,26 +774,26 @@ const agregarFila = (event) => {
         var cell2 = row.insertCell(-1);
         var cell3 = row.insertCell(-1);
         var cell4 = row.insertCell(-1);
-        var cell5 = row.insertCell(-1);
+        //var cell5 = row.insertCell(-1);
 
-        cell1.innerHTML = `<span class= "textInput" contenteditable="true"></span>`;
-        cell2.innerHTML = `<span class= "textInput" contenteditable="true"></span>`;
+        cell3.innerHTML = `<span class= "textInput" contenteditable="true"></span>`;
+        cell4.innerHTML = `<span class= "textInput" contenteditable="true"></span>`;
 
-        cell3.className = "celdaImpacto"
-        cell3.innerHTML = 
+        cell2.className = "celdaImpacto"
+        cell2.innerHTML = 
         `
         <span style="display: none;"></span>
         <select class="dropdownImpacto"></select>
         `;
 
-        cell4.className = "celdaOcurrencia"
-        cell4.innerHTML = 
+        cell1.className = "celdaOcurrencia"
+        cell1.innerHTML = 
         `
         <span style="display: none;"></span>
         <select class="dropdownOcurrencia"></select>
         `;
 
-        cell5.innerHTML = `<span class= "textInput" contenteditable="true"></span>`;
+        //cell5.innerHTML = `<span class= "textInput" contenteditable="true"></span>`;
     
     
         crearOpcionesImpacto(row)
@@ -909,6 +915,7 @@ function crearOpcionesOcurrencia(fila) {
 }
 
 
+
 function contarFilas() {
 
         const tables = document.getElementsByTagName('table');
@@ -1025,12 +1032,12 @@ function contarFilas() {
                 
                     for (let k = 0; k < cells.length; k++) {
     
-                        if (k===2) {
+                        if (k===1) {
                             const dropdown = cells[k].querySelector('.dropdownImpacto');
                             const selectedIndex = dropdown.selectedIndex
                             console.log(selectedIndex);
                             rowData.push(selectedIndex)
-                        } else if (k===3) {
+                        } else if (k===0) {
                             const dropdown = cells[k].querySelector('.dropdownOcurrencia');
                             const selectedIndex = dropdown.selectedIndex
                             console.log(selectedIndex);
