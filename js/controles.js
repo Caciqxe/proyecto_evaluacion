@@ -3,7 +3,18 @@ const descripcionProyecto = document.getElementById('descripcionProyecto');
 const horizonteEvaluacion = document.getElementById('horizonteEvaluacion');
 const numeroAlternativas = document.getElementById('numeroAlternativas');
 const contenedorAlternativas = document.getElementById('contenedorAlternativas')
+
 const setModulo = document.getElementById('modulo_1')
+const modulo2 = document.getElementById('modulo_2')
+const modulo3 = document.getElementById('modulo_3')
+const modulo4 = document.getElementById('modulo_4')
+const modulo5 = document.getElementById('modulo_5')
+const modulo6 = document.getElementById('modulo_6')
+const modulo7 = document.getElementById('modulo_7')
+const modulo8 = document.getElementById('modulo_8')
+const modulo9 = document.getElementById('modulo_9')
+const modulo10 = document.getElementById('modulo_10')
+
 const grabarTodo = document.getElementById('grabarTodo')
 const eliminarTodo = document.getElementById('eliminarTodo')
 const guardarComo = document.getElementById('guardarComo')
@@ -14,6 +25,20 @@ descripcionProyecto.addEventListener('change', crearAlternativas)
 horizonteEvaluacion.addEventListener('change', crearAlternativas)
 numeroAlternativas.addEventListener('change', crearAlternativas)
 setModulo.addEventListener('click', setAlternativas)
+modulo2.addEventListener('click',setAlternativas)
+modulo3.addEventListener('click',setAlternativas)
+modulo4.addEventListener('click',setAlternativas)
+modulo5.addEventListener('click',setAlternativas)
+modulo6.addEventListener('click',setAlternativas)
+modulo7.addEventListener('click',setAlternativas)
+modulo8.addEventListener('click',setAlternativas)
+modulo9.addEventListener('click',setAlternativas)
+modulo10.addEventListener('click',setAlternativas)
+
+
+
+
+
 
 grabarTodo.style.display = 'none'
 
