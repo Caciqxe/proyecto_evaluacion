@@ -427,7 +427,7 @@ otros2.innerHTML = otros2V
 otros3.innerHTML = otros3V
 totalTablaFinanciamiento0.innerHTML = parseInt(parseInt(valorRequerido0V) + parseInt(fondosNacionales0V) + parseInt(municipalComunidad0V) + parseInt(cooperacionInternacional0V) + parseInt(cooperacionInternacional0V) + parseInt(prestamos0V) + parseInt(recursosPropios0V) + parseInt(ingresosProyecto0V) + parseInt(app0V) + parseInt(otros0V))
 totalTablaFinanciamiento1.innerHTML = parseInt(parseInt(valorRequerido1V) + parseInt(fondosNacionales1V) + parseInt(municipalComunidad1V) + parseInt(cooperacionInternacional1V) + parseInt(cooperacionInternacional1V) + parseInt(prestamos1V) + parseInt(recursosPropios1V) + parseInt(ingresosProyecto1V) + parseInt(app1V) + parseInt(otros1V))
-totalTablaFinanciamiento2.innerHTML = totalTablaFinanciamiento2V
+totalTablaFinanciamiento2.innerHTML = parseInt(parseInt(valorRequerido2V) + parseInt(fondosNacionales2V) + parseInt(municipalComunidad2V) + parseInt(cooperacionInternacional2V) + parseInt(cooperacionInternacional2V) + parseInt(prestamos2V) + parseInt(recursosPropios2V) + parseInt(ingresosProyecto2V) + parseInt(app2V) + parseInt(otros2V))
 totalTablaFinanciamiento3.innerHTML = totalTablaFinanciamiento3V
 justificacionPropuesta.innerHTML = justificacionPropuestaV
 }

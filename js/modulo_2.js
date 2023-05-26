@@ -120,7 +120,7 @@ if (estrategiasVinculacion != null) {
         <tr>
             <td><span contenteditable="true" class="textInput">${estrategiasVinculacion.rows[x][0]}</span></td>
             <td><span contenteditable="true" class="textInput">${estrategiasVinculacion.rows[x][1]}</span></td>
-            <td class="celdaPosicion">
+            <td class="celdaPosicion" style="display: flex; justify-content: center; align-items: center; height: 23px;">
                 <span style="display: none;"></span>
                 <select class="dropdownPosicion" value="${estrategiasVinculacion.rows[x][2]}"></select>
             </td>
