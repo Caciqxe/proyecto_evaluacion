@@ -7,8 +7,6 @@ let x = 0
 
 
 
-
-
 if (seleccionAlternativa != null) {
 
     function buscadorAlt() {
@@ -37,28 +35,55 @@ if (seleccionAlternativa != null) {
     let nombreGanador = JSON.parse(sessionStorage.getItem(`Alt_numero_${numAlternativaGanadora}`)).name
     let descripcionGanadora = JSON.parse(sessionStorage.getItem(`descripcionAlt_${numAlternativaGanadora}`))
     
-    
-    contenedorAlternativa.innerHTML +=
-    `
-    <table id="tablaAlternativaSeleccionada">
-        <tbody>
-            <tr>
-                <th>NOMBRE DE LA ALTERNATIVA SELECCIONADA</th>
-                <th>DESCRIPCIÓN</th>
-            </tr>
-            <tr id="respuestaAlternativa">
-                <td><span class="respuestaTabla">${nombreGanador}</span></td>
-                <td><span class="respuestaTabla">${descripcionGanadora.rows[0][2]}</span></td>
-            </tr>
-            <tr>
-                <td colspan="2" class="bajada">JUSTIFICACIÓN</td>
-            </tr>
-            <tr>
-                <td colspan="2"><span class="respuestaTabla" contenteditable="true"></span></td>
-            </tr>
-        </tbody>
-    </table>
-    `
+    let justificacionExiste = sessionStorage.getItem('justificacionAlternativaSeleccionada')
+    console.log(justificacionExiste);
+    if (justificacionExiste != null) {
+        contenedorAlternativa.innerHTML +=
+        `
+        <table id="tablaAlternativaSeleccionada">
+            <tbody>
+                <tr>
+                    <th>NOMBRE DE LA ALTERNATIVA SELECCIONADA</th>
+                    <th>DESCRIPCIÓN</th>
+                </tr>
+                <tr id="respuestaAlternativa">
+                    <td><span class="respuestaTabla">${nombreGanador}</span></td>
+                    <td><span class="respuestaTabla">${descripcionGanadora.rows[0][2]}</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="bajada">JUSTIFICACIÓN</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span class="respuestaTabla" contenteditable="true" id="justificacionAlternativaSeleccionada">${justificacionExiste}</span></td>
+                </tr>
+            </tbody>
+        </table>
+        `
+        const justificacionAlternativaSeleccionada = document.getElementById('justificacionAlternativaSeleccionada')
+    } else {
+        contenedorAlternativa.innerHTML +=
+        `
+        <table id="tablaAlternativaSeleccionada">
+            <tbody>
+                <tr>
+                    <th>NOMBRE DE LA ALTERNATIVA SELECCIONADA</th>
+                    <th>DESCRIPCIÓN</th>
+                </tr>
+                <tr id="respuestaAlternativa">
+                    <td><span class="respuestaTabla">${nombreGanador}</span></td>
+                    <td><span class="respuestaTabla">${descripcionGanadora.rows[0][2]}</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="bajada">JUSTIFICACIÓN</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><span class="respuestaTabla" contenteditable="true" id="justificacionAlternativaSeleccionada"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        `
+        const justificacionAlternativaSeleccionada = document.getElementById('justificacionAlternativaSeleccionada')
+    }
 }
 
 
@@ -145,6 +170,8 @@ while (x<numAlternativas){
 function contarFilas() {
         
         const tables = document.getElementsByTagName('table')
+
+        sessionStorage.setItem('justificacionAlternativaSeleccionada', justificacionAlternativaSeleccionada.innerHTML);
 
         for (let i = 0; i < tables.length; i++) {
             const table = tables[i];
