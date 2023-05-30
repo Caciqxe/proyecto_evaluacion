@@ -27,20 +27,60 @@ while (x<numAlternativas) {
     <div id=Alt${x+1}>
     <span class="alternativaStilo">Alternativa N° ${x+1}: ${JSON.parse(prueba).name}</span>
         <div id=contenedor_comp_alt${x+1}>
-        <div>
+        </div>
     </div>
     `
     
-    
+    actividades.innerHTML +=
+    `
+    <div id=ocultoAlt${x+1}>
+    </div>
+    <div id="contenerdor_total_Alt${x+1}">
+        <span id="preguntaTablaFinalAlt${x+1}"></span>
+        <span id="respuestaTablaFinalAlt${x+1}"></span>
+    </div>
+    `
 
 
     let numComp = document.getElementById(`contenedor_comp_alt${x+1}`)
     let y = 0
-    
+    let sumaMasGrande = 0
     while (y < parseInt(JSON.parse(prueba).numeroCom)) {
         let storage = JSON.parse(sessionStorage.getItem(`alt${x+1}_com${y+1}`));
         
         
+
+        if (storage != null) {
+            let oculto = document.getElementById(`ocultoAlt${x+1}`)
+
+            let suma = 0
+
+            storage.rows.forEach(el => {
+                suma += parseInt(el[4])
+            });
+
+            oculto.innerHTML += 
+            `
+            <span class="preguntaTabla">COMPONENTE ${y+1}</span>
+            <span>${suma}</span>
+            `
+            console.log(suma);
+            
+            sumaMasGrande += parseInt(suma)
+        }  else {
+
+        }
+
+        if (storage != null) {
+        let respuestaTablaFinal = document.getElementById(`respuestaTablaFinalAlt${x+1}`)
+        let preguntaTablaFinal = document.getElementById(`preguntaTablaFinalAlt${x+1}`)
+        preguntaTablaFinal.className = 'preguntaTabla'
+        preguntaTablaFinal.innerHTML = `TOTAL ALTERNATIVA ${x+1}:`
+        respuestaTablaFinal.innerHTML = sumaMasGrande
+        } else {
+
+        }
+
         if (storage != null) {
             let z = 0
             numComp.innerHTML += 
@@ -73,25 +113,19 @@ while (x<numAlternativas) {
                                 <span style="display: none;"></span>
                                 <select class="my-dropdown" id="unidMed_alt${x+1}_com${y+1}_act1" value="${storage.rows[z][1]}"></select>
                             </td>
-                            <td><input style="width: 97%" id= "cantReq_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][2]}" contenteditable="true" style="text-align:right"></input></td>
-                            <td><input style="width: 97%" id= "costUnit_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][3]}" contenteditable="true" style="text-align:right"></input></td>
-                            <td><input style="width: 97%" id= "valTotal_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][4]}" readonly="true" style="text-align:right"></input></td>
-                            <td><input style="width: 97%" id= "perDepre_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][5]}" contenteditable="true"></input></td>
+                            <td><input style="width: 97%;text-align:right" id= "cantReq_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][2]}" contenteditable="true"></input></td>
+                            <td><input style="width: 97%;text-align:right" id= "costUnit_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][3]}" contenteditable="true"></input></td>
+                            <td><input style="width: 97%;text-align:right" id= "valTotal_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][4]}" readonly="true"></input></td>
+                            <td><input style="width: 97%;text-align:right" id= "perDepre_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][5]}" contenteditable="true"></input></td>
                             <td><input style="width: 97%" id= "riesAsoc_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][6]}" contenteditable="true"></input></td>
                             <td><input style="width: 97%" id= "afectPos_alt${x+1}_com${y+1}_act${z+1}" class= "textInput" value="${storage.rows[z][7]}" contenteditable="true"></input></td>
-                        </tr>
+                </tr>
                 `
-        
-                
                 var table = document.getElementById(`alt${x+1}_com${y+1}`);
-                
-                
-        
-                
                 
                 z++
             }
-
+            
         } else {
             numComp.innerHTML += 
             `
@@ -114,10 +148,10 @@ while (x<numAlternativas) {
                             <span style="display: none;"></span>
                             <select class="my-dropdown" id="unidMed_alt${x+1}_com${y+1}_act1"></select>
                         </td>
-                        <td><input style="width:97%" id= "cantReq_alt${x+1}_com${y+1}_act1" class= "textInput" value=0 contenteditable="true" style="text-align:right"></input></td>
-                        <td><input style="width:97%" id= "costUnit_alt${x+1}_com${y+1}_act1" class= "textInput" value=0 contenteditable="true" style="text-align:right"></input></td>
-                        <td><input style="width:97%" id= "valTotal_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="false" style="text-align:right"></input></td>
-                        <td><input style="width:97%" id= "perDepre_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="true"></input></td>
+                        <td><input style="width:97%;text-align:right" id= "cantReq_alt${x+1}_com${y+1}_act1" class= "textInput" value=0 contenteditable="true"></input></td>
+                        <td><input style="width:97%;text-align:right" id= "costUnit_alt${x+1}_com${y+1}_act1" class= "textInput" value=0 contenteditable="true"></input></td>
+                        <td><input style="width:97%;text-align:right" id= "valTotal_alt${x+1}_com${y+1}_act1" class= "textInput" value=0 readonly="true"></input></td>
+                        <td><input style="width:97%;text-align:right" id= "perDepre_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="true"></input></td>
                         <td><input style="width:97%" id= "riesAsoc_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="true"></input></td>
                         <td><input style="width:97%" id= "afectPos_alt${x+1}_com${y+1}_act1" class= "textInput" contenteditable="true"></input></td>
                     </tr>
@@ -131,12 +165,10 @@ while (x<numAlternativas) {
             var table = document.getElementById(`alt${x+1}_com${y+1}`);
             
             
-    
-            
-            
         }
         y++
     }
+
     x++
 }
 
@@ -176,10 +208,10 @@ const agregarFila = (event) => {
     //cell2.innerHTML = `<input class="textInput" id="unidMed_${id_loc}_act${rowCount}"></input>  `;
     cell3.innerHTML = `<input class="textInput" id="cantReq_${id_loc}_act${rowCount}" value=0 style="text-align:right"></input>  `;
     cell4.innerHTML = `<input class="textInput" id="costUnit_${id_loc}_act${rowCount}" value=0 style="text-align:right"></input>  `;
-    cell5.innerHTML = `<input class="textInput" id="valTotal_${id_loc}_act${rowCount}" style="text-align:right"></input>  `;
-    cell6.innerHTML = `<input class="textInput" id="perDepre_${id_loc}_act${rowCount}"></input>  `;
-    cell7.innerHTML = `<input class="textInput" id="riesAsoc_${id_loc}_act${rowCount}"></input>  `;
-    cell8.innerHTML = `<input class="textInput" id="afectPos_${id_loc}_act${rowCount}"></input>  `;
+    cell5.innerHTML = `<input class="textInput" id="valTotal_${id_loc}_act${rowCount}" style="text-align:right" readonly="true"></input>  `;
+    cell6.innerHTML = `<input class="textInput" id="perDepre_${id_loc}_act${rowCount}" style="text-align:right"></input>  `;
+    cell7.innerHTML = `<input class="textInput" id="riesAsoc_${id_loc}_act${rowCount}"></input>`;
+    cell8.innerHTML = `<input class="textInput" id="afectPos_${id_loc}_act${rowCount}"></input>`;
     
     crearOpciones(row)
     }
@@ -206,6 +238,7 @@ function calculador(e) {
         let valTotal = document.getElementById(`valTotal_${campo}`)
         
         valTotal.value = parseInt(cantReq.value) * parseInt(costUnit.value)
+        //valTotal.value = (parseInt(cantReq.value) * parseInt(costUnit.value)).toFixed(2)
     
     } if (campo.startsWith('costUnit')) {
         campo = campo.replace('costUnit_','')
@@ -214,6 +247,7 @@ function calculador(e) {
         let valTotal = document.getElementById(`valTotal_${campo}`)
 
         valTotal.value = parseInt(cantReq.value) * parseInt(costUnit.value)
+        //valTotal.value = (parseInt(cantReq.value) * parseInt(costUnit.value)).toFixed(2)
     }
 }
 
@@ -423,6 +457,7 @@ dropdownCell.forEach(function(cell) {
             console.log(tableObject);
             sessionStorage.setItem(`${tableId}`, JSON.stringify(tableObject));
         }
+        window.location.reload()
     }
 
     
