@@ -22,7 +22,7 @@ main {
 .contenedor_1 {
   display: flex;
   flex-direction: column;
-  max-width: 70%; }
+  max-width: 876px; }
   .contenedor_1 .projectInfo {
     display: flex;
     justify-content: center;
