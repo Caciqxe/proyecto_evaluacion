@@ -74,43 +74,43 @@ if (infoExtraHistograma != null) {
           <th>PxF</th>
       </tr>
       <tr>
-          <td><span class="respuestaTabla">1</span></td>
-          <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][1]}</span></td>
-          <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][2]}</span></td>
-          <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][3]}</span></td>
-          <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][4]}</span></td>
-          <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][5]}</span></td>
-          <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][6]}</span></td>
-          <td><span class="respuestaTabla">3</)span></td>
-          <td><span class="respuestaTabla">${parseInt(tablaEvaluacionGeomorfologica.rows[0][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[0][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][6])}</span></td>
-          <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionGeomorfologica.rows[0][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[0][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][6]))*3*1}</span></td>
-          <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionGeomorfologica.rows[0][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[0][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][6]))*3}</span></td>
+          <td><span class="respuestaTabla1" >1</span></td>
+          <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][1]}</span></td>
+          <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][2]}</span></td>
+          <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][3]}</span></td>
+          <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][4]}</span></td>
+          <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][5]}</span></td>
+          <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[0][6]}</span></td>
+          <td><span class="respuestaTabla1" >3</)span></td>
+          <td><span class="respuestaTabla1" >${parseInt(tablaEvaluacionGeomorfologica.rows[0][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[0][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][6])}</span></td>
+          <td><span class="respuestaTabla1" >${(parseInt(tablaEvaluacionGeomorfologica.rows[0][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[0][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][6]))*3*1}</span></td>
+          <td><span class="respuestaTabla1" >${(parseInt(tablaEvaluacionGeomorfologica.rows[0][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[0][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[0][6]))*3}</span></td>
       </tr>
       <tr>
-           <td><span class="respuestaTabla">2</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][1]}</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][2]}</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][3]}</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][4]}</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][5]}</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][6]}</span></td>
-           <td><span class="respuestaTabla">2</span></td>
-           <td><span class="respuestaTabla">${parseInt(tablaEvaluacionGeomorfologica.rows[1][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[1][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][6])}</span></td>
-           <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionGeomorfologica.rows[1][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[1][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][6]))*2*2}</span></td>
-           <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionGeomorfologica.rows[1][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[1][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][6]))*2}</span></td>
+           <td><span class="respuestaTabla1" >2</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][1]}</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][2]}</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][3]}</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][4]}</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][5]}</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[1][6]}</span></td>
+           <td><span class="respuestaTabla1" >2</span></td>
+           <td><span class="respuestaTabla1" >${parseInt(tablaEvaluacionGeomorfologica.rows[1][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[1][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][6])}</span></td>
+           <td><span class="respuestaTabla1" >${(parseInt(tablaEvaluacionGeomorfologica.rows[1][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[1][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][6]))*2*2}</span></td>
+           <td><span class="respuestaTabla1" >${(parseInt(tablaEvaluacionGeomorfologica.rows[1][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[1][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[1][6]))*2}</span></td>
       </tr>
       <tr>
-           <td><span class="respuestaTabla">3</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][1]}</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][2]}</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][3]}</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][4]}</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][5]}</span></td>
-           <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][6]}</span></td>
-           <td><span class="respuestaTabla">1</span></td>
-           <td><span class="respuestaTabla">${parseInt(tablaEvaluacionGeomorfologica.rows[2][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[2][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][6])}</span></td>
-           <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionGeomorfologica.rows[2][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[2][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][6]))*3*1}</span></td>
-           <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionGeomorfologica.rows[2][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[2][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][6]))}</span></td>
+           <td><span class="respuestaTabla1" >3</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][1]}</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][2]}</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][3]}</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][4]}</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][5]}</span></td>
+           <td><span class="respuestaTabla1"  contenteditable="true">${tablaEvaluacionGeomorfologica.rows[2][6]}</span></td>
+           <td><span class="respuestaTabla1" >1</span></td>
+           <td><span class="respuestaTabla1" >${parseInt(tablaEvaluacionGeomorfologica.rows[2][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[2][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][6])}</span></td>
+           <td><span class="respuestaTabla1" >${(parseInt(tablaEvaluacionGeomorfologica.rows[2][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[2][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][6]))*3*1}</span></td>
+           <td><span class="respuestaTabla1" >${(parseInt(tablaEvaluacionGeomorfologica.rows[2][1]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][2]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][3]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][4])+ parseInt(tablaEvaluacionGeomorfologica.rows[2][5]) + parseInt(tablaEvaluacionGeomorfologica.rows[2][6]))}</span></td>
       </tr>
   </tbody>
   `
@@ -130,37 +130,37 @@ if (infoExtraHistograma != null) {
         <th>PxF</th>
     </tr>
     <tr>
-        <td><span class="respuestaTabla">1</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[0][1]}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[0][2]}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[0][3]}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[0][4]}</span></td>
-        <td><span class="respuestaTabla">3</span></td>
-        <td><span class="respuestaTabla">${parseInt(tablaEvaluacionSocial.rows[0][1]) + parseInt(tablaEvaluacionSocial.rows[0][2]) + parseInt(tablaEvaluacionSocial.rows[0][3]) + parseInt(tablaEvaluacionSocial.rows[0][4])}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionSocial.rows[0][1]) + parseInt(tablaEvaluacionSocial.rows[0][2]) + parseInt(tablaEvaluacionSocial.rows[0][3]) + parseInt(tablaEvaluacionSocial.rows[0][4])) * 1 * 3}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionSocial.rows[0][1]) + parseInt(tablaEvaluacionSocial.rows[0][2]) + parseInt(tablaEvaluacionSocial.rows[0][3]) + parseInt(tablaEvaluacionSocial.rows[0][4])) * 3}</span></td>
+        <td><span class="respuestaTabla" >1</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[0][1]}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[0][2]}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[0][3]}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[0][4]}</span></td>
+        <td><span class="respuestaTabla" >3</span></td>
+        <td><span class="respuestaTabla" >${parseInt(tablaEvaluacionSocial.rows[0][1]) + parseInt(tablaEvaluacionSocial.rows[0][2]) + parseInt(tablaEvaluacionSocial.rows[0][3]) + parseInt(tablaEvaluacionSocial.rows[0][4])}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionSocial.rows[0][1]) + parseInt(tablaEvaluacionSocial.rows[0][2]) + parseInt(tablaEvaluacionSocial.rows[0][3]) + parseInt(tablaEvaluacionSocial.rows[0][4])) * 1 * 3}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionSocial.rows[0][1]) + parseInt(tablaEvaluacionSocial.rows[0][2]) + parseInt(tablaEvaluacionSocial.rows[0][3]) + parseInt(tablaEvaluacionSocial.rows[0][4])) * 3}</span></td>
     </tr>
     <tr>
-        <td><span class="respuestaTabla">2</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[1][1]}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[1][2]}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[1][3]}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[1][4]}</span></td>
-        <td><span class="respuestaTabla">2</span></td>
-        <td><span class="respuestaTabla">${parseInt(tablaEvaluacionSocial.rows[1][1]) + parseInt(tablaEvaluacionSocial.rows[1][2]) + parseInt(tablaEvaluacionSocial.rows[1][3]) + parseInt(tablaEvaluacionSocial.rows[1][4]) }</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionSocial.rows[1][1]) + parseInt(tablaEvaluacionSocial.rows[1][2]) + parseInt(tablaEvaluacionSocial.rows[1][3]) + parseInt(tablaEvaluacionSocial.rows[1][4])) * 2 * 2}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionSocial.rows[1][1]) + parseInt(tablaEvaluacionSocial.rows[1][2]) + parseInt(tablaEvaluacionSocial.rows[1][3]) + parseInt(tablaEvaluacionSocial.rows[1][4])) * 2}</span></td>
+        <td><span class="respuestaTabla" >2</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[1][1]}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[1][2]}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[1][3]}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[1][4]}</span></td>
+        <td><span class="respuestaTabla" >2</span></td>
+        <td><span class="respuestaTabla" >${parseInt(tablaEvaluacionSocial.rows[1][1]) + parseInt(tablaEvaluacionSocial.rows[1][2]) + parseInt(tablaEvaluacionSocial.rows[1][3]) + parseInt(tablaEvaluacionSocial.rows[1][4]) }</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionSocial.rows[1][1]) + parseInt(tablaEvaluacionSocial.rows[1][2]) + parseInt(tablaEvaluacionSocial.rows[1][3]) + parseInt(tablaEvaluacionSocial.rows[1][4])) * 2 * 2}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionSocial.rows[1][1]) + parseInt(tablaEvaluacionSocial.rows[1][2]) + parseInt(tablaEvaluacionSocial.rows[1][3]) + parseInt(tablaEvaluacionSocial.rows[1][4])) * 2}</span></td>
     </tr>
     <tr>
-        <td><span class="respuestaTabla">3</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[2][1]}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[2][2]}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[2][3]}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${tablaEvaluacionSocial.rows[2][4]}</span></td>
-        <td><span class="respuestaTabla">1</span></td>
-        <td><span class="respuestaTabla">${parseInt(tablaEvaluacionSocial.rows[2][1]) + parseInt(tablaEvaluacionSocial.rows[2][2]) + parseInt(tablaEvaluacionSocial.rows[2][3]) + parseInt(tablaEvaluacionSocial.rows[2][4])}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionSocial.rows[2][1]) + parseInt(tablaEvaluacionSocial.rows[2][2]) + parseInt(tablaEvaluacionSocial.rows[2][3]) + parseInt(tablaEvaluacionSocial.rows[2][4])) * 3 * 1}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionSocial.rows[2][1]) + parseInt(tablaEvaluacionSocial.rows[2][2]) + parseInt(tablaEvaluacionSocial.rows[2][3]) + parseInt(tablaEvaluacionSocial.rows[2][4])) * 1}</span></td>
+        <td><span class="respuestaTabla" >3</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[2][1]}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[2][2]}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[2][3]}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${tablaEvaluacionSocial.rows[2][4]}</span></td>
+        <td><span class="respuestaTabla" >1</span></td>
+        <td><span class="respuestaTabla" >${parseInt(tablaEvaluacionSocial.rows[2][1]) + parseInt(tablaEvaluacionSocial.rows[2][2]) + parseInt(tablaEvaluacionSocial.rows[2][3]) + parseInt(tablaEvaluacionSocial.rows[2][4])}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionSocial.rows[2][1]) + parseInt(tablaEvaluacionSocial.rows[2][2]) + parseInt(tablaEvaluacionSocial.rows[2][3]) + parseInt(tablaEvaluacionSocial.rows[2][4])) * 3 * 1}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionSocial.rows[2][1]) + parseInt(tablaEvaluacionSocial.rows[2][2]) + parseInt(tablaEvaluacionSocial.rows[2][3]) + parseInt(tablaEvaluacionSocial.rows[2][4])) * 1}</span></td>
     </tr>
   </tbody>
   `
@@ -181,40 +181,40 @@ if (infoExtraHistograma != null) {
         <th>PxF</th>
     </tr>
     <tr>
-        <td><span class="respuestaTabla">1</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[0][1])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[0][2])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[0][3])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[0][4])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[0][5])}</span></td>
-        <td><span class="respuestaTabla">3</span></td>
-        <td><span class="respuestaTabla">${parseInt(tablaEvaluacionFisica.rows[0][1]) + parseInt(tablaEvaluacionFisica.rows[0][2]) + parseInt(tablaEvaluacionFisica.rows[0][3]) + parseInt(tablaEvaluacionFisica.rows[0][4]) + parseInt(tablaEvaluacionFisica.rows[0][5])}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionFisica.rows[0][1]) + parseInt(tablaEvaluacionFisica.rows[0][2]) + parseInt(tablaEvaluacionFisica.rows[0][3]) + parseInt(tablaEvaluacionFisica.rows[0][4]) + parseInt(tablaEvaluacionFisica.rows[0][5])) * 3 * 1}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionFisica.rows[0][1]) + parseInt(tablaEvaluacionFisica.rows[0][2]) + parseInt(tablaEvaluacionFisica.rows[0][3]) + parseInt(tablaEvaluacionFisica.rows[0][4]) + parseInt(tablaEvaluacionFisica.rows[0][5])) * 3 }</span></td>
+        <td><span class="respuestaTabla" >1</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[0][1])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[0][2])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[0][3])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[0][4])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[0][5])}</span></td>
+        <td><span class="respuestaTabla" >3</span></td>
+        <td><span class="respuestaTabla" >${parseInt(tablaEvaluacionFisica.rows[0][1]) + parseInt(tablaEvaluacionFisica.rows[0][2]) + parseInt(tablaEvaluacionFisica.rows[0][3]) + parseInt(tablaEvaluacionFisica.rows[0][4]) + parseInt(tablaEvaluacionFisica.rows[0][5])}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionFisica.rows[0][1]) + parseInt(tablaEvaluacionFisica.rows[0][2]) + parseInt(tablaEvaluacionFisica.rows[0][3]) + parseInt(tablaEvaluacionFisica.rows[0][4]) + parseInt(tablaEvaluacionFisica.rows[0][5])) * 3 * 1}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionFisica.rows[0][1]) + parseInt(tablaEvaluacionFisica.rows[0][2]) + parseInt(tablaEvaluacionFisica.rows[0][3]) + parseInt(tablaEvaluacionFisica.rows[0][4]) + parseInt(tablaEvaluacionFisica.rows[0][5])) * 3 }</span></td>
     </tr>
     <tr>
-        <td><span class="respuestaTabla">2</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[1][1])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[1][2])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[1][3])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[1][4])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[1][5])}</span></td>
-        <td><span class="respuestaTabla">2</span></td>
-        <td><span class="respuestaTabla">${parseInt(tablaEvaluacionFisica.rows[1][1]) + parseInt(tablaEvaluacionFisica.rows[1][2]) + parseInt(tablaEvaluacionFisica.rows[1][3]) + parseInt(tablaEvaluacionFisica.rows[1][4]) + parseInt(tablaEvaluacionFisica.rows[1][5])}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionFisica.rows[1][1]) + parseInt(tablaEvaluacionFisica.rows[1][2]) + parseInt(tablaEvaluacionFisica.rows[1][3]) + parseInt(tablaEvaluacionFisica.rows[1][4]) + parseInt(tablaEvaluacionFisica.rows[1][5])) * 2 * 2}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionFisica.rows[1][1]) + parseInt(tablaEvaluacionFisica.rows[1][2]) + parseInt(tablaEvaluacionFisica.rows[1][3]) + parseInt(tablaEvaluacionFisica.rows[1][4]) + parseInt(tablaEvaluacionFisica.rows[1][5])) * 2}</span></td>
+        <td><span class="respuestaTabla" >2</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[1][1])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[1][2])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[1][3])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[1][4])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[1][5])}</span></td>
+        <td><span class="respuestaTabla" >2</span></td>
+        <td><span class="respuestaTabla" >${parseInt(tablaEvaluacionFisica.rows[1][1]) + parseInt(tablaEvaluacionFisica.rows[1][2]) + parseInt(tablaEvaluacionFisica.rows[1][3]) + parseInt(tablaEvaluacionFisica.rows[1][4]) + parseInt(tablaEvaluacionFisica.rows[1][5])}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionFisica.rows[1][1]) + parseInt(tablaEvaluacionFisica.rows[1][2]) + parseInt(tablaEvaluacionFisica.rows[1][3]) + parseInt(tablaEvaluacionFisica.rows[1][4]) + parseInt(tablaEvaluacionFisica.rows[1][5])) * 2 * 2}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionFisica.rows[1][1]) + parseInt(tablaEvaluacionFisica.rows[1][2]) + parseInt(tablaEvaluacionFisica.rows[1][3]) + parseInt(tablaEvaluacionFisica.rows[1][4]) + parseInt(tablaEvaluacionFisica.rows[1][5])) * 2}</span></td>
     </tr>
     <tr>
-        <td><span class="respuestaTabla">3</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[2][1])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[2][2])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[2][3])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[2][4])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[2][5])}</span></td>
-        <td><span class="respuestaTabla">1</span></td>
-        <td><span class="respuestaTabla">${parseInt(tablaEvaluacionFisica.rows[2][1]) + parseInt(tablaEvaluacionFisica.rows[2][2]) + parseInt(tablaEvaluacionFisica.rows[2][3]) + parseInt(tablaEvaluacionFisica.rows[2][4]) + parseInt(tablaEvaluacionFisica.rows[2][5])}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionFisica.rows[2][1]) + parseInt(tablaEvaluacionFisica.rows[2][2]) + parseInt(tablaEvaluacionFisica.rows[2][3]) + parseInt(tablaEvaluacionFisica.rows[2][4]) + parseInt(tablaEvaluacionFisica.rows[2][5])) * 3 * 1}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionFisica.rows[2][1]) + parseInt(tablaEvaluacionFisica.rows[2][2]) + parseInt(tablaEvaluacionFisica.rows[2][3]) + parseInt(tablaEvaluacionFisica.rows[2][4]) + parseInt(tablaEvaluacionFisica.rows[2][5])) * 1}</span></td>
+        <td><span class="respuestaTabla" >3</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[2][1])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[2][2])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[2][3])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[2][4])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionFisica.rows[2][5])}</span></td>
+        <td><span class="respuestaTabla" >1</span></td>
+        <td><span class="respuestaTabla" >${parseInt(tablaEvaluacionFisica.rows[2][1]) + parseInt(tablaEvaluacionFisica.rows[2][2]) + parseInt(tablaEvaluacionFisica.rows[2][3]) + parseInt(tablaEvaluacionFisica.rows[2][4]) + parseInt(tablaEvaluacionFisica.rows[2][5])}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionFisica.rows[2][1]) + parseInt(tablaEvaluacionFisica.rows[2][2]) + parseInt(tablaEvaluacionFisica.rows[2][3]) + parseInt(tablaEvaluacionFisica.rows[2][4]) + parseInt(tablaEvaluacionFisica.rows[2][5])) * 3 * 1}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionFisica.rows[2][1]) + parseInt(tablaEvaluacionFisica.rows[2][2]) + parseInt(tablaEvaluacionFisica.rows[2][3]) + parseInt(tablaEvaluacionFisica.rows[2][4]) + parseInt(tablaEvaluacionFisica.rows[2][5])) * 1}</span></td>
     </tr>
   </tbody>
   `
@@ -233,34 +233,34 @@ if (infoExtraHistograma != null) {
         <th>PxF</th>
     </tr>
     <tr>
-        <td><span class="respuestaTabla">1</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[0][1])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[0][2])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[0][3])}</span></td>
-        <td><span class="respuestaTabla">3</span></td>
-        <td><span class="respuestaTabla">${parseInt(tablaEvaluacionInstitucional.rows[0][1]) + parseInt(tablaEvaluacionInstitucional.rows[0][2]) + parseInt(tablaEvaluacionInstitucional.rows[0][3])}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionInstitucional.rows[0][1]) + parseInt(tablaEvaluacionInstitucional.rows[0][2]) + parseInt(tablaEvaluacionInstitucional.rows[0][3])) * 3 * 1}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionInstitucional.rows[0][1]) + parseInt(tablaEvaluacionInstitucional.rows[0][2]) + parseInt(tablaEvaluacionInstitucional.rows[0][3])) * 3}</span></td>
+        <td><span class="respuestaTabla" >1</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[0][1])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[0][2])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[0][3])}</span></td>
+        <td><span class="respuestaTabla" >3</span></td>
+        <td><span class="respuestaTabla" >${parseInt(tablaEvaluacionInstitucional.rows[0][1]) + parseInt(tablaEvaluacionInstitucional.rows[0][2]) + parseInt(tablaEvaluacionInstitucional.rows[0][3])}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionInstitucional.rows[0][1]) + parseInt(tablaEvaluacionInstitucional.rows[0][2]) + parseInt(tablaEvaluacionInstitucional.rows[0][3])) * 3 * 1}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionInstitucional.rows[0][1]) + parseInt(tablaEvaluacionInstitucional.rows[0][2]) + parseInt(tablaEvaluacionInstitucional.rows[0][3])) * 3}</span></td>
     </tr>
     <tr>
-        <td><span class="respuestaTabla">2</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[1][1])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[1][2])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[1][3])}</span></td>
-        <td><span class="respuestaTabla">2</span></td>
-        <td><span class="respuestaTabla">${parseInt(tablaEvaluacionInstitucional.rows[1][1]) + parseInt(tablaEvaluacionInstitucional.rows[1][2]) + parseInt(tablaEvaluacionInstitucional.rows[1][3])}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionInstitucional.rows[1][1]) + parseInt(tablaEvaluacionInstitucional.rows[1][2]) + parseInt(tablaEvaluacionInstitucional.rows[1][3])) * 2 * 2}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionInstitucional.rows[1][1]) + parseInt(tablaEvaluacionInstitucional.rows[1][2]) + parseInt(tablaEvaluacionInstitucional.rows[1][3])) * 2}</span></td>
+        <td><span class="respuestaTabla" >2</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[1][1])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[1][2])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[1][3])}</span></td>
+        <td><span class="respuestaTabla" >2</span></td>
+        <td><span class="respuestaTabla" >${parseInt(tablaEvaluacionInstitucional.rows[1][1]) + parseInt(tablaEvaluacionInstitucional.rows[1][2]) + parseInt(tablaEvaluacionInstitucional.rows[1][3])}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionInstitucional.rows[1][1]) + parseInt(tablaEvaluacionInstitucional.rows[1][2]) + parseInt(tablaEvaluacionInstitucional.rows[1][3])) * 2 * 2}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionInstitucional.rows[1][1]) + parseInt(tablaEvaluacionInstitucional.rows[1][2]) + parseInt(tablaEvaluacionInstitucional.rows[1][3])) * 2}</span></td>
     </tr>
     <tr>
-        <td><span class="respuestaTabla">3</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[2][1])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[2][2])}</span></td>
-        <td><span class="respuestaTabla" contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[2][3])}</span></td>
-        <td><span class="respuestaTabla">1</span></td>
-        <td><span class="respuestaTabla">${parseInt(tablaEvaluacionInstitucional.rows[2][1]) + parseInt(tablaEvaluacionInstitucional.rows[2][2]) + parseInt(tablaEvaluacionInstitucional.rows[2][3])}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionInstitucional.rows[2][1]) + parseInt(tablaEvaluacionInstitucional.rows[2][2]) + parseInt(tablaEvaluacionInstitucional.rows[2][3])) * 3 * 1}</span></td>
-        <td><span class="respuestaTabla">${(parseInt(tablaEvaluacionInstitucional.rows[2][1]) + parseInt(tablaEvaluacionInstitucional.rows[2][2]) + parseInt(tablaEvaluacionInstitucional.rows[2][3]))}</span></td>
+        <td><span class="respuestaTabla" >3</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[2][1])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[2][2])}</span></td>
+        <td><span class="respuestaTabla"  contenteditable="true">${parseInt(tablaEvaluacionInstitucional.rows[2][3])}</span></td>
+        <td><span class="respuestaTabla" >1</span></td>
+        <td><span class="respuestaTabla" >${parseInt(tablaEvaluacionInstitucional.rows[2][1]) + parseInt(tablaEvaluacionInstitucional.rows[2][2]) + parseInt(tablaEvaluacionInstitucional.rows[2][3])}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionInstitucional.rows[2][1]) + parseInt(tablaEvaluacionInstitucional.rows[2][2]) + parseInt(tablaEvaluacionInstitucional.rows[2][3])) * 3 * 1}</span></td>
+        <td><span class="respuestaTabla" >${(parseInt(tablaEvaluacionInstitucional.rows[2][1]) + parseInt(tablaEvaluacionInstitucional.rows[2][2]) + parseInt(tablaEvaluacionInstitucional.rows[2][3]))}</span></td>
     </tr>
   </tbody>
   `
