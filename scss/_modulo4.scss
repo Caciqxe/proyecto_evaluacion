@@ -1,4 +1,11 @@
 .tablaModulo4 {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap; }
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.tabla-histograma {
+  th {
+    padding: 5px 0;
+  }
+}
