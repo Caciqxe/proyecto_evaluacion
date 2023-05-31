@@ -33,11 +33,11 @@ while (x < numAlternativas) {
 
   actividades.innerHTML +=
     `
-    <div id=ocultoAlt${x + 1} style="display: flex; flex-wrap: wrap; width:50%; padding-top:5px">
+    <div id=ocultoAlt${x + 1} style="display: flex; flex-wrap: wrap; width:50%; padding-top:5px;">
     </div>
-    <div id="contenerdor_total_Alt${x + 1}" style="padding-bottom: 10px;">
+    <div id="contenerdor_total_Alt${x + 1}" style="padding-bottom: 10px; display: flex; width: 100%;">
         <span id="preguntaTablaFinalAlt${x + 1}" style="width:25% !important"></span>
-        <span id="respuestaTablaFinalAlt${x + 1}" style="margin-left:10px; background-color: whitesmoke; color:black; height: fit-content; padding: 0 6px"></span>
+        <span id="respuestaTablaFinalAlt${x + 1}" style="margin-left:10px; background-color: whitesmoke; color:black; height: fit-content; padding: 0 6px; text-align: end; min-width: 150px;"></span>
     </div>
     `
 
@@ -62,7 +62,7 @@ while (x < numAlternativas) {
       oculto.innerHTML +=
         `
             <span class="preguntaTabla" style="width: 50% !important; margin-bottom: 5px;">COMPONENTE ${y + 1}</span>
-            <span style="margin-left:10px; background-color: whitesmoke; color:black; height: fit-content; padding: 0 6px">${suma}</span>
+            <span style="margin-left:10px; background-color: whitesmoke; color:black; height: fit-content; padding: 0 6px; text-align: end; min-width: 150px;">${suma}</span>
             `
       console.log(suma);
 
