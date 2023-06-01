@@ -448,7 +448,7 @@ while (x<numAlternativas) {
             bodyPaso9frecuente_B.innerHTML+=
             `
             <tr>
-                <td><span class="textInput" contenteditable="false">${tablaPaso9Bfrecuente.rows[y_b][0]}</span></td>
+                <td><span class="textInput" contenteditable="false">${tablaPaso6B.rows[y_b][0]}</span></td>
                                         <td class="dropdown-cell">
                             <span style="display: none;"></span>
                             <select class="my-dropdown" value="${tablaPaso9Bfrecuente.rows[y_b][1]}"></select>
