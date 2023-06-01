@@ -163,7 +163,7 @@ while (x<numAlternativas) {
                 </td>
                 <td><span style="text-align:right; width: 97%" class= "textInput" contenteditable="true">${infoSession6A.rows[y_a][2]}</span></td>
                 <td><span style="text-align:right; width: 97%" class= "textInput" contenteditable="true">${infoSession6A.rows[y_a][3]}</span></td>
-                <td><span style="text-align:right; width: 97%" class= "textInput" contenteditable="false">${infoSession6A.rows[y_a][3]*infoSession6A.rows[y_a][2]}</span></td>
+                <td><span style="text-align:right; width: 97%" class= "textInput" contenteditable="false">${(infoSession6A.rows[y_a][3]*infoSession6A.rows[y_a][2]).toFixed(2)}</span></td>
                 <td><span class= "textInput" contenteditable="true">${infoSession6A.rows[y_a][5]}</span></td>
             </tr>
             `
