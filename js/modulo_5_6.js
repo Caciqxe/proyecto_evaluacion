@@ -27,6 +27,9 @@ while (x<numAlternativas) {
     let tablaBeneficioPrivado = JSON.parse(sessionStorage.getItem(`tablaBeneficioPrivadoAlt${x+1}`))
     let tablaComplementariaPrivado = JSON.parse(sessionStorage.getItem(`tablaComplementariaPrivadoAlt${x+1}`))
     let numComp = sessionStorage.getItem(`Alt_numero_${x+1}`)
+    let costoInversionPrivadoTablaAnterior = JSON.parse(sessionStorage.getItem(`sumTodoAlt${x+1}`))
+    let costoOperacionPrivadoTablaAnterior = JSON.parse(sessionStorage.getItem(`ultimoTotalesAlt${x+1}`))
+
 
     if (tablaBeneficioPrivado != null) {
         let tablaCostos = JSON.parse(sessionStorage.getItem(`costosOperacionAlt${x+1}`))
@@ -170,7 +173,8 @@ while (x<numAlternativas) {
         }
         
         beneficioTotal0.innerHTML = benTotal 
-        costosDirectos0.innerHTML = costTotal
+        //costosDirectos0.innerHTML = costTotal
+        costosDirectos0.innerHTML = parseInt(costoInversionPrivadoTablaAnterior.rows[1][1]) + parseInt(costoOperacionPrivadoTablaAnterior.rows[0][1])
         costosAsociados0.innerHTML = costAsociadTot
         costoProyecto0.innerHTML = parseInt(costosDirectos0.innerHTML) + parseInt(costosAsociados0.innerHTML)
         flujoNetos0.innerHTML = parseInt(beneficioTotal0.innerHTML) - parseInt(costoProyecto0.innerHTML)
@@ -257,9 +261,13 @@ while (x<numAlternativas) {
             <td><span class="respuestaTabla5-6" id="beneficioTotal_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${benTotal}</span></td>
             `
     
-            costosDirectos.innerHTML +=
+/*             costosDirectos.innerHTML +=
             `
             <td><span class="respuestaTabla5-6" id="costosDirectos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${ultimoTotales.rows[0][y+2]}</span></td>
+            ` */
+            costosDirectos.innerHTML +=
+            `
+            <td><span class="respuestaTabla5-6" id="costosDirectos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseInt(costoInversionPrivadoTablaAnterior.rows[1][y+2])+parseInt(costoOperacionPrivadoTablaAnterior.rows[0][y+2])}</span></td>
             `
 
             costosAsociados.innerHTML +=

@@ -26,6 +26,9 @@ let arrayUnidades = [
 while (x<numAlternativas) {
     let tablaBeneficioSocial = JSON.parse(sessionStorage.getItem(`tablaBeneficioSocialAlt${x+1}`))
     let tablaComplementariaSocial = JSON.parse(sessionStorage.getItem(`tablaComplementariaSocialAlt${x+1}`))
+    let costoInversionSocialTablaAnterior = JSON.parse(sessionStorage.getItem(`sumTodoAlt${x+1}`))
+    let costoOperacionSocialTablaAnterior = JSON.parse(sessionStorage.getItem(`ultimoTotalesAlt${x+1}`))
+
 
     if (tablaBeneficioSocial != null) {
         let tablaCostos = JSON.parse(sessionStorage.getItem(`tablaBeneficioPrivadoAlt${x+1}`))
@@ -173,7 +176,8 @@ while (x<numAlternativas) {
         }
         
         beneficioTotal0.innerHTML = benTotal 
-        costosDirectos0.innerHTML = costTotal
+        //costosDirectos0.innerHTML = costTotal
+        costosDirectos0.innerHTML = parseInt(costoInversionSocialTablaAnterior.rows[2][1]) + parseInt(costoOperacionSocialTablaAnterior.rows[1][1])
         costosAsociados0.innerHTML = costAsociadTot
         costoProyecto0.innerHTML = parseInt(costosDirectos0.innerHTML) + parseInt(costosAsociados0.innerHTML)
         flujoNetos0.innerHTML = parseInt(beneficioTotal0.innerHTML) - parseInt(costoProyecto0.innerHTML)
@@ -294,9 +298,14 @@ while (x<numAlternativas) {
             <td><span class="respuestaTabla5-7" id="beneficioTotal_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${benTotal}</span></td>
             `
     
-            costosDirectos.innerHTML +=
+/*             costosDirectos.innerHTML +=
             `
             <td><span class="respuestaTabla5-7" id="costosDirectos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${ultimoTotales.rows[0][y+2]}</span></td>
+            ` */
+
+            costosDirectos.innerHTML +=
+            `
+            <td><span class="respuestaTabla5-6" id="costosDirectos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseInt(costoInversionSocialTablaAnterior.rows[2][y+2])+parseInt(costoOperacionSocialTablaAnterior.rows[1][y+2])}</span></td>
             `
 
             costosAsociados.innerHTML +=

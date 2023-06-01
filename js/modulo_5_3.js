@@ -562,7 +562,7 @@ const eliminarFila = (event) =>{
     }
 }
 
-document.querySelectorAll("span[data-type='currency']").forEach(function(span) {
+/* document.querySelectorAll("span[data-type='currency']").forEach(function(span) {
     span.addEventListener('keyup', function() {
         formatCurrency(span);
     });
@@ -570,7 +570,7 @@ document.querySelectorAll("span[data-type='currency']").forEach(function(span) {
     span.addEventListener('blur', function() {
         formatCurrency(span, "blur");
     });
-});
+}); */
 
 function formatNumber(n) {
     return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
