@@ -88,12 +88,12 @@ while (x<numAlternativas) {
                     <th style="min-width:2.5cm">TOTAL</th>
                 </tr>
                 <tr id=sumPrivados_alt${x+1}>
-                    <td class="bajada" style="width:10cm">TOTAL COSTOS INVERSION Y REINVERSION Precios Privados</td>
-                    <td><span id=valorTotalPrivados_alt${x+1} class="respuestaTabla5-2">0</span></td>
+                    <td class="bajada" style="width:10cm">TOTAL COSTOS INVERSIÓN Y REINVERSIÓN Precios Privados</td>
+                    <td><span id=valorTotalPrivados_alt${x+1} class="respuestaTabla5-2" style="text-align:right">0</span></td>
                 </tr>
                 <tr id=sumSociales_alt${x+1}>
-                    <td class="bajada" style="width:10cm">TOTAL COSTOS INVERSION Y REINVERSION Precios Sociales</td>
-                    <td><span id=valorTotalSociales_alt${x+1} class="respuestaTabla5-2">0</span></td>
+                    <td class="bajada" style="width:10cm">TOTAL COSTOS INVERSIÓN Y REINVERSIÓN Precios Sociales</td>
+                    <td><span id=valorTotalSociales_alt${x+1} class="respuestaTabla5-2" style="text-align:right">0</span></td>
                 </tr>
             </tbody>
         </table>
@@ -118,8 +118,8 @@ while (x<numAlternativas) {
 
                 let datoLargo = dato.rows.length;
 
-                SumTotalPrivado = (parseInt(SumTotalPrivado) + parseInt(dato.rows[datoLargo-2][index]));
-                SumTotalSocial = parseInt(SumTotalSocial) + parseInt(dato.rows[datoLargo-1][index])
+                SumTotalPrivado = parseFloat((parseInt(SumTotalPrivado) + parseInt(dato.rows[datoLargo-2][index]))).toFixed(2);
+                SumTotalSocial = parseFloat(parseInt(SumTotalSocial) + parseInt(dato.rows[datoLargo-1][index])).toFixed(2)
 
                 zzz++
             }
@@ -264,7 +264,7 @@ while (x<numAlternativas) {
                     var rowHor = altHor.insertRow(rowCountHor);
                     var periodo0 = rowHor.insertCell(0)
                     if (j<alternativas.rows.length) {
-                        periodo0.innerHTML=`<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${tablaHorizonte.rows[j][i]} style="text-align:right">`
+                        periodo0.innerHTML=`<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(tablaHorizonte.rows[j][i]).toFixed(2)} style="text-align:right">`
                         let array_periodos = []
                         for (let index = 1; index <= horizonte; index++) {
                             var sumValTotalSocial = 0;
@@ -281,7 +281,7 @@ while (x<numAlternativas) {
                             }
 
                             array_periodos[index] = rowHor.insertCell(-1)
-                            array_periodos[index].innerHTML = `<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${tablaHorizonte.rows[j][index]} style="text-align:right">`
+                            array_periodos[index].innerHTML = `<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(tablaHorizonte.rows[j][index]).toFixed(2)} style="text-align:right">`
                             
                         }
                     } else if (j===alternativas.rows.length){
@@ -295,7 +295,7 @@ while (x<numAlternativas) {
                                 
                             } else {
                                 sumValTotal += parseInt(tablaHorizonte.rows[jz])
-                                periodo0.innerHTML=`<input id=totalPrivado_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${sumValTotal} readonly="true" style="text-align:right">`
+                                periodo0.innerHTML=`<input id=totalPrivado_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(sumValTotal).toFixed(2)} readonly="true" style="text-align:right">`
                             }
                             jz++
                         }
@@ -312,7 +312,7 @@ while (x<numAlternativas) {
                                 jz++
                             }
                             array_periodos[index] = rowHor.insertCell(-1)
-                            array_periodos[index].innerHTML = `<input id=totalPrivado_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${sumValPrivado} readonly="true" style="text-align:right">`
+                            array_periodos[index].innerHTML = `<input id=totalPrivado_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(sumValPrivado).toFixed(2)} readonly="true" style="text-align:right">`
                         }
                     }   else {
                         let array_periodos = []
@@ -326,7 +326,7 @@ while (x<numAlternativas) {
                                 let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${x+1}_com${y+1}`))
                                 
                                 sumValTotal += parseInt(tablaHorizonte.rows[jz][0]*flujoCosto.rows[jz][2])
-                                periodo0.innerHTML=`<input id=totalSocial_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${sumValTotal} readonly="true" style="text-align:right">`
+                                periodo0.innerHTML=`<input id=totalSocial_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(sumValTotal).toFixed(2)} readonly="true" style="text-align:right">`
                             }
                             jz++
                         }
@@ -346,7 +346,7 @@ while (x<numAlternativas) {
                             }
 
                             array_periodos[index] = rowHor.insertCell(-1)
-                            array_periodos[index].innerHTML = `<input id=totalSocual_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${sumValSocial} contenteditable=false style="text-align:right">`
+                            array_periodos[index].innerHTML = `<input id=totalSocual_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(sumValSocial).toFixed(2)} contenteditable=false style="text-align:right">`
                         }
                     
                     }
@@ -438,7 +438,7 @@ while (x<numAlternativas) {
                     cell4.innerHTML=''
                     cell5.innerHTML=''
                     cell6.innerHTML=''
-                    cell7.innerHTML=`<span class="respuestaTabla5-2" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right">${flujoCosto.rows[z][6]}</span>`
+                    cell7.innerHTML=`<span class="respuestaTabla5-2" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right">${parseFloat(flujoCosto.rows[z][6]).toFixed(2)}</span>`
                 }
                 
                 var sumValTotal = 0;
@@ -449,7 +449,7 @@ while (x<numAlternativas) {
                         sumValTotal += parseInt(el[4])
                         let resultadoPrivado = document.getElementById(`resultadoPrivado_alt${x+1}_com${y+1}`)
                         resultadoPrivado.innerHTML = `
-                        ${sumValTotal}`
+                        ${parseFloat(sumValTotal).toFixed(2)}`
                     }
                 });
             } else {
@@ -482,7 +482,7 @@ while (x<numAlternativas) {
                             sumValTotal += (parseInt(el[6])*parseFloat(el[2]))
                             let resultadoSocial = document.getElementById(`resultadoSocial_alt${x+1}_com${y+1}`)
                             resultadoSocial.innerHTML = `
-                            ${sumValTotal}`
+                            ${parseFloat(sumValTotal).toFixed(2)}`
                         }
                     });
                 }
@@ -551,8 +551,8 @@ while (ultimoWhile<numAlternativas) {
         ultimoComponente++
     }
 
-    valorTotalPrivados.innerHTML = valPrivadoFinal
-    valorTotalSociales.innerHTML = valSocialFinal
+    valorTotalPrivados.innerHTML = parseFloat(valPrivadoFinal).toFixed(2)
+    valorTotalSociales.innerHTML = parseFloat(valSocialFinal).toFixed(2)
 
     ultimoWhile++
 }

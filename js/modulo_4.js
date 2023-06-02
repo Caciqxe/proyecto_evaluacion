@@ -14,9 +14,9 @@ while (x<numAlternativas) {
         `
         <div id=Alt${x+1} class="segmentos">
             <span class="alternativaStilo" style="width: 99.8%;">Alternativa N° ${x+1}: ${respuestaTabla.rows[0][1]}</span>
-            <span class="bajada">PREPARACION DE LA ALTERNATIVA N° ${x+1}</span>
+            <span class="bajada">PREPARACIÓN DE LA ALTERNATIVA N° ${x+1}</span>
             <span id="preparacion_alt${x+1}" class="textInput" contenteditable="true"  style="width: 99.5%;">${infoSession[0].preparacionAlt}</span>
-            <span class="bajada">DESCRIPCIÓN BÁSICA DE LA ALTERNATIVA ${x+1}</span>
+            <span class="bajada">DESCRIPCIÓN BÁSICA DE LA ALTERNATIVA N° ${x+1}</span>
             <span id="descripcion_alt${x+1}" class="textInput" contenteditable="true" style="width: 99.5%;">${infoSession[0].descripcionAlt}</span>
         </div>
         `
@@ -25,9 +25,9 @@ while (x<numAlternativas) {
         `
         <div id=Alt${x+1} class="segmentos">
             <span class="alternativaStilo" style="width: 99.8%;">Alternativa N° ${x+1}</span>
-            <span class="bajada">PREPARACION DE LA ALTERNATIVA N° ${x+1}</span>
+            <span class="bajada">PREPARACIÓN DE LA ALTERNATIVA N° ${x+1}</span>
             <span id="preparacion_alt${x+1}" class="textInput" contenteditable="true" style="width: 99.5%;">${respuestaTabla.rows[0][1]}</span>
-            <span class="bajada">DESCRIPCIÓN BÁSICA DE LA ALTERNATIVA ${x+1}</span>
+            <span class="bajada">DESCRIPCIÓN BÁSICA DE LA ALTERNATIVA N° ${x+1}</span>
             <span id="descripcion_alt${x+1}" class="textInput" contenteditable="true" style="width: 99.5%;">${respuestaTabla.rows[0][2]}</span>
         </div>
         `
@@ -36,9 +36,9 @@ while (x<numAlternativas) {
         `
         <div id=Alt${x+1} class="segmentos">
             <span class="alternativaStilo" style="width: 99.8%;">Alternativa N° ${x+1}</span>
-            <span class="bajada">PREPARACION DE LA ALTERNATIVA N° ${x+1}</span>
+            <span class="bajada">PREPARACIÓN DE LA ALTERNATIVA N° ${x+1}</span>
             <span id="preparacion_alt${x+1}" class="textInput" contenteditable="true" style="width: 99.5%;"></span>
-            <span class="bajada">DESCRIPCIÓN BÁSICA DE LA ALTERNATIVA ${x+1}</span>
+            <span class="bajada">DESCRIPCIÓN BÁSICA DE LA ALTERNATIVA N° ${x+1}</span>
             <span id="descripcion_alt${x+1}" class="textInput" contenteditable="true" style="width: 99.5%;"></span>
         </div>
         `

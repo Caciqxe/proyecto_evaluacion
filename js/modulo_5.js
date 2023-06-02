@@ -62,7 +62,7 @@ while (x < numAlternativas) {
       oculto.innerHTML +=
         `
             <span class="preguntaTabla" style="width: 50% !important; margin-bottom: 5px;">COMPONENTE ${y + 1}</span>
-            <span style="margin-left:10px; background-color: whitesmoke; color:black; height: fit-content; padding: 0 6px; text-align: end; min-width: 150px;">${suma}</span>
+            <span style="margin-left:10px; background-color: whitesmoke; color:black; height: fit-content; padding: 0 6px; text-align: end; min-width: 150px;">${parseFloat(suma).toFixed(2)}</span>
             `
       console.log(suma);
 
@@ -76,7 +76,7 @@ while (x < numAlternativas) {
       let preguntaTablaFinal = document.getElementById(`preguntaTablaFinalAlt${x + 1}`)
       preguntaTablaFinal.className = 'preguntaTabla'
       preguntaTablaFinal.innerHTML = `TOTAL ALTERNATIVA ${x + 1}:`
-      respuestaTablaFinal.innerHTML = sumaMasGrande
+      respuestaTablaFinal.innerHTML = parseFloat(sumaMasGrande).toFixed(2)
     } else {
 
     }
@@ -235,7 +235,7 @@ function calculador(e) {
     let costUnit = document.getElementById(`costUnit_${campo}`)
     let valTotal = document.getElementById(`valTotal_${campo}`)
 
-    valTotal.value = parseInt(cantReq.value) * parseInt(costUnit.value)
+    valTotal.value = parseFloat(parseInt(cantReq.value) * parseInt(costUnit.value)).toFixed(2)
     //valTotal.value = (parseInt(cantReq.value) * parseInt(costUnit.value)).toFixed(2)
 
   } if (campo.startsWith('costUnit')) {
@@ -244,7 +244,7 @@ function calculador(e) {
     let costUnit = document.getElementById(`costUnit_${campo}`)
     let valTotal = document.getElementById(`valTotal_${campo}`)
 
-    valTotal.value = parseInt(cantReq.value) * parseInt(costUnit.value)
+    valTotal.value = parseFloat(parseInt(cantReq.value) * parseInt(costUnit.value)).toFixed(2)
     //valTotal.value = (parseInt(cantReq.value) * parseInt(costUnit.value)).toFixed(2)
   }
 }

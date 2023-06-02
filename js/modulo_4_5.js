@@ -99,12 +99,12 @@ while (x<numAlternativas) {
                 let costoAproximado2 = arrayTabla.rows[index][9];
                 let costoAproximado3 = arrayTabla.rows[index][10];
 
-                subtotalPrivados = subtotalPrivados + parseInt(costoAproximado1)
-                subtotalSocial = parseInt(subtotalSocial) + (parseFloat(factorSocial1) * parseInt(costoAproximado1))
-                subtotalPrivados2 = subtotalPrivados2 + parseInt(costoAproximado2)
-                subtotalSocial2 = parseInt(subtotalSocial2) + (parseFloat(factorSocial2) * parseInt(costoAproximado2))
-                subtotalPrivados3 = subtotalPrivados3 + parseInt(costoAproximado3)
-                subtotalSocial3 = parseInt(subtotalSocial3) +  (parseFloat(factorSocial2) * parseInt(costoAproximado3))
+                subtotalPrivados = parseFloat(subtotalPrivados + parseInt(costoAproximado1)).toFixed(2)
+                subtotalSocial = parseFloat(parseInt(subtotalSocial) + (parseFloat(factorSocial1) * parseInt(costoAproximado1))).toFixed(2)
+                subtotalPrivados2 = parseFloat(subtotalPrivados2 + parseInt(costoAproximado2)).toFixed(2)
+                subtotalSocial2 = parseFloat(parseInt(subtotalSocial2) + (parseFloat(factorSocial2) * parseInt(costoAproximado2))).toFixed(2)
+                subtotalPrivados3 = parseFloat(subtotalPrivados3 + parseInt(costoAproximado3)).toFixed(2)
+                subtotalSocial3 = parseFloat(parseInt(subtotalSocial3) +  (parseFloat(factorSocial2) * parseInt(costoAproximado3))).toFixed(2)
             }
 
             let array = []
@@ -155,27 +155,27 @@ while (x<numAlternativas) {
                         </tr>
                         <tr>
                             <td class="bajada"><span>Sub totales a Precios Privados</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[0]}</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[2]}</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[4]}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[0]).toFixed(2)}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[2]).toFixed(2)}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[4]).toFixed(2)}</span></td>
                         </tr>
                         <tr>
                             <td class="bajada"><span>Sub totales a Precios Sociales</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[1]}</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[3]}</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[5]}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[1]).toFixed(2)}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[3]).toFixed(2)}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[5]).toFixed(2)}</span></td>
                         </tr>
                         <tr>
                             <td class="bajada"><span>Totales escenario frecuente Precios Privados</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[0]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[2]}</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[4]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[0]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[2]).toFixed(2)}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[4]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
                         </tr>
                         <tr>
                             <td class="bajada"><span>Totales escenario frecuente Precios Sociales</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[1]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[3]}</span></td>
-                            <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Af[5]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[1]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[3]).toFixed(2)}</span></td>
+                            <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Af[5]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -209,27 +209,27 @@ while (x<numAlternativas) {
                     </tr>
                     <tr>
                         <td class="bajada"><span>Sub totales a Precios Privados</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[0]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[2]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[4]}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[0]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[2]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[4]).toFixed(2)}</span></td>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Sub totales a Precios Sociales</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[1]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[3]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[5]}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[1]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[3]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[5]).toFixed(2)}</span></td>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Totales escenario extremo Precios Privados</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[0]*parseInt(eventosExtranos.innerHTML)}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[2]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[4]*parseInt(eventosExtranos.innerHTML)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[0]*parseInt(eventosExtranos.innerHTML)).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[2]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[4]*parseInt(eventosExtranos.innerHTML)).toFixed(2)}</span></td>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Totales escenario extremo Precios Sociales</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[1]*parseInt(eventosExtranos.innerHTML)}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[3]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Ae[5]*parseInt(eventosExtranos.innerHTML)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[1]*parseInt(eventosExtranos.innerHTML)).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[3]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Ae[5]*parseInt(eventosExtranos.innerHTML)).toFixed(2)}</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -243,15 +243,15 @@ while (x<numAlternativas) {
                 </tr>
                 <tr>
                     <td class="bajada"><span>Total Escenario Frecuente más Extremo a Precios Privados</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Af[0]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Ae[0]*parseInt(eventosExtranos.innerHTML))}</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Af[2]+sum9Ae[2])}</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Af[4]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Ae[4]*parseInt(eventosExtranos.innerHTML))}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Af[0]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Ae[0]*parseInt(eventosExtranos.innerHTML))).toFixed(2)}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Af[2]+sum9Ae[2])).toFixed(2)}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Af[4]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Ae[4]*parseInt(eventosExtranos.innerHTML))).toFixed(2)}</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>Total Escenario Frecuente más Extremo a Precios Sociales</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Af[1]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Ae[1]*parseInt(eventosExtranos.innerHTML))}</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Af[3]+sum9Ae[3])}</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Af[5]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Ae[5]*parseInt(eventosExtranos.innerHTML))}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Af[1]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Ae[1]*parseInt(eventosExtranos.innerHTML))).toFixed(2)}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Af[3]+sum9Ae[3])).toFixed(2)}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Af[5]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Ae[5]*parseInt(eventosExtranos.innerHTML))).toFixed(2)}</span></td>
                 </tr>
             </tbody>
         </table>
@@ -285,27 +285,27 @@ while (x<numAlternativas) {
                     </tr>
                     <tr>
                         <td class="bajada"><span>Sub totales a Precios Privados</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[0]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[2]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[4]}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[0]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[2]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[4]).toFixed(2)}</span></td>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Sub totales a Precios Sociales</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[1]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[3]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[5]}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[1]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[3]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[5]).toFixed(2)}</span></td>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Totales escenario frecuente Precios Privados</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[0]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[2]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[4]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[0]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[2]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[4]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Totales escenario frecuente Precios Sociales</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[1]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[3]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Bf[5]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[1]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[3]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Bf[5]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -339,27 +339,27 @@ while (x<numAlternativas) {
                     </tr>
                     <tr>
                         <td class="bajada"><span>Sub totales a Precios Privados</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[0]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[2]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[4]}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[0]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[2]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[4]).toFixed(2)}</span></td>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Sub totales a Precios Sociales</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[1]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[3]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[5]}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[1]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[3]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[5]).toFixed(2)}</span></td>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Totales escenario extremo Precios Privados</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[0]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[2]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[4]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[0]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[2]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[4]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
                     </tr>
                     <tr>
                         <td class="bajada"><span>Totales escenario extremo Precios Sociales</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[1]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[3]}</span></td>
-                        <td><span style="text-align:right" class="textInput" editablecontent="false">${sum9Be[5]*parseInt(eventosFrecuentes.innerHTML)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[1]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[3]).toFixed(2)}</span></td>
+                        <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(sum9Be[5]*parseInt(eventosFrecuentes.innerHTML)).toFixed(2)}</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -373,15 +373,15 @@ while (x<numAlternativas) {
                 </tr>
                 <tr>
                     <td class="bajada"><span>Total Escenario Frecuente más Extremo a Precios Privados</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Bf[0]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Be[0]*parseInt(eventosExtranos.innerHTML))}</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Bf[2]+sum9Be[2])}</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Bf[4]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Be[4]*parseInt(eventosExtranos.innerHTML))}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Bf[0]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Be[0]*parseInt(eventosExtranos.innerHTML))).toFixed(2)}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Bf[2]+sum9Be[2])).toFixed(2)}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Bf[4]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Be[4]*parseInt(eventosExtranos.innerHTML))).toFixed(2)}</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>Total Escenario Frecuente más Extremo a Precios Sociales</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Bf[1]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Be[1]*parseInt(eventosExtranos.innerHTML))}</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Bf[3]+sum9Be[3])}</span></td>
-                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt(sum9Bf[5]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Be[5]*parseInt(eventosExtranos.innerHTML))}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Bf[1]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Be[1]*parseInt(eventosExtranos.innerHTML))).toFixed(2)}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Bf[3]+sum9Be[3])).toFixed(2)}</span></td>
+                    <td><span style="text-align:right" class="textInput" editablecontent="false">${parseFloat(parseInt(sum9Bf[5]*parseInt(eventosFrecuentes.innerHTML))+parseInt(sum9Be[5]*parseInt(eventosExtranos.innerHTML))).toFixed(2)}</span></td>
                 </tr>
             </tbody>
             </table>

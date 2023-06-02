@@ -64,8 +64,8 @@ while (x<numAlternativas) {
                 </tr>
                 <tr>
                     <td><span class="textInput" editablecontent="false">¿El Blindaje del Proyecto es factible (C-B >4) o No Factible (C-B <= 4) ?</span></td>
-                    <td><span style="text-align:right; background-color:yellow" class="textInput" editablecontent="false">${parseInt((parseInt(totalPaso9A.rows[0][1])-parseInt(totalPaso9A.rows[0][3]))/parseInt(totalPaso9A.rows[0][2]))<=4 ? "NO FACTIBLE":"FACTIBLE"}</span></td>
-                    <td><span style="text-align:right; background-color:yellow" class="textInput" editablecontent="false">${parseInt((parseInt(totalPaso9A.rows[1][1])-parseInt(totalPaso9A.rows[1][3]))/parseInt(totalPaso9A.rows[1][2]))<=4 ? "NO FACTIBLE":"FACTIBLE"}</span></td>
+                    <td><span style="text-align:right; background-color:yellow ;font-weight:bold" class="textInput" editablecontent="false">${parseInt((parseInt(totalPaso9A.rows[0][1])-parseInt(totalPaso9A.rows[0][3]))/parseInt(totalPaso9A.rows[0][2]))>4 ? "FACTIBLE":"NO FACTIBLE"}</span></td>
+                    <td><span style="text-align:right; background-color:yellow ;font-weight:bold" class="textInput" editablecontent="false">${parseInt((parseInt(totalPaso9A.rows[1][1])-parseInt(totalPaso9A.rows[1][3]))/parseInt(totalPaso9A.rows[1][2]))>4 ? "FACTIBLE":"NO FACTIBLE"}</span></td>
                 </tr>
             </tbody>
         </table>;
@@ -117,8 +117,8 @@ while (x<numAlternativas) {
             </tr>
             <tr>
                 <td><span class="textInput" editablecontent="false">¿El Blindaje del Proyecto es factible (C-B >4) o No Factible (C-B <= 4) ?</span></td>
-                <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt((parseInt(totalPaso9B.rows[0][1])-parseInt(totalPaso9B.rows[0][3]))/parseInt(totalPaso9B.rows[0][2]))<=4 ? "NO FACTIBLE":"FACTIBLE"}</span></td>
-                <td><span style="text-align:right" class="textInput" editablecontent="false">${parseInt((parseInt(totalPaso9B.rows[1][1])-parseInt(totalPaso9B.rows[1][3]))/parseInt(totalPaso9B.rows[1][2]))<=4 ? "NO FACTIBLE":"FACTIBLE"}</span></td>
+                <td><span style="text-align:right;background:yellow;font-weight:bold" class="textInput" editablecontent="false">${parseInt((parseInt(totalPaso9B.rows[0][1])-parseInt(totalPaso9B.rows[0][3]))/parseInt(totalPaso9B.rows[0][2]))>4 ? "FACTIBLE":"NO FACTIBLE"}</span></td>
+                <td><span style="text-align:right;background:yellow;font-weight:bold" class="textInput" editablecontent="false">${parseInt((parseInt(totalPaso9B.rows[1][1])-parseInt(totalPaso9B.rows[1][3]))/parseInt(totalPaso9B.rows[1][2]))>4 ? "FACTIBLE":"NO FACTIBLE"}</span></td>
             </tr>
         </tbody>
     </table>
