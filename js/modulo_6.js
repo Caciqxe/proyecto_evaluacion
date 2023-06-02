@@ -15,7 +15,7 @@ if (Modulo6Extra != null) {
     `
     <tbody>
         <tr>
-            <th colspan="2">DEFINA LAS INSTANCIAS O INSTITUCIONES CON LAS CUALES SE RELACIONARA EL PROYECTO</th>
+            <th colspan="2">DEFINA LAS INSTANCIAS O INSTITUCIONES CON LAS CUALES SE RELACIONARÁ EL PROYECTO</th>
         </tr>
         <tr>
             <td class="bajada" style="width: 350px;">INSTANCIAS DE REGULACIÓN TÉCNICA: </td>
@@ -46,9 +46,9 @@ if (Modulo6Extra != null) {
             <th colspan="3">DEFINA EL MARCO LEGAL CON EL CUAL SE RELACIONARÁ EL PROYECTO</th>
         </tr>
         <tr>
-            <td class="bajada" style="width: 333px;">NORMATIVIDAD RELACIONADA O REGULATORIA</td>
-            <td class="bajada" style="width: 333px;">ASPECTOS A TENER EN CUENTA</td>
-            <td class="bajada" style="width: 333px;">ACCIONES A DESARROLLAR</td>
+            <td class="bajada" style="width: 333px;text-align:center">NORMATIVIDAD RELACIONADA O REGULATORIA</td>
+            <td class="bajada" style="width: 333px;text-align:center">ASPECTOS A TENER EN CUENTA</td>
+            <td class="bajada" style="width: 333px;text-align:center">ACCIONES A DESARROLLAR</td>
         </tr>
         <tr>
             <td><span contenteditable="true" class="textInput">${marcoLegal.rows[0][0]}</span></td>
@@ -89,9 +89,9 @@ if (Modulo6Extra != null) {
             <th colspan="3">SELECCIONE LA MODALIDAD INSTITUCIONAL PARA LA EJECUCIÓN DEL PROYECTO.</th>
         </tr>
         <tr>
-            <td class="bajada" style="width: 333px;">MODALIDAD</td>
-            <td class="bajada" style="width: 333px;">DESCRIPCIÓN</td>
-            <td class="bajada" style="width: 333px;">JUSTIFICACIÓN</td>
+            <td class="bajada" style="width: 333px;text-align:center;">MODALIDAD</td>
+            <td class="bajada" style="width: 333px;text-align:center;">DESCRIPCIÓN</td>
+            <td class="bajada" style="width: 333px;text-align:center;">JUSTIFICACIÓN</td>
         </tr>
         <tr>
             <td><span contenteditable="true" class="textInput">${modalidadEjecucion.rows[0][0]}</span></td>
@@ -107,9 +107,9 @@ if (Modulo6Extra != null) {
             <th colspan="3">SELECCIONE LA MODALIDAD INSTITUCIONAL PARA LA EJECUCIÓN DEL PROYECTO.</th>
         </tr>
         <tr>
-            <td class="bajada" style="width: 333px;">MODALIDAD</td>
-            <td class="bajada" style="width: 333px;">DESCRIPCIÓN</td>
-            <td class="bajada" style="width: 333px;">JUSTIFICACIÓN</td>
+            <td class="bajada" style="width: 333px;text-align:center;">MODALIDAD</td>
+            <td class="bajada" style="width: 333px;text-align:center;">DESCRIPCIÓN</td>
+            <td class="bajada" style="width: 333px;text-align:center;">JUSTIFICACIÓN</td>
         </tr>
         <tr>
             <td><span contenteditable="true" class="textInput">${modalidadOperacion.rows[0][0]}</span></td>
