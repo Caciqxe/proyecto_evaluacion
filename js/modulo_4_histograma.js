@@ -78,7 +78,7 @@ if (infoExtraHistograma != null) {
           <th>IMPACTOS AGUAS ABAJO</th>
           <th>P</th>
           <th>F</th>
-          <th>EXPXF</th>
+          <th>ExPxF</th>
           <th>PxF</th>
       </tr>
       <tr>
@@ -147,7 +147,7 @@ if (infoExtraHistograma != null) {
         <th>INUNDACIÓN MARINA</th>
         <th>P</th>
         <th>F</th>
-        <th>EXPXF</th>
+        <th>ExPxF</th>
         <th>PxF</th>
     </tr>
     <tr>
@@ -209,7 +209,7 @@ if (infoExtraHistograma != null) {
         <th>SEGURIDAD</th>
         <th>P</th>
         <th>F</th>
-        <th>EXPXF</th>
+        <th>ExPxF</th>
         <th>PxF</th>
     </tr>
     <tr>
@@ -270,10 +270,10 @@ if (infoExtraHistograma != null) {
         <th>E</th>
         <th>CONFLICTOS TERRITORIALES</th>
         <th>SEGURIDAD CIUDADANA</th>
-        <th>MARCO JURIDICO</th>
+        <th>MARCO JURÍDICO</th>
         <th>P</th>
         <th>F</th>
-        <th>EXPXF</th>
+        <th>ExPxF</th>
         <th>PxF</th>
     </tr>
     <tr>
@@ -357,7 +357,7 @@ if (infoExtraHistograma != null) {
         <td><span class="respuestaTabla" style="font-weight:bold;text-align:center">${ab}</span></td>
     <tr>
     <tr>
-        <td><span class="respuestaTabla">VULNERABILIDAD FISICA</span></td>
+        <td><span class="respuestaTabla">VULNERABILIDAD FÍSICA</span></td>
         <td><span class="respuestaTabla" style="text-align:center">${divc}</span></td>
     <tr>
     <tr>
@@ -388,13 +388,13 @@ if (infoExtraHistograma != null) {
     </tr>
     <tr>
         <td><span class="respuestaTabla">Entre 1 y 1.5</span></td>
-        <td><span class="respuestaTabla">Significa que el proyecto  esta en estado alto de riesgo, pudiendo dar lugar a afectaciones  a la calidad de vida de las personas.</span></td>
+        <td><span class="respuestaTabla">Significa que el proyecto está en estado alto de riesgo, pudiendo dar lugar a afectaciones  a la calidad de vida de las personas.</span></td>
         <td><span class="respuestaTabla">Se define el proyecto como no elegible en las condiciones en que se presenta.</span></td>
     </tr>
     <tr>
         <td><span class="respuestaTabla">Entre 1.51 y 2.0</span></td>
-        <td><span class="respuestaTabla">Significa que el proyecto esta en estado de riesgo  critico, pudiendo dar lugar a afectaciones a la calidad de vida de los usuarios.</span></td>
-        <td><span class="respuestaTabla">Se sugiere la busqueda de una mejor opción tecnologica, de diseño.</span></td>
+        <td><span class="respuestaTabla">Significa que el proyecto está en estado de riesgo  crítico, pudiendo dar lugar a afectaciones a la calidad de vida de los usuarios.</span></td>
+        <td><span class="respuestaTabla">Se sugiere la búsqueda de una mejor opción tecnológica, de diseño.</span></td>
     </tr>
     <tr>
         <td><span class="respuestaTabla">Entre 2.1 y 2.5</span></td>

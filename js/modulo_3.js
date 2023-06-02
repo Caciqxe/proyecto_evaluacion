@@ -251,7 +251,7 @@ function generarTablaCremiento() {
         <th>POBLACIÓN</th>
         <th>DEMANDA</th>
         <th>OFERTA</th>
-        <th>DEFICIT / SUPERAVIT</th>
+        <th>DÉFICIT / SUPERAVIT</th>
     </tr>
     `
     while (y<horizonte) {
