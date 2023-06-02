@@ -370,7 +370,7 @@ if (infoExtraHistograma != null) {
     <tr>
     <tr>
         <td class="bajada"><span style="font-weight:bold">BALANCE DE RIESGO PROMEDIO</span></td>
-        <td><span class="respuestaTabla" style="font-weight:bold;text-align:center">${parseFloat((ab)/(cd)).toFixed(2)}</span></td>
+        <td><span class="respuestaTabla" style="font-weight:bold;text-align:center">${parseFloat(((ab)+(cd))/2).toFixed(2)}</span></td>
     <tr>
   </tbody>
   `
