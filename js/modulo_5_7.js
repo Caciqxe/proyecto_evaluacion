@@ -50,24 +50,24 @@ while (x<numAlternativas) {
                 </tr>
                 <tr id="calificada_alt${x+1}">
                     <td><input id=calificadaAlt${x+1} readonly="true" class="respuestaTabla5-7" value="${tablaCostos.rows[0][0]}"></td>
-                    <td><input class="costoBenefSocial" id=factorCalificadaAlt${x+1} value=0.808 readonly="true"></td>
-                    <td><input class="costoBenefSocial" id=unidadCalificadaAlt${x+1} value="${tablaCostos.rows[0][1]}"></td>
+                    <td><input class="costoBenefSocial" id=factorCalificadaAlt${x+1} value=0.808 readonly="true" style="text-align:right"></td>
+                    <td><input class="costoBenefSocial" id=unidadCalificadaAlt${x+1} value="${tablaCostos.rows[0][1]}" style="text-align:right"></td>
                     <td><input class="costoBenefSocial" id=cantidadCalificadaAlt${x+1} value="${tablaCostos.rows[0][2]}" style="text-align:right"></td>
                     <td><input class="costoBenefSocial" id=valorUnitarioCalificadaAlt${x+1} value="${tablaCostos.rows[0][3]}" style="text-align:right"></td>
                     <td><input class="costoBenefSocial" id=valorTotalCalificadaAlt${x+1} readonly=true value="${tablaCostos.rows[0][4]}" style="text-align:right"></td>
                 </tr>
                 <tr id="semiCalificada_alt${x+1}">
                     <td><input id=semiCalificadaAlt${x+1} readonly="true" class="respuestaTabla5-7" value="${tablaCostos.rows[1][0]}"></td>
-                    <td><input class="costoBenefSocial" id=factorSemiCalificadaAlt${x+1} value=0.696 readonly="true"></td>
-                    <td><input class="costoBenefSocial" id=unidadSemiCalificadaAlt${x+1} value="${tablaCostos.rows[1][1]}"></td>
+                    <td><input class="costoBenefSocial" id=factorSemiCalificadaAlt${x+1} value=0.696 readonly="true" style="text-align:right"></td>
+                    <td><input class="costoBenefSocial" id=unidadSemiCalificadaAlt${x+1} value="${tablaCostos.rows[1][1]}" style="text-align:right"></td>
                     <td><input class="costoBenefSocial" id=cantidadSemiCalificadaAlt${x+1} value="${tablaCostos.rows[1][2]}" style="text-align:right"></td>
                     <td><input class="costoBenefSocial" id=valorUnitarioSemiCalificadaAlt${x+1} value="${tablaCostos.rows[1][3]}" style="text-align:right"></td>
                     <td><input class="costoBenefSocial" id=valorTotalSemiCalificadaAlt${x+1} readonly=true value=${tablaCostos.rows[1][4]} style="text-align:right"></td>
                 </tr>
                 <tr id="noCalificada_alt${x+1}">
                     <td><input id=noCalificadaAlt${x+1} readonly="true" class="respuestaTabla5-7" value="${tablaCostos.rows[2][0]}"></td>
-                    <td><input class="costoBenefSocial" id=factorNoCalificadaAlt${x+1} value=0.663 readonly="true"></td>
-                    <td><input class="costoBenefSocial" id=unidadANoCalificadaAlt${x+1} value="${tablaCostos.rows[2][1]}"></td>
+                    <td><input class="costoBenefSocial" id=factorNoCalificadaAlt${x+1} value=0.663 readonly="true" style="text-align:right"></td>
+                    <td><input class="costoBenefSocial" id=unidadANoCalificadaAlt${x+1} value="${tablaCostos.rows[2][1]}" style="text-align:right"></td>
                     <td><input class="costoBenefSocial" id=cantidadANoCalificadaAlt${x+1} value="${tablaCostos.rows[2][2]}" style="text-align:right"></td>
                     <td><input class="costoBenefSocial" id=valorUnitarioANoCalificadaAlt${x+1} value="${tablaCostos.rows[2][3]}" style="text-align:right"></td>
                     <td><input class="costoBenefSocial" id=valorTotalANoCalificadaAlt${x+1} readonly=true value="${tablaCostos.rows[2][4]}" style="text-align:right"></td>
@@ -108,7 +108,7 @@ while (x<numAlternativas) {
         <tbody>
             <tr>
                 <td class="bajada">TASA DE OPORTUNIDAD (TASA PRIVADA DE DESCUENTO)</td>
-                <td><span class="respuestaTabla5-7" style="text-align:right">${parseFloat(tasa*100)}</span></td>
+                <td><span class="respuestaTabla5-7" style="text-align:right">${parseFloat(tasa*100).toFixed(2)}</span></td>
             </tr>
             <tr>
                 <td class="bajada">VAN</td>
@@ -123,7 +123,7 @@ while (x<numAlternativas) {
                 <td><span id="vanCostosAlt${x+1}" class="respuestaTabla5-7" style="text-align:right">${(calcularVPN((tablaComplementariaSocial.rows[3][2]), tablaComplementariaSocial.rows[3], tasa)).toFixed(2)}</span></td>
             </tr>
             <tr>
-                <td class="bajada">RAZON BENEFICIO / COSTO</td>
+                <td class="bajada">RAZÓN BENEFICIO / COSTO</td>
                 <td><span id="razonBeneficioAlt${x+1}" class="respuestaTabla5-7" style="text-align:right"></span></td>
             </tr>
         </tbody>
@@ -175,12 +175,12 @@ while (x<numAlternativas) {
     
         }
         
-        beneficioTotal0.innerHTML = benTotal 
+        beneficioTotal0.innerHTML = parseFloat(benTotal).toFixed(2) 
         //costosDirectos0.innerHTML = costTotal
-        costosDirectos0.innerHTML = parseInt(costoInversionSocialTablaAnterior.rows[2][1]) + parseInt(costoOperacionSocialTablaAnterior.rows[1][1])
-        costosAsociados0.innerHTML = costAsociadTot
-        costoProyecto0.innerHTML = parseInt(costosDirectos0.innerHTML) + parseInt(costosAsociados0.innerHTML)
-        flujoNetos0.innerHTML = parseInt(beneficioTotal0.innerHTML) - parseInt(costoProyecto0.innerHTML)
+        costosDirectos0.innerHTML = parseFloat(parseInt(costoInversionSocialTablaAnterior.rows[2][1]) + parseInt(costoOperacionSocialTablaAnterior.rows[1][1])).toFixed(2)
+        costosAsociados0.innerHTML = parseFloat(costAsociadTot).toFixed(2)
+        costoProyecto0.innerHTML = parseFloat(parseInt(costosDirectos0.innerHTML) + parseInt(costosAsociados0.innerHTML)).toFixed(2)
+        flujoNetos0.innerHTML = parseFloat(parseInt(beneficioTotal0.innerHTML) - parseInt(costoProyecto0.innerHTML)).toFixed(2)
 
         let asd = 3
         let y = 0
@@ -205,7 +205,7 @@ while (x<numAlternativas) {
             var cell6T = rowTable.insertCell(-1)
     
             cell1T.innerHTML = `<input id=item${rowCountTabla-6}Alt${x+1}" value="${tablaCostos.rows[asd][0]}">`
-            cell2T.innerHTML = `<input id=factorSocial${rowCountTabla-6}Alt${x+1} value="1">`
+            cell2T.innerHTML = `<input id=factorSocial${rowCountTabla-6}Alt${x+1} style="text-align:right" value="1">`
             cell3T.innerHTML = `<input id=unidadMedida${rowCountTabla-6}Alt${x+1} value=${tablaCostos.rows[asd][1]}>`
             cell4T.innerHTML = `<input id=cantidad${rowCountTabla-6}Alt${x+1} value=${tablaCostos.rows[asd][2]} style="text-align:right">`
             cell5T.innerHTML = `<input id=valorUnitario${rowCountTabla-6}Alt${x+1} value=${tablaCostos.rows[asd][3]} style="text-align:right">`
@@ -233,16 +233,16 @@ while (x<numAlternativas) {
                 var cell6T = rowTable.insertCell(-1)
         
                 cell1T.innerHTML = `<input style="width:97%" id=item${rowCountTabla-6}Alt${x+1} value=${tablaBeneficioSocial.rows[asd][0]}>`
-                cell2T.innerHTML = `<input style="width:97%" id=factorSocial${rowCountTabla-6}Alt${x+1} value="1">`
-                cell3T.innerHTML = `<input style="width:97%" id=unidadMedida${rowCountTabla-6}Alt${x+1} value="${tablaBeneficioSocial.rows[asd][2]}">`
-                cell4T.innerHTML = `<input style="width:97%" id=cantidad${rowCountTabla-6}Alt${x+1} value="${tablaBeneficioSocial.rows[asd][3]}" style="text-align:right">`
-                cell5T.innerHTML = `<input style="width:97%" id=valorUnitario${rowCountTabla-6}Alt${x+1} value="${tablaBeneficioSocial.rows[asd][4]}" style="text-align:right">`
-                cell6T.innerHTML = `<input style="width:97%" id=valorTotal${rowCountTabla-6}Alt${x+1} value="${tablaBeneficioSocial.rows[asd][5]}" style="text-align:right">`
+                cell2T.innerHTML = `<input style="width:97%;text-align:right" id=factorSocial${rowCountTabla-6}Alt${x+1} value="1">`
+                cell3T.innerHTML = `<input style="width:97%;text-align:right" id=unidadMedida${rowCountTabla-6}Alt${x+1} value="${tablaBeneficioSocial.rows[asd][2]}">`
+                cell4T.innerHTML = `<input style="width:97%;text-align:right" id=cantidad${rowCountTabla-6}Alt${x+1} value="${tablaBeneficioSocial.rows[asd][3]}">`
+                cell5T.innerHTML = `<input style="width:97%;text-align:right" id=valorUnitario${rowCountTabla-6}Alt${x+1} value="${tablaBeneficioSocial.rows[asd][4]}">`
+                cell6T.innerHTML = `<input style="width:97%;text-align:right" id=valorTotal${rowCountTabla-6}Alt${x+1} value="${tablaBeneficioSocial.rows[asd][5]}">`
         
                 let array_periodos=[]
                 for (let index = 0; index <= horizonte; index++) {
                     array_periodos[index] = rowTable.insertCell(-1)
-                    array_periodos[index].innerHTML = `<td class="bajada"><input style="width:97%" id=input_item${rowCountTabla-5}_alt${x+1}_hor${index} value="${tablaBeneficioSocial.rows[asd][index+6]}" style="text-align:right"></td>`
+                    array_periodos[index].innerHTML = `<td class="bajada"><input style="width:97%;text-align:right" id=input_item${rowCountTabla-5}_alt${x+1}_hor${index} value="${tablaBeneficioSocial.rows[asd][index+6]}"></td>`
                 }
             }
         
@@ -295,7 +295,7 @@ while (x<numAlternativas) {
 
             beneficioTotal.innerHTML +=
             `
-            <td><span class="respuestaTabla5-7" id="beneficioTotal_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${benTotal}</span></td>
+            <td><span class="respuestaTabla5-7" id="beneficioTotal_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseFloat(benTotal).toFixed(2)}</span></td>
             `
     
 /*             costosDirectos.innerHTML +=
@@ -305,12 +305,12 @@ while (x<numAlternativas) {
 
             costosDirectos.innerHTML +=
             `
-            <td><span class="respuestaTabla5-6" id="costosDirectos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseInt(costoInversionSocialTablaAnterior.rows[2][y+2])+parseInt(costoOperacionSocialTablaAnterior.rows[1][y+2])}</span></td>
+            <td><span class="respuestaTabla5-6" id="costosDirectos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseFloat(parseInt(costoInversionSocialTablaAnterior.rows[2][y+2])+parseInt(costoOperacionSocialTablaAnterior.rows[1][y+2])).toFixed(2)}</span></td>
             `
 
             costosAsociados.innerHTML +=
             `
-            <td><span class="respuestaTabla5-7" id="costosAsociados_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaComplementariaSocial.rows[2][y+2]}</span></td>
+            <td><span class="respuestaTabla5-7" id="costosAsociados_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${parseFloat(tablaComplementariaSocial.rows[2][y+2]).toFixed(2)}</span></td>
             `
 
             let beneficioPeriodo = document.getElementById(`beneficioTotal_alt${x+1}_hor${y}`)
@@ -319,11 +319,11 @@ while (x<numAlternativas) {
 
             costoProyecto.innerHTML +=
             `
-            <td><span class="respuestaTabla5-7" id="costoProyecto_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseInt(costosPeriodo.innerHTML) + parseInt(asociadoPeriodo.innerHTML)}</span></td>
+            <td><span class="respuestaTabla5-7" id="costoProyecto_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseFloat(parseInt(costosPeriodo.innerHTML) + parseInt(asociadoPeriodo.innerHTML)).toFixed(2)}</span></td>
             `
             flujoNetos.innerHTML +=
             `
-            <td><span class="respuestaTabla5-7" id="flujoNetos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseInt(beneficioPeriodo.innerHTML) - parseInt(parseInt(costosPeriodo.innerHTML) + parseInt(asociadoPeriodo.innerHTML))}</span></td>
+            <td><span class="respuestaTabla5-7" id="flujoNetos_alt${x+1}_hor${y}" contenteditable="false" style="text-align:right">${parseFloat(parseInt(beneficioPeriodo.innerHTML) - parseInt(parseInt(costosPeriodo.innerHTML) + parseInt(asociadoPeriodo.innerHTML))).toFixed(2)}</span></td>
             `
     
             
@@ -351,24 +351,24 @@ while (x<numAlternativas) {
             </tr>
             <tr id="calificada_alt${x+1}">
                 <td><input id=calificadaAlt${x+1} readonly="true" class="respuestaTabla5-7" value="${tablaCostos.rows[0][0]}"></td>
-                <td><input class="costoBenefSocial" id=factorCalificadaAlt${x+1} value=0.808 readonly="true"></td>
-                <td><input class="costoBenefSocial" id=unidadCalificadaAlt${x+1} value="${tablaCostos.rows[0][1]}"></td>
+                <td><input class="costoBenefSocial" id=factorCalificadaAlt${x+1} style="text-align:right" value=0.808 readonly="true"></td>
+                <td><input class="costoBenefSocial" id=unidadCalificadaAlt${x+1} style="text-align:right" value="${tablaCostos.rows[0][1]}"></td>
                 <td><input class="costoBenefSocial" id=cantidadCalificadaAlt${x+1} value="${tablaCostos.rows[0][2]}" style="text-align:right"></td>
                 <td><input class="costoBenefSocial" id=valorUnitarioCalificadaAlt${x+1} value="${tablaCostos.rows[0][3]}" style="text-align:right"></td>
                 <td><input class="costoBenefSocial" id=valorTotalCalificadaAlt${x+1} readonly=true value="${tablaCostos.rows[0][4]}" style="text-align:right"></td>
             </tr>
             <tr id="semiCalificada_alt${x+1}">
                 <td><input id=semiCalificadaAlt${x+1} readonly="true" class="respuestaTabla5-7" value="${tablaCostos.rows[1][0]}"></td>
-                <td><input class="costoBenefSocial" id=factorSemiCalificadaAlt${x+1} value=0.696 readonly="true"></td>
-                <td><input class="costoBenefSocial" id=unidadSemiCalificadaAlt${x+1} value="${tablaCostos.rows[1][1]}"></td>
+                <td><input class="costoBenefSocial" id=factorSemiCalificadaAlt${x+1} style="text-align:right" value=0.696 readonly="true"></td>
+                <td><input class="costoBenefSocial" id=unidadSemiCalificadaAlt${x+1} style="text-align:right" value="${tablaCostos.rows[1][1]}"></td>
                 <td><input class="costoBenefSocial" id=cantidadSemiCalificadaAlt${x+1} value="${tablaCostos.rows[1][2]}" style="text-align:right"></td>
                 <td><input class="costoBenefSocial" id=valorUnitarioSemiCalificadaAlt${x+1} value="${tablaCostos.rows[1][3]}" style="text-align:right"></td>
                 <td><input class="costoBenefSocial" id=valorTotalSemiCalificadaAlt${x+1} readonly=true value=${tablaCostos.rows[1][4]} style="text-align:right"></td>
             </tr>
             <tr id="noCalificada_alt${x+1}">
                 <td><input id=noCalificadaAlt${x+1} readonly="true" class="respuestaTabla5-7" value="${tablaCostos.rows[2][0]}"></td>
-                <td><input class="costoBenefSocial" id=factorNoCalificadaAlt${x+1} value=0.663 readonly="true"></td>
-                <td><input class="costoBenefSocial" id=unidadANoCalificadaAlt${x+1} value="${tablaCostos.rows[2][1]}"></td>
+                <td><input class="costoBenefSocial" id=factorNoCalificadaAlt${x+1}  style="text-align:right" value=0.663 readonly="true"></td>
+                <td><input class="costoBenefSocial" id=unidadANoCalificadaAlt${x+1} style="text-align:right" value="${tablaCostos.rows[2][1]}"></td>
                 <td><input class="costoBenefSocial" id=cantidadANoCalificadaAlt${x+1} value="${tablaCostos.rows[2][2]}" style="text-align:right"></td>
                 <td><input class="costoBenefSocial" id=valorUnitarioANoCalificadaAlt${x+1} value="${tablaCostos.rows[2][3]}" style="text-align:right"></td>
                 <td><input class="costoBenefSocial" id=valorTotalANoCalificadaAlt${x+1} readonly=true value="${tablaCostos.rows[2][4]}" style="text-align:right"></td>
@@ -429,15 +429,15 @@ while (x<numAlternativas) {
     
             cell1T.innerHTML = `<input style="width:97%" id=item${rowCountTabla-6}Alt${x+1}" value="${tablaCostos.rows[asd][0]}">`
             cell2T.innerHTML = `<input style="width:97%" id=factorSocial${rowCountTabla-6}Alt${x+1} value="1">`
-            cell3T.innerHTML = `<input style="width:97%" id=unidadMedida${rowCountTabla-6}Alt${x+1} value=${tablaCostos.rows[asd][1]}>`
-            cell4T.innerHTML = `<input style="width:97%" id=cantidad${rowCountTabla-6}Alt${x+1} value=${tablaCostos.rows[asd][2]} style="text-align:right">`
-            cell5T.innerHTML = `<input style="width:97%" id=valorUnitario${rowCountTabla-6}Alt${x+1} value=${tablaCostos.rows[asd][3]} style="text-align:right">`
-            cell6T.innerHTML = `<input style="width:97%" id=valorTotal${rowCountTabla-6}Alt${x+1} value=${tablaCostos.rows[asd][4]} style="text-align:right">`
+            cell3T.innerHTML = `<input style="width:97%;text-align:right" id=unidadMedida${rowCountTabla-6}Alt${x+1} value=${tablaCostos.rows[asd][1]}>`
+            cell4T.innerHTML = `<input style="width:97%;text-align:right" id=cantidad${rowCountTabla-6}Alt${x+1} value=${tablaCostos.rows[asd][2]}>`
+            cell5T.innerHTML = `<input style="width:97%;text-align:right" id=valorUnitario${rowCountTabla-6}Alt${x+1} value=${tablaCostos.rows[asd][3]}>`
+            cell6T.innerHTML = `<input style="width:97%;text-align:right" id=valorTotal${rowCountTabla-6}Alt${x+1} value=${tablaCostos.rows[asd][4]}>`
     
             let array_periodos=[]
             for (let index = 0; index <= horizonte; index++) {
                 array_periodos[index] = rowTable.insertCell(-1)
-                array_periodos[index].innerHTML = `<td class="bajada"><input style="width:97%" id=input_item${rowCountTabla-5}_alt${x+1}_hor${index} value=${tablaCostos.rows[asd][index+5]} style="text-align:right"></td>`
+                array_periodos[index].innerHTML = `<td class="bajada"><input style="width:97%;text-align:right" id=input_item${rowCountTabla-5}_alt${x+1}_hor${index} value=${tablaCostos.rows[asd][index+5]}></td>`
             }
     
             asd++
@@ -851,18 +851,18 @@ const agregarFila = (event) => {
 
   
     cell1.innerHTML = `<input style="width:97%" id=item${rowCount-6}Alt${x+1} value=>`
-    cell2.innerHTML = `<input style="width:97%" id=factorSocial${rowCountTabla-6}Alt${x+1} value="1">`
-    cell3.innerHTML = `<input style="width:97%" id=unidadMedida${rowCount-6}Alt${x+1} value=0>`
-    cell4.innerHTML = `<input style="width:97%" id=cantidad${rowCount-6}Alt${x+1} value=0 style="text-align:right">`
-    cell5.innerHTML = `<input style="width:97%" id=valorUnitario${rowCount-6}Alt${x+1} value=0 style="text-align:right">`
-    cell6.innerHTML = `<input style="width:97%" id=valorTotal${rowCount-6}Alt${x+1} value=0 style="text-align:right">`
+    cell2.innerHTML = `<input style="width:97%;text-align:right" id=factorSocial${rowCountTabla-6}Alt${x+1} value="1">`
+    cell3.innerHTML = `<input style="width:97%;text-align:right"" id=unidadMedida${rowCount-6}Alt${x+1} value=0>`
+    cell4.innerHTML = `<input style="width:97%;text-align:right" id=cantidad${rowCount-6}Alt${x+1} value=0>`
+    cell5.innerHTML = `<input style="width:97%;text-align:right" id=valorUnitario${rowCount-6}Alt${x+1} value=0>`
+    cell6.innerHTML = `<input style="width:97%;text-align:right" id=valorTotal${rowCount-6}Alt${x+1} value=0>`
 
     let horizonte = sessionStorage.getItem('horizonteEvaluacion')
 
     let array_periodos=[]
     for (let index = 0; index <= horizonte; index++) {
         array_periodos[index] = row.insertCell(-1)
-        array_periodos[index].innerHTML = `<td class="bajada"><input style="width:97%" id=input_item${rowCount-5}_alt${x+1}_hor${index} value=0 style="text-align:right"></td>`
+        array_periodos[index].innerHTML = `<td class="bajada"><input style="width:97%;text-align:right" id=input_item${rowCount-5}_alt${x+1}_hor${index} value=0></td>`
     }
   
     }

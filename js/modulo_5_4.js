@@ -45,19 +45,19 @@ if (factoresPrecioPrivado != null) {
             <tbody>
                 <tr>
                     <td class="bajada"><span>VALOR PRESENTE NETO DE LOS COSTOS:</span></td>
-                    <td><span class="respuestaTabla5-4" id="vanPrivadoAlt${x+1}">${valoresIndicadoresPrivados.rows[0][1]}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="vanPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[0][1]).toFixed(2)}</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>COSTO ANUAL EQUIVALENTE:</span></td>
-                    <td><span class="respuestaTabla5-4" id="costoPrivadoAlt${x+1}">${valoresIndicadoresPrivados.rows[1][1]}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="costoPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[1][1]).toFixed(2)}</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>PROMEDIO DE UNIDADES DE BENEFICIO ACTUAL:</span></td>
-                    <td><span class="respuestaTabla5-4" id="beneficioPrivadoAlt${x+1}">${valoresIndicadoresPrivados.rows[2][1]}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="beneficioPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[2][1]).toFixed(2)}</span></td>
                 </tr>
                 <tr>
-                    <td class="bajada"><span>COSTO ATENCION ANUAL POR UNIDAD DE BENEFICIO:</span></td>
-                    <td><span class="respuestaTabla5-4" id="anualPrivadoAlt${x+1}">${valoresIndicadoresPrivados.rows[3][1]}</span></td>
+                    <td class="bajada"><span>COSTO ATENCIÓN ANUAL POR UNIDAD DE BENEFICIO:</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="anualPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[3][1]).toFixed(2)}</span></td>
                 </tr>
             </tbody>
         </table>
@@ -75,19 +75,19 @@ if (factoresPrecioPrivado != null) {
             <tbody>
                 <tr>
                     <td class="bajada"><span>VALOR PRESENTE NETO DE LOS COSTOS:</span></td>
-                    <td><span class="respuestaTabla5-4" id="vanSocialAlt${x+1}">${valoresIndicadoresSociales.rows[0][1]}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="vanSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[0][1]).toFixed(2)}</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>COSTO ANUAL EQUIVALENTE:</span></td>
-                    <td><span class="respuestaTabla5-4" id="costoSocialAlt${x+1}">${valoresIndicadoresSociales.rows[1][1]}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="costoSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[1][1]).toFixed(2)}</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>PROMEDIO DE UNIDADES DE BENEFICIO ACTUAL:</span></td>
-                    <td><span class="respuestaTabla5-4" id="beneficioSocialAlt${x+1}">${valoresIndicadoresSociales.rows[2][1]}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="beneficioSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[2][1]).toFixed(2)}</span></td>
                 </tr>
                 <tr>
-                    <td class="bajada"><span>COSTO ATENCION ANUAL POR UNIDAD DE BENEFICIO:</span></td>
-                    <td><span class="respuestaTabla5-4" id="anualSocialAlt${x+1}">${valoresIndicadoresSociales.rows[3][1]}</span></td>
+                    <td class="bajada"><span>COSTO ATENCIÓN ANUAL POR UNIDAD DE BENEFICIO:</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="anualSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[3][1]).toFixed(2)}</span></td>
                 </tr>
             </tbody>
         </table>
@@ -140,13 +140,13 @@ if (factoresPrecioPrivado != null) {
             `
             f2Priv.innerHTML+=
             `
-            <td><span class="respuestaTabla5-4" style="text-align:right">${parseInt(totales.rows[0][y+2])+parseInt(costosTotalesPrecioPrivado.rows[1][y+2])}</span></td>
+            <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(parseInt(totales.rows[0][y+2])+parseInt(costosTotalesPrecioPrivado.rows[1][y+2])).toFixed(2)}</span></td>
             `
             if (y===0) {
             } else {
                 f3Priv.innerHTML+=
                 `
-                <td><span class="respuestaTabla5-4" style="text-align:right">${crecimientoPoblacional.rows[y-1][1]}</span></td>
+                <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(crecimientoPoblacional.rows[y-1][1]).toFixed(2)}</span></td>
                 `
             }
             f1Soc.innerHTML+=
@@ -155,14 +155,14 @@ if (factoresPrecioPrivado != null) {
             `
             f2Soc.innerHTML+=
             `
-            <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(totales.rows[1][y+2])+parseFloat(costosTotalesPrecioPrivado.rows[2][y+2])}</span></td>
+            <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(parseFloat(totales.rows[1][y+2])+parseFloat(costosTotalesPrecioPrivado.rows[2][y+2])).toFixed(2)}</span></td>
             `
             if (y===0) {
                 
             } else {
                 f3Soc.innerHTML+=
                 `
-                <td><span class="respuestaTabla5-4" style="text-align:right">${crecimientoPoblacional.rows[y-1][1]}</span></td>
+                <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(crecimientoPoblacional.rows[y-1][1]).toFixed(2)}</span></td>
                 `
             }
             y++
@@ -201,19 +201,19 @@ horizonteSocial.value = factoresPrecioSocial.rows[2][1]
             <tbody>
                 <tr>
                     <td class="bajada"><span>VALOR PRESENTE NETO DE LOS COSTOS:</span></td>
-                    <td><span class="respuestaTabla5-4" id="vanPrivadoAlt${x+1}">0</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="vanPrivadoAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>COSTO ANUAL EQUIVALENTE:</span></td>
-                    <td><span class="respuestaTabla5-4" id="costoPrivadoAlt${x+1}">0</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="costoPrivadoAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>PROMEDIO DE UNIDADES DE BENEFICIO ACTUAL:</span></td>
-                    <td><span class="respuestaTabla5-4" id="beneficioPrivadoAlt${x+1}">0</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="beneficioPrivadoAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
-                    <td class="bajada"><span>COSTO ATENCION ANUAL POR UNIDAD DE BENEFICIO:</span></td>
-                    <td><span class="respuestaTabla5-4" id="anualPrivadoAlt${x+1}">0</span></td>
+                    <td class="bajada"><span>COSTO ATENCIÓN ANUAL POR UNIDAD DE BENEFICIO:</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="anualPrivadoAlt${x+1}">0</span></td>
                 </tr>
             </tbody>
         </table>
@@ -230,19 +230,19 @@ horizonteSocial.value = factoresPrecioSocial.rows[2][1]
             <tbody>
                 <tr>
                     <td class="bajada"><span>VALOR PRESENTE NETO DE LOS COSTOS:</span></td>
-                    <td><span class="respuestaTabla5-4" id="vanSocialAlt${x+1}">0</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="vanSocialAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>COSTO ANUAL EQUIVALENTE:</span></td>
-                    <td><span class="respuestaTabla5-4" id="costoSocialAlt${x+1}">0</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="costoSocialAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>PROMEDIO DE UNIDADES DE BENEFICIO ACTUAL:</span></td>
-                    <td><span class="respuestaTabla5-4" id="beneficioSocialAlt${x+1}">0</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="beneficioSocialAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
-                    <td class="bajada"><span>COSTO ATENCION ANUAL POR UNIDAD DE BENEFICIO:</span></td>
-                    <td><span class="respuestaTabla5-4" id="anualSocialAlt${x+1}">0</span></td>
+                    <td class="bajada"><span>COSTO ATENCIÓN ANUAL POR UNIDAD DE BENEFICIO:</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="anualSocialAlt${x+1}">0</span></td>
                 </tr>
             </tbody>
         </table>
@@ -295,13 +295,13 @@ horizonteSocial.value = factoresPrecioSocial.rows[2][1]
             `
             f2Priv.innerHTML+=
             `
-            <td><span class="respuestaTabla5-4" style="text-align:right">${parseInt(totales.rows[0][y+2])+parseInt(costosTotalesPrecioPrivado.rows[1][y+2])}</span></td>
+            <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(parseInt(totales.rows[0][y+2])+parseInt(costosTotalesPrecioPrivado.rows[1][y+2])).toFixed(2)}</span></td>
             `
             if (y===0) {
             } else {
                 f3Priv.innerHTML+=
                 `
-                <td><span class="respuestaTabla5-4" style="text-align:right">${crecimientoPoblacional.rows[y-1][1]}</span></td>
+                <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(crecimientoPoblacional.rows[y-1][1]).toFixed(2)}</span></td>
                 `
             }
             f1Soc.innerHTML+=
@@ -310,14 +310,14 @@ horizonteSocial.value = factoresPrecioSocial.rows[2][1]
             `
             f2Soc.innerHTML+=
             `
-            <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(totales.rows[1][y+2])+parseFloat(costosTotalesPrecioPrivado.rows[2][y+2])}</span></td>
+            <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(parseFloat(totales.rows[1][y+2])+parseFloat(costosTotalesPrecioPrivado.rows[2][y+2])).toFixed(2)}</span></td>
             `
             if (y===0) {
                 
             } else {
                 f3Soc.innerHTML+=
                 `
-                <td><span class="respuestaTabla5-4" style="text-align:right">${crecimientoPoblacional.rows[y-1][1]}</span></td>
+                <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(crecimientoPoblacional.rows[y-1][1]).toFixed(2)}</span></td>
                 `
             }
             y++
@@ -436,8 +436,8 @@ function calcular() {
         let vanPrivado = document.getElementById(`vanPrivadoAlt${x+1}`)
         let vanSocial = document.getElementById(`vanSocialAlt${x+1}`)
         
-        vanPrivado = parseInt(vanPrivado.innerHTML)
-        vanSocial = parseInt(vanSocial.innerHTML)
+        vanPrivado = parseFloat(vanPrivado.innerHTML).toFixed(2)
+        vanSocial = parseFloat(vanSocial.innerHTML).toFixed(2)
 
         let costoPrivadoAlt = document.getElementById(`costoPrivadoAlt${x+1}`)
         let costoSocialAlt = document.getElementById(`costoSocialAlt${x+1}`)

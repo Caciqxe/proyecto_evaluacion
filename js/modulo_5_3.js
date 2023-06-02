@@ -88,7 +88,7 @@ while (x<numAlternativas) {
                         <select class="dropdownManoObra" value="${tablaCostos.rows[0][1]}"></select>
                     </td>
 
-                    <td><span class="respuestaTabla5-3">${tablaCostos.rows[0][2]}</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla5-3">${tablaCostos.rows[0][2]}</span></td>
 
                     <td class="celdaUnidades">
                         <span style="display: none;"></span>
@@ -97,7 +97,7 @@ while (x<numAlternativas) {
                     
                     <td><span class="textInput" contenteditable="true" style="text-align:right">${tablaCostos.rows[0][4]}</span></td>
                     <td><span class="textInput" contenteditable="true" style="text-align:right">${tablaCostos.rows[0][5]}</span></td>
-                    <td><span class="textInput" contenteditable="false" style="text-align:right">${parseInt(tablaCostos.rows[0][4]*tablaCostos.rows[0][5])}</span></td>
+                    <td><span class="textInput" contenteditable="false" style="text-align:right">${parseFloat(parseInt(tablaCostos.rows[0][4]*tablaCostos.rows[0][5])).toFixed(2)}</span></td>
                 </tr>
                 <tr id="calificada_alt${x+1}">
                     <td style="min-width:5cm"><span class="textInput" contenteditable="true">${tablaCostos.rows[1][0]}</span></td>
@@ -106,7 +106,7 @@ while (x<numAlternativas) {
                         <select class="dropdownManoObra" value="${tablaCostos.rows[1][1]}"></select>
                     </td>
 
-                    <td><span class="respuestaTabla5-3">${tablaCostos.rows[1][2]}</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla5-3">${tablaCostos.rows[1][2]}</span></td>
 
                     <td class="celdaUnidades">
                         <span style="display: none;"></span>
@@ -114,7 +114,7 @@ while (x<numAlternativas) {
                     </td>
                     <td><span class="textInput" contenteditable="true" style="text-align:right">${tablaCostos.rows[1][4]}</span></td>
                     <td><span class="textInput" contenteditable="true" style="text-align:right">${tablaCostos.rows[1][5]}</span></td>
-                    <td><span class="textInput" contenteditable="false" style="text-align:right">${parseInt(tablaCostos.rows[1][4]*tablaCostos.rows[1][5])}</span></td>
+                    <td><span class="textInput" contenteditable="false" style="text-align:right">${parseFloat(parseInt(tablaCostos.rows[1][4]*tablaCostos.rows[1][5])).toFixed(2)}</span></td>
                 </tr>
                 <tr id="noCalificada_alt${x+1}">
                     <td><span class="textInput" contenteditable="true">${tablaCostos.rows[2][0]}</span></td>
@@ -124,7 +124,7 @@ while (x<numAlternativas) {
                         <select class="dropdownManoObra" value="${tablaCostos.rows[2][1]}"></select>
                     </td>
 
-                    <td><span class="respuestaTabla5-3">${tablaCostos.rows[2][2]}</span></td>
+                    <td><span style="text-align:right" class="respuestaTabla5-3">${tablaCostos.rows[2][2]}</span></td>
                     
                     <td class="celdaUnidades">
                         <span style="display: none;"></span>
@@ -133,7 +133,7 @@ while (x<numAlternativas) {
 
                     <td><span class="textInput" contenteditable="true" style="text-align:right">${tablaCostos.rows[2][4]}</span></td>
                     <td><span class="textInput" contenteditable="true" style="text-align:right">${tablaCostos.rows[2][5]}</span></td>
-                    <td><span class="textInput" contenteditable="false" style="text-align:right">${parseInt(tablaCostos.rows[2][4]*tablaCostos.rows[2][5])}</span></td>
+                    <td><span class="textInput" contenteditable="false" style="text-align:right">${parseFloat(parseInt(tablaCostos.rows[2][4]*tablaCostos.rows[2][5])).toFixed(2)}</span></td>
                 </tr>
                 <tr>
                     <td colspan="${(horizonte)+3}" class="bajada">Costos en otros Ítems</td>
@@ -204,7 +204,7 @@ while (x<numAlternativas) {
 
             cell5T.innerHTML = `<span contenteditable="true" class="textInput" id=cantidadRequerida${rowCountTabla-6} style="text-align:right">${tablaCostos.rows[asd][4]}</span>`
             cell6T.innerHTML = `<span contenteditable="true" class="textInput" id=valorUnitario${rowCountTabla-6} style="text-align:right">${tablaCostos.rows[asd][5]}</span>`
-            cell7T.innerHTML = `<span contenteditable="false" class="textInput" id=valorTotal${rowCountTabla-6} style="text-align:right">${parseInt(tablaCostos.rows[asd][4]*tablaCostos.rows[asd][5])}</span>`
+            cell7T.innerHTML = `<span contenteditable="false" class="textInput" id=valorTotal${rowCountTabla-6} style="text-align:right">${parseFloat(parseInt(tablaCostos.rows[asd][4]*tablaCostos.rows[asd][5])).toFixed(2)}</span>`
 
 
             let array_periodos=[]
@@ -231,15 +231,15 @@ while (x<numAlternativas) {
             `
             semiCalificada.innerHTML +=
             `
-            <td><span class="respuestaTabla5-3" id="semiCalificada_alt${x+1}_hor${y}" data-type="currency" contenteditable="true" contenteditable="true" style="text-align:right">${tablaCostos.rows[0][y+7]}</span></td>
+            <td><span class="respuestaTabla5-3" id="semiCalificada_alt${x+1}_hor${y}" data-type="currency" contenteditable="true" contenteditable="true" style="text-align:right">${parseFloat(tablaCostos.rows[0][y+7]).toFixed(2)}</span></td>
             `
             calificada.innerHTML +=
             `
-            <td><span class="respuestaTabla5-3" id="calificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaCostos.rows[1][y+7]}</span></td>
+            <td><span class="respuestaTabla5-3" id="calificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${parseFloat(tablaCostos.rows[1][y+7]).toFixed(2)}</span></td>
             `
             noCalificada.innerHTML +=
             `
-            <td><span class="respuestaTabla5-3" id="noCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${tablaCostos.rows[2][y+7]}</span></td>
+            <td><span class="respuestaTabla5-3" id="noCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${parseFloat(tablaCostos.rows[2][y+7]).toFixed(2)}</span></td>
             `
     
             periodosCostos.innerHTML +=
@@ -273,11 +273,11 @@ while (x<numAlternativas) {
             }
             costoTotalPrecioPrivado.innerHTML +=
             `
-            <td><span class="respuestaTabla5-3" id="costoTotalPrecioPrivado_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">${sumValPrivado}</span></td>
+            <td><span class="respuestaTabla5-3" id="costoTotalPrecioPrivado_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">${parseFloat(sumValPrivado).toFixed(2)}</span></td>
             `
             costoTotalPrecioSocial.innerHTML +=
             `
-            <td><span class="respuestaTabla5-3" id="costoTotalPrecioSocial_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">${sumValSocial}</span></td>
+            <td><span class="respuestaTabla5-3" id="costoTotalPrecioSocial_alt${x+1}_hor${y} contenteditable="false" style="text-align:right">${parseFloat(sumValSocial).toFixed(2)}</span></td>
             `
 
             y++
@@ -465,8 +465,8 @@ while (ultimoWhile<numAlternativas) {
             console.log('index :'+index);
         }
 
-        valorTotalPrivados.innerHTML = valPrivadoFinal
-        valorTotalSociales.innerHTML = valSocialFinal
+        valorTotalPrivados.innerHTML = parseFloat(valPrivadoFinal).toFixed(2)
+        valorTotalSociales.innerHTML = parseFloat(valSocialFinal).toFixed(2)
     } else {
 
     }
