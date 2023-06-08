@@ -295,12 +295,17 @@ bodyFlujoNeto0.innerHTML =  parseInt(totalIngresos.rows[0][0]) - (parseInt(total
 let indicadores = JSON.parse(sessionStorage.getItem('indicadoresUltimaTabla'))
 
 let tasa = document.getElementById('tasaOportunidad')
+tasa.style = "text-align:right"
 tasa.innerHTML = indicadores.rows[0][1]
 tasa = parseFloat(tasa.innerHTML)
 tasa = parseFloat(tasa/100)
 
 let van = document.getElementById('van')
 van.innerHTML = calcularVPN(flujoNeto.rows[0][1], flujoNeto.rows[0], tasa)
+
+if (parseInt(van.innerHTML)<0) {
+    van.style = "color:red;text-align:right"
+}
 
 let tir = document.getElementById('tir')
 tir.innerHTML = calcularTIR(flujoNeto.rows[0][1], flujoNeto.rows[0])
@@ -440,15 +445,13 @@ justificacionPropuesta.innerHTML = justificacionPropuestaV
 while (x<numComponentes) {
     let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${alternativaGanadora}_com${x+1}`))
     let horizonteCosto = JSON.parse(sessionStorage.getItem(`horizonteCosto_alt${alternativaGanadora}_com${x+1}`))
-
-
-    
+    let nombreComponente = JSON.parse(sessionStorage.getItem(`detalleCompAlt_${alternativaGanadora}`))
     
     let j = 0
     contenedorComponentes.innerHTML +=
     `
     <p class="paso">
-        <span>COMPONENTE ${x+1}</span>
+        <span>COMPONENTE ${x+1}: ${nombreComponente.rows[x][1]}</span>
     </p>
     <table class="tablaModulo7">
         <tbody id=actividades${x+1}>

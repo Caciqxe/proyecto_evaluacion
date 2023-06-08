@@ -59,7 +59,7 @@ if (seleccionAlternativa != null) {
             </tbody>
         </table>
         `
-        const justificacionAlternativaSeleccionada = document.getElementById('justificacionAlternativaSeleccionada')
+        let justificacionAlternativaSeleccionada = document.getElementById('justificacionAlternativaSeleccionada')
     } else {
         contenedorAlternativa.innerHTML +=
         `
@@ -170,8 +170,17 @@ while (x<numAlternativas){
 function contarFilas() {
         
         const tables = document.getElementsByTagName('table')
+        
+        let justificacionAlternativaSeleccionada = document.getElementById('justificacionAlternativaSeleccionada')
+        let respuestaAlternativaSeleccionada = justificacionAlternativaSeleccionada.innerHTML
 
-        sessionStorage.setItem('justificacionAlternativaSeleccionada', justificacionAlternativaSeleccionada.innerHTML);
+        if (justificacionAlternativaSeleccionada =! null) {
+
+            sessionStorage.setItem('justificacionAlternativaSeleccionada', respuestaAlternativaSeleccionada);
+        } else {
+
+        }
+        
 
         for (let i = 0; i < tables.length; i++) {
             const table = tables[i];

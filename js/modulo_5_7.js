@@ -129,6 +129,13 @@ while (x<numAlternativas) {
         </tbody>
     </table>
         `
+
+        let vanAlt = document.getElementById(`vanAlt${x+1}`)
+
+        if (parseInt(vanAlt.innerHTML)<0) {
+            vanAlt.style = 'color:red; text-align:right'
+        }
+        
         let vanBeneficio = document.getElementById(`vanBeneficioAlt${x+1}`)
         let vanCostos = document.getElementById(`vanCostosAlt${x+1}`)
         let razonBeneficio = document.getElementById(`razonBeneficioAlt${x+1}`)
