@@ -42,6 +42,59 @@ while (x<numAlternativas) {
             </tbody>
         </table>
         `
+
+
+        let arrayVacio = []
+        
+        function calculador(array) {
+            let numIteracion = 1
+            
+
+            while (numIteracion<=8) {
+                let sumaTotalTabla = 0
+                tablaUsada.rows.forEach(el => {
+                    sumaTotalTabla += parseInt(el[numIteracion])
+                });
+                array.push(sumaTotalTabla)
+                numIteracion++
+            }
+        }
+
+        calculador(arrayVacio)
+        console.log(arrayVacio);
+
+        contenedor.innerHTML +=
+        `
+        <table id="oculto${x+1}" style="width:30%">
+            <tbody>
+                <tr>
+                    <td class="bajada">TOTAL RECURSO HUMANO DIRECTO (HOMBRE)</td>
+                    <td style="width:50%""><span id="rhdh_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[0]}</span></td>
+                </tr>
+                <tr>
+                    <td class="bajada">TOTAL RECURSO HUMANO DIRECTO (MUJER)</td>
+                    <td style="width:50%""><span id="rhdm_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[1]}</span></td>
+                </tr>
+                <tr>
+                    <td class="bajada">TOTAL RECURSO HUMANO DIRECTO (GRUPO VULNERABLE)</td>
+                    <td style="width:50%""><span id="rhdg_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[2]}</span></td>
+                </tr>
+                <tr>
+                    <td class="bajada">TOTAL RECURSO HUMANO INDIRECTO (HOMBRE)</td>
+                    <td style="width:50%""><span id="rhih_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[4]}</span></td>
+                </tr>
+                <tr>
+                    <td class="bajada">TOTAL RECURSO HUMANO INDIRECTO (MUJER)</td>
+                    <td style="width:50%""><span id="rhim_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[5]}</span></td>
+                </tr>
+                <tr>
+                    <td class="bajada">TOTAL RECURSO HUMANO INDIRECTO (GRUPO VULNERABLE)</td>
+                    <td style="width:50%""><span id="rhig_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[6]}</span></td>
+                </tr>
+            </tbody>
+        </table>
+        `
+
         let comp0 = 0
         while (y<numComponentes) {
             let bodyAlt = document.getElementById(`bodyAlt${x+1}`)
@@ -278,6 +331,7 @@ function contarFilas() {
     sessionStorage.setItem('factorGeneracionEmpleo', generacionEmpleo.innerHTML);
 
 
+
     for (let i = 0; i < tables.length; i++) {
         const table = tables[i];
         const rows = table.rows;
@@ -330,12 +384,13 @@ function contarFilas() {
                 };
                 console.log(tableObject);
             
-                if (tableId === "") {
+                if (tableId === "" || tableId.includes('oculto')) {
                     
                 } else {
                     sessionStorage.setItem(`${tableId}`, JSON.stringify(tableObject));
                 }
         }
+        window.location.reload()
 }
 // ORIGINAL
 /* function contarFilas() {
