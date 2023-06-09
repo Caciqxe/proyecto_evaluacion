@@ -4,6 +4,8 @@ let tablaComponentes = document.getElementById('tablaModulo8')
 let numeroComponentes = parseInt(JSON.parse(sessionStorage.getItem(`Alt_numero_${alternativaGanadora}`)).numeroCom)
 let nombreComponente = JSON.parse(sessionStorage.getItem(`detalleCompAlt_${alternativaGanadora}`))
 let array_nuevo = []
+let array_valores = []
+let array_index = []
 
 let infoModulo = JSON.parse(sessionStorage.getItem('tablaModulo8'))
 
@@ -48,9 +50,12 @@ while (x<numeroComponentes-1) {
 while (y<numeroComponentes) {
     let suma = JSON.parse(sessionStorage.getItem(`alt${alternativaGanadora}_com${y+1}`))
     
-    suma.rows.forEach(el => {
+    suma.rows.forEach((el,index) => {
         array_nuevo.push(el[0]);
+        array_valores.push(el[4])
+        array_index.push((y+1)+'.'+(index+1))
     });
+    console.log(array_index);
     y++
 }
 } else {
@@ -88,9 +93,10 @@ while (y<numeroComponentes) {
     
     while (y<numeroComponentes) {
         let suma = JSON.parse(sessionStorage.getItem(`alt${alternativaGanadora}_com${y+1}`))
-        
-        suma.rows.forEach(el => {
+        suma.rows.forEach((el,index) => {
             array_nuevo.push(el[0]);
+            array_valores.push(el[4])
+            array_index.push((y+1)+'.'+(index+1))
         });
         y++
     }
@@ -131,9 +137,9 @@ if (infoModulo!=null) {
     `
     <tr>
         <td rowspan="${array_nuevo.length}" class="bajada">ACTIVIDADES</td>
-        <td class="bajada">1</td>
+        <td class="bajada">${array_index[0]}</td>
         <td><span contenteditable="false" class="textInput8">${array_nuevo[0]}</span></td>
-        <td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][2]}</span></td>
+        <td><span contenteditable="true" class="textInput8" style="text-align:right">${array_valores[0]}</span></td>
         <td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][3]}</span></td>
         <td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][4]}</span></td>
     </tr>
@@ -151,9 +157,9 @@ if (infoModulo!=null) {
         var cell5 = row.insertCell(-1)
 
         cell1.className = "bajada"
-        cell1.innerHTML=`${i+2}`
+        cell1.innerHTML=`${array_index[i+1]}`
         cell2.innerHTML=`<td><span contenteditable="false" class="textInput8">${array_nuevo[i+1]}</span></td>`
-        cell3.innerHTML=`<td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length+(i+1)][2]}</span></td>`
+        cell3.innerHTML=`<td><span contenteditable="true" class="textInput8" style="text-align:right">${array_valores[i+1]}</span></td>`
         cell4.innerHTML=`<td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length+(i+1)][3]}</span></td>`
         cell5.innerHTML=`<td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length+(i+1)][4]}</span></td>`
         i++
@@ -164,9 +170,9 @@ if (infoModulo!=null) {
     `
     <tr>
         <td rowspan="${array_nuevo.length}" class="bajada">ACTIVIDADES</td>
-        <td class="bajada">1</td>
+        <td class="bajada">${array_index[0]}</td>
         <td><span contenteditable="false" class="textInput8">${array_nuevo[0]}</span></td>
-        <td><span contenteditable="true" class="textInput8"></span></td>
+        <td><span contenteditable="true" class="textInput8" style="text-align:right">${array_valores[0]}</span></td>
         <td><span contenteditable="true" class="textInput8"></span></td>
         <td><span contenteditable="true" class="textInput8"></span></td>
     </tr>
@@ -184,9 +190,9 @@ if (infoModulo!=null) {
         var cell5 = row.insertCell(-1)
     
         cell1.className="bajada"
-        cell1.innerHTML=`${i+2}`
+        cell1.innerHTML=`$${array_index[i+1]}`
         cell2.innerHTML=`<td><span contenteditable="false" class="textInput8">${array_nuevo[i+1]}</span></td>`
-        cell3.innerHTML=`<td><span contenteditable="true" class="textInput8"></span></td>`
+        cell3.innerHTML=`<td><span contenteditable="true" class="textInput8" style="text-align:right">${array_valores[i+1]}</span></td>`
         cell4.innerHTML=`<td><span contenteditable="true" class="textInput8"></span></td>`
         cell5.innerHTML=`<td><span contenteditable="true" class="textInput8"></span></td>`
         i++

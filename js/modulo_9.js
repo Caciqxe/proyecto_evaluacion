@@ -8,6 +8,7 @@ let x = 0
 let y = 0
 let ayuda = document.getElementById('ayuda')
 let array_nuevo = []
+let array_index = []
 
 let mes = document.getElementById('mes')
 let trimestre = document.getElementById('trimestre')
@@ -65,8 +66,9 @@ ayuda.innerHTML +=
 while (y<numeroComponentes) {
     let suma = JSON.parse(sessionStorage.getItem(`alt${alternativaGanadora}_com${y+1}`))
     
-    suma.rows.forEach(el => {
+    suma.rows.forEach((el,index) => {
         array_nuevo.push(el[0]);
+        array_index.push((y+1)+'.'+(index+1))
     });
     y++
 }
@@ -86,7 +88,7 @@ while (i < array_nuevo.length) {
         if (z===0) {
             columnas.innerHTML += 
             `
-            <td class="bajada">${i+1}</td>
+            <td class="bajada">${array_index[i]}</td>
             `
         } else if (z===1) {
             columnas.innerHTML += 
@@ -158,8 +160,6 @@ const cambiarColor = (event) =>{
 
     }
 }
-
-
 
 function contarFilas() {
 

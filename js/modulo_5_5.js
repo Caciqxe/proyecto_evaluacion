@@ -65,31 +65,28 @@ while (x<numAlternativas) {
 
         contenedor.innerHTML +=
         `
-        <table id="oculto${x+1}" style="width:30%">
+        <table id="oculto${x+1}">
             <tbody>
                 <tr>
-                    <td class="bajada">TOTAL RECURSO HUMANO DIRECTO (HOMBRE)</td>
-                    <td style="width:50%""><span id="rhdh_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[0]}</span></td>
+                    <th style="width:20%"></th>
+                    <th style="width:20%">TOTAL</th>
+                    <th style="width:20%">HOMBRES</th>
+                    <th style="width:20%">MUJERS</th>
+                    <th style="width:20%">GRUPO VULNERABLE</th>
                 </tr>
+                    <td style="background-color:#b8cce4;color:black;font-weight:bold"><span>RECURSO HUMANO DIRECTO</td>
+                    <td><span class="respuestaTabla" style="text-align:right">${arrayVacio[3]}</span></td>
+                    <td><span class="respuestaTabla" style="text-align:right">${arrayVacio[0]}</span></td>
+                    <td><span class="respuestaTabla" style="text-align:right">${arrayVacio[1]}</span></td>
+                    <td><span class="respuestaTabla" style="text-align:right">${arrayVacio[2]}</span></td>
                 <tr>
-                    <td class="bajada">TOTAL RECURSO HUMANO DIRECTO (MUJER)</td>
-                    <td style="width:50%""><span id="rhdm_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[1]}</span></td>
                 </tr>
+                    <td style="width:20%;background-color:#b8cce4;color:black;font-weight:bold"><span>RECURSO HUMANO INDIRECTO</td>
+                    <td><span class="respuestaTabla" style="text-align:right">${arrayVacio[7]}</span></td>
+                    <td><span class="respuestaTabla" style="text-align:right">${arrayVacio[4]}</span></td>
+                    <td><span class="respuestaTabla" style="text-align:right">${arrayVacio[5]}</span></td>
+                    <td><span class="respuestaTabla" style="text-align:right">${arrayVacio[6]}</span></td>
                 <tr>
-                    <td class="bajada">TOTAL RECURSO HUMANO DIRECTO (GRUPO VULNERABLE)</td>
-                    <td style="width:50%""><span id="rhdg_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[2]}</span></td>
-                </tr>
-                <tr>
-                    <td class="bajada">TOTAL RECURSO HUMANO INDIRECTO (HOMBRE)</td>
-                    <td style="width:50%""><span id="rhih_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[4]}</span></td>
-                </tr>
-                <tr>
-                    <td class="bajada">TOTAL RECURSO HUMANO INDIRECTO (MUJER)</td>
-                    <td style="width:50%""><span id="rhim_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[5]}</span></td>
-                </tr>
-                <tr>
-                    <td class="bajada">TOTAL RECURSO HUMANO INDIRECTO (GRUPO VULNERABLE)</td>
-                    <td style="width:50%""><span id="rhig_alt${x+1}" class="respuestaTabla" style="text-align:right">${arrayVacio[6]}</span></td>
                 </tr>
             </tbody>
         </table>
@@ -342,6 +339,10 @@ function contarFilas() {
         let skipRows = 2
         tableId = tableId.toString()
 
+        if (tableId === "" || tableId.includes('oculto')) {
+            
+        } else {
+
         for (let j = skipRows; j < rows.length; j++) {
             const rowData = [];
             const cells = rows[j].cells;
@@ -376,6 +377,7 @@ function contarFilas() {
                 tableData.push(rowData);
             }
         }
+    }
         
 
             

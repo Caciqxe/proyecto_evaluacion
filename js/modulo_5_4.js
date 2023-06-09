@@ -178,10 +178,10 @@ let tasaSocial = document.getElementById('tasaSocial')
 let unidadSocial = document.getElementById('unidadSocial')
 let horizonteSocial = document.getElementById('horizonteSocial')
 
-tasaPrivada.value = factoresPrecioPrivado.rows[0][1]
+tasaPrivada.value = parseFloat(factoresPrecioPrivado.rows[0][1]).toFixed(2)
 unidadPrivada.value = factoresPrecioPrivado.rows[1][1]
 horizontePrivada.value = factoresPrecioPrivado.rows[2][1]
-tasaSocial.value = factoresPrecioSocial.rows[0][1]
+tasaSocial.value = parseFloat(factoresPrecioSocial.rows[0][1]).toFixed(2)
 unidadSocial.value = factoresPrecioSocial.rows[1][1]
 horizonteSocial.value = factoresPrecioSocial.rows[2][1]
 
@@ -444,8 +444,8 @@ function calcular() {
         let tasaPrivada = document.getElementById('tasaPrivada')
         let tasaSocial = document.getElementById('tasaSocial')
     
-        tasaPrivada = parseFloat(parseFloat(tasaPrivada.value)/100)
-        tasaSocial = parseFloat(parseFloat(tasaSocial.value)/100)
+        tasaPrivada = parseFloat(parseFloat(tasaPrivada.value)/100).toFixed(2)
+        tasaSocial = parseFloat(parseFloat(tasaSocial.value)/100).toFixed(2)
 
         
         

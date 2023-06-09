@@ -5,7 +5,22 @@ const ejecucion = sessionStorage.getItem('ejecucion')
 
 
 let factoresPrecioPrivado = JSON.parse(sessionStorage.getItem('factoresPrecioPrivado'))
-let tasa = parseFloat(parseInt(factoresPrecioPrivado.rows[0][1])/100)
+let factorPrecioPrivadoHoja = sessionStorage.getItem('tasaPrivadaContainer')
+
+let tasaContainer = document.getElementById('tasaContainer')
+let tasa = 0
+
+console.log(factorPrecioPrivadoHoja);
+if (factorPrecioPrivadoHoja != null) {
+    tasaContainer.innerHTML = parseFloat(parseFloat(factorPrecioPrivadoHoja)).toFixed(2)
+    tasa = parseFloat(parseFloat(factorPrecioPrivadoHoja)/100)
+} else if (factoresPrecioPrivado != null) {
+    tasaContainer.innerHTML = parseFloat(parseFloat(factoresPrecioPrivado.rows[0][1])).toFixed(2)
+    tasa = parseFloat(parseFloat(factoresPrecioPrivado.rows[0][1])/100)
+} else {
+    tasaContainer.innerHTML = parseFloat(0.00).toFixed(2)
+    tasa = parseFloat(parseFloat(tasaContainer.innerHTML)/100).toFixed(2)
+}
 
 let x = 0
 
@@ -105,7 +120,7 @@ while (x<numAlternativas) {
         <tbody>
             <tr>
                 <td class="bajada">TASA DE OPORTUNIDAD (TASA PRIVADA DE DESCUENTO)</td>
-                <td><span class="respuestaTabla5-6" style="text-align:right">${parseInt(tasa*100).toFixed(2)}</span></td>
+                <td><span class="respuestaTabla5-6" style="text-align:right">${parseFloat(tasa*100).toFixed(2)}</span></td>
             </tr>
             <tr>
                 <td class="bajada">VAN</td>
@@ -126,6 +141,9 @@ while (x<numAlternativas) {
         </tbody>
     </table>
         `
+
+        
+
         let vanAlt = document.getElementById(`vanAlt${x+1}`)
 
         if (parseInt(vanAlt.innerHTML)<0) {
@@ -497,8 +515,10 @@ function calculador(e) {
 
 function contarFilas() {
         
+        let tasaContainer = document.getElementById('tasaContainer')
         sessionStorage.setItem('ejecucion',1)
         const tables = document.getElementsByTagName('table');
+        sessionStorage.setItem('tasaPrivadaContainer', parseFloat(tasaContainer.innerHTML))
 
         for (let i = 0; i < tables.length; i++) {
             const table = tables[i];
@@ -714,7 +734,7 @@ function contarFilas3() {
 }
 
 function calcularVPN(inversionInicial, flujosCaja, tasaDescuento) {
-    let vpn = -inversionInicial;
+    let vpn = parseFloat(inversionInicial);
     
     for (let i = 3; i < flujosCaja.length; i++) {
       vpn += flujosCaja[i] / Math.pow((1 + tasaDescuento), i-2);

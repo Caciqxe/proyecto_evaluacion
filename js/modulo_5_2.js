@@ -424,7 +424,7 @@ while (x<numAlternativas) {
                 var cell7 = row.insertCell(-1)
                 
                 if (flujoCosto === null) {
-                    cell1.innerHTML=`<span class="respuestaTabla5-2">Privado</span>`;
+                    cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Privados</span>`;
                     cell2.innerHTML=''
                     cell3.innerHTML=''
                     cell4.innerHTML=''

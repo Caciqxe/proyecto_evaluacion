@@ -4,8 +4,24 @@ const costoBeneficioSocial = document.getElementById('costoBeneficioSocial')
 const ejecucion = sessionStorage.getItem('ejecucion')
 
 let factoresPrecioSocial = JSON.parse(sessionStorage.getItem('factoresPrecioSocial'))
-let tasa = parseFloat(parseFloat(factoresPrecioSocial.rows[0][1])/100)
+let factorPrecioSocialHoja = sessionStorage.getItem('tasaSocialContainer')
 
+let tasaContainer = document.getElementById('tasaContainer')
+let tasa = 0
+
+console.log(factorPrecioSocialHoja);
+if (factorPrecioSocialHoja != null) {
+    tasaContainer.innerHTML = parseFloat(parseFloat(factorPrecioSocialHoja)).toFixed(2)
+    tasa = parseFloat(parseFloat(factorPrecioSocialHoja)/100)
+} else if (factoresPrecioSocial != null) {
+    tasaContainer.innerHTML = parseFloat(parseFloat(factoresPrecioSocial.rows[0][1])).toFixed(2)
+    tasa = parseFloat(parseFloat(factoresPrecioSocial.rows[0][1])/100)
+} else {
+    tasaContainer.innerHTML = parseFloat(0.00).toFixed(2)
+    tasa = parseFloat(parseFloat(tasaContainer.innerHTML)/100).toFixed(2)
+}
+
+//tasa = parseFloat(parseFloat(factoresPrecioSocial.rows[0][1])/100)
 
 let x = 0
 
@@ -544,9 +560,11 @@ function calculador(e) {
 }
 
 function contarFilas() {
-        
+    
+        let tasaContainer = document.getElementById('tasaContainer')
         sessionStorage.setItem('ejecucion',1)
         const tables = document.getElementsByTagName('table');
+        sessionStorage.setItem('tasaSocialContainer', parseFloat(tasaContainer.innerHTML))
 
         for (let i = 0; i < tables.length; i++) {
             const table = tables[i];
@@ -826,7 +844,7 @@ function contarFilas3() {
 }
 
 function calcularVPN(inversionInicial, flujosCaja, tasaDescuento) {
-    let vpn = -inversionInicial;
+    let vpn = parseFloat(inversionInicial)
     
     
     for (let i = 3; i < flujosCaja.length; i++) {
