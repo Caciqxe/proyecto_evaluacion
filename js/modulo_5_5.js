@@ -93,50 +93,99 @@ while (x<numAlternativas) {
         `
 
         let comp0 = 0
+        let sumaLen = tablaUsada.rows.length
+
+        console.log(sumaLen);
         while (y<numComponentes) {
             let bodyAlt = document.getElementById(`bodyAlt${x+1}`)
             let alternativas = JSON.parse(sessionStorage.getItem(`alt${x+1}_com${y+1}`))
             let z = 0
-            
-            bodyAlt.innerHTML +=
-            `
-            <tr id="trAlt${x+1}_Com${y+1}">
-                <td rowspan="${alternativas.rows.length}" class="bajada" style="text-align:center"><span>${detalleComponente.rows[y][1]}</span></td>
-                <td><span class="respuestaTabla5-5">${alternativas.rows[0][0]}</span></td>
-                <td><input style="width:97%;text-align:right" id="hDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[comp0][1]}"></td>
-                <td><input style="width:97%;text-align:right" id="mDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[comp0][2]}"></td>
-                <td><input style="width:97%;text-align:right" id="vDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[comp0][3]}"></td>
-                <td><input style="width:97%;text-align:right" id="tDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[comp0][4]}" readonly="true"></span></td>
-                <td><input style="width:97%;text-align:right" id="hIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[comp0][1]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
-                <td><input style="width:97%;text-align:right" id="mIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[comp0][2]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
-                <td><input style="width:97%;text-align:right" id="vIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[comp0][3]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
-                <td><input style="width:97%;text-align:right" id="tIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[comp0][4]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
-            </tr>
-            `
-            console.log(alternativas.rows.length);
 
-            let numAlternativa = comp0
-            while (z<alternativas.rows.length-1) {
-                
-    
+            sumaLen = sumaLen - alternativas.rows.length
+            
+            if (sumaLen>=0) {
+                console.log(alternativas);
                 bodyAlt.innerHTML +=
                 `
-                <tr>
-                    <td><span class="respuestaTabla5-5">${alternativas.rows[z+1][0]}</span></td>
-                    <td><input style="width:97%;text-align:right" id="hDirectoAlt${x+1}_com${y+1}_${z+1}" value="${tablaUsada.rows[numAlternativa+1][1]}"></td>
-                    <td><input style="width:97%;text-align:right" id="mDirectoAlt${x+1}_com${y+1}_${z+1}" value="${tablaUsada.rows[numAlternativa+1][2]}"></td>
-                    <td><input style="width:97%;text-align:right" id="vDirectoAlt${x+1}_com${y+1}_${z+1}" value="${tablaUsada.rows[numAlternativa+1][3]}"></td>
-                    <td><input style="width:97%;text-align:right" id="tDirectoAlt${x+1}_com${y+1}_${z+1}" value="${tablaUsada.rows[numAlternativa+1][4]}" readonly="true"></span></td>
-                    <td><input style="width:97%;text-align:right" id="hIndirectoAlt${x+1}_com${y+1}_${z+1}" value=${tablaUsada.rows[numAlternativa+1][1]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
-                    <td><input style="width:97%;text-align:right" id="mIndirectoAlt${x+1}_com${y+1}_${z+1}" value=${tablaUsada.rows[numAlternativa+1][2]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
-                    <td><input style="width:97%;text-align:right" id="vIndirectoAlt${x+1}_com${y+1}_${z+1}" value=${tablaUsada.rows[numAlternativa+1][3]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
-                    <td><input style="width:97%;text-align:right" id="tIndirectoAlt${x+1}_com${y+1}_${z+1}" value=${tablaUsada.rows[numAlternativa+1][4]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
+                <tr id="trAlt${x+1}_Com${y+1}">
+                    <td rowspan="${alternativas.rows.length}" class="bajada" style="text-align:center"><span>${detalleComponente.rows[y][1]}</span></td>
+                    <td><span class="respuestaTabla5-5">${alternativas.rows[0][0]}</span></td>
+                    <td><input style="width:97%;text-align:right" id="hDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[comp0][1]}"></td>
+                    <td><input style="width:97%;text-align:right" id="mDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[comp0][2]}"></td>
+                    <td><input style="width:97%;text-align:right" id="vDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[comp0][3]}"></td>
+                    <td><input style="width:97%;text-align:right" id="tDirectoAlt${x+1}_com${y+1}_0" value="${tablaUsada.rows[comp0][4]}" readonly="true"></span></td>
+                    <td><input style="width:97%;text-align:right" id="hIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[comp0][1]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
+                    <td><input style="width:97%;text-align:right" id="mIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[comp0][2]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
+                    <td><input style="width:97%;text-align:right" id="vIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[comp0][3]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
+                    <td><input style="width:97%;text-align:right" id="tIndirectoAlt${x+1}_com${y+1}_0" value=${tablaUsada.rows[comp0][4]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
                 </tr>
                 `
-                numAlternativa ++
-                z++
+                console.log(alternativas.rows.length);
+    
+                let numAlternativa = comp0
+                while (z<alternativas.rows.length-1) {
+                    
+        
+                    bodyAlt.innerHTML +=
+                    `
+                    <tr>
+                        <td><span class="respuestaTabla5-5">${alternativas.rows[z+1][0]}</span></td>
+                        <td><input style="width:97%;text-align:right" id="hDirectoAlt${x+1}_com${y+1}_${z+1}" value="${tablaUsada.rows[numAlternativa+1][1]}"></td>
+                        <td><input style="width:97%;text-align:right" id="mDirectoAlt${x+1}_com${y+1}_${z+1}" value="${tablaUsada.rows[numAlternativa+1][2]}"></td>
+                        <td><input style="width:97%;text-align:right" id="vDirectoAlt${x+1}_com${y+1}_${z+1}" value="${tablaUsada.rows[numAlternativa+1][3]}"></td>
+                        <td><input style="width:97%;text-align:right" id="tDirectoAlt${x+1}_com${y+1}_${z+1}" value="${tablaUsada.rows[numAlternativa+1][4]}" readonly="true"></span></td>
+                        <td><input style="width:97%;text-align:right" id="hIndirectoAlt${x+1}_com${y+1}_${z+1}" value=${tablaUsada.rows[numAlternativa+1][1]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
+                        <td><input style="width:97%;text-align:right" id="mIndirectoAlt${x+1}_com${y+1}_${z+1}" value=${tablaUsada.rows[numAlternativa+1][2]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
+                        <td><input style="width:97%;text-align:right" id="vIndirectoAlt${x+1}_com${y+1}_${z+1}" value=${tablaUsada.rows[numAlternativa+1][3]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
+                        <td><input style="width:97%;text-align:right" id="tIndirectoAlt${x+1}_com${y+1}_${z+1}" value=${tablaUsada.rows[numAlternativa+1][4]*parseFloat(factorGeneracionEmpleo)} readonly="true"></span></td>
+                    </tr>
+                    `
+                    numAlternativa ++
+                    z++
+                }
+                comp0 += parseInt(alternativas.rows.length)
+            } else {
+                bodyAlt.innerHTML +=
+                `
+                <tr id="trAlt${x+1}_Com${y+1}">
+                    <td rowspan="${alternativas.rows.length}" class="bajada" style="text-align:center"><span>${detalleComponente.rows[y][1]}</span></td>
+                    <td><span class="respuestaTabla5-5">${alternativas.rows[0][0]}</span></td>
+                    <td><input style="width:97%;text-align:right" id="hDirectoAlt${x+1}_com${y+1}_0" value=0></td>
+                    <td><input style="width:97%;text-align:right" id="mDirectoAlt${x+1}_com${y+1}_0" value=0></td>
+                    <td><input style="width:97%;text-align:right" id="vDirectoAlt${x+1}_com${y+1}_0" value=0></td>
+                    <td><input style="width:97%;text-align:right" id="tDirectoAlt${x+1}_com${y+1}_0" value=0 readonly="true"></span></td>
+                    <td><input style="width:97%;text-align:right" id="hIndirectoAlt${x+1}_com${y+1}_0" value=0 readonly="true"></span></td>
+                    <td><input  style="width:97%;text-align:right" id="mIndirectoAlt${x+1}_com${y+1}_0" value=0 readonly="true"></span></td>
+                    <td><input style="width:97%;text-align:right" id="vIndirectoAlt${x+1}_com${y+1}_0" value=0 readonly="true"></span></td>
+                    <td><input style="width:97%;text-align:right" id="tIndirectoAlt${x+1}_com${y+1}_0" value=0 readonly="true"></span></td>
+                </tr>
+                `
+                
+        
+                while (z<alternativas.rows.length-1) {
+                    
+        
+                    bodyAlt.innerHTML +=
+                    `
+                    <tr>
+                        <td><span class="respuestaTabla5-5">${alternativas.rows[z+1][0]}</span></td>
+                        <td><input style="width:97%;text-align:right" id="hDirectoAlt${x+1}_com${y+1}_${z+1}" value=0></td>
+                        <td><input style="width:97%;text-align:right" id="mDirectoAlt${x+1}_com${y+1}_${z+1}" value=0></td>
+                        <td><input style="width:97%;text-align:right" id="vDirectoAlt${x+1}_com${y+1}_${z+1}" value=0></td>
+                        <td><input style="width:97%;text-align:right" id="tDirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true"></span></td>
+                        <td><input style="width:97%;text-align:right" id="hIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true"></span></td>
+                        <td><input style="width:97%;text-align:right" id="mIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true"></span></td>
+                        <td><input style="width:97%;text-align:right" id="vIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true"></span></td>
+                        <td><input style="width:97%;text-align:right" id="tIndirectoAlt${x+1}_com${y+1}_${z+1}" value=0 readonly="true"></span></td>
+                    </tr>
+                    `
+        
+                    z++
+                }
             }
-            comp0 += parseInt(alternativas.rows.length)
+
+
+
     
             y++
         }

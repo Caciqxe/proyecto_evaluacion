@@ -115,11 +115,15 @@ while (x<numAlternativas) {
 
             while (zzz < JSON.parse(numComp).numeroCom) {
                 let dato = JSON.parse(sessionStorage.getItem(`horizonteCosto_alt${x+1}_com${zzz+1}`));
+                if (dato != null) {
+                    let datoLargo = dato.rows.length;
 
-                let datoLargo = dato.rows.length;
+                    SumTotalPrivado = parseFloat((parseInt(SumTotalPrivado) + parseInt(dato.rows[datoLargo-2][index]))).toFixed(2);
+                    SumTotalSocial = parseFloat(parseInt(SumTotalSocial) + parseInt(dato.rows[datoLargo-1][index])).toFixed(2)
+                } else {
 
-                SumTotalPrivado = parseFloat((parseInt(SumTotalPrivado) + parseInt(dato.rows[datoLargo-2][index]))).toFixed(2);
-                SumTotalSocial = parseFloat(parseInt(SumTotalSocial) + parseInt(dato.rows[datoLargo-1][index])).toFixed(2)
+                }
+
 
                 zzz++
             }

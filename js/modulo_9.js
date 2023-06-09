@@ -62,68 +62,165 @@ ayuda.innerHTML +=
 
 
 
+let sumaLen = 0
 
 while (y<numeroComponentes) {
     let suma = JSON.parse(sessionStorage.getItem(`alt${alternativaGanadora}_com${y+1}`))
-    
+    sumaLen += parseInt(suma.rows.length)
     suma.rows.forEach((el,index) => {
         array_nuevo.push(el[0]);
         array_index.push((y+1)+'.'+(index+1))
     });
+    console.log(sumaLen + 'iteracion');
     y++
 }
 
+console.log(sumaLen + 'total');
 
 let i = 0
 while (i < array_nuevo.length) {
-    let z = 0
-    tablaNueva.innerHTML += 
-    `
-    <tr id=act_${i+1}>
-    </tr>
-    `
-    while (z <= ((horizonte*modHoz)+3)) {
-        let columnas = document.getElementById(`act_${i+1}`)
+    if (importarCronograma!=null) {
+        if (i<importarCronograma.rows.length) {
+            let z = 0
+            tablaNueva.innerHTML += 
+            `
+            <tr id=act_${i+1}>
+            </tr>
+            `
+            while (z <= ((horizonte*modHoz)+3)) {
+                let columnas = document.getElementById(`act_${i+1}`)
+                
+                if (z===0) {
+                    columnas.innerHTML += 
+                    `
+                    <td class="bajada">${array_index[i]}</td>
+                    `
+                } else if (z===1) {
+                    columnas.innerHTML += 
+                    `
+                    <td><span contenteditable="false" class="textInput9">${array_nuevo[i]}</span></td>
+                    `
+                } else if(z<=((horizonte*modHoz)+2)) {
+                    if (importarCronograma!=null) {
+                        columnas.innerHTML += 
+                        `
+                        <td id="act${i}_hor${z}" class="celdaX">${importarCronograma.rows[i][z]}</td>
+                        `
+                    } else {
+                        columnas.innerHTML += 
+                        `
+                        <td id="act${i}_hor${z}" class="celdaX"></td>
+                        `
+                    }
+                } else {
+                    if (importarCronograma!=null) {
         
-        if (z===0) {
-            columnas.innerHTML += 
-            `
-            <td class="bajada">${array_index[i]}</td>
-            `
-        } else if (z===1) {
-            columnas.innerHTML += 
-            `
-            <td><span contenteditable="false" class="textInput9">${array_nuevo[i]}</span></td>
-            `
-        } else if(z<=((horizonte*modHoz)+2)) {
-            if (importarCronograma!=null) {
-                columnas.innerHTML += 
-                `
-                <td id="act${i}_hor${z}" class="celdaX">${importarCronograma.rows[i][z]}</td>
-                `
-            } else {
-                columnas.innerHTML += 
-                `
-                <td id="act${i}_hor${z}" class="celdaX"></td>
-                `
+                        columnas.innerHTML += 
+                        `
+                        <td><span contenteditable="true" class="textInput9">${importarCronograma.rows[i][z]}</span></td>
+                        `
+                    } else {
+                        columnas.innerHTML += 
+                        `
+                        <td><span contenteditable="true" class="textInput9"></span></td>
+                        `
+                    }
+                }
+        
+                
+                z++
             }
         } else {
-            if (importarCronograma!=null) {
-                columnas.innerHTML += 
-                `
-                <td><span contenteditable="true" class="textInput9">${importarCronograma.rows[i][z]}</span></td>
-                `
-            } else {
-                columnas.innerHTML += 
-                `
-                <td><span contenteditable="true" class="textInput9"></span></td>
-                `
+            let z = 0
+            tablaNueva.innerHTML += 
+            `
+            <tr id=act_${i+1}>
+            </tr>
+            `
+            while (z <= ((horizonte*modHoz)+3)) {
+                let columnas = document.getElementById(`act_${i+1}`)
+                
+                if (z===0) {
+                    columnas.innerHTML += 
+                    `
+                    <td class="bajada">${array_index[i]}</td>
+                    `
+                } else if (z===1) {
+                    columnas.innerHTML += 
+                    `
+                    <td><span contenteditable="false" class="textInput9">${array_nuevo[i]}</span></td>
+                    `
+                } else if(z<=((horizonte*modHoz)+2)) {
+                    
+                        columnas.innerHTML += 
+                        `
+                        <td id="act${i}_hor${z}" class="celdaX"></td>
+                        `
+                    
+                } else {
+                        columnas.innerHTML += 
+                        `
+                        <td><span contenteditable="true" class="textInput9"></span></td>
+                        `
+    
+                }
+        
+                
+                z++
             }
         }
-
-        
-        z++
+    } else {
+        let z = 0
+        tablaNueva.innerHTML += 
+        `
+        <tr id=act_${i+1}>
+        </tr>
+        `
+        while (z <= ((horizonte*modHoz)+3)) {
+            let columnas = document.getElementById(`act_${i+1}`)
+            
+            if (z===0) {
+                columnas.innerHTML += 
+                `
+                <td class="bajada">${array_index[i]}</td>
+                `
+            } else if (z===1) {
+                columnas.innerHTML += 
+                `
+                <td><span contenteditable="false" class="textInput9">${array_nuevo[i]}</span></td>
+                `
+            } else if(z<=((horizonte*modHoz)+2)) {
+                if (importarCronograma!=null) {
+                    columnas.innerHTML += 
+                    `
+                    <td id="act${i}_hor${z}" class="celdaX">${importarCronograma.rows[i][z]}</td>
+                    `
+                } else {
+                    columnas.innerHTML += 
+                    `
+                    <td id="act${i}_hor${z}" class="celdaX"></td>
+                    `
+                }
+            } else {
+                if (importarCronograma!=null) {
+                    columnas.innerHTML += 
+                    `
+                    <td><span contenteditable="true" class="textInput9">${importarCronograma.rows[i][z]}</span></td>
+                    `
+                } else {
+                    columnas.innerHTML += 
+                    `
+                    <td><span contenteditable="true" class="textInput9"></span></td>
+                    `
+                }
+            }
+    
+            
+            z++
+        }
     }
+
+
     
     i++
 }
