@@ -104,7 +104,7 @@ while (i < array_nuevo.length) {
                     if (importarCronograma!=null) {
                         columnas.innerHTML += 
                         `
-                        <td id="act${i}_hor${z}" class="celdaX">${importarCronograma.rows[i][z]}</td>
+                        <td id="act${i}_hor${z}" class="celdaX">${(importarCronograma.rows[i][z] === undefined) ? "":importarCronograma.rows[i][z]}</td>
                         `
                     } else {
                         columnas.innerHTML += 
@@ -114,10 +114,9 @@ while (i < array_nuevo.length) {
                     }
                 } else {
                     if (importarCronograma!=null) {
-        
                         columnas.innerHTML += 
                         `
-                        <td><span contenteditable="true" class="textInput9">${importarCronograma.rows[i][z]}</span></td>
+                        <td><span contenteditable="true" class="textInput9">${(importarCronograma.rows[i][z] === undefined) ? "":importarCronograma.rows[i][z]}</span></td>
                         `
                     } else {
                         columnas.innerHTML += 

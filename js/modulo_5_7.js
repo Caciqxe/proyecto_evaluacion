@@ -292,17 +292,17 @@ while (x<numAlternativas) {
             `
             semiCalificada.innerHTML +=
             `
-            <td><input class="costoBenefSocial" id=semiCalificada_alt${x+1}_hor${y} value="${tablaBeneficioSocial.rows[0][y+6]}" style="text-align:right"></td>
+            <td><input class="costoBenefSocial" id=semiCalificada_alt${x+1}_hor${y} value="${(tablaBeneficioSocial.rows[0][y+6] != undefined) ? tablaBeneficioSocial.rows[0][y+6] : parseFloat(0).toFixed(2)}" style="text-align:right"></td>
             `
     
             calificada.innerHTML +=
             `
-            <td><input class="costoBenefSocial" id=calificada_alt${x+1}_hor${y} value="${tablaBeneficioSocial.rows[1][y+6]}" style="text-align:right"></td>
+            <td><input class="costoBenefSocial" id=calificada_alt${x+1}_hor${y} value="${(tablaBeneficioSocial.rows[1][y+6] != undefined) ? tablaBeneficioSocial.rows[1][y+6] : parseFloat(0).toFixed(2)}" style="text-align:right"></td>
             `
     
             noCalificada.innerHTML +=
             `
-            <td><input class="costoBenefSocial" id=noCalificada_alt${x+1}_hor${y} value="${tablaBeneficioSocial.rows[2][y+6]}" style="text-align:right"></td>
+            <td><input class="costoBenefSocial" id=noCalificada_alt${x+1}_hor${y} value="${(tablaBeneficioSocial.rows[2][y+6] != undefined) ? tablaBeneficioSocial.rows[2][y+6] : parseFloat(0).toFixed(2)}" style="text-align:right"></td>
             `
             
             periodosCostos.innerHTML +=
@@ -333,7 +333,7 @@ while (x<numAlternativas) {
 
             costosAsociados.innerHTML +=
             `
-            <td><span class="respuestaTabla5-7" id="costosAsociados_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${parseFloat(tablaComplementariaSocial.rows[2][y+2]).toFixed(2)}</span></td>
+            <td><span class="respuestaTabla5-7" id="costosAsociados_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${(tablaComplementariaSocial.rows[2][y+2] != undefined) ? parseFloat(tablaComplementariaSocial.rows[2][y+2]).toFixed(2) : parseFloat(0).toFixed(2)}</span></td>
             `
 
             let beneficioPeriodo = document.getElementById(`beneficioTotal_alt${x+1}_hor${y}`)

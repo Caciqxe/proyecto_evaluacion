@@ -256,17 +256,17 @@ while (x<numAlternativas) {
             `
             semiCalificada.innerHTML +=
             `
-            <td><input style="width: 97%;text-align:right" id=semiCalificada_alt${x+1}_hor${y} value=${parseFloat(tablaBeneficioPrivado.rows[1][y+5]).toFixed(2)}></td>
+            <td><input style="width: 97%;text-align:right" id=semiCalificada_alt${x+1}_hor${y} value=${(tablaBeneficioPrivado.rows[1][y+5] != undefined) ? parseFloat(tablaBeneficioPrivado.rows[1][y+5]).toFixed(2):parseFloat(0).toFixed(2)}></td>
             `
     
             calificada.innerHTML +=
             `
-            <td><input style="width: 97%;text-align:right" id=calificada_alt${x+1}_hor${y} value=${parseFloat(tablaBeneficioPrivado.rows[0][y+5]).toFixed(2)}></td>
+            <td><input style="width: 97%;text-align:right" id=calificada_alt${x+1}_hor${y} value=${(tablaBeneficioPrivado.rows[0][y+5] != undefined) ? parseFloat(tablaBeneficioPrivado.rows[0][y+5]).toFixed(2):parseFloat(0).toFixed(2)}></td>
             `
     
             noCalificada.innerHTML +=
             `
-            <td><input style="width: 97%;text-align:right" id=noCalificada_alt${x+1}_hor${y} value=${parseFloat(tablaBeneficioPrivado.rows[2][y+5]).toFixed(2)}></td>
+            <td><input style="width: 97%;text-align:right" id=noCalificada_alt${x+1}_hor${y} value=${(tablaBeneficioPrivado.rows[2][y+5] != undefined) ? parseFloat(tablaBeneficioPrivado.rows[2][y+5]).toFixed(2):parseFloat(0).toFixed(2)}></td>
             `
             
             periodosCostos.innerHTML +=
@@ -296,7 +296,7 @@ while (x<numAlternativas) {
 
             costosAsociados.innerHTML +=
             `
-            <td><span class="respuestaTabla5-6" id="costosAsociados_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${parseFloat(tablaComplementariaPrivado.rows[2][y+2]).toFixed(2)}</span></td>
+            <td><span class="respuestaTabla5-6" id="costosAsociados_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${(tablaComplementariaPrivado.rows[2][y+2] != undefined) ? parseFloat(tablaComplementariaPrivado.rows[2][y+2]).toFixed(2) : parseFloat(0).toFixed(2)}</span></td>
             `
 
             let beneficioPeriodo = document.getElementById(`beneficioTotal_alt${x+1}_hor${y}`)

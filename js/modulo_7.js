@@ -173,12 +173,12 @@ if (preInversion === null) {
     
     costosEstudios.innerHTML +=
     `
-    <td><span class= "textInput7-1" contenteditable="true" style="text-align: right">${preInversion.rows[0][y+5]}</span></td>
+    <td><span class= "textInput7-1" contenteditable="true" style="text-align: right">${(preInversion.rows[0][y+5] === undefined) ? 0:preInversion.rows[0][y+5]}</span></td>
     `
 
     costosDisenos.innerHTML +=
     `
-    <td><span class= "textInput7-1" contenteditable="true" style="text-align: right">${preInversion.rows[1][y+5]}</span></td>
+    <td><span class= "textInput7-1" contenteditable="true" style="text-align: right">${(preInversion.rows[1][y+5] === undefined) ? 0:preInversion.rows[1][y+5]}</span></td>
     `
 
     totalCostosPreinversion.innerHTML +=
@@ -196,7 +196,7 @@ if (preInversion === null) {
     `
     ingresoConcepto.innerHTML +=
     `
-    <td><span class= "textInput7-1" contenteditable="true" style="text-align: right">${ingresos.rows[0][y+5]}</span></td>
+    <td><span class= "textInput7-1" contenteditable="true" style="text-align: right">${(ingresos.rows[0][y+5] === undefined) ? 0:ingresos.rows[0][y+5]}</span></td>
     `
     /* ingresoConcepto2.innerHTML +=
     `

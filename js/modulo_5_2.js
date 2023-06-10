@@ -284,10 +284,16 @@ while (x<numAlternativas) {
                                 jz++
                             }
 
-                            array_periodos[index] = rowHor.insertCell(-1)
-                            array_periodos[index].innerHTML = `<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(tablaHorizonte.rows[j][index]).toFixed(2)} style="text-align:right">`
-                            
+                            if (tablaHorizonte.rows[j][index] === undefined) {
+                                array_periodos[index] = rowHor.insertCell(-1)
+                                array_periodos[index].innerHTML = `<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=0.00 style="text-align:right">`
+                            } else {
+                                array_periodos[index] = rowHor.insertCell(-1)
+                                array_periodos[index].innerHTML = `<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(tablaHorizonte.rows[j][index]).toFixed(2)} style="text-align:right">`
+                            }
+
                         }
+                        
                     } else if (j===alternativas.rows.length){
                         
                         let array_periodos = []

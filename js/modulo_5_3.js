@@ -229,17 +229,19 @@ while (x<numAlternativas) {
             `
             <th id="alt${x+1}_hor${y}">${y}</th>
             `
+
+            console.log(tablaCostos.rows[0][y+7]);
             semiCalificada.innerHTML +=
             `
-            <td><span class="respuestaTabla5-3" id="semiCalificada_alt${x+1}_hor${y}" data-type="currency" contenteditable="true" contenteditable="true" style="text-align:right">${parseFloat(tablaCostos.rows[0][y+7]).toFixed(2)}</span></td>
+            <td><span class="respuestaTabla5-3" id="semiCalificada_alt${x+1}_hor${y}" data-type="currency" contenteditable="true" style="text-align:right">${(tablaCostos.rows[0][y+7] === undefined) ? parseFloat(0).toFixed(2):(parseFloat(tablaCostos.rows[0][y+7]).toFixed(2))}</span></td>
             `
             calificada.innerHTML +=
             `
-            <td><span class="respuestaTabla5-3" id="calificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${parseFloat(tablaCostos.rows[1][y+7]).toFixed(2)}</span></td>
+            <td><span class="respuestaTabla5-3" id="calificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${(tablaCostos.rows[0][y+7] === undefined) ? parseFloat(0).toFixed(2):(parseFloat(tablaCostos.rows[1][y+7]).toFixed(2))}</span></td>
             `
             noCalificada.innerHTML +=
             `
-            <td><span class="respuestaTabla5-3" id="noCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${parseFloat(tablaCostos.rows[2][y+7]).toFixed(2)}</span></td>
+            <td><span class="respuestaTabla5-3" id="noCalificada_alt${x+1}_hor${y}" contenteditable="true" style="text-align:right">${(tablaCostos.rows[0][y+7] === undefined) ? parseFloat(0).toFixed(2):(parseFloat(tablaCostos.rows[2][y+7]).toFixed(2))}</span></td>
             `
     
             periodosCostos.innerHTML +=
@@ -536,7 +538,7 @@ const agregarFila = (event) => {
         let array_periodos=[]
         for (let index = 0; index <= horizonte; index++) {
             array_periodos[index] = row.insertCell(-1)
-            array_periodos[index].innerHTML = `<td class="bajada"><input style="width:96%" id=input_item${rowCount-5}_hor${index} value=0></td>`
+            array_periodos[index].innerHTML = `<td class="bajada"><input style="width:96%;text-align:right" id=input_item${rowCount-5}_hor${index} value=0.00></td>`
 
         }
 
