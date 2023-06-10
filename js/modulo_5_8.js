@@ -92,45 +92,74 @@ if (seleccionAlternativa != null) {
 while (x<numAlternativas){
 
     if (seleccionAlternativa != null) {
-    let alternativa = JSON.parse(sessionStorage.getItem(`Alt_numero_${x+1}`))
-    let tbody = document.getElementById('bodySeleccionAlternativa')
-    let indicadoresPrivados = JSON.parse(sessionStorage.getItem(`indicadoresPrivadosAlt${x+1}`))
-    let indicadoresSociales = JSON.parse(sessionStorage.getItem(`indicadoresSocialesAlt${x+1}`))
-    let tablaIndicadoresCostoBeneficioSocial = JSON.parse(sessionStorage.getItem(`tablaIndicadoresCostoBeneficioSocialAlt${x+1}`))
-    
-    let cal1 = parseFloat(seleccionAlternativa.rows[x][6])
-    let cal2 = parseFloat(seleccionAlternativa.rows[x][7])
-    let cal3 = parseFloat(seleccionAlternativa.rows[x][8])
-    let cal4 = parseFloat(seleccionAlternativa.rows[x][9])
-    let cal5 = parseFloat(seleccionAlternativa.rows[x][10])
-
-    let calPromedio = parseFloat((cal1 + cal2 + cal3 + cal4 + cal5)/5).toFixed(2)
-    
-
-
-    
-    tbody.innerHTML +=
-    `
-    <tr>
-        <td><input class="input5-8" id="nombreAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][0]}"></td>
-        <td><input style="text-align:right" class="input5-8" id="promedioAnualAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][1]}"></td>
-        <td><input style="text-align:right" class="input5-8" id="costoAnualEAlt${x+1}" readonly="true" value="${parseFloat(seleccionAlternativa.rows[x][2]).toFixed(2)}"></td>
-        <td><input style="text-align:right" class="input5-8" id="indicadorAceAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][3]}"></td>
-        <td><input style="text-align:right" class="input5-8" id="indicadorAcbAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][4]}"></td>
-        <td><input style="text-align:right" class="input5-8" id="indicadorRazonAlt" readonly="true" value="${seleccionAlternativa.rows[x][5]}"></td>
-        <td><input style="text-align:right" class="input5-8" id="comunidadAlt${x+1}"value="${cal1}"></td>
-        <td><input style="text-align:right" class="input5-8" id="calidadAlt${x+1}"value="${cal2}"></td>
-        <td><input style="text-align:right" class="input5-8" id="empleoAlt${x+1}"value="${cal3}"></td>
-        <td><input style="text-align:right" class="input5-8" id="sostenibilidadAlt${x+1}"value="${cal4}"></td>
-        <td><input style="text-align:right" class="input5-8" id="continuidadAlt${x+1}"value="${cal5}"></td>
-        <td><input style="text-align:right" class="input5-8" readonly=" true" id="calificacionAlt${x+1}"value="${calPromedio}"></td>
-        <td><input class="input5-8" id="observacion1Alt${x+1}"value="${seleccionAlternativa.rows[x][12]}"></td>
-        <td><input class="input5-8" id="observacion2Alt${x+1}"value="${seleccionAlternativa.rows[x][13]}"></td>
-        <td><input style="text-align:center" class="input5-8" id="prioridadAlt${x+1}"value="${x+1}"></td>
-    </tr>
-    `
-
-    let nombreAlternativaGanadora = seleccionAlternativa.rows[0][0]
+        if (x <= seleccionAlternativa.rows.length-1) {
+            let alternativa = JSON.parse(sessionStorage.getItem(`Alt_numero_${x+1}`))
+            let tbody = document.getElementById('bodySeleccionAlternativa')
+            let indicadoresPrivados = JSON.parse(sessionStorage.getItem(`indicadoresPrivadosAlt${x+1}`))
+            let indicadoresSociales = JSON.parse(sessionStorage.getItem(`indicadoresSocialesAlt${x+1}`))
+            let tablaIndicadoresCostoBeneficioSocial = JSON.parse(sessionStorage.getItem(`tablaIndicadoresCostoBeneficioSocialAlt${x+1}`))
+            
+            let cal1 = parseFloat(seleccionAlternativa.rows[x][6])
+            let cal2 = parseFloat(seleccionAlternativa.rows[x][7])
+            let cal3 = parseFloat(seleccionAlternativa.rows[x][8])
+            let cal4 = parseFloat(seleccionAlternativa.rows[x][9])
+            let cal5 = parseFloat(seleccionAlternativa.rows[x][10])
+        
+            let calPromedio = parseFloat((cal1 + cal2 + cal3 + cal4 + cal5)/5).toFixed(2)
+            
+        
+        
+            
+            tbody.innerHTML +=
+            `
+            <tr>
+                <td><input class="input5-8" id="nombreAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][0]}"></td>
+                <td><input style="text-align:right" class="input5-8" id="promedioAnualAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][1]}"></td>
+                <td><input style="text-align:right" class="input5-8" id="costoAnualEAlt${x+1}" readonly="true" value="${parseFloat(seleccionAlternativa.rows[x][2]).toFixed(2)}"></td>
+                <td><input style="text-align:right" class="input5-8" id="indicadorAceAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][3]}"></td>
+                <td><input style="text-align:right" class="input5-8" id="indicadorAcbAlt${x+1}" readonly="true" value="${seleccionAlternativa.rows[x][4]}"></td>
+                <td><input style="text-align:right" class="input5-8" id="indicadorRazonAlt" readonly="true" value="${seleccionAlternativa.rows[x][5]}"></td>
+                <td><input style="text-align:right" class="input5-8" id="comunidadAlt${x+1}"value="${cal1}"></td>
+                <td><input style="text-align:right" class="input5-8" id="calidadAlt${x+1}"value="${cal2}"></td>
+                <td><input style="text-align:right" class="input5-8" id="empleoAlt${x+1}"value="${cal3}"></td>
+                <td><input style="text-align:right" class="input5-8" id="sostenibilidadAlt${x+1}"value="${cal4}"></td>
+                <td><input style="text-align:right" class="input5-8" id="continuidadAlt${x+1}"value="${cal5}"></td>
+                <td><input style="text-align:right" class="input5-8" readonly=" true" id="calificacionAlt${x+1}"value="${calPromedio}"></td>
+                <td><input class="input5-8" id="observacion1Alt${x+1}"value="${seleccionAlternativa.rows[x][12]}"></td>
+                <td><input class="input5-8" id="observacion2Alt${x+1}"value="${seleccionAlternativa.rows[x][13]}"></td>
+                <td><input style="text-align:center" class="input5-8" id="prioridadAlt${x+1}"value="${x+1}"></td>
+            </tr>
+            `
+        
+            let nombreAlternativaGanadora = seleccionAlternativa.rows[0][0]
+        
+        } else {
+            let alternativa = JSON.parse(sessionStorage.getItem(`Alt_numero_${x+1}`))
+            let tbody = document.getElementById('bodySeleccionAlternativa')
+            let indicadoresPrivados = JSON.parse(sessionStorage.getItem(`indicadoresPrivadosAlt${x+1}`))
+            let indicadoresSociales = JSON.parse(sessionStorage.getItem(`indicadoresSocialesAlt${x+1}`))
+            let tablaIndicadoresCostoBeneficioSocial = JSON.parse(sessionStorage.getItem(`tablaIndicadoresCostoBeneficioSocialAlt${x+1}`))
+            tbody.innerHTML +=
+            `
+            <tr>
+                <td><input class="input5-8" id="nombreAlt${x+1}" readonly="true" value="${alternativa.name}"></td>
+                <td><input style="text-align:right" class="input5-8" id="promedioAnualAlt${x+1}" readonly="true" value="${indicadoresPrivados.rows[2][1]}"></td>
+                <td><input style="text-align:right" class="input5-8" id="costoAnualEAlt${x+1}" readonly="true" value="${parseFloat(indicadoresSociales.rows[1][1]).toFixed(2)}"></td>
+                <td><input style="text-align:right" class="input5-8" id="indicadorAceAlt${x+1}" readonly="true" value="${indicadoresSociales.rows[3][1]}"></td>
+                <td><input style="text-align:right" class="input5-8" id="indicadorAcbAlt${x+1}" readonly="true" value="${indicadoresSociales.rows[1][1]>0?"NO APLICA":tablaIndicadoresCostoBeneficioSocial.rows[0][1]}"></td>
+                <td><input style="text-align:right" class="input5-8" id="indicadorRazonAlt" readonly="true" value="${indicadoresSociales.rows[1][1]>0?"NO APLICA":tablaIndicadoresCostoBeneficioSocial.rows[3][1]}"></td>
+                <td><input style="text-align:right" class="input5-8" id="comunidadAlt${x+1}"value="0"></td>
+                <td><input style="text-align:right" class="input5-8" id="calidadAlt${x+1}"value="0"></td>
+                <td><input style="text-align:right" class="input5-8" id="empleoAlt${x+1}"value="0"></td>
+                <td><input style="text-align:right" class="input5-8" id="sostenibilidadAlt${x+1}"value="0"></td>
+                <td><input style="text-align:right" class="input5-8" id="continuidadAlt${x+1}"value="0"></td>
+                <td><input style="text-align:right" class="input5-8" readonly="true" id="calificacionAlt${x+1}"value="0"></td>
+                <td><input class="input5-8" id="observacion1Alt${x+1}"value=""></td>
+                <td><input class="input5-8" id="observacion2Alt${x+1}"value=""></td>
+                <td><input style="text-align:center" class="input5-8" id="prioridadAlt${x+1}"value="0"></td>
+            </tr>
+            `
+        }
 
     
 

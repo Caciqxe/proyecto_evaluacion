@@ -33,6 +33,147 @@ if (factoresPrecioPrivado != null) {
         
         let numComp = sessionStorage.getItem(`Alt_numero_${x+1}`)
 
+        if (valoresIndicadoresPrivados != null || valoresIndicadoresSociales!=null) {
+            costoEficienciaPrivado.innerHTML +=
+            `
+            <div class="centrar">
+                <span class="alternativaStilo">ALTERNATIVA ${x+1}: ${JSON.parse(numComp).name}</span>
+            </div>
+            <table id="costoPrivadoPeriodoAlt${x+1}" class="costoPrivadoClass">
+            </table>
+            <table id="indicadoresPrivadosAlt${x+1}">
+                <tbody>
+                    <tr>
+                        <td class="bajada"><span>VALOR PRESENTE NETO DE LOS COSTOS:</span></td>
+                        <td><span class="respuestaTabla5-4" style="text-align:right" id="vanPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[0][1]).toFixed(2)}</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada"><span>COSTO ANUAL EQUIVALENTE:</span></td>
+                        <td><span class="respuestaTabla5-4" style="text-align:right" id="costoPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[1][1]).toFixed(2)}</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada"><span>PROMEDIO DE UNIDADES DE BENEFICIO ACTUAL:</span></td>
+                        <td><span class="respuestaTabla5-4" style="text-align:right" id="beneficioPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[2][1]).toFixed(2)}</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada"><span>COSTO ATENCIÓN ANUAL POR UNIDAD DE BENEFICIO:</span></td>
+                        <td><span class="respuestaTabla5-4" style="text-align:right" id="anualPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[3][1]).toFixed(2)}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            `
+    
+    
+            costoEficienciaSocial.innerHTML +=
+            `
+            <div class="centrar">
+                <span class="alternativaStilo">ALTERNATIVA ${x+1}: ${JSON.parse(numComp).name}</span>
+            </div>
+            <table id="costoSocialPeriodoAlt${x+1}" class="costoSocialClass">
+            </table>
+            <table id="indicadoresSocialesAlt${x+1}">
+                <tbody>
+                    <tr>
+                        <td class="bajada"><span>VALOR PRESENTE NETO DE LOS COSTOS:</span></td>
+                        <td><span class="respuestaTabla5-4" style="text-align:right" id="vanSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[0][1]).toFixed(2)}</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada"><span>COSTO ANUAL EQUIVALENTE:</span></td>
+                        <td><span class="respuestaTabla5-4" style="text-align:right" id="costoSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[1][1]).toFixed(2)}</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada"><span>PROMEDIO DE UNIDADES DE BENEFICIO ACTUAL:</span></td>
+                        <td><span class="respuestaTabla5-4" style="text-align:right" id="beneficioSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[2][1]).toFixed(2)}</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bajada"><span>COSTO ATENCIÓN ANUAL POR UNIDAD DE BENEFICIO:</span></td>
+                        <td><span class="respuestaTabla5-4" style="text-align:right" id="anualSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[3][1]).toFixed(2)}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            `
+    
+            let costoPrivadoPeriodo = document.getElementById(`costoPrivadoPeriodoAlt${x+1}`)
+            let costoSocialPeriodo = document.getElementById(`costoSocialPeriodoAlt${x+1}`)
+    
+            costoPrivadoPeriodo.innerHTML+=
+            `
+            <tr id="f1Priv_alt${x+1}">
+                <th style="min-width:7cm" colspan="2">ITEM</th>
+            </tr>
+            <tr id="f2Priv_alt${x+1}">
+                <td colspan="2" class="bajada">COSTOS TOTALES</td>
+            </tr>
+            <tr id="f3Priv_alt${x+1}">
+                <td colspan="3" class="bajada">NÚMERO DE  UNIDADES DE BENEFICIO (PRODUCTOS, ATENCIONES, BENEFICIARIOS):</td>
+            </tr>
+            `
+    
+            costoSocialPeriodo.innerHTML+=
+            `
+            <tr id="f1Soc_alt${x+1}">
+                <th colspan="2">ITEM</th>
+            </tr>
+            <tr id="f2Soc_alt${x+1}">
+                <td colspan="2" class="bajada">COSTOS TOTALES</td>
+            </tr>
+            <tr id="f3Soc_alt${x+1}">
+                <td colspan="3" class="bajada">NÚMERO DE  UNIDADES DE BENEFICIO (PRODUCTOS, ATENCIONES, BENEFICIARIOS):</td>
+            </tr>
+            `
+    
+            let f1Priv = document.getElementById(`f1Priv_alt${x+1}`)
+            let f2Priv = document.getElementById(`f2Priv_alt${x+1}`)
+            let f3Priv = document.getElementById(`f3Priv_alt${x+1}`)
+            let f1Soc = document.getElementById(`f1Soc_alt${x+1}`)
+            let f2Soc = document.getElementById(`f2Soc_alt${x+1}`)
+            let f3Soc = document.getElementById(`f3Soc_alt${x+1}`)
+    
+            let totales = JSON.parse(sessionStorage.getItem(`ultimoTotalesAlt${x+1}`))
+            
+            let y = 0
+            while (y<=horizonte) {
+                f1Priv.innerHTML+=
+                `
+                <th>${y}</th>
+                `
+                f2Priv.innerHTML+=
+                `
+                <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(parseInt(totales.rows[0][y+2])+parseInt(costosTotalesPrecioPrivado.rows[1][y+2])).toFixed(2)}</span></td>
+                `
+                if (y===0) {
+                } else {
+                    f3Priv.innerHTML+=
+                    `
+                    <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(crecimientoPoblacional.rows[y-1][1]).toFixed(2)}</span></td>
+                    `
+                }
+                f1Soc.innerHTML+=
+                `
+                <th>${y}</th>
+                `
+                f2Soc.innerHTML+=
+                `
+                <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(parseFloat(totales.rows[1][y+2])+parseFloat(costosTotalesPrecioPrivado.rows[2][y+2])).toFixed(2)}</span></td>
+                `
+                if (y===0) {
+                    
+                } else {
+                    f3Soc.innerHTML+=
+                    `
+                    <td><span class="respuestaTabla5-4" style="text-align:right">${parseFloat(crecimientoPoblacional.rows[y-1][1]).toFixed(2)}</span></td>
+                    `
+                }
+                y++
+            }
+    
+            x++
+        } else {
+            
+    while (x<numAlternativas) {
+        let costosTotalesPrecioPrivado = JSON.parse(sessionStorage.getItem(`sumTodoAlt${x+1}`))
+        let numComp = sessionStorage.getItem(`Alt_numero_${x+1}`)
 
         costoEficienciaPrivado.innerHTML +=
         `
@@ -45,25 +186,24 @@ if (factoresPrecioPrivado != null) {
             <tbody>
                 <tr>
                     <td class="bajada"><span>VALOR PRESENTE NETO DE LOS COSTOS:</span></td>
-                    <td><span class="respuestaTabla5-4" style="text-align:right" id="vanPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[0][1]).toFixed(2)}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="vanPrivadoAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>COSTO ANUAL EQUIVALENTE:</span></td>
-                    <td><span class="respuestaTabla5-4" style="text-align:right" id="costoPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[1][1]).toFixed(2)}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="costoPrivadoAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>PROMEDIO DE UNIDADES DE BENEFICIO ACTUAL:</span></td>
-                    <td><span class="respuestaTabla5-4" style="text-align:right" id="beneficioPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[2][1]).toFixed(2)}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="beneficioPrivadoAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>COSTO ATENCIÓN ANUAL POR UNIDAD DE BENEFICIO:</span></td>
-                    <td><span class="respuestaTabla5-4" style="text-align:right" id="anualPrivadoAlt${x+1}">${parseFloat(valoresIndicadoresPrivados.rows[3][1]).toFixed(2)}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="anualPrivadoAlt${x+1}">0</span></td>
                 </tr>
             </tbody>
         </table>
         `
-
-
+    
         costoEficienciaSocial.innerHTML +=
         `
         <div class="centrar">
@@ -75,32 +215,32 @@ if (factoresPrecioPrivado != null) {
             <tbody>
                 <tr>
                     <td class="bajada"><span>VALOR PRESENTE NETO DE LOS COSTOS:</span></td>
-                    <td><span class="respuestaTabla5-4" style="text-align:right" id="vanSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[0][1]).toFixed(2)}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="vanSocialAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>COSTO ANUAL EQUIVALENTE:</span></td>
-                    <td><span class="respuestaTabla5-4" style="text-align:right" id="costoSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[1][1]).toFixed(2)}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="costoSocialAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>PROMEDIO DE UNIDADES DE BENEFICIO ACTUAL:</span></td>
-                    <td><span class="respuestaTabla5-4" style="text-align:right" id="beneficioSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[2][1]).toFixed(2)}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="beneficioSocialAlt${x+1}">0</span></td>
                 </tr>
                 <tr>
                     <td class="bajada"><span>COSTO ATENCIÓN ANUAL POR UNIDAD DE BENEFICIO:</span></td>
-                    <td><span class="respuestaTabla5-4" style="text-align:right" id="anualSocialAlt${x+1}">${parseFloat(valoresIndicadoresSociales.rows[3][1]).toFixed(2)}</span></td>
+                    <td><span class="respuestaTabla5-4" style="text-align:right" id="anualSocialAlt${x+1}">0</span></td>
                 </tr>
             </tbody>
         </table>
-
+    
         `
-
+    
         let costoPrivadoPeriodo = document.getElementById(`costoPrivadoPeriodoAlt${x+1}`)
         let costoSocialPeriodo = document.getElementById(`costoSocialPeriodoAlt${x+1}`)
-
+    
         costoPrivadoPeriodo.innerHTML+=
         `
         <tr id="f1Priv_alt${x+1}">
-            <th style="min-width:7cm" colspan="2">ITEM</th>
+            <th colspan="2">ITEM</th>
         </tr>
         <tr id="f2Priv_alt${x+1}">
             <td colspan="2" class="bajada">COSTOS TOTALES</td>
@@ -109,7 +249,7 @@ if (factoresPrecioPrivado != null) {
             <td colspan="3" class="bajada">NÚMERO DE  UNIDADES DE BENEFICIO (PRODUCTOS, ATENCIONES, BENEFICIARIOS):</td>
         </tr>
         `
-
+    
         costoSocialPeriodo.innerHTML+=
         `
         <tr id="f1Soc_alt${x+1}">
@@ -122,14 +262,14 @@ if (factoresPrecioPrivado != null) {
             <td colspan="3" class="bajada">NÚMERO DE  UNIDADES DE BENEFICIO (PRODUCTOS, ATENCIONES, BENEFICIARIOS):</td>
         </tr>
         `
-
+    
         let f1Priv = document.getElementById(`f1Priv_alt${x+1}`)
         let f2Priv = document.getElementById(`f2Priv_alt${x+1}`)
         let f3Priv = document.getElementById(`f3Priv_alt${x+1}`)
         let f1Soc = document.getElementById(`f1Soc_alt${x+1}`)
         let f2Soc = document.getElementById(`f2Soc_alt${x+1}`)
         let f3Soc = document.getElementById(`f3Soc_alt${x+1}`)
-
+        
         let totales = JSON.parse(sessionStorage.getItem(`ultimoTotalesAlt${x+1}`))
         
         let y = 0
@@ -167,8 +307,9 @@ if (factoresPrecioPrivado != null) {
             }
             y++
         }
-
         x++
+    }
+        }
     }
 
 let tasaPrivada = document.getElementById('tasaPrivada')
