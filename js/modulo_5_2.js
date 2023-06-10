@@ -254,250 +254,507 @@ while (x<numAlternativas) {
     
             }
         } else {
-            while (i<=horizonte) {
 
-                periodos.innerHTML +=
-                `
-                <th style="height:35px">${i}</th>
-                `
-                
-                
-                while (j<=alternativas.rows.length+1) {
-                    const altHor = document.getElementById(`horizonteCosto_alt${x+1}_com${y+1}`)
-                    var rowCountHor = altHor.rows.length;
-                    var rowHor = altHor.insertRow(rowCountHor);
-                    var periodo0 = rowHor.insertCell(0)
-                    if (j<alternativas.rows.length) {
-                        periodo0.innerHTML=`<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(tablaHorizonte.rows[j][i]).toFixed(2)} style="text-align:right">`
-                        let array_periodos = []
-                        for (let index = 1; index <= horizonte; index++) {
-                            var sumValTotalSocial = 0;
+            if (alternativas.rows.length <= tablaHorizonte.rows.length-2) {
+                while (i<=horizonte) {
 
+                    periodos.innerHTML +=
+                    `
+                    <th style="height:35px">${i}</th>
+                    `
+                    
+                    
+                    while (j<=alternativas.rows.length+1) {
+                        const altHor = document.getElementById(`horizonteCosto_alt${x+1}_com${y+1}`)
+                        var rowCountHor = altHor.rows.length;
+                        var rowHor = altHor.insertRow(rowCountHor);
+                        var periodo0 = rowHor.insertCell(0)
+                        if (j<alternativas.rows.length) {
+                            periodo0.innerHTML=`<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(tablaHorizonte.rows[j][i]).toFixed(2)} style="text-align:right">`
+                            let array_periodos = []
+                            for (let index = 1; index <= horizonte; index++) {
+                                var sumValTotalSocial = 0;
+    
+                                let jz = 0
+                                while (jz<tablaHorizonte.rows.length-2) {
+                                    if (tablaHorizonte.rows[jz] === "") {
+    
+                                    } else {
+                                        let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${x+1}_com${y+1}`))
+                                        sumValTotalSocial += parseInt(tablaHorizonte.rows[jz][index]*flujoCosto.rows[jz][2])
+                                    }
+                                    jz++
+                                }
+    
+                                if (tablaHorizonte.rows[j][index] === undefined) {
+                                    array_periodos[index] = rowHor.insertCell(-1)
+                                    array_periodos[index].innerHTML = `<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=0.00 style="text-align:right">`
+                                } else {
+                                    array_periodos[index] = rowHor.insertCell(-1)
+                                    array_periodos[index].innerHTML = `<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(tablaHorizonte.rows[j][index]).toFixed(2)} style="text-align:right">`
+                                }
+    
+                            }
+    
+                        } else if (j===alternativas.rows.length){
+                            
+                            let array_periodos = []
+                            var sumValTotal = 0;
+    
                             let jz = 0
                             while (jz<tablaHorizonte.rows.length-2) {
                                 if (tablaHorizonte.rows[jz] === "") {
-
+                                    
                                 } else {
-                                    let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${x+1}_com${y+1}`))
-                                    sumValTotalSocial += parseInt(tablaHorizonte.rows[jz][index]*flujoCosto.rows[jz][2])
+                                    sumValTotal += parseInt(tablaHorizonte.rows[jz])
+                                    periodo0.innerHTML=`<input id=totalPrivado_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(sumValTotal).toFixed(2)} readonly="true" style="text-align:right">`
                                 }
                                 jz++
                             }
+                            for (let index = 1; index <= horizonte; index++) {
+                                var sumValPrivado = 0;
+    
+                                let jz = 0
+                                while (jz<tablaHorizonte.rows.length -2) {
+                                    if (tablaHorizonte.rows[jz] === "") {
+                                        
+                                    } else {
+                                        sumValPrivado += parseInt(tablaHorizonte.rows[jz][index])
+                                    }
+                                    jz++
+                                }
+                                array_periodos[index] = rowHor.insertCell(-1)
+                                array_periodos[index].innerHTML = `<input id=totalPrivado_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(sumValPrivado).toFixed(2)} readonly="true" style="text-align:right">`
+                            }
+                        }   else {
+                            let array_periodos = []
+                            var sumValTotal = 0;
+    
+                            let jz = 0
+                            while (jz<tablaHorizonte.rows.length-2) {
+                                if (tablaHorizonte.rows[jz] === "") {
+                                    
+                                } else {
+                                    let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${x+1}_com${y+1}`))
+                                    
+                                    sumValTotal += parseInt(tablaHorizonte.rows[jz][0]*flujoCosto.rows[jz][2])
+                                    periodo0.innerHTML=`<input id=totalSocial_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(sumValTotal).toFixed(2)} readonly="true" style="text-align:right">`
+                                }
+                                jz++
+                            }
+        
+                            for (let index = 1; index <= horizonte; index++) {
+                                var sumValSocial = 0;
+    
+                                let jz = 0
+                                while (jz<tablaHorizonte.rows.length -2) {
+                                    if (tablaHorizonte.rows[jz] === "") {
+                                        
+                                    } else {
+                                        let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${x+1}_com${y+1}`))
+                                        sumValSocial += parseInt(tablaHorizonte.rows[jz][index]*flujoCosto.rows[jz][2])
+                                    }
+                                    jz++
+                                }
+    
+                                array_periodos[index] = rowHor.insertCell(-1)
+                                array_periodos[index].innerHTML = `<input id=totalSocual_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(sumValSocial).toFixed(2)} contenteditable=false style="text-align:right">`
+                            }
+                        
+                        }
+        
+                        j++
+        
+                    }
+                    i++
+        
+                }
+            } else {
+                while (i<=horizonte) {
 
-                            if (tablaHorizonte.rows[j][index] === undefined) {
+                    periodos.innerHTML +=
+                    `
+                    <th style="height:35px">${i}</th>
+                    `
+
+                    while (j<=alternativas.rows.length+1) {
+                        const altHor = document.getElementById(`horizonteCosto_alt${x+1}_com${y+1}`)
+                        var rowCountHor = altHor.rows.length;
+                        var rowHor = altHor.insertRow(rowCountHor);
+                        var periodo0 = rowHor.insertCell(0)
+                        if (j<tablaHorizonte.rows.length-2) {
+                            console.log('j'+j);
+                            periodo0.innerHTML=`<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(tablaHorizonte.rows[j][i]).toFixed(2)} style="text-align:right">`
+                            let array_periodos = []
+                            for (let index = 1; index <= horizonte; index++) {
+                                var sumValTotalSocial = 0;
+    
+                                let jz = 0
+                                while (jz<tablaHorizonte.rows.length-2) {
+                                    if (tablaHorizonte.rows[jz] === "") {
+    
+                                    } else {
+                                        let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${x+1}_com${y+1}`))
+                                        sumValTotalSocial += parseInt(tablaHorizonte.rows[jz][index]*flujoCosto.rows[jz][2])
+                                    }
+                                    jz++
+                                }
+    
+                                if (tablaHorizonte.rows[j][index] === undefined) {
+                                    array_periodos[index] = rowHor.insertCell(-1)
+                                    array_periodos[index].innerHTML = `<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=0.00 style="text-align:right">`
+                                } else {
+                                    array_periodos[index] = rowHor.insertCell(-1)
+                                    array_periodos[index].innerHTML = `<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(tablaHorizonte.rows[j][index]).toFixed(2)} style="text-align:right">`
+                                }
+    
+                            }
+    
+                        } else if (j===alternativas.rows.length){
+                            console.log('j' + j);
+                            let array_periodos = []
+                            var sumValTotal = 0;
+    
+                            let jz = 0
+                            while (jz<tablaHorizonte.rows.length-2) {
+                                if (tablaHorizonte.rows[jz] === "") {
+                                    
+                                } else {
+                                    sumValTotal += parseInt(tablaHorizonte.rows[jz])
+                                    periodo0.innerHTML=`<input id=totalPrivado_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(sumValTotal).toFixed(2)} readonly="true" style="text-align:right">`
+                                }
+                                jz++
+                            }
+                            for (let index = 1; index <= horizonte; index++) {
+                                var sumValPrivado = 0;
+    
+                                let jz = 0
+                                while (jz<tablaHorizonte.rows.length -2) {
+                                    if (tablaHorizonte.rows[jz] === "") {
+                                        
+                                    } else {
+                                        sumValPrivado += parseInt(tablaHorizonte.rows[jz][index])
+                                    }
+                                    jz++
+                                }
+                                array_periodos[index] = rowHor.insertCell(-1)
+                                array_periodos[index].innerHTML = `<input id=totalPrivado_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(sumValPrivado).toFixed(2)} readonly="true" style="text-align:right">`
+                            }
+                        } else if (j===alternativas.rows.length+1){
+                            let array_periodos = []
+                            var sumValTotal = 0;
+    
+                            let jz = 0
+                            while (jz<tablaHorizonte.rows.length-2) {
+                                if (tablaHorizonte.rows[jz] === "") {
+                                    
+                                } else {
+                                    let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${x+1}_com${y+1}`))
+                                    
+                                    sumValTotal += parseInt(tablaHorizonte.rows[jz][0]*flujoCosto.rows[jz][2])
+                                    periodo0.innerHTML=`<input id=totalSocial_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(sumValTotal).toFixed(2)} readonly="true" style="text-align:right">`
+                                }
+                                jz++
+                            }
+        
+                            for (let index = 1; index <= horizonte; index++) {
+                                var sumValSocial = 0;
+    
+                                let jz = 0
+                                while (jz<tablaHorizonte.rows.length -2) {
+                                    if (tablaHorizonte.rows[jz] === "") {
+                                        
+                                    } else {
+                                        let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${x+1}_com${y+1}`))
+                                        sumValSocial += parseInt(tablaHorizonte.rows[jz][index]*flujoCosto.rows[jz][2])
+                                    }
+                                    jz++
+                                }
+    
+                                array_periodos[index] = rowHor.insertCell(-1)
+                                array_periodos[index].innerHTML = `<input id=totalSocual_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(sumValSocial).toFixed(2)} contenteditable=false style="text-align:right">`
+                            }
+                        } else {
+                            periodo0.innerHTML=`<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=0.00 style="text-align:right">`
+                            let array_periodos = []
+                            for (let index = 1; index <= horizonte; index++) {
                                 array_periodos[index] = rowHor.insertCell(-1)
                                 array_periodos[index].innerHTML = `<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=0.00 style="text-align:right">`
-                            } else {
-                                array_periodos[index] = rowHor.insertCell(-1)
-                                array_periodos[index].innerHTML = `<input id=input_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(tablaHorizonte.rows[j][index]).toFixed(2)} style="text-align:right">`
-                            }
-
-                        }
-                        
-                    } else if (j===alternativas.rows.length){
-                        
-                        let array_periodos = []
-                        var sumValTotal = 0;
-
-                        let jz = 0
-                        while (jz<tablaHorizonte.rows.length-2) {
-                            if (tablaHorizonte.rows[jz] === "") {
                                 
-                            } else {
-                                sumValTotal += parseInt(tablaHorizonte.rows[jz])
-                                periodo0.innerHTML=`<input id=totalPrivado_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(sumValTotal).toFixed(2)} readonly="true" style="text-align:right">`
                             }
-                            jz++
                         }
-                        for (let index = 1; index <= horizonte; index++) {
-                            var sumValPrivado = 0;
-
-                            let jz = 0
-                            while (jz<tablaHorizonte.rows.length -2) {
-                                if (tablaHorizonte.rows[jz] === "") {
-                                    
-                                } else {
-                                    sumValPrivado += parseInt(tablaHorizonte.rows[jz][index])
-                                }
-                                jz++
-                            }
-                            array_periodos[index] = rowHor.insertCell(-1)
-                            array_periodos[index].innerHTML = `<input id=totalPrivado_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(sumValPrivado).toFixed(2)} readonly="true" style="text-align:right">`
-                        }
-                    }   else {
-                        let array_periodos = []
-                        var sumValTotal = 0;
-
-                        let jz = 0
-                        while (jz<tablaHorizonte.rows.length-2) {
-                            if (tablaHorizonte.rows[jz] === "") {
-                                
-                            } else {
-                                let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${x+1}_com${y+1}`))
-                                
-                                sumValTotal += parseInt(tablaHorizonte.rows[jz][0]*flujoCosto.rows[jz][2])
-                                periodo0.innerHTML=`<input id=totalSocial_alt${x+1}_com${y+1}_act${j+1}_hor${i} value=${parseFloat(sumValTotal).toFixed(2)} readonly="true" style="text-align:right">`
-                            }
-                            jz++
-                        }
-    
-                        for (let index = 1; index <= horizonte; index++) {
-                            var sumValSocial = 0;
-
-                            let jz = 0
-                            while (jz<tablaHorizonte.rows.length -2) {
-                                if (tablaHorizonte.rows[jz] === "") {
-                                    
-                                } else {
-                                    let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${x+1}_com${y+1}`))
-                                    sumValSocial += parseInt(tablaHorizonte.rows[jz][index]*flujoCosto.rows[jz][2])
-                                }
-                                jz++
-                            }
-
-                            array_periodos[index] = rowHor.insertCell(-1)
-                            array_periodos[index].innerHTML = `<input id=totalSocual_alt${x+1}_com${y+1}_act${j+1}_hor${index} value=${parseFloat(sumValSocial).toFixed(2)} contenteditable=false style="text-align:right">`
-                        }
-                    
+        
+                        j++
+        
                     }
-    
-                    j++
-    
+                    i++
+        
                 }
-                i++
-    
             }
         }
         
         
         const altID = document.getElementById(`flujoCosto_alt${x+1}_com${y+1}`)
-        
+
         while (z<=alternativas.rows.length+1) {
             let flujoCosto = JSON.parse(sessionStorage.getItem(`flujoCosto_alt${x+1}_com${y+1}`))
-            if (z<alternativas.rows.length) {
-                var rowCount = altID.rows.length;
-                var row = altID.insertRow(rowCount);
-                var cell1 = row.insertCell(0)
-                var cell2 = row.insertCell(-1)
-                var cell3 = row.insertCell(-1)
-                var cell4 = row.insertCell(-1)
-                var cell5 = row.insertCell(-1)
-                var cell6 = row.insertCell(-1)
-                var cell7 = row.insertCell(-1)
-                
-                cell1.innerHTML=`<span class="respuestaTabla" style="font-size:75%;width:97%">${alternativas.rows[z][0]}</span>`;
-                //cell2.innerHTML=`<input id=inputComponenteSocial_alt${x+1}_com${y+1}_act${z+1} list=factorSocial_alt${x+1}_com${y+1}_act${z+1}><datalist class=selectorFactorSocial id=factorSocial_alt${x+1}_com${y+1}_act${z+1} style="overflow-y: auto"></datalist>`
-                if (flujoCosto === null) {
-                    cell2.className = "dropdown-cell"
-                    cell2.innerHTML = 
-                    `
-                        <span style="display: none;"></span>
-                        <select class="my-dropdown" ></select>
-                    `
-                    cell3.innerHTML=`<span class="respuestaTabla5-2" id=valorFactorSocial_alt${x+1}_com${y+1}_act${z+1}></span>`
-                } else {
-                    cell2.className = "dropdown-cell"
-                    cell2.innerHTML = 
-                    `
-                        <span style="display: none;"></span>
-                        <select class="my-dropdown" value="${flujoCosto.rows[z][1]}"></select>
-                    `
-                    cell3.innerHTML=`<span class="respuestaTabla5-2" id=valorFactorSocial_alt${x+1}_com${y+1}_act${z+1}>${flujoCosto.rows[z][2]}</span>`
-                }
 
-                cell4.innerHTML=`<span class="respuestaTabla5-2">${arrayUnidades[alternativas.rows[z][1]]}</span>`;
-                cell5.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][2]}</span>`;
-                cell6.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][3]}</span>`;
-                cell7.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][4]}</span>`;
-                
-/*                 let datalist = document.getElementById(`factorSocial_alt${x+1}_com${y+1}_act${z+1}`)
-                let input = document.getElementById(`inputComponenteSocial_alt${x+1}_com${y+1}_act${z+1}`)
-                arrayFactores.forEach(el => {
-                    datalist.innerHTML += 
-                    `   
-                    <option value="${el.name}">
-                    `
+            if (alternativas.rows.length <= flujoCosto.rows.length-2) {
+                console.log('normal');
+                if (z<alternativas.rows.length) {
+                    var rowCount = altID.rows.length;
+                    var row = altID.insertRow(rowCount);
+                    var cell1 = row.insertCell(0)
+                    var cell2 = row.insertCell(-1)
+                    var cell3 = row.insertCell(-1)
+                    var cell4 = row.insertCell(-1)
+                    var cell5 = row.insertCell(-1)
+                    var cell6 = row.insertCell(-1)
+                    var cell7 = row.insertCell(-1)
                     
-                }); */
-    
-                
-            } else if (z===alternativas.rows.length) 
-            {
-                var rowCount = altID.rows.length;
-                var row = altID.insertRow(rowCount);
-                var cell1 = row.insertCell(0)
-                var cell2 = row.insertCell(-1)
-                var cell3 = row.insertCell(-1)
-                var cell4 = row.insertCell(-1)
-                var cell5 = row.insertCell(-1)
-                var cell6 = row.insertCell(-1)
-                var cell7 = row.insertCell(-1)
-                
-                if (flujoCosto === null) {
-                    cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Privados</span>`;
-                    cell2.innerHTML=''
-                    cell3.innerHTML=''
-                    cell4.innerHTML=''
-                    cell5.innerHTML=''
-                    cell6.innerHTML=''
-                    cell7.innerHTML=`<span class="respuestaTabla5-2" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right"></span>`
-                } else {
-                    cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Privados</span>`;
-                    cell2.innerHTML=''
-                    cell3.innerHTML=''
-                    cell4.innerHTML=''
-                    cell5.innerHTML=''
-                    cell6.innerHTML=''
-                    cell7.innerHTML=`<span class="respuestaTabla5-2" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right">${parseFloat(flujoCosto.rows[z][6]).toFixed(2)}</span>`
-                }
-                
-                var sumValTotal = 0;
-                alternativas.rows.forEach(el => {
-                    if (el[4] === "") {
-                        
+                    cell1.innerHTML=`<span class="respuestaTabla" style="font-size:75%;width:97%">${alternativas.rows[z][0]}</span>`;
+                    //cell2.innerHTML=`<input id=inputComponenteSocial_alt${x+1}_com${y+1}_act${z+1} list=factorSocial_alt${x+1}_com${y+1}_act${z+1}><datalist class=selectorFactorSocial id=factorSocial_alt${x+1}_com${y+1}_act${z+1} style="overflow-y: auto"></datalist>`
+                    if (flujoCosto === null) {
+                        cell2.className = "dropdown-cell"
+                        cell2.innerHTML = 
+                        `
+                            <span style="display: none;"></span>
+                            <select class="my-dropdown" ></select>
+                        `
+                        cell3.innerHTML=`<span class="respuestaTabla5-2" id=valorFactorSocial_alt${x+1}_com${y+1}_act${z+1}></span>`
                     } else {
-                        sumValTotal += parseInt(el[4])
-                        let resultadoPrivado = document.getElementById(`resultadoPrivado_alt${x+1}_com${y+1}`)
-                        resultadoPrivado.innerHTML = `
-                        ${parseFloat(sumValTotal).toFixed(2)}`
+                        cell2.className = "dropdown-cell"
+                        cell2.innerHTML = 
+                        `
+                            <span style="display: none;"></span>
+                            <select class="my-dropdown" value="${flujoCosto.rows[z][1]}"></select>
+                        `
+                        cell3.innerHTML=`<span class="respuestaTabla5-2" id=valorFactorSocial_alt${x+1}_com${y+1}_act${z+1}>${flujoCosto.rows[z][2]}</span>`
                     }
-                });
-            } else {
-                var rowCount = altID.rows.length;
-                var row = altID.insertRow(rowCount);
-                var cell1 = row.insertCell(0)
-                var cell2 = row.insertCell(-1)
-                var cell3 = row.insertCell(-1)
-                var cell4 = row.insertCell(-1)
-                var cell5 = row.insertCell(-1)
-                var cell6 = row.insertCell(-1)
-                var cell7 = row.insertCell(-1)
-                cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Sociales</span>`;
-                cell2.innerHTML=''
-                cell3.innerHTML=''
-                cell4.innerHTML=''
-                cell5.innerHTML=''
-                cell6.innerHTML=''
-                cell7.innerHTML=`<span class="respuestaTabla5-2" id="resultadoSocial_alt${x+1}_com${y+1}" style="text-align:right"></span>`
-
-                if (flujoCosto === null) {
-                    let resultadoSocial = document.getElementById(`resultadoSocial_alt${x+1}_com${y+1}`)
-                    resultadoSocial.innerHTML = "0"
-                } else {
+    
+                    cell4.innerHTML=`<span class="respuestaTabla5-2">${arrayUnidades[alternativas.rows[z][1]]}</span>`;
+                    cell5.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][2]}</span>`;
+                    cell6.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][3]}</span>`;
+                    cell7.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][4]}</span>`;
+                    
+    /*                 let datalist = document.getElementById(`factorSocial_alt${x+1}_com${y+1}_act${z+1}`)
+                    let input = document.getElementById(`inputComponenteSocial_alt${x+1}_com${y+1}_act${z+1}`)
+                    arrayFactores.forEach(el => {
+                        datalist.innerHTML += 
+                        `   
+                        <option value="${el.name}">
+                        `
+                        
+                    }); */
+        
+                    
+                } else if (z===alternativas.rows.length) 
+                {
+                    var rowCount = altID.rows.length;
+                    var row = altID.insertRow(rowCount);
+                    var cell1 = row.insertCell(0)
+                    var cell2 = row.insertCell(-1)
+                    var cell3 = row.insertCell(-1)
+                    var cell4 = row.insertCell(-1)
+                    var cell5 = row.insertCell(-1)
+                    var cell6 = row.insertCell(-1)
+                    var cell7 = row.insertCell(-1)
+                    
+                    if (flujoCosto === null) {
+                        cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Privados</span>`;
+                        cell2.innerHTML=''
+                        cell3.innerHTML=''
+                        cell4.innerHTML=''
+                        cell5.innerHTML=''
+                        cell6.innerHTML=''
+                        cell7.innerHTML=`<span class="respuestaTabla5-2" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right"></span>`
+                    } else {
+                        cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Privados</span>`;
+                        cell2.innerHTML=''
+                        cell3.innerHTML=''
+                        cell4.innerHTML=''
+                        cell5.innerHTML=''
+                        cell6.innerHTML=''
+                        cell7.innerHTML=`<span class="respuestaTabla5-2" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right">${parseFloat(flujoCosto.rows[z][6]).toFixed(2)}</span>`
+                    }
+                    
                     var sumValTotal = 0;
-                    flujoCosto.rows.forEach(el => {
-                        if (el[2] === "") {
+                    alternativas.rows.forEach(el => {
+                        if (el[4] === "") {
                             
                         } else {
-                            sumValTotal += (parseInt(el[6])*parseFloat(el[2]))
-                            let resultadoSocial = document.getElementById(`resultadoSocial_alt${x+1}_com${y+1}`)
-                            resultadoSocial.innerHTML = `
+                            sumValTotal += parseInt(el[4])
+                            let resultadoPrivado = document.getElementById(`resultadoPrivado_alt${x+1}_com${y+1}`)
+                            resultadoPrivado.innerHTML = `
                             ${parseFloat(sumValTotal).toFixed(2)}`
                         }
                     });
+                } else {
+                    var rowCount = altID.rows.length;
+                    var row = altID.insertRow(rowCount);
+                    var cell1 = row.insertCell(0)
+                    var cell2 = row.insertCell(-1)
+                    var cell3 = row.insertCell(-1)
+                    var cell4 = row.insertCell(-1)
+                    var cell5 = row.insertCell(-1)
+                    var cell6 = row.insertCell(-1)
+                    var cell7 = row.insertCell(-1)
+                    cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Sociales</span>`;
+                    cell2.innerHTML=''
+                    cell3.innerHTML=''
+                    cell4.innerHTML=''
+                    cell5.innerHTML=''
+                    cell6.innerHTML=''
+                    cell7.innerHTML=`<span class="respuestaTabla5-2" id="resultadoSocial_alt${x+1}_com${y+1}" style="text-align:right"></span>`
+    
+                    if (flujoCosto === null) {
+                        let resultadoSocial = document.getElementById(`resultadoSocial_alt${x+1}_com${y+1}`)
+                        resultadoSocial.innerHTML = "0"
+                    } else {
+                        var sumValTotal = 0;
+                        flujoCosto.rows.forEach(el => {
+                            if (el[2] === "") {
+                                
+                            } else {
+                                sumValTotal += (parseInt(el[6])*parseFloat(el[2]))
+                                let resultadoSocial = document.getElementById(`resultadoSocial_alt${x+1}_com${y+1}`)
+                                resultadoSocial.innerHTML = `
+                                ${parseFloat(sumValTotal).toFixed(2)}`
+                            }
+                        });
+                    }
+                }
+            } else {
+
+                if (z<alternativas.rows.length) {
+                    var rowCount = altID.rows.length;
+                    var row = altID.insertRow(rowCount);
+                    var cell1 = row.insertCell(0)
+                    var cell2 = row.insertCell(-1)
+                    var cell3 = row.insertCell(-1)
+                    var cell4 = row.insertCell(-1)
+                    var cell5 = row.insertCell(-1)
+                    var cell6 = row.insertCell(-1)
+                    var cell7 = row.insertCell(-1)
+                    
+                    cell1.innerHTML=`<span class="respuestaTabla" style="font-size:75%;width:97%">${alternativas.rows[z][0]}</span>`;
+                    //cell2.innerHTML=`<input id=inputComponenteSocial_alt${x+1}_com${y+1}_act${z+1} list=factorSocial_alt${x+1}_com${y+1}_act${z+1}><datalist class=selectorFactorSocial id=factorSocial_alt${x+1}_com${y+1}_act${z+1} style="overflow-y: auto"></datalist>`
+                    if (flujoCosto === null || z>=(flujoCosto.rows.length-2)) {
+
+                        cell2.className = "dropdown-cell"
+                        cell2.innerHTML = 
+                        `
+                            <span style="display: none;"></span>
+                            <select class="my-dropdown" ></select>
+                        `
+                        cell3.innerHTML=`<span class="respuestaTabla5-2" id=valorFactorSocial_alt${x+1}_com${y+1}_act${z+1}></span>`
+                    } else {
+
+                        cell2.className = "dropdown-cell"
+                        cell2.innerHTML = 
+                        `
+                            <span style="display: none;"></span>
+                            <select class="my-dropdown" value="${flujoCosto.rows[z][1]}"></select>
+                        `
+                        cell3.innerHTML=`<span class="respuestaTabla5-2" id=valorFactorSocial_alt${x+1}_com${y+1}_act${z+1}>${flujoCosto.rows[z][2]}</span>`
+                    }
+    
+                    cell4.innerHTML=`<span class="respuestaTabla5-2">${arrayUnidades[alternativas.rows[z][1]]}</span>`;
+                    cell5.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][2]}</span>`;
+                    cell6.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][3]}</span>`;
+                    cell7.innerHTML=`<span class="respuestaTabla5-2" style="text-align:right">${alternativas.rows[z][4]}</span>`;
+                    
+    /*                 let datalist = document.getElementById(`factorSocial_alt${x+1}_com${y+1}_act${z+1}`)
+                    let input = document.getElementById(`inputComponenteSocial_alt${x+1}_com${y+1}_act${z+1}`)
+                    arrayFactores.forEach(el => {
+                        datalist.innerHTML += 
+                        `   
+                        <option value="${el.name}">
+                        `
+                        
+                    }); */
+        
+                    
+                } else if (z===alternativas.rows.length) 
+                {
+                    var rowCount = altID.rows.length;
+                    var row = altID.insertRow(rowCount);
+                    var cell1 = row.insertCell(0)
+                    var cell2 = row.insertCell(-1)
+                    var cell3 = row.insertCell(-1)
+                    var cell4 = row.insertCell(-1)
+                    var cell5 = row.insertCell(-1)
+                    var cell6 = row.insertCell(-1)
+                    var cell7 = row.insertCell(-1)
+                    
+                    if (flujoCosto === null || z>=(flujoCosto.rows.length-2)) {
+                        cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Privados</span>`;
+                        cell2.innerHTML=''
+                        cell3.innerHTML=''
+                        cell4.innerHTML=''
+                        cell5.innerHTML=''
+                        cell6.innerHTML=''
+                        cell7.innerHTML=`<span class="respuestaTabla5-2" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right"></span>`
+                    } else {
+
+                        cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Privados</span>`;
+                        cell2.innerHTML=''
+                        cell3.innerHTML=''
+                        cell4.innerHTML=''
+                        cell5.innerHTML=''
+                        cell6.innerHTML=''
+                        cell7.innerHTML=`<span class="respuestaTabla5-2" id='resultadoPrivado_alt${x+1}_com${y+1}' style="text-align:right">${parseFloat(flujoCosto.rows[z-1][6]).toFixed(2)}</span>`
+                    }
+                    
+                    var sumValTotal = 0;
+                    alternativas.rows.forEach(el => {
+                        if (el[4] === "") {
+                            
+                        } else {
+                            sumValTotal += parseInt(el[4])
+                            let resultadoPrivado = document.getElementById(`resultadoPrivado_alt${x+1}_com${y+1}`)
+                            resultadoPrivado.innerHTML = `
+                            ${parseFloat(sumValTotal).toFixed(2)}`
+                        }
+                    });
+                } else if (z===alternativas.rows.length+1) {
+                    var rowCount = altID.rows.length;
+                    var row = altID.insertRow(rowCount);
+                    var cell1 = row.insertCell(0)
+                    var cell2 = row.insertCell(-1)
+                    var cell3 = row.insertCell(-1)
+                    var cell4 = row.insertCell(-1)
+                    var cell5 = row.insertCell(-1)
+                    var cell6 = row.insertCell(-1)
+                    var cell7 = row.insertCell(-1)
+                    cell1.innerHTML=`<span class="respuestaTabla5-2">TOTAL COMP a Precios Sociales</span>`;
+                    cell2.innerHTML=''
+                    cell3.innerHTML=''
+                    cell4.innerHTML=''
+                    cell5.innerHTML=''
+                    cell6.innerHTML=''
+                    cell7.innerHTML=`<span class="respuestaTabla5-2" id="resultadoSocial_alt${x+1}_com${y+1}" style="text-align:right"></span>`
+    
+                    if (flujoCosto === null) {
+                        let resultadoSocial = document.getElementById(`resultadoSocial_alt${x+1}_com${y+1}`)
+                        resultadoSocial.innerHTML = "0"
+                    } else {
+                        var sumValTotal = 0;
+                        flujoCosto.rows.forEach(el => {
+                            if (el[2] === "") {
+                                
+                            } else {
+                                sumValTotal += (parseInt(el[6])*parseFloat(el[2]))
+                                let resultadoSocial = document.getElementById(`resultadoSocial_alt${x+1}_com${y+1}`)
+                                resultadoSocial.innerHTML = `
+                                ${parseFloat(sumValTotal).toFixed(2)}`
+                            }
+                        });
+                    }
+                } else {
+
                 }
             }
-
             z++
         }
 
@@ -1217,7 +1474,7 @@ dropdownCells.forEach(function(cell) {
     option.text = value.name;
 
     if (index === parseInt(valorPredeterminado)) {
-        console.log('son iguales');
+
         option.selected = true;
     }
     

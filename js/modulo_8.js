@@ -133,17 +133,35 @@ if (infoModulo!=null) {
     propr3.innerHTML = infoModulo.rows[2][4]
     propr4.innerHTML = infoModulo.rows[2][5]
 
-    tablaComponentes.innerHTML  += 
-    `
-    <tr>
-        <td rowspan="${array_nuevo.length}" class="bajada">ACTIVIDADES</td>
-        <td class="bajada">${array_index[0]}</td>
-        <td><span contenteditable="false" class="textInput8">${array_nuevo[0]}</span></td>
-        <td><span contenteditable="true" class="textInput8" style="text-align:right">${array_valores[0]}</span></td>
-        <td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][3]}</span></td>
-        <td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][4]}</span></td>
-    </tr>
-    `
+    console.log(infoModulo.rows);
+    console.log(array_nuevo);
+    console.log(infoModulo.rows.length-array_nuevo.length);
+    if (infoModulo.rows.length-array_nuevo.length<0) {
+        tablaComponentes.innerHTML  += 
+        `
+        <tr>
+            <td rowspan="${array_nuevo.length}" class="bajada">ACTIVIDADES</td>
+            <td class="bajada">${array_index[0]}</td>
+            <td><span contenteditable="false" class="textInput8">${array_nuevo[0]}</span></td>
+            <td><span contenteditable="true" class="textInput8" style="text-align:right">${array_valores[0]}</span></td>
+            <td><span contenteditable="true" class="textInput8">${infoModulo.rows[0][3]}</span></td>
+            <td><span contenteditable="true" class="textInput8">${infoModulo.rows[0][4]}</span></td>
+        </tr>
+        `
+    } else {
+        tablaComponentes.innerHTML  += 
+        `
+        <tr>
+            <td rowspan="${array_nuevo.length}" class="bajada">ACTIVIDADES</td>
+            <td class="bajada">${array_index[0]}</td>
+            <td><span contenteditable="false" class="textInput8">${array_nuevo[0]}</span></td>
+            <td><span contenteditable="true" class="textInput8" style="text-align:right">${array_valores[0]}</span></td>
+            <td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][3]}</span></td>
+            <td><span contenteditable="true" class="textInput8">${infoModulo.rows[infoModulo.rows.length-array_nuevo.length][4]}</span></td>
+        </tr>
+        `
+    }
+
 
     let i = 0
     while (i < array_nuevo.length-1) {
