@@ -175,9 +175,15 @@ for (let i = 0; i < localStorage.length; i++) {
 const jsonData = JSON.stringify(data);
 
 // Crear un archivo JSON y descargarlo
-const file = new Blob([jsonData], {type: 'application/json'});
+
+//const file = new Blob([jsonData], {type: 'application/json'});
+//const a = document.createElement('a');
+//a.href = URL.createObjectURL(file);
+
+const utf8Bom = new Uint8Array([0xEF, 0xBB, 0xBF]);
+const content = new Blob([utf8Bom, jsonData], { type: 'application/json' });
 const a = document.createElement('a');
-a.href = URL.createObjectURL(file);
+a.href = URL.createObjectURL(content);
 a.download = 'localStorage.json';
 a.click();
 })
