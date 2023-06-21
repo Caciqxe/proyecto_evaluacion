@@ -6,13 +6,18 @@ let nombreComponente = JSON.parse(sessionStorage.getItem(`detalleCompAlt_${alter
 let array_nuevo = []
 let array_valores = []
 let array_index = []
+let propr1 = document.getElementById('propr1')
 
 let infoModulo = JSON.parse(sessionStorage.getItem('tablaModulo8'))
 
 
+let moduloExtra = JSON.parse(sessionStorage.getItem('Modulo1Extra'))
+propr1.innerHTML = moduloExtra.objetivoCentral
+
 let x = 0
 let y = 0
 
+console.log(propr1);
 
 if (infoModulo!=null) {
     tablaComponentes.innerHTML  += 
@@ -120,6 +125,10 @@ if (infoModulo!=null) {
     let propr3 = document.getElementById('propr3')
     let propr4 = document.getElementById('propr4')
 
+    let moduloExtra = JSON.parse(sessionStorage.getItem('Modulo1Extra'))
+
+    console.log(moduloExtra.objetivoCentral);
+
     fin11.innerHTML = infoModulo.rows[0][1]
     fin12.innerHTML = infoModulo.rows[0][2]
     fin13.innerHTML = infoModulo.rows[0][3]
@@ -128,7 +137,7 @@ if (infoModulo!=null) {
     fin22.innerHTML = infoModulo.rows[1][2]
     fin23.innerHTML = infoModulo.rows[1][3]
     fin24.innerHTML = infoModulo.rows[1][4]
-    propr1.innerHTML = infoModulo.rows[2][2]
+    propr1.innerHTML = moduloExtra.objetivoCentral
     propr2.innerHTML = infoModulo.rows[2][3]
     propr3.innerHTML = infoModulo.rows[2][4]
     propr4.innerHTML = infoModulo.rows[2][5]

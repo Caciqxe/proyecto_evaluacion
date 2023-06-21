@@ -310,10 +310,17 @@ if (parseInt(van.innerHTML)<0) {
 let tir = document.getElementById('tir')
 tir.innerHTML = calcularTIR(flujoNeto.rows[0][1], flujoNeto.rows[0])
 
-let valorRequerido0V = sessionStorage.getItem('valorRequerido0')
-let valorRequerido1V = sessionStorage.getItem('valorRequerido1')
-let valorRequerido2V = sessionStorage.getItem('valorRequerido2')
+//let valorRequerido0V = sessionStorage.getItem('valorRequerido0')
+let valorRequerido0V = JSON.parse(sessionStorage.getItem('totalPreinversion')).rows[0][0]
+//let valorRequerido1V = sessionStorage.getItem('valorRequerido1')
+let valorRequerido1V = JSON.parse(sessionStorage.getItem('totalCostosInversion')).rows[0][0]
+//let valorRequerido2V = sessionStorage.getItem('valorRequerido2')
+let valorRequerido2V = JSON.parse(sessionStorage.getItem('totalCostosOperacion')).rows[0][0]
 let valorRequerido3V = sessionStorage.getItem('valorRequerido3')
+
+
+
+
 let fondosNacionales0V = sessionStorage.getItem('fondosNacionales0')
 let fondosNacionales1V = sessionStorage.getItem('fondosNacionales1')
 let fondosNacionales2V = sessionStorage.getItem('fondosNacionales2')
@@ -396,7 +403,7 @@ let justificacionPropuesta = document.getElementById('justificacionPropuesta')
 
 valorRequerido0.innerHTML = valorRequerido0V
 valorRequerido1.innerHTML = valorRequerido1V
-valorRequerido2.innerHTML = valorRequerido2V
+valorRequerido2.innerHTML = parseFloat(parseInt(valorRequerido2V)/horizonte)
 valorRequerido3.innerHTML = valorRequerido3V
 fondosNacionales0.innerHTML = fondosNacionales0V
 fondosNacionales1.innerHTML = fondosNacionales1V
@@ -430,9 +437,9 @@ otros0.innerHTML = otros0V
 otros1.innerHTML = otros1V
 otros2.innerHTML = otros2V
 otros3.innerHTML = otros3V
-totalTablaFinanciamiento0.innerHTML = parseInt(parseInt(valorRequerido0V) + parseInt(fondosNacionales0V) + parseInt(municipalComunidad0V) + parseInt(cooperacionInternacional0V) + parseInt(cooperacionInternacional0V) + parseInt(prestamos0V) + parseInt(recursosPropios0V) + parseInt(ingresosProyecto0V) + parseInt(app0V) + parseInt(otros0V))
-totalTablaFinanciamiento1.innerHTML = parseInt(parseInt(valorRequerido1V) + parseInt(fondosNacionales1V) + parseInt(municipalComunidad1V) + parseInt(cooperacionInternacional1V) + parseInt(cooperacionInternacional1V) + parseInt(prestamos1V) + parseInt(recursosPropios1V) + parseInt(ingresosProyecto1V) + parseInt(app1V) + parseInt(otros1V))
-totalTablaFinanciamiento2.innerHTML = parseInt(parseInt(valorRequerido2V) + parseInt(fondosNacionales2V) + parseInt(municipalComunidad2V) + parseInt(cooperacionInternacional2V) + parseInt(cooperacionInternacional2V) + parseInt(prestamos2V) + parseInt(recursosPropios2V) + parseInt(ingresosProyecto2V) + parseInt(app2V) + parseInt(otros2V))
+totalTablaFinanciamiento0.innerHTML = parseInt(parseInt(fondosNacionales0V) + parseInt(municipalComunidad0V) + parseInt(cooperacionInternacional0V) + parseInt(cooperacionInternacional0V) + parseInt(prestamos0V) + parseInt(recursosPropios0V) + parseInt(ingresosProyecto0V) + parseInt(app0V) + parseInt(otros0V))
+totalTablaFinanciamiento1.innerHTML = parseInt(parseInt(fondosNacionales1V) + parseInt(municipalComunidad1V) + parseInt(cooperacionInternacional1V) + parseInt(cooperacionInternacional1V) + parseInt(prestamos1V) + parseInt(recursosPropios1V) + parseInt(ingresosProyecto1V) + parseInt(app1V) + parseInt(otros1V))
+totalTablaFinanciamiento2.innerHTML = parseInt(parseInt(fondosNacionales2V) + parseInt(municipalComunidad2V) + parseInt(cooperacionInternacional2V) + parseInt(cooperacionInternacional2V) + parseInt(prestamos2V) + parseInt(recursosPropios2V) + parseInt(ingresosProyecto2V) + parseInt(app2V) + parseInt(otros2V))
 totalTablaFinanciamiento3.innerHTML = totalTablaFinanciamiento3V
 justificacionPropuesta.innerHTML = justificacionPropuestaV
 }
